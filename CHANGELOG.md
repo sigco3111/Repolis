@@ -5,6 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.2.1] - 2026-06-23
+
+### Changed
+- **README 최종 갱신** — 라이브 데모 임베드, 배지, 시각 자료, 목차, 다층 옵션, 로드맵
+- **로드맵 명시**: v0.2.0이 **기능 추가 마지막 버전**. v0.3.0+는 **성능/안정성/관측성/자동화만**
+- CHANGELOG: v0.2.1 항목 추가 (README 갱신 마킹)
+
+### Notes
+- 이 버전은 **문서만** 변경. 코드/워크플로/도시 데이터 동일.
+
 ## [0.2.0] - 2026-06-23
 
 ### Added
