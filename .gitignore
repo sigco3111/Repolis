@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.venv/
+venv/
+
+# 데이터 (Actions에서 자동 갱신)
+data/logs/*.csv
+!data/logs/.gitkeep
+
+# 빌드 산출물
+repos.json
+# ↑ Actions에서 갱신하지만, 첫 빌드는 로컬에서 푸시
+
+# Editor / OS
+.idea/
+.vscode/
+.DS_Store
+*.swp

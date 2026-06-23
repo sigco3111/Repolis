@@ -1,0 +1,63 @@
+name: Refresh Repolis data
+
+on:
+  # 6시간마다 자동 실행 (KST 03/09/15/21)
+  schedule:
+    - cron: "0 */6 * * *"
+  # 수동 트리거 (gh workflow run refresh.yml)
+  workflow_dispatch:
+  # 코드 변경 시 즉시 갱신
+  push:
+    branches: [main]
+    paths:
+      - "scripts/build_repos.py"
+      - ".github/workflows/refresh.yml"
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install gh-traffic-monitor
+        run: |
+          git clone https://github.com/sigco3111/gh-traffic-monitor.git /tmp/gtm
+          cd /tmp/gtm
+          pip install -e .
+
+      - name: Collect traffic data
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          mkdir -p data/logs
+          python -m gh_traffic_monitor \
+            --owner sigco3111 \
+            --log-dir ./data/logs \
+            collect \
+            --delay 0.3
+
+      - name: Build repos.json
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO_OWNER: sigco3111
+          GTL_DIR: data/logs
+        run: python scripts/build_repos.py
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/ repos.json
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          git commit -m "chore: refresh Repolis data ($(date -u +%Y-%m-%dT%H:%M:%SZ))"
+          git push
