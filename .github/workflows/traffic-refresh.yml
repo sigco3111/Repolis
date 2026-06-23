@@ -1,0 +1,52 @@
+name: Traffic refresh (faster)
+
+# refresh.yml은 매일 1회 전체 빌드 → 무료 한도 보호.
+# 이 워크플로는 4시간마다 gh-traffic-monitor만 돌려서
+# data/logs/의 traffic 데이터를 자주 갱신.
+# build_repos.py + GitHub Pages는 daily refresh.yml에 맡김.
+
+on:
+  schedule:
+    - cron: "0 */4 * * *"  # 4시간마다 (KST 04/08/12/16/20/00)
+  workflow_dispatch:
+
+jobs:
+  traffic:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install gh-traffic-monitor
+        run: |
+          git clone https://github.com/sigco3111/gh-traffic-monitor.git /tmp/gtm
+          cd /tmp/gtm
+          pip install -e .
+
+      - name: Collect traffic data only
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          mkdir -p data/logs
+          python -m gh_traffic_monitor \
+            --owner sigco3111 \
+            --log-dir ./data/logs \
+            collect \
+            --delay 0.3
+
+      - name: Commit traffic data only
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/logs/
+          if git diff --cached --quiet; then
+            echo "No traffic changes"
+            exit 0
+          fi
+          git commit -m "chore: traffic refresh $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          git push

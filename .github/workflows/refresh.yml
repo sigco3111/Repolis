@@ -1,12 +1,13 @@
 name: Refresh Repolis data
 
 on:
-  # 6시간마다 자동 실행 (KST 03/09/15/21)
+  # 매일 1회 자동 실행 (KST 09:00)
   schedule:
-    - cron: "0 */6 * * *"
+    - cron: "0 0 * * *"
   # 수동 트리거 (gh workflow run refresh.yml)
   workflow_dispatch:
-  # 코드 변경 시 즉시 갱신
+  # 4시간마다 gh-traffic-monitor 단독 갱신 (저장소 추가/삭제 빠른 반영)
+  # Actions 무료 한도 보호를 위해 refresh.yml은 daily, traffic은 별도 워크플로
   push:
     branches: [main]
     paths:

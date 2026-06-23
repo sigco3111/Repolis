@@ -12,14 +12,16 @@
 
 원작 [hyeonsangjeon/Repolis](https://github.com/hyeonsangjeon/Repolis)와 비교:
 
-| 측면 | 원작 | **sigco3111 fork** |
-|---|---|---|
-| 데이터 백엔드 | 자체 `collect_traffic.py` (3-layer CSV) | **[gh-traffic-monitor](https://github.com/sigco3111/gh-traffic-monitor)** (단일 레이어) |
-| 의존성 | `gh CLI` + 자체 Python | `gh CLI` + **gh-traffic-monitor zero-deps** |
-| 도시 데이터 | 60~80개 repo | **155개 repo** |
-| LLM 택시 모드 | Local + WebLLM + AI proxy | **Local only** (WebGPU/proxy 생략) |
-| Multi-player (PartyKit) | ✅ 있음 | ✅ 그대로 유지 |
-| 데이터 갱신 | 매일 1회 cron | **6시간마다** cron (저장소 추가/삭제 4h 내 반영) |
+| 측면 | 원작 | sigco3111 fork v0.1.0 | **sigco3111 fork v0.2.0** |
+|---|---|---|---|
+| 데이터 백엔드 | 자체 `collect_traffic.py` (3-layer CSV) | gh-traffic-monitor (단일 레이어) | ✅ 동일 |
+| 의존성 | `gh CLI` + 자체 Python | `gh CLI` + gh-traffic-monitor zero-deps | ✅ 동일 |
+| 도시 데이터 | 60~80개 repo | 155개 repo | ✅ 동일 |
+| LLM 택시 모드 | Local + WebLLM + AI proxy | Local only | **Local + WebLLM + AI proxy (전부)** ✅ |
+| Multi-player (PartyKit) | ✅ 있음 | ✅ 그대로 유지 | ✅ 동일 |
+| Contribution Library | 6 카테고리 × 50+ 항목 (논문/수상/AWS 활동) | null (비어있음) | **6 카테고리 × 23 항목 (sigco3111 큐레이션)** ✅ |
+| 데이터 갱신 | 매일 1회 cron | 6시간마다 cron | **매일 빌드 + 4시간 traffic** (이중 cron) ✅ |
+| GitHub Actions 사용 | 1회/일 | 4회/일 | **5회/일** (한도 내) |
 
 ## 🧠 작동 원리 (`How it works`)
 
@@ -117,6 +119,10 @@ sigco3111/opencode-harness-bridge,2026-06-23,2026-06-23,0,325,1
 
 - **걷기** — WASD / 방향키 / on-screen joystick으로 도보 이동
 - **차량 호출** — 화면 우상단 🚕 버튼 → 자연어로 질문 → 택시가 픽업 → 운전
+  - **Local 모드** (default, 키 0) — 결정론적 synonym + metric 인식 검색
+  - **WebLLM 모드** — 브라우저 안 LLM (~1GB 다운로드, 키 0, WebGPU)
+  - **AI proxy 모드** — 본인 Vercel/Azure endpoint (고품질, 키 필요)
+- **Contribution Library** — sigco3111의 대표 작품 6 카테고리 (🛠️ 시그니처 OSS, 🎮 게임, 🤖 AI 자동화, 🏘️ 커뮤니티, 🎨 3D, 📚 학습)
 - **건물 클릭** — 도시에 있는 집(repo)에 다가가면 카드 자동 오픈
 - **야경 보기** — 🌙/☀️ 토글. 밤에는 활발한 repo 창문에서 빛이 남
 - **다른 방문자 보기** — 🟢 실시간 멀티플레이어 (PartyKit 서버)
@@ -177,17 +183,22 @@ git push
 
 ## 📅 자동화 (Cron schedule)
 
-| 트리거 | 주기 | 효과 |
-|---|---|---|
-| GitHub Actions schedule | **6시간마다** (`0 */6 * * *`) | 신규 repo ≤ 6h 내 도시 반영 |
-| GitHub Actions `workflow_dispatch` | 수동 | `gh workflow run refresh.yml` |
-| `push` to `main` on `build_repos.py` | 변경 시 | 빌더 수정 즉시 반영 |
+| 워크플로 | 트리거 | 효과 | 무료 한도 |
+|---|---|---|---|
+| `traffic-refresh.yml` | **4시간마다** (`0 */4 * * *`) | `gh-traffic-monitor` 단독 실행, traffic만 갱신 | ✅ 월 ~180회 |
+| `refresh.yml` | **매일 1회** (`0 0 * * *`) | 전체 빌드 (traffic + build_repos + Pages 배포) | ✅ 월 ~30회 |
+| `refresh.yml` workflow_dispatch | 수동 | `gh workflow run refresh.yml` | 무제한 |
+| `refresh.yml` push | main 변경 시 | 빌더 수정 즉시 반영 | 빌드마다 1회 |
+
+**저장소 추가/삭제 시**: 가장 빠른 반영은 `gh workflow run refresh.yml --repo sigco3111/Repolis` (즉시).
 
 ## ⚠️ 주의 (`Caveats`)
 
 - **첫 24~48시간**: GitHub Traffic API가 익명 visitor 데이터를 노출하는 데 시간이 걸립니다. 첫 실행 후 `uniques=0`이어도 정상이에요.
-- **14일 룰**: 14일 넘은 데이터는 GitHub이 자체 삭제하므로, **반드시 매일 실행**해야 평생 누적이 정확합니다.
-- **WebLLM/AI proxy 택시**: 원작에는 3가지 LLM 모드가 있지만, sigco3111 fork는 **Local only** (의존성 최소화 + zero key). 추후 v0.2.0에서 옵션 추가 예정.
+- **14일 룰**: GitHub이 14일 넘은 traffic을 자체 삭제하므로, **반드시 매일 실행**해야 평생 누적이 정확합니다.
+- **WebLLM 택시**: 첫 사용 시 ~1GB 모델을 브라우저가 다운로드합니다 (한 번만). WebGPU 미지원 브라우저는 동작 안 함 (Safari/Firefox 일부 환경).
+- **AI proxy 택시**: `api/taxi.js`는 Azure OpenAI 또는 OpenAI 호환 endpoint를 받습니다. 환경 변수 4개 (`AZURE_OPENAI_ENDPOINT`, `DEPLOYMENT`, `KEY`, `API_VERSION`) 또는 자체 Vercel endpoint URL 직접 입력.
+- **Contribution Library**: sigco3111의 대표 23개 작품 (원작 hyeonsangjeon의 50+ 학술/수상/발표 항목은 제외 — sigco3111은 OSS/코드 위주).
 
 ## 🙏 감사의 말
 
