@@ -127,7 +127,7 @@ def social_map(owner: str) -> dict[str, dict]:
 def build() -> int:
     """메인 빌드. Returns: 작성된 repo 수."""
     print(f"[1/3] {OWNER}의 public repo 목록 조회 중...", file=sys.stderr)
-    repos = gh_api("/user/repos?per_page=100&affiliation=owner&sort=full_name")
+    repos = gh_api(f"/users/{OWNER}/repos?per_page=100&sort=full_name")
     if not isinstance(repos, list):
         print(f"  ⚠️ gh_api 결과가 list가 아님: {type(repos)}", file=sys.stderr)
         return 0
