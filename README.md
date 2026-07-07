@@ -1,6 +1,6 @@
 # 🏙️ Repolis — sigco3111의 도시
 
-> **155개의 GitHub repo가 사는 3D 도시.** 건물은 트래픽이 자라고, LLM 택시가 안내한다.
+> **sigco3111의 모든 GitHub repo가 사는 3D 도시.** 건물은 트래픽이 자라고, LLM 택시가 안내한다.
 
 <!-- 배지: GitHub 표준 -->
 <p align="left">
@@ -9,6 +9,7 @@
   <a href="https://github.com/sigco3111/Repolis/stargazers"><img src="https://img.shields.io/github/stars/sigco3111/Repolis?style=for-the-badge" alt="Stars"></a>
   <a href="https://github.com/sigco3111/Repolis/network/members"><img src="https://img.shields.io/github/forks/sigco3111/Repolis?style=for-the-badge" alt="Forks"></a>
   <a href="https://github.com/sigco3111/Repolis/actions"><img src="https://img.shields.io/github/actions/workflow-status/sigco3111/Repolis/refresh.yml?style=for-the-badge" alt="Build Status"></a>
+  <a href="https://github.com/sigco3111?tab=repositories"><img src="https://img.shields.io/github/repos/sigco3111?style=for-the-badge&label=%F0%9F%8F%98%EF%B8%8F_repos&color=22c55e" alt="sigco3111's public repos (live)"></a>
 </p>
 
 <p align="left">
@@ -71,7 +72,7 @@ GitHub은 repo의 **트래픽 데이터**(방문자, 클론, 포크, 별)를 **1
 |---|---|---|---|
 | 데이터 백엔드 | 자체 `collect_traffic.py` (3-layer CSV) | gh-traffic-monitor (단일 레이어) | ✅ 동일 |
 | 의존성 | `gh CLI` + 자체 Python | `gh CLI` + gh-traffic-monitor **zero-deps** | ✅ 동일 |
-| 도시 데이터 | 60~80개 repo | 155개 repo | ✅ 동일 |
+| 도시 데이터 | 60~80개 repo | 전부 (모두 트래픽 추적) | ✅ 동일 |
 | LLM 택시 모드 | Local + WebLLM + AI proxy | Local only | **Local + WebLLM + AI proxy (전부)** ✅ |
 | Multi-player (PartyKit) | ✅ 있음 | ✅ 그대로 유지 | ✅ 동일 |
 | Contribution Library | 6 카테고리 × 50+ 항목 (논문/수상/AWS 활동) | null (비어있음) | **6 카테고리 × 23 항목 (sigco3111 큐레이션)** ✅ |
@@ -84,14 +85,13 @@ GitHub은 repo의 **트래픽 데이터**(방문자, 클론, 포크, 별)를 **1
   <img src="https://sigco3111.github.io/Repolis/assets/social-preview.png" alt="Repolis 도시 미리보기" width="720"/>
 </p>
 
-### 📊 도시 통계 (2026-06-23 기준)
+### 📊 도시 통계 (`live` · 매일 자동 갱신)
 
 | 지표 | 값 |
-|---|---:|
-| 총 public repo | **155개** |
-| 다운타운 (rank < 14) | **14개** |
-| 동네 (hometown) | **141개** |
-| 트래픽 추적 중 | **154개** |
+|---|---|
+| 총 public repo (live) | ![repos](https://img.shields.io/github/repos/sigco3111?style=flat-square&color=22c55e) |
+| 트래픽 추적 중 | _매일 cron으로 `repos.json` 자동 갱신 (정확한 수는 [repos.json](https://github.com/sigco3111/Repolis/blob/main/repos.json) 참고)_ |
+| 도시 갱신 | ![refresh](https://img.shields.io/github/actions/workflow-status/sigco3111/Repolis/refresh.yml?style=flat-square) |
 
 ### 🎨 언어 분포 (상위 5)
 
@@ -121,7 +121,7 @@ GitHub은 repo의 **트래픽 데이터**(방문자, 클론, 포크, 별)를 **1
 └─────────────────────────────────────────────────────────────┘
                           ↓
 ┌─────────────────────────────────────────────────────────────┐
-│  2️⃣ gh-traffic-monitor: 154개 repo 트래픽 수집             │
+│  2️⃣ gh-traffic-monitor: sigco3111의 모든 공개 repo 트래픽 수집 │
 │     → data/logs/YYYY-MM-DD.csv (일별)                      │
 │     → data/logs/_cumulative.csv (평생 누적)                  │
 └─────────────────────────────────────────────────────────────┘
@@ -132,12 +132,12 @@ GitHub은 repo의 **트래픽 데이터**(방문자, 클론, 포크, 별)를 **1
 │     - openGraphImageUrl (GraphQL)                            │
 │     - 점수 = log(visitors)·1.0 + log(clones)·0.7 +           │
 │             log(forks)·0.6 + log(stars)·0.5                  │
-│     → repos.json (155개 × 30 필드, score 순)                 │
+│     → repos.json (각 entry ~30 필드, score 순)               │
 └─────────────────────────────────────────────────────────────┘
                           ↓
 ┌─────────────────────────────────────────────────────────────┐
 │  4️⃣ GitHub Pages: index.html (Three.js) 자동 배포            │
-│     - 155개 건물을 다운타운(상위 14) + 동네(141)로 배치      │
+│     - 건물 자동 배치 (상위 14 = 다운타운, 나머지 = 동네)     │
 │     - WASD/joystick 도보 이동                                │
 │     - LLM 택시 3모드 (Local · WebLLM · AI proxy)             │
 └─────────────────────────────────────────────────────────────┘
@@ -268,7 +268,7 @@ gh workflow run refresh.yml --repo sigco3111/Repolis
 > **v0.2.0이 기능 추가 마지막 버전**입니다. 이후는 **성능/안정성/관측성/자동화** 개선만 진행됩니다.
 
 ### ✅ v0.1.0 (2026-06-23) — 도시 첫 빌드
-- [x] 155개 public repo 도시 (점수 기반 그라데이션)
+- [x] sigco3111 모든 공개 repo를 도시로 시각화 (점수 기반 그라데이션)
 - [x] gh-traffic-monitor v0.1.0 데이터 백엔드
 - [x] 6시간 cron 자동 갱신
 - [x] GitHub Pages 라이브 (`sigco3111.github.io/Repolis`)
