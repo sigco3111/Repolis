@@ -1,0 +1,66 @@
+#:schema node_modules/wrangler/config-schema.json
+# Repolis taxi grounding backend — Cloudflare Worker (separate from the realtime
+# presence Worker in ../cloudflare). Deploy makes the public site's "🛰️ AI Foundry
+# Live" taxi mode answer real, live repo questions through your Azure AI Search KB.
+
+name = "repolis-taxi"
+main = "src/grounded.js"
+compatibility_date = "2025-04-01"
+workers_dev = true
+
+# ── Resident NPC live on/off (owner dashboard toggle) ─────────────────────────
+# Shared KV with the private repolis-metrics dashboard. The dashboard writes the
+# on/off flags here; this Worker reads them per request ONLY when NPC_LIVE_TOGGLE
+# is "true" (the master kill-switch). With the toggle off, KV is ignored and the
+# residents stay strictly env-gated — the safe, deploy-only default. Same namespace
+# id must be bound in repolis-metrics/wrangler.toml.
+[[kv_namespaces]]
+binding = "NPC_FLAGS"
+id = "0cad99a719a84c919839aa9e0616db53"
+
+# Non-secret config. The Search key is a SECRET — never put it here:
+#   wrangler secret put SEARCH_API_KEY
+[vars]
+SEARCH_KB_NAME = "repolis-github-kb"
+SEARCH_KS_NAME = "github-repos-mcp-ks"
+# Scholar NPCs share the same KB-retrieve pipeline; each just points at its own KB + MCP
+# knowledge source (see SCHOLARS.md). Defaults are baked into src/grounded.js — override here:
+MSDOCS_KB_NAME = "repolis-mslearn-kb"
+MSDOCS_KS_NAME = "microsoft-learn-mcp-ks"
+SEARCH_API_VERSION = "2026-05-01-preview"
+GROUNDED_MAX_RUNTIME_S = "30"
+GROUNDED_TIMEOUT_MS = "25000"
+
+# General-knowledge fallback: scholars answer off-KB questions (trivia, lore, small talk) in
+# persona via a direct Azure OpenAI chat-completion, authenticated keyless with an Entra ID
+# service principal. These two are generic defaults (safe to commit); the account-specific
+# endpoint/tenant/client id and the secret are kept out of git (see below + wrangler secret).
+AOAI_DEPLOYMENT = "gpt-5.4-mini"
+AOAI_API_VERSION = "2025-04-01-preview"
+
+# Set your Azure AI Search endpoint (not secret, but account-specific). Either
+# uncomment + edit here, or keep it out of git with `wrangler secret put SEARCH_ENDPOINT`:
+# SEARCH_ENDPOINT = "https://<your-search>.search.windows.net"
+
+# Entra ID service principal for the general-knowledge fallback (account-specific). Keep
+# these OUT of git — set with `wrangler secret put` (and mirror into .dev.vars for local dev):
+#   wrangler secret put AOAI_ENDPOINT      # https://<your-aoai>.cognitiveservices.azure.com
+#   wrangler secret put AAD_TENANT         # directory (tenant) id
+#   wrangler secret put AAD_CLIENT_ID      # service principal appId
+#   wrangler secret put AAD_CLIENT_SECRET  # service principal password (the only true secret)
+# Create the SP once:  az ad sp create-for-rbac --name repolis-taxi-aoai \
+#   --role "Cognitive Services OpenAI User" --scopes <aoai-resource-id>
+
+# (Optional) lock CORS to your Pages origin so only your site can call it. Default is "*".
+# ALLOW_ORIGIN = "https://<you>.github.io"
+
+# ── Chronopolis Kronos Council (POST {action:"council"}) ──────────────────────
+# The chamber is Ambient (deterministic, $0) by DEFAULT — a clone works with none of
+# the below. Turning Live on spends real LLM money, so it is gated behind an explicit
+# "true" plus the budget caps. The final verdict ALWAYS comes from the deterministic
+# core engine regardless of the debate (§G), and guards L1–L5 wall off abuse (§I).
+# COUNCIL_LIVE_ENABLED = "false"   # anything but "true" keeps Live OFF (the safe default)
+# COUNCIL_MONTH_CAP_USD = "600"    # budget walls — env only, keep OUT of git if account-specific
+# COUNCIL_DAY_CAP_USD = "24"
+# COUNCIL_DEPLOYMENT = "gpt-4o-mini"   # optional: debate model (falls back to AOAI_DEPLOYMENT)
+# COUNCIL_SALT = "<random>"        # optional salt for the privacy-preserving rate-limit key
