@@ -53,6 +53,30 @@ Repolis/                                    [Working dir = worktree]
 
 ---
 
+## Task 0: Prerequisite — Ensure hyeonsangjeon/Repolis is available locally
+
+**Files:**
+- Verify: `/tmp/hyeonsangjeon-Repolis/` (already cloned earlier in session)
+
+- [ ] **Step 1: Verify hyeonsangjeon clone exists**
+
+```bash
+ls -la /tmp/hyeonsangjeon-Repolis/index.html /tmp/hyeonsangjeon-Repolis/council/engine.js 2>&1
+```
+
+Expected: both files exist (clone was created during brainstorming)
+
+- [ ] **Step 2 (fallback): If clone missing, re-clone**
+
+```bash
+git clone --depth=1 https://github.com/hyeonsangjeon/Repolis.git /tmp/hyeonsangjeon-Repolis
+ls /tmp/hyeonsangjeon-Repolis/index.html
+```
+
+Expected: clone created
+
+---
+
 ## Task 1: Create isolated worktree
 
 **Files:**
@@ -236,10 +260,10 @@ git -c user.email=sisyphus@anthropic.local -c user.name=Sisyphus commit -m "feat
 
 ---
 
-## Task 5: Delta 2 — Korean description in README files
+## Task 5: Delta 2 — Korean description + I18N dict + 🇰🇷 flag
 
 **Files:**
-- Modify: `README.md`, `README.ko.md`
+- Modify: `README.md`, `README.ko.md`, `index.html` (I18N dict + 🇰🇷 flag)
 
 - [ ] **Step 1: Find Korean description in current sigco3111 README**
 
@@ -270,16 +294,50 @@ cp /tmp/sigco-delta-README.ko.md ./README.ko.md
 wc -l README.ko.md
 ```
 
-- [ ] **Step 5: Verify S7 — README has sigco3111 identity**
+- [ ] **Step 5: Locate I18N dict in current index.html**
 
-Run: `grep -c "sigco3111\|gh-traffic-monitor" README.md README.ko.md`
-Expected: matches > 0 in both
+Run: `grep -n "I18N\|const I18N\|const t =" index.html | head -5`
+Expected: matches found
 
-- [ ] **Step 6: Commit**
+- [ ] **Step 6: Locate I18N dict in sigco3111 delta**
+
+Run: `grep -n "I18N\|const I18N\|const t =" /tmp/sigco-delta-index.html | head -5`
+Expected: matches found (sigco3111's Korean translations)
+
+- [ ] **Step 7: Extract sigco3111's I18N dict and apply**
+
+Identify the exact `const I18N = {...}` block boundaries in BOTH files. Use `edit` tool to:
+- oldString: current I18N block in index.html (hyeonsangjeon's English-only or partial)
+- newString: sigco3111's I18N block from `/tmp/sigco-delta-index.html`
+
+Preserve all keys; only change values where sigco3111 has Korean translations.
+
+- [ ] **Step 8: Locate language toggle code**
+
+Run: `grep -n "🇰🇷\|🇺🇸\|lang.*ko\|toggleLang" index.html | head -10`
+Expected: matches found
+
+- [ ] **Step 9: Ensure 🇰🇷 flag is present in language toggle**
+
+If `🇰🇷` is missing in current index.html:
+- Find the toggle element (e.g., `<span>EN</span>` or `🇺🇸`)
+- Replace with Korean flag version: `🇰🇷 / 🇺🇸` toggle
+
+(Check sigco3111 delta for exact format: `grep "🇰🇷" /tmp/sigco-delta-index.html | head -5`)
+
+- [ ] **Step 10: Verify S7 + S8 — README has sigco3111 identity AND Korean i18n**
 
 ```bash
-git add README.md README.ko.md
-git -c user.email=sisyphus@anthropic.local -c user.name=Sisyphus commit -m "feat(delta): apply Delta 2 — Korean description in README files"
+grep -c "sigco3111\|gh-traffic-monitor" README.md README.ko.md
+grep -c "🇰🇷\|lang.*ko" index.html
+```
+Expected: matches > 0 in all
+
+- [ ] **Step 11: Commit**
+
+```bash
+git add README.md README.ko.md index.html
+git -c user.email=sisyphus@anthropic.local -c user.name=Sisyphus commit -m "feat(delta): apply Delta 2 — Korean description + I18N dict + 🇰🇷 flag"
 ```
 
 ---
@@ -425,9 +483,9 @@ Expected: `200`
 - [ ] **Step S2: Library shows 23 items (verify via grep)**
 
 ```bash
-awk '/const LIBDATA=\[/{flag=1;next}/^\];/{flag=0}flag' index.html | grep -oE '\{[^}]*\}' | grep -c "ko:"
+awk '/const LIBDATA=\[/{flag=1;next}/^\];/{flag=0}flag' index.html | grep -oE "\{[^}]*\}" | grep -c "ko:"
 ```
-Expected: ~46 (each entry has both ko: and en:, so ~23 unique items × 2 = ~46)
+Expected: ~23 (each entry has one `ko:` field; sigco3111's curation has 23 items)
 
 - [ ] **Step S3a: LLM taxi Local mode (offline fallback)**
 
