@@ -483,17 +483,33 @@ Expected: `200`
 - [ ] **Step S2: Library shows 23 items (verify via grep)**
 
 ```bash
-awk '/const LIBDATA=\[/{flag=1;next}/^\];/{flag=0}flag' index.html | grep -oE "\{[^}]*\}" | grep -c "ko:"
+awk '/const LIBDATA=\[/{flag=1;next}flag && /^\];/{flag=0;exit}flag' index.html > /tmp/libdata.txt
+grep -c "ko:" /tmp/libdata.txt
+grep -c "en:" /tmp/libdata.txt
+grep -c "items:" /tmp/libdata.txt
 ```
-Expected: ~23 (each entry has one `ko:` field; sigco3111's curation has 23 items)
+Expected: `ko:` ~23 (sigco3111's 23 items × 1 Korean field each), `en:` ~23, `items:` 6 (categories)
+
+Note: this counts Korean keys as a proxy for "items present" — matches the spec requirement that each item has both `ko:` and `en:` fields.
 
 - [ ] **Step S3a: LLM taxi Local mode (offline fallback)**
 
-This requires browser automation (Playwright). Skip if unavailable:
+This requires browser automation (Playwright) for full validation. Without Playwright, fall back to a static check:
+
 ```bash
+# Static check: confirm Local mode fallback code exists
 grep -c "deterministicIntent\|localIntent" index.html
 ```
 Expected: matches > 0 (fallback code exists)
+
+For full validation (recommended if Playwright is installed):
+```bash
+# Playwright interaction test
+npx playwright test --grep "S3a Local mode" 2>&1 || \
+  echo "Playwright not configured — static check only"
+```
+
+Note: Without Playwright, S3a is only **partially verified** — the static check confirms code exists but doesn't test runtime behavior. Flag this as a known gap in the final summary.
 
 - [ ] **Step S4: gh-traffic-monitor builder runs**
 
