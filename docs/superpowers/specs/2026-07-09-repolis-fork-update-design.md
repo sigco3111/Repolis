@@ -91,8 +91,10 @@ Replace the base with `hyeonsangjeon/Repolis` (v1.64.0), then re-apply the 5 sig
 | S6 | Scholar system files exist | `ls SCHOLARS.md scholars.js` + `cat` shows persona registry | Bash |
 | S7 | README has sigco3111 identity | grep "sigco3111", "gh-traffic-monitor" in README | grep |
 | S8 | Korean i18n toggle works | `?lang=ko` → Korean UI visible | Playwright |
+| S9 | OWNER constant is exactly `'sigco3111'` | `grep "const OWNER = 'sigco3111'" index.html` returns 1 line | grep |
+| S3a | LLM taxi Local mode (offline fallback) | With no `CLOUDFLARE_API_TOKEN`, Local mode still returns top-K results via deterministic intent | Playwright (offline) |
 
-All 8 scenarios must PASS for completion.
+All 9 scenarios must PASS for completion.
 
 ## File-by-file change list
 
