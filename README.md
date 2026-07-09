@@ -25,13 +25,7 @@
 ## ✨ 30초 만에 도시 구경하기
 
 <p align="center">
-
-  <a href="https://sigco3111.github.io/Repolis/">
-
-    <img src="https://sigco3111.github.io/Repolis/assets/banner.svg" alt="Repolis Banner" width="800"/>
-
-  </a>
-
+  <a href="https://sigco3111.github.io/Repolis/"><img src="https://sigco3111.github.io/Repolis/assets/banner.svg" alt="Repolis Banner" width="800"/></a>
 </p>
 
 ### 👉 [**🌆 https://sigco3111.github.io/Repolis/**](https://sigco3111.github.io/Repolis/)
