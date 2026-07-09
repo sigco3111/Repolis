@@ -3204,7 +3204,46 @@ for(const z of ZONES) buildHub(z);
 function refreshHubSigns(){ for(const s of _HUB_SIGNS){ const m=s.board.material; if(m&&m.map){ m.map.dispose(); m.map=signTexture(s.z.icon+' '+(LANG==='ko'?s.z.ko:s.z.en), s.z.tone); m.needsUpdate=true; } } }
 
 /* ====================== CONTRIBUTION LIBRARY (special civic landmark) ====================== */
-const LIBREPO='https://github.com/hyeonsangjeon/Hyeonsang-AI-Contributions';
+const LIBREPO='https://github.com/sigco3111/opencode-harness-bridge';
+const LIBDATA=[
+  { icon:'🛠️', ko:'시그니처 OSS 도구', en:'Signature OSS tools', items:[
+    {t:{ko:'opencode-harness-bridge — Claude Code/Codex 하니스를 OpenCode로 안전 이주', en:'opencode-harness-bridge — Safe Claude Code/Codex → OpenCode migration'}, m:'sigco3111 · MIT', u:'https://github.com/sigco3111/opencode-harness-bridge'},
+    {t:{ko:'md-doctor — 마크다운 품질 진단 + 후처리 CLI', en:'md-doctor — Markdown quality diagnosis CLI'}, m:'sigco3111 · MIT', u:'https://github.com/sigco3111/md-doctor'},
+    {t:{ko:'cron-doctor — cron YAML 문법·의미·스키마 검증', en:'cron-doctor — cron YAML validator (syntax + semantics + schema)'}, m:'sigco3111 · MIT', u:'https://github.com/sigco3111/cron-doctor'},
+    {t:{ko:'hwp2md — 한글 HWP를 마크다운으로 (의존성 0)', en:'hwp2md — Korean HWP → clean markdown (zero-deps)'}, m:'sigco3111 · MIT', u:'https://github.com/sigco3111/hwp2md'},
+    {t:{ko:'opencode-trading — TradingCodex → OpenCode 어댑터', en:'opencode-trading — TradingCodex → OpenCode adapter'}, m:'sigco3111 · MIT', u:'https://github.com/sigco3111/opencode-trading'},
+  ]},
+  { icon:'🎮', ko:'AI 게임 / 전략 / RPG', en:'AI games · Strategy · RPG', items:[
+    {t:{ko:'ai-gm-core — AI 게임마스터 코어', en:'ai-gm-core — AI Game Master core engine'}, m:'sigco3111', u:'https://github.com/sigco3111/ai-gm-core'},
+    {t:{ko:'ai-gm-strategy-war — 전략/전쟁 장르 플러그인 (샘플: 고구려 391)', en:'ai-gm-strategy-war — Strategy/war genre plugin (seed: Goguryeo 391)'}, m:'sigco3111', u:'https://github.com/sigco3111/ai-gm-strategy-war'},
+    {t:{ko:'ai-gm-fantasy-rpg — 판타지 RPG 플러그인', en:'ai-gm-fantasy-rpg — Fantasy RPG genre plugin'}, m:'sigco3111', u:'https://github.com/sigco3111/ai-gm-fantasy-rpg'},
+    {t:{ko:'terrarium — 3D 방치형 생태계 시뮬레이션 (★2)', en:'terrarium — 3D idle ecosystem simulation (★2)'}, m:'sigco3111 · Three.js', u:'https://github.com/sigco3111/terrarium'},
+    {t:{ko:'real-estate-king — 부동산 매매/임대 시뮬레이션', en:'real-estate-king — Real estate trading/lease simulation'}, m:'sigco3111 · ★1', u:'https://github.com/sigco3111/real-estate-king'},
+  ]},
+  { icon:'🤖', ko:'AI 자동화 / 에이전트', en:'AI automation · Agents', items:[
+    {t:{ko:'ICBM2 — 사설 Hermes Agent (자동화 워크플로 + Notion + cron)', en:'ICBM2 — Private Hermes Agent (automation + Notion + cron)'}, m:'sigco3111 · private', u:'https://github.com/sigco3111/icbm2-knowledge-graph'},
+    {t:{ko:'icbm2-skills-marketplace — 스킬 마켓플레이스', en:'icbm2-skills-marketplace — Skill marketplace'}, m:'sigco3111', u:'https://github.com/sigco3111/icbm2-skills-marketplace'},
+    {t:{ko:'icbm2-knowledge-graph — 지식 그래프 자동 구축', en:'icbm2-knowledge-graph — Auto knowledge graph'}, m:'sigco3111 · ★1', u:'https://github.com/sigco3111/icbm2-knowledge-graph'},
+    {t:{ko:'opencode-usage-cli — OpenCode 사용량 체크 (★1)', en:'opencode-usage-cli — OpenCode usage check (★1)'}, m:'sigco3111', u:'https://github.com/sigco3111/opencode-usage-cli'},
+  ]},
+  { icon:'🏘️', ko:'커뮤니티 / 실험', en:'Community · Experiments', items:[
+    {t:{ko:'hitel-board — 90년대 PC통신 레트로 게시판 (★1)', en:'hitel-board — 90s Korean BBS retro bulletin board (★1)'}, m:'sigco3111', u:'https://github.com/sigco3111/hitel-board'},
+    {t:{ko:'dongne-today — 동네 오늘 (앱인토스 챌린지)', en:'dongne-today — Neighborhood today (Toss app-in challenge)'}, m:'sigco3111 · 2026', u:'https://github.com/sigco3111/dongne-today'},
+    {t:{ko:'blog-images — ICBM 블로그 이미지 호스팅', en:'blog-images — ICBM blog image hosting'}, m:'sigco3111', u:'https://github.com/sigco3111/blog-images'},
+  ]},
+  { icon:'🎨', ko:'3D / 비주얼 / 게임 에셋', en:'3D · Visual · Game assets', items:[
+    {t:{ko:'2048 — 클래식 퍼즐 게임', en:'2048 — Classic puzzle game'}, m:'sigco3111', u:'https://github.com/sigco3111/2048'},
+    {t:{ko:'3d-physics-lab — Three.js 물리 시뮬레이션', en:'3d-physics-lab — Three.js physics simulation'}, m:'sigco3111', u:'https://github.com/sigco3111/3d-physics-lab'},
+    {t:{ko:'3d-fractal — 3D 프랙탈 렌더링', en:'3d-fractal — 3D fractal renderer'}, m:'sigco3111', u:'https://github.com/sigco3111/3d-fractal'},
+    {t:{ko:'wobbly-tower — 흔들리는 탑 시뮬레이션', en:'wobbly-tower — Wobbly tower simulation'}, m:'sigco3111', u:'https://github.com/sigco3111/wobbly-tower'},
+    {t:{ko:'python-xmas-tree — 인터랙티브 크리스마스 트리', en:'python-xmas-tree — Interactive Christmas tree'}, m:'sigco3111', u:'https://github.com/sigco3111/python-xmas-tree'},
+  ]},
+  { icon:'📚', ko:'학습 / 강의 / 데이터', en:'Learning · Lectures · Data', items:[
+    {t:{ko:'myipynb — Jupyter 노트북 모음', en:'myipynb — Jupyter notebook collection'}, m:'sigco3111', u:'https://github.com/sigco3111/myipynb'},
+    {t:{ko:'yesno — 단순 결정 도우미', en:'yesno — Simple decision helper'}, m:'sigco3111', u:'https://github.com/sigco3111/yesno'},
+    {t:{ko:'sysmon — 시스템 모니터링', en:'sysmon — System monitoring'}, m:'sigco3111', u:'https://github.com/sigco3111/sysmon'},
+  ]},
+];
 /* Contribution Library data is generated daily from the Hyeonsang-AI-Contributions
    markdown into assets/contribution-library.json (scripts/build-contribution-library.mjs +
    .github/workflows/update-contribution-library.yml). It is fetched at runtime below, so the
