@@ -1,6 +1,6 @@
-# 🏙️ Repolis — sigco3111의 도시
+# 🏙️ Repolis — the City of Repos
 
-> **sigco3111의 모든 GitHub repo가 사는 3D 도시.** 건물은 트래픽이 자라고, LLM 택시가 안내한다.
+**sigco3111의 모든 GitHub repo가 사는 3D 도시** · 14일 데이터 사라지는 GitHub traffic을 평생 누적으로 보존
 
 <!-- 배지: GitHub 표준 -->
 <p align="left">
