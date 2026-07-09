@@ -5,6 +5,30 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.3.0] - 2026-07-09
+
+### 🎉 Fork-based integration with hyeonsangjeon/Repolis v1.64.0
+
+Adopts hyeonsangjeon's latest features while preserving sigco3111's identity.
+
+#### Added (from hyeonsangjeon v1.64.0)
+- **Kronos Council system** — Deterministic adjudicator (`council/engine.js`) + live debate streaming via Cloudflare Worker (gpt-5.4-mini SSE).
+- **Scholar NPCs** — POLARIS (taxi), VEGA (MS Docs engineer), RIGEL (cartographer) with KB grounding.
+- **Cloudflare Grounded Worker** — `cloudflare-taxi/src/grounded.js` for Azure AI Search + GitHub MCP integration.
+- **Visual improvements** — Sun sprite rendering, Passport/Course/Stamps UI, Contribution Library landmark.
+- **Project structure** — `AGENTS.md`, `docs/domain-model.md`, `llms.txt`, `repolis.yaml`, `.env.example`.
+- **Smoke tests** — `scripts/smoke.mjs` for static regression guards.
+
+#### Preserved sigco3111 deltas
+- `OWNER = 'sigco3111'` (in `index.html`)
+- Korean description (`README.md` + `README.ko.md`)
+- sigco3111 Library curation (6 categories × 25 works) — sigco3111의 OSS / 게임 / 에이전트 / 커뮤니티 / 3D / 학습 작품
+- gh-traffic-monitor backend (`scripts/build_repos.py` — zero-deps, single layer)
+- Dual cron (`traffic-refresh.yml` 4h + `refresh.yml` daily)
+
+#### Changed
+- README "What's different" section: now documents v0.3.0 status (was v0.2.0 = "last feature version" policy superseded).
+
 ## [0.2.1] - 2026-06-23
 
 ### Changed
