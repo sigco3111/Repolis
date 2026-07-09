@@ -2909,7 +2909,7 @@
 "views": 0,
 "visitors": 0,
 "clones": 0,
-"size": 685,
+"size": 1058,
 "open_issues": 0,
 "license": "MIT",
 "archived": false,
@@ -2921,7 +2921,7 @@
 "tracked": true,
 "first_seen": "2026-06-23",
 "last_tracked": "2026-07-09",
-"social": "https://opengraph.githubassets.com/4cc0fbc3fbda82840dbb149383fbd7cfb5364b529110a4b816ae1de4a4ef23ce/sigco3111/Repolis",
+"social": "https://opengraph.githubassets.com/e3579d49252da373d8026fe8fdc3cebef800c51022a20593eac4595188105d34/sigco3111/Repolis",
 "social_custom": false,
 "score": 0.416,
 "rank": 94
@@ -4821,6 +4821,36 @@
 "rank": 157
 },
 {
+"repo": "heat-conduction-heatmap",
+"desc": "[코드깎는노인-코딩미션] 열전도 히트맵 (Thermodynamics)",
+"lang": "HTML",
+"topics": [],
+"url": "https://github.com/sigco3111/heat-conduction-heatmap",
+"home": "",
+"stars": 0,
+"forks": 0,
+"fork": false,
+"views": 0,
+"visitors": 0,
+"clones": 0,
+"size": 3,
+"open_issues": 0,
+"license": "",
+"archived": false,
+"default_branch": "main",
+"release_tag": "",
+"release_date": "",
+"created": "2026-07-09",
+"pushed": "2026-07-09",
+"tracked": true,
+"first_seen": "2026-07-09",
+"last_tracked": "2026-07-09",
+"social": "https://opengraph.githubassets.com/b964002ddd1a93881bfb30c86f244f078f6aa147a57db003c13fdc8a60accdc0/sigco3111/heat-conduction-heatmap",
+"social_custom": false,
+"score": 0.0,
+"rank": 158
+},
+{
 "repo": "heavy-chain-ik",
 "desc": "[코드깎는노인-코딩미션] 무거운 사슬과 물리 (Inverse Kinematics)",
 "lang": "HTML",
@@ -4848,7 +4878,7 @@
 "social": "https://opengraph.githubassets.com/a7d77ebfecbf5fbfaad7d9f55b9bb6c4517f567759ac31590ccb70de76242022/sigco3111/heavy-chain-ik",
 "social_custom": false,
 "score": 0.0,
-"rank": 158
+"rank": 159
 },
 {
 "repo": "hermes-landing",
@@ -4878,7 +4908,7 @@
 "social": "https://opengraph.githubassets.com/7e46a907ed5fcb5e26314055b717e052eba32905e7c8eaf2bbf2b90ef3e53f68/sigco3111/hermes-landing",
 "social_custom": false,
 "score": 0.0,
-"rank": 159
+"rank": 160
 },
 {
 "repo": "interactive-voronoi",
@@ -4908,7 +4938,7 @@
 "social": "https://opengraph.githubassets.com/97d226f29c7a274ec3597a7de5750069e23a83bb0c6c9748fe7913e0d9a89812/sigco3111/interactive-voronoi",
 "social_custom": false,
 "score": 0.0,
-"rank": 160
+"rank": 161
 },
 {
 "repo": "ios_hyperclovax",
@@ -4938,7 +4968,7 @@
 "social": "https://opengraph.githubassets.com/f66629ddb5f9983703605f1391a561a20ea533c05188efa4dd6bddd060d7f270/sigco3111/ios_hyperclovax",
 "social_custom": false,
 "score": 0.0,
-"rank": 161
+"rank": 162
 },
 {
 "repo": "jelly-slime",
@@ -4968,7 +4998,7 @@
 "social": "https://opengraph.githubassets.com/cc6af5444e6671de456974b8b0619e778cd4c47fee674245daac39e31b0e9ebc/sigco3111/jelly-slime",
 "social_custom": false,
 "score": 0.0,
-"rank": 162
+"rank": 163
 },
 {
 "repo": "KakaoSplit",
@@ -4998,7 +5028,7 @@
 "social": "https://opengraph.githubassets.com/3f58145192e6fa901422c725adb7d55dece2e4eba366db88a85e6a13a5716188/sigco3111/KakaoSplit",
 "social_custom": false,
 "score": 0.0,
-"rank": 163
+"rank": 164
 },
 {
 "repo": "ke-globe",
@@ -5028,7 +5058,7 @@
 "social": "https://opengraph.githubassets.com/5132b3c60aed59ceabcdb70547df0ac44346c1fcfae81e88fb9fa61eacf00b62/sigco3111/ke-globe",
 "social_custom": false,
 "score": 0.0,
-"rank": 164
+"rank": 165
 },
 {
 "repo": "lorenz-attractor",
@@ -5058,7 +5088,7 @@
 "social": "https://opengraph.githubassets.com/bdaab378390f59bc8ec89b209c24d19cde259b766186bf898f8ba61a240f597c/sigco3111/lorenz-attractor",
 "social_custom": false,
 "score": 0.0,
-"rank": 165
+"rank": 166
 },
 {
 "repo": "mac-board",
@@ -5088,7 +5118,7 @@
 "social": "https://opengraph.githubassets.com/e5880abbdef36ff4290cc3daa31ca9dd513615cb86549f6c5526b51cf3f25e99/sigco3111/mac-board",
 "social_custom": false,
 "score": 0.0,
-"rank": 166
+"rank": 167
 },
 {
 "repo": "mandelbrot-kaleidoscope",
@@ -5118,7 +5148,7 @@
 "social": "https://opengraph.githubassets.com/1d28a13d6dfa4b83375a4ccdfbfb47b69ea7e706a2ee586bbe0c163eaa6b2d50/sigco3111/mandelbrot-kaleidoscope",
 "social_custom": false,
 "score": 0.0,
-"rank": 167
+"rank": 168
 },
 {
 "repo": "md-doctor",
@@ -5148,7 +5178,7 @@
 "social": "https://opengraph.githubassets.com/2f954e9c1a2d7c09a7bf5fe85ab99a1e887bf204bd9364053dec0c99300266aa/sigco3111/md-doctor",
 "social_custom": false,
 "score": 0.0,
-"rank": 168
+"rank": 169
 },
 {
 "repo": "nbody-simulation",
@@ -5178,7 +5208,7 @@
 "social": "https://opengraph.githubassets.com/dca351165ec0c3c8cb621f103353fa1082e0582cd4984415cddc1c048a4dd278/sigco3111/nbody-simulation",
 "social_custom": false,
 "score": 0.0,
-"rank": 169
+"rank": 170
 },
 {
 "repo": "offroad-suspension",
@@ -5208,7 +5238,7 @@
 "social": "https://opengraph.githubassets.com/5cab51c1b8dbbc4e3ce41f00cbfab2075cdb5ebbc3ce1e5be1f696d49516d121/sigco3111/offroad-suspension",
 "social_custom": false,
 "score": 0.0,
-"rank": 170
+"rank": 171
 },
 {
 "repo": "one-card-game",
@@ -5238,37 +5268,37 @@
 "social": "https://opengraph.githubassets.com/2fa87cf5538dcc2ae3a755c1cef0e0715b49db07551b28569ca51dd4c18bd912/sigco3111/one-card-game",
 "social_custom": false,
 "score": 0.0,
-"rank": 171
+"rank": 172
 },
 {
 "repo": "optics-prism-lab",
 "desc": "[코드깎는노인-코딩미션] 빛의 굴절과 프리즘 (Optics Lab)",
-"lang": "Other",
+"lang": "HTML",
 "topics": [],
 "url": "https://github.com/sigco3111/optics-prism-lab",
-"home": "",
+"home": "https://optics-prism-lab.vercel.app",
 "stars": 0,
 "forks": 0,
 "fork": false,
 "views": 0,
 "visitors": 0,
 "clones": 0,
-"size": 3,
+"size": 28,
 "open_issues": 0,
-"license": "",
+"license": "MIT",
 "archived": false,
 "default_branch": "main",
 "release_tag": "",
 "release_date": "",
 "created": "2026-07-08",
-"pushed": "2026-07-08",
+"pushed": "2026-07-09",
 "tracked": true,
 "first_seen": "2026-07-09",
 "last_tracked": "2026-07-09",
-"social": "https://opengraph.githubassets.com/8ef075dffe88b0dafa61673ebc9f0cee8979b83d9299a201aa50ec03efd95d74/sigco3111/optics-prism-lab",
+"social": "https://opengraph.githubassets.com/10b4017a1fb006a3e127a940e888df1ff7a1c050959bc9322c38d74035d857c5/sigco3111/optics-prism-lab",
 "social_custom": false,
 "score": 0.0,
-"rank": 172
+"rank": 173
 },
 {
 "repo": "pages",
@@ -5298,7 +5328,7 @@
 "social": "https://opengraph.githubassets.com/47855eeff12a072771d5d4101f959cc3fc994e2244dd2da77fd8ee52544513fe/sigco3111/pages",
 "social_custom": false,
 "score": 0.0,
-"rank": 173
+"rank": 174
 },
 {
 "repo": "particle-fireworks",
@@ -5328,7 +5358,7 @@
 "social": "https://opengraph.githubassets.com/5c42904205fc8b16b35f3a01120308924eefe023f875ea878d1e8dd9a716fa2f/sigco3111/particle-fireworks",
 "social_custom": false,
 "score": 0.0,
-"rank": 174
+"rank": 175
 },
 {
 "repo": "pendulum-wave",
@@ -5358,7 +5388,7 @@
 "social": "https://opengraph.githubassets.com/e1d43f5292fc58464ebf81fbec847ab79451eadc99d7fd5456c4a09b0d4dfea3/sigco3111/pendulum-wave",
 "social_custom": false,
 "score": 0.0,
-"rank": 175
+"rank": 176
 },
 {
 "repo": "photosynthesis-simulator",
@@ -5388,7 +5418,7 @@
 "social": "https://opengraph.githubassets.com/2c26c710f8c4dc4190f9abd7935cc756719ea66c54b9a1a556af208c80ecf45b/sigco3111/photosynthesis-simulator",
 "social_custom": false,
 "score": 0.0,
-"rank": 176
+"rank": 177
 },
 {
 "repo": "poker-king",
@@ -5418,7 +5448,7 @@
 "social": "https://opengraph.githubassets.com/867f85b662fd9bc39ae4d535cdd6c027bf72e73232e427b759cb5149e9a8c42e/sigco3111/poker-king",
 "social_custom": false,
 "score": 0.0,
-"rank": 177
+"rank": 178
 },
 {
 "repo": "procedural-city",
@@ -5448,7 +5478,7 @@
 "social": "https://opengraph.githubassets.com/a836ae5220efad02b5a6264ad42440eddc57f2a9be1daefd9a1a28115a7144c6/sigco3111/procedural-city",
 "social_custom": false,
 "score": 0.0,
-"rank": 178
+"rank": 179
 },
 {
 "repo": "ray-cast-shadows",
@@ -5478,7 +5508,7 @@
 "social": "https://opengraph.githubassets.com/6e9acab5a6fa6f8390897c500aeb41acfb41ec34944324829be2b54b443043ae/sigco3111/ray-cast-shadows",
 "social_custom": false,
 "score": 0.0,
-"rank": 179
+"rank": 180
 },
 {
 "repo": "raycasting-doom",
@@ -5508,7 +5538,7 @@
 "social": "https://opengraph.githubassets.com/30e499cd3361084ee57e39a82b7358fa81e9f2f0588ca31480e06064c1f4f134/sigco3111/raycasting-doom",
 "social_custom": false,
 "score": 0.0,
-"rank": 180
+"rank": 181
 },
 {
 "repo": "repo-dna-analyzer",
@@ -5538,7 +5568,7 @@
 "social": "https://opengraph.githubassets.com/648dd51251b6b6fbffa09c1604b1c772d257d786b17a58ec8dca692a64d19f2a/sigco3111/repo-dna-analyzer",
 "social_custom": false,
 "score": 0.0,
-"rank": 181
+"rank": 182
 },
 {
 "repo": "retro-synthwave-shooter",
@@ -5568,7 +5598,7 @@
 "social": "https://opengraph.githubassets.com/3cd078dc3cf7a0a86588dbffac1075ba077b18ab91f4786d35421d4718215d9d/sigco3111/retro-synthwave-shooter",
 "social_custom": false,
 "score": 0.0,
-"rank": 182
+"rank": 183
 },
 {
 "repo": "sigco3111",
@@ -5598,7 +5628,7 @@
 "social": "https://opengraph.githubassets.com/895bf01ea2e6677da4fb77805b7e470b4a76a595f88f10c02f2ac75e381145ff/sigco3111/sigco3111",
 "social_custom": false,
 "score": 0.0,
-"rank": 183
+"rank": 184
 },
 {
 "repo": "space-board",
@@ -5628,7 +5658,7 @@
 "social": "https://opengraph.githubassets.com/8d4c2b15c58fd62a7aa14ed53b8562f697b8a92c8be6a09e1f903ec95904eced/sigco3111/space-board",
 "social_custom": false,
 "score": 0.0,
-"rank": 184
+"rank": 185
 },
 {
 "repo": "steam-board",
@@ -5658,7 +5688,7 @@
 "social": "https://opengraph.githubassets.com/56a3fda915fad53eedaccad01f20fb07802410c1d136734202720b36e70cf1c2/sigco3111/steam-board",
 "social_custom": false,
 "score": 0.0,
-"rank": 185
+"rank": 186
 },
 {
 "repo": "synthwave-terrain",
@@ -5688,7 +5718,7 @@
 "social": "https://opengraph.githubassets.com/5dcccfae8354f9041957a6048ac067ef7c1d9ffb4b3fe153d5b75bff84cabae0/sigco3111/synthwave-terrain",
 "social_custom": false,
 "score": 0.0,
-"rank": 186
+"rank": 187
 },
 {
 "repo": "sys8-board",
@@ -5718,7 +5748,7 @@
 "social": "https://opengraph.githubassets.com/196d136421084078a4eb19c1b019dc840a3687bcbe754a50f53dfd3afa7f8eaa/sigco3111/sys8-board",
 "social_custom": false,
 "score": 0.0,
-"rank": 187
+"rank": 188
 },
 {
 "repo": "texture-forge",
@@ -5748,7 +5778,7 @@
 "social": "https://opengraph.githubassets.com/83466f996f1604835646b4df2c0d84f86313324c638b109e14ac40abf56c41d6/sigco3111/texture-forge",
 "social_custom": false,
 "score": 0.0,
-"rank": 188
+"rank": 189
 },
 {
 "repo": "ubuntu-board",
@@ -5778,7 +5808,7 @@
 "social": "https://opengraph.githubassets.com/2cf1216e304230f19ac78e5850cf3bcf3e3722beda2bf7001f17fbb675014b78/sigco3111/ubuntu-board",
 "social_custom": false,
 "score": 0.0,
-"rank": 189
+"rank": 190
 },
 {
 "repo": "voronoi-glass-fracture",
@@ -5808,7 +5838,7 @@
 "social": "https://opengraph.githubassets.com/5e544cdd3f684202a602b034444503e2579eaf5f0d3c0d4fa23e1e5fceebaf6b/sigco3111/voronoi-glass-fracture",
 "social_custom": false,
 "score": 0.0,
-"rank": 190
+"rank": 191
 },
 {
 "repo": "win11-board",
@@ -5838,7 +5868,7 @@
 "social": "https://opengraph.githubassets.com/36e3eed345a81230f6a3ff6c1b0934068ff1e8cb91c6a9c87fb24adf529d395f/sigco3111/win11-board",
 "social_custom": false,
 "score": 0.0,
-"rank": 191
+"rank": 192
 },
 {
 "repo": "winxp-board",
@@ -5868,7 +5898,7 @@
 "social": "https://opengraph.githubassets.com/36e3eed345a81230f6a3ff6c1b0934068ff1e8cb91c6a9c87fb24adf529d395f/sigco3111/winxp-board",
 "social_custom": false,
 "score": 0.0,
-"rank": 192
+"rank": 193
 },
 {
 "repo": "wobbly-tower",
@@ -5898,7 +5928,7 @@
 "social": "https://opengraph.githubassets.com/da7153c9f5a6312aecaf964fef4ba80f5e972e3725be0185da2831470c744082/sigco3111/wobbly-tower",
 "social_custom": false,
 "score": 0.0,
-"rank": 193
+"rank": 194
 },
 {
 "repo": "wordle",
@@ -5928,7 +5958,7 @@
 "social": "https://opengraph.githubassets.com/b0450945e36b19ab133e5334507a406e39ab9a971c6ec1c0ca7c2cee5397b535/sigco3111/wordle",
 "social_custom": false,
 "score": 0.0,
-"rank": 194
+"rank": 195
 },
 {
 "repo": "xmrig-dashboard",
@@ -5958,6 +5988,6 @@
 "social": "https://opengraph.githubassets.com/9f17128e18b4f036e6c2830a7d2526463f662ef7c8b9e25bb062ff4bdde484d8/sigco3111/xmrig-dashboard",
 "social_custom": false,
 "score": 0.0,
-"rank": 195
+"rank": 196
 }
 ]
