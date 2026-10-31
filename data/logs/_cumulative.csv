@@ -78,17 +78,17 @@ sigco3111/apex-formula,2026-10-31,2026-10-31,0,0,1
 sigco3111/api-playground,2026-06-23,2026-10-31,0,0,1
 sigco3111/appscript_board,2026-06-23,2026-10-31,0,0,1
 sigco3111/asciirogue,2026-10-31,2026-10-31,0,0,0
-sigco3111/assets-2d-pixel,2026-10-31,2026-10-31,0,0,0
-sigco3111/assets-3d-lowpoly,2026-10-31,2026-10-31,0,0,0
-sigco3111/assets-audio,2026-10-31,2026-10-31,0,0,0
-sigco3111/assets-ui-icons,2026-10-31,2026-10-31,0,0,0
+sigco3111/assets-2d-pixel,2026-10-31,2026-10-31,0,0,1
+sigco3111/assets-3d-lowpoly,2026-10-31,2026-10-31,0,0,1
+sigco3111/assets-audio,2026-10-31,2026-10-31,0,0,1
+sigco3111/assets-ui-icons,2026-10-31,2026-10-31,0,0,1
 sigco3111/astral-forge-threejs,2026-10-31,2026-10-31,0,0,1
 sigco3111/astrocartography,2026-06-23,2026-10-31,0,0,1
 sigco3111/athena-crisis,2026-10-31,2026-10-31,0,0,1
 sigco3111/aurora-fluid,2026-10-31,2026-10-31,0,0,0
 sigco3111/auto-chess,2026-10-31,2026-10-31,0,0,1
 sigco3111/auto-janggi,2026-10-31,2026-10-31,0,0,1
-sigco3111/backpack-labyrinth,2026-10-31,2026-10-31,0,0,0
+sigco3111/backpack-labyrinth,2026-10-31,2026-10-31,0,0,1
 sigco3111/batgrl-gallery,2026-10-31,2026-10-31,0,0,1
 sigco3111/blacksite,2026-10-31,2026-10-31,0,0,1
 sigco3111/block-simCity,2026-06-23,2026-10-31,0,0,1
@@ -147,7 +147,7 @@ sigco3111/elderglen,2026-10-31,2026-10-31,0,0,1
 sigco3111/emerald-bayou,2026-10-31,2026-10-31,0,0,1
 sigco3111/engineworks-kr,2026-10-31,2026-10-31,0,0,1
 sigco3111/enterprise_ceo,2026-06-23,2026-10-31,0,0,1
-sigco3111/esp32-s3-rlcd-4.2-guide,2026-10-31,2026-10-31,0,0,0
+sigco3111/esp32-s3-rlcd-4.2-guide,2026-10-31,2026-10-31,0,0,1
 sigco3111/evolve-kr,2026-10-31,2026-10-31,0,0,0
 sigco3111/ez-tree,2026-10-31,2026-10-31,0,0,1
 sigco3111/fable5-world-demo,2026-10-31,2026-10-31,0,0,1
@@ -158,7 +158,7 @@ sigco3111/flamesword-action,2026-10-31,2026-10-31,0,0,0
 sigco3111/forest-survivor-3d,2026-10-31,2026-10-31,0,0,1
 sigco3111/fractal-tree,2026-10-31,2026-10-31,0,0,0
 sigco3111/fruitbox,2026-10-31,2026-10-31,0,0,1
-sigco3111/game-asset-catalog,2026-10-31,2026-10-31,0,0,0
+sigco3111/game-asset-catalog,2026-10-31,2026-10-31,0,0,1
 sigco3111/gamedev-lite,2026-06-23,2026-10-31,0,0,1
 sigco3111/gateheavens-shmup,2026-10-31,2026-10-31,0,0,0
 sigco3111/gazette-trend-analyzer,2026-06-23,2026-10-31,0,0,1
@@ -291,7 +291,7 @@ sigco3111/rpg-adv-bt,2026-06-23,2026-10-31,0,0,1
 sigco3111/rpg-script-editor,2026-06-23,2026-10-31,0,0,1
 sigco3111/rzweb,2026-06-23,2026-10-31,0,0,1
 sigco3111/sakura-idle,2026-10-31,2026-10-31,0,0,1
-sigco3111/san11-web,2026-10-31,2026-10-31,0,0,0
+sigco3111/san11-web,2026-10-31,2026-10-31,0,0,1
 sigco3111/sand-blast,2026-06-23,2026-10-31,0,0,1
 sigco3111/sand-sandbox,2026-06-23,2026-10-31,0,0,1
 sigco3111/sango-rising-dragons-kr,2026-10-31,2026-10-31,0,0,1
@@ -356,6 +356,7 @@ sigco3111/world-bank-board,2026-06-23,2026-10-31,0,0,1
 sigco3111/world-box,2026-06-23,2026-10-31,0,0,2
 sigco3111/world-data-map,2026-06-23,2026-10-31,0,0,1
 sigco3111/xcom-lite,2026-06-23,2026-10-31,0,0,2
+sigco3111/xiaozhi-rlcd-4.2-cdc,2026-10-31,2026-10-31,0,0,1
 sigco3111/xmrig-dashboard,2026-10-31,2026-10-31,0,0,0
 sigco3111/youtube-board,2026-06-23,2026-10-31,0,0,1
 sigco3111/yt-download,2026-06-23,2026-10-31,0,0,1
