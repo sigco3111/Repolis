@@ -1,49 +1,56 @@
 name: Traffic refresh (faster)
 
 # refresh.yml은 매일 1회 전체 빌드 → 무료 한도 보호.
-# 이 워크플로는 4시간마다 gh-traffic-monitor만 돌려서
-# data/logs/의 traffic 데이터를 자주 갱신.
-# build_repos.py + GitHub Pages는 daily refresh.yml에 맡김.
+# 이 워크플로는 4시간마다 traffic 수집만 돌려서
+# data/towns/<owner>/logs 의 traffic 데이터를 자주 갱신 (v1.98 자체 수집기 사용).
+# build_repos.py + 전체 검증은 daily refresh.yml에 맡김.
 
 on:
   schedule:
     - cron: "0 */4 * * *"  # 4시간마다 (KST 04/08/12/16/20/00)
   workflow_dispatch:
 
+permissions:
+  contents: write
+
+concurrency:
+  group: traffic-refresh-repolis
+  cancel-in-progress: false
+
 jobs:
   traffic:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
+    env:
+      GH_PAT: ${{ secrets.GH_PAT }}
+      REPO_OWNER: ${{ github.repository_owner }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GH_PAT || github.token }}
 
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
 
-      - name: Install gh-traffic-monitor
+      - name: Select owner-scoped traffic directory
         run: |
-          git clone https://github.com/sigco3111/gh-traffic-monitor.git /tmp/gtm
-          cd /tmp/gtm
-          pip install -e .
+          if [ "${REPO_OWNER,,}" = "hyeonsangjeon" ]; then
+            echo "GTM_DIR=data" >> "$GITHUB_ENV"
+          else
+            echo "GTM_DIR=data/towns/$REPO_OWNER" >> "$GITHUB_ENV"
+          fi
 
       - name: Collect traffic data only
+        # 기존 v1.64 워크플로와 동일한 권한: GH_PAT이 있으면 쓰고, 없으면 기본 GITHUB_TOKEN (권한 확대 없음)
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          mkdir -p data/logs
-          python -m gh_traffic_monitor \
-            --owner sigco3111 \
-            --log-dir ./data/logs \
-            collect \
-            --delay 0.3
+          GH_TOKEN: ${{ secrets.GH_PAT || github.token }}
+        run: LOGS_DIR="$GTM_DIR/logs" python3 scripts/collect_traffic.py
 
       - name: Commit traffic data only
         run: |
           git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/logs/
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/
           if git diff --cached --quiet; then
             echo "No traffic changes"
             exit 0
