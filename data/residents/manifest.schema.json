@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://hyeonsangjeon.github.io/Repolis/data/residents/manifest.schema.json",
+  "$id": "https://sigco3111.github.io/Repolis/data/residents/manifest.schema.json",
   "title": "Repolis resident manifest",
   "description": "Boot manifest and the only resident artifact that carries the build clock and the dated Shared city reference.",
   "type": "object",
