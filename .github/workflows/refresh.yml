@@ -1,64 +1,89 @@
 name: Refresh Repolis data
 
 on:
-  # 매일 1회 자동 실행 (KST 09:00)
   schedule:
-    - cron: "0 0 * * *"
-  # 수동 트리거 (gh workflow run refresh.yml)
-  workflow_dispatch:
-  # 4시간마다 gh-traffic-monitor 단독 갱신 (저장소 추가/삭제 빠른 반영)
-  # Actions 무료 한도 보호를 위해 refresh.yml은 daily, traffic은 별도 워크플로
-  push:
-    branches: [main]
-    paths:
-      - "scripts/build_repos.py"
-      - ".github/workflows/refresh.yml"
+    - cron: "17 18 * * *" # daily ~03:17 KST
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-repolis
+  cancel-in-progress: false
 
 jobs:
   refresh:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
+    env:
+      GH_PAT: ${{ secrets.GH_PAT }}
+      REPO_OWNER: ${{ github.repository_owner }}
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout Repolis
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GH_PAT || github.token }}
 
-      - name: Setup Python
+      - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
 
-      - name: Install gh-traffic-monitor
+      - name: Select owner-scoped traffic directory
         run: |
-          git clone https://github.com/sigco3111/gh-traffic-monitor.git /tmp/gtm
-          cd /tmp/gtm
-          pip install -e .
+          if [ "${REPO_OWNER,,}" = "hyeonsangjeon" ]; then
+            echo "GTM_DIR=data" >> "$GITHUB_ENV"
+          else
+            echo "GTM_DIR=data/towns/$REPO_OWNER" >> "$GITHUB_ENV"
+          fi
 
-      - name: Collect traffic data
+      - name: Collect traffic into data/logs
+        if: ${{ env.GH_PAT != '' }}
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ env.GH_PAT }}
+        run: LOGS_DIR="$GTM_DIR/logs" python3 scripts/collect_traffic.py
+
+      - name: Explain metadata-only mode
+        if: ${{ env.GH_PAT == '' }}
+        run: echo "GH_PAT is not set; building from public metadata. Add GH_PAT later to grow cumulative traffic."
+
+      - name: Set deterministic city reference day
+        run: echo "CITY_STATE_AS_OF=$(date -u +%FT00:00:00Z)" >> "$GITHUB_ENV"
+
+      - name: Build generated city data
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT || github.token }}
+        run: python3 scripts/build_repos.py
+
+      - name: Validate deterministic city state
         run: |
-          mkdir -p data/logs
-          python -m gh_traffic_monitor \
-            --owner sigco3111 \
-            --log-dir ./data/logs \
-            collect \
-            --delay 0.3
+          python3 scripts/test_city_state.py
+          python3 scripts/validate_city_state.py
+          python3 scripts/test_resident_profiles.py
+          python3 scripts/validate_resident_profiles.py
+          python3 scripts/test_fork_lineage.py
+          python3 scripts/scan_public_artifacts.py
+          node scripts/validate-lore-fragments.mjs
+          node scripts/test-city-time.mjs
+          node scripts/test-session-footprints.mjs
+          node scripts/test-fork-lineage.mjs
+          node scripts/smoke.mjs
 
-      - name: Build repos.json
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          REPO_OWNER: sigco3111
-          GTL_DIR: data/logs
-        run: python scripts/build_repos.py
-
-      - name: Commit and push
+      - name: Commit if changed
         run: |
           git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/ repos.json
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A data repos.json cloudflare-taxi/src/generated/resident-registry.js
           if git diff --cached --quiet; then
-            echo "No changes to commit"
-            exit 0
+            echo "no changes"
+          else
+            git commit -m "chore: refresh Repolis traffic + data ($(date -u +%F))"
+            # Rebase-and-retry so an overlapping run (manual + scheduled) never loses a push
+            for i in 1 2 3 4 5; do
+              if git push; then echo "pushed"; exit 0; fi
+              echo "push rejected (attempt $i) — rebasing on latest main"
+              git pull --rebase --autostash origin main
+            done
+            echo "push failed after retries" >&2
+            exit 1
           fi
-          git commit -m "chore: refresh Repolis data ($(date -u +%Y-%m-%dT%H:%M:%SZ))"
-          git push
