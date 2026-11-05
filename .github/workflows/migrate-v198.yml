@@ -32,9 +32,10 @@ jobs:
 
       - name: Apply bundle (preserve .git and data/logs)
         run: |
-          find . -mindepth 1 -maxdepth 1 ! -name .git ! -name data -exec rm -rf {} +
+          find . -mindepth 1 -maxdepth 1 ! -name .git ! -name data ! -name .github -exec rm -rf {} +
+          find .github -mindepth 1 -maxdepth 1 ! -name workflows -exec rm -rf {} +
           find data -mindepth 1 -maxdepth 1 ! -name logs -exec rm -rf {} +
-          tar xzf /tmp/bundle.tar.gz
+          tar xzf /tmp/bundle.tar.gz --exclude='.github/workflows*'
 
       - name: Commit migration (rebase-retry so concurrent data commits are kept)
         run: |
