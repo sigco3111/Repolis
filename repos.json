@@ -99,7 +99,7 @@
 "views": 0,
 "visitors": 0,
 "clones": 0,
-"size": 9113,
+"size": 9177,
 "open_issues": 0,
 "license": "",
 "archived": false,
@@ -107,10 +107,10 @@
 "release_tag": "",
 "release_date": "",
 "created": "2026-04-11",
-"pushed": "2026-11-04",
+"pushed": "2026-11-05",
 "tracked": true,
 "first_seen": "2026-06-23",
-"social": "https://opengraph.githubassets.com/ad4df39de68f67bffacd5f9973c70739ccb8b4169a40c29a247969a82e4533a8/sigco3111/icbm2-knowledge-graph",
+"social": "https://opengraph.githubassets.com/bab46f5ef35b0c9d0253acff06c034b216c27da5f3024eb5635772cd6e2c96d2/sigco3111/icbm2-knowledge-graph",
 "social_custom": false,
 "score": 0.965,
 "rank": 3
@@ -4362,7 +4362,7 @@
 "views": 0,
 "visitors": 0,
 "clones": 0,
-"size": 415,
+"size": 419,
 "open_issues": 0,
 "license": "",
 "archived": false,
@@ -4370,10 +4370,10 @@
 "release_tag": "",
 "release_date": "",
 "created": "2026-10-16",
-"pushed": "2026-11-04",
+"pushed": "2026-11-05",
 "tracked": true,
 "first_seen": "2026-11-04",
-"social": "https://opengraph.githubassets.com/33c198ff6d1967cb3fb9a203d3014f927248465eb337d10e593d7e1247d9c161/sigco3111/instinct-usage-dashboard",
+"social": "https://opengraph.githubassets.com/68e18b88da73c2f433fefa2954e35cb2bcd50c8db92457ddc8090edde7eb1afb/sigco3111/instinct-usage-dashboard",
 "social_custom": false,
 "score": 0.416,
 "rank": 148
@@ -6461,7 +6461,7 @@
 "views": 0,
 "visitors": 0,
 "clones": 0,
-"size": 21098,
+"size": 21102,
 "open_issues": 0,
 "license": "MIT",
 "archived": false,
@@ -6472,7 +6472,7 @@
 "pushed": "2026-11-05",
 "tracked": true,
 "first_seen": "2026-06-23",
-"social": "https://opengraph.githubassets.com/72917d282fcad4c29e0f54064376ac4395257f8e6cd1eb07499fc2017cc3816c/sigco3111/Repolis",
+"social": "https://opengraph.githubassets.com/70e16d8ac9f9c74f4c5a8f42935d635e83a04309ad9560463da6210e963c4447/sigco3111/Repolis",
 "social_custom": false,
 "score": 0.416,
 "rank": 219
@@ -9397,6 +9397,35 @@
 "rank": 318
 },
 {
+"repo": "cheonha-sambun",
+"desc": "오리지널 삼국지 전술 RPG (천하삼분) - HTML5 Canvas 턴제 전술, 첫 플레이어블 v0.1",
+"lang": "JavaScript",
+"topics": [],
+"url": "https://github.com/sigco3111/cheonha-sambun",
+"home": "",
+"stars": 0,
+"forks": 0,
+"fork": false,
+"views": 0,
+"visitors": 0,
+"clones": 0,
+"size": 0,
+"open_issues": 0,
+"license": "",
+"archived": false,
+"default_branch": "main",
+"release_tag": "",
+"release_date": "",
+"created": "2026-11-05",
+"pushed": "2026-11-05",
+"tracked": false,
+"first_seen": "",
+"social": "https://opengraph.githubassets.com/362f4b7ad8757a7399f7af2d4575ba21a378a340ed4ea24e498c5981f87836cc/sigco3111/cheonha-sambun",
+"social_custom": false,
+"score": 0.0,
+"rank": 319
+},
+{
 "repo": "clipboard-history-mac",
 "desc": "🟢 [원작] (콘텐츠) · macOS 메뉴바 상주 클립보드 히스토리 — SwiftUI MenuBarExtra + NSPasteboard 폴링 + 기존 단일 HTML 임베드",
 "lang": "Swift",
@@ -9423,7 +9452,7 @@
 "social": "https://opengraph.githubassets.com/62d13acb876aefdb4b36326f52eb542f4cb348e0d3657a80779b306710ada0ee/sigco3111/clipboard-history-mac",
 "social_custom": false,
 "score": 0.0,
-"rank": 319
+"rank": 320
 },
 {
 "repo": "cloth-simulation",
@@ -9452,7 +9481,7 @@
 "social": "https://opengraph.githubassets.com/eb1caa4db4063460b56625d7ea7713bf943c66eb1731f9568b25ee029e4a9d8e/sigco3111/cloth-simulation",
 "social_custom": false,
 "score": 0.0,
-"rank": 320
+"rank": 321
 },
 {
 "repo": "core-image-converter",
@@ -9481,7 +9510,7 @@
 "social": "https://opengraph.githubassets.com/ff32c63b6135839a581268fc2fa42ce3c13a54109f701b753afaeeafb0903062/sigco3111/core-image-converter",
 "social_custom": false,
 "score": 0.0,
-"rank": 321
+"rank": 322
 },
 {
 "repo": "decision-genie",
@@ -9510,7 +9539,7 @@
 "social": "https://opengraph.githubassets.com/0ea96b7f6df46753f97c75adc1d331883aed0b0b12e58c3ae2a99d9391d69756/sigco3111/decision-genie",
 "social_custom": false,
 "score": 0.0,
-"rank": 322
+"rank": 323
 },
 {
 "repo": "dnb-action-rpg",
@@ -9539,7 +9568,7 @@
 "social": "https://opengraph.githubassets.com/27ed45d63f0898d724dfa2b1cec2417cc75dd0ac781f251a65d1fba212502081/sigco3111/dnb-action-rpg",
 "social_custom": false,
 "score": 0.0,
-"rank": 323
+"rank": 324
 },
 {
 "repo": "dnb-map-editor",
@@ -9568,7 +9597,7 @@
 "social": "https://opengraph.githubassets.com/c8dcb908d83ec8e88893479ea564c1e73521110664c57980d15ed9611e2230f0/sigco3111/dnb-map-editor",
 "social_custom": false,
 "score": 0.0,
-"rank": 324
+"rank": 325
 },
 {
 "repo": "dnb-sprite-tool",
@@ -9597,7 +9626,7 @@
 "social": "https://opengraph.githubassets.com/16e24f5dfd7cbdaa4cbccd960a61ad439a4a81a009f0070647dc7bcaf0c159cb/sigco3111/dnb-sprite-tool",
 "social_custom": false,
 "score": 0.0,
-"rank": 325
+"rank": 326
 },
 {
 "repo": "double-pendulum-chaos",
@@ -9626,7 +9655,7 @@
 "social": "https://opengraph.githubassets.com/ea9a8116c6f2b40ddc0d64de5340a1bc0ba2bafe637bb92bc2a1f9a9b46bbcbc/sigco3111/double-pendulum-chaos",
 "social_custom": false,
 "score": 0.0,
-"rank": 326
+"rank": 327
 },
 {
 "repo": "evolve-kr",
@@ -9655,7 +9684,7 @@
 "social": "https://opengraph.githubassets.com/76378db66ad8ea1c3c65cd07e0ff5e682b45238f5e5c77b59beeffa91e064ce7/sigco3111/evolve-kr",
 "social_custom": false,
 "score": 0.0,
-"rank": 327
+"rank": 328
 },
 {
 "repo": "exact-half",
@@ -9684,7 +9713,7 @@
 "social": "https://opengraph.githubassets.com/9f0f696004058a6431b02a73fb4e129276abbd938c547464a8a02c4ad9485bb9/sigco3111/exact-half",
 "social_custom": false,
 "score": 0.0,
-"rank": 328
+"rank": 329
 },
 {
 "repo": "FireworksMaster",
@@ -9713,7 +9742,7 @@
 "social": "https://opengraph.githubassets.com/c556fb8ca5f9ccd182ebe85655915b9c1df34674a4481db1397d859d4debca24/sigco3111/FireworksMaster",
 "social_custom": false,
 "score": 0.0,
-"rank": 329
+"rank": 330
 },
 {
 "repo": "flamesword-action",
@@ -9742,11 +9771,11 @@
 "social": "https://opengraph.githubassets.com/46643b15acbe349a1d299d6d9fdf271ce898af3d7b04dbb7b80ae8da4ccc2abd/sigco3111/flamesword-action",
 "social_custom": false,
 "score": 0.0,
-"rank": 330
+"rank": 331
 },
 {
 "repo": "fortune-duo",
-"desc": "포춘 듀오 — AI 파트너와 함께하는 랜덤 합성 디펜스 (수집 CC0 에셋 활용)",
+"desc": "🟢 [원작] (3D) (디펜스) AI 파트너와 함께하는 2인 협동 랜덤 합성 디펜스 - 소환·합성·도박·정예 성장(초월)으로 성문 방어",
 "lang": "JavaScript",
 "topics": [],
 "url": "https://github.com/sigco3111/fortune-duo",
@@ -9757,7 +9786,7 @@
 "views": 0,
 "visitors": 0,
 "clones": 0,
-"size": 18440,
+"size": 19728,
 "open_issues": 0,
 "license": "",
 "archived": false,
@@ -9768,10 +9797,10 @@
 "pushed": "2026-11-05",
 "tracked": false,
 "first_seen": "",
-"social": "https://opengraph.githubassets.com/d0bdbc97b16e6c825b190876aeeb1f00943f19683fa9769aecdff635225bb78c/sigco3111/fortune-duo",
+"social": "https://opengraph.githubassets.com/22b6057a78cee643c6c3040be4e142b02e88c6bb98a0fcb0a6c87e976981b64b/sigco3111/fortune-duo",
 "social_custom": false,
 "score": 0.0,
-"rank": 331
+"rank": 332
 },
 {
 "repo": "fractal-tree",
@@ -9800,7 +9829,7 @@
 "social": "https://opengraph.githubassets.com/894022ac0b023b4fb6a5a2c420d0c5fa7fb1256536a92470e4a60347304a5dbc/sigco3111/fractal-tree",
 "social_custom": false,
 "score": 0.0,
-"rank": 332
+"rank": 333
 },
 {
 "repo": "gateheavens-shmup",
@@ -9829,7 +9858,7 @@
 "social": "https://opengraph.githubassets.com/5c2fa9341fe3bdb5384c33e6af50c78086034bd5175b49c2c1cbbb216823b80e/sigco3111/gateheavens-shmup",
 "social_custom": false,
 "score": 0.0,
-"rank": 333
+"rank": 334
 },
 {
 "repo": "genetic-walking",
@@ -9858,7 +9887,7 @@
 "social": "https://opengraph.githubassets.com/976420621222f94cd8c6a3964cd420116a55e99c20547e1eb3d8c925b7966979/sigco3111/genetic-walking",
 "social_custom": false,
 "score": 0.0,
-"rank": 334
+"rank": 335
 },
 {
 "repo": "github-board2",
@@ -9887,7 +9916,7 @@
 "social": "https://opengraph.githubassets.com/a3964317a5ad409d932865c34b4cb250f213dfe17e136700991e2ca1bd6e0314/sigco3111/github-board2",
 "social_custom": false,
 "score": 0.0,
-"rank": 335
+"rank": 336
 },
 {
 "repo": "gp32-blaster-vertical",
@@ -9916,7 +9945,7 @@
 "social": "https://opengraph.githubassets.com/badceb57c9742ed5210c254e14f0d0564eda44b88ffc4fd4808755027eadded6/sigco3111/gp32-blaster-vertical",
 "social_custom": false,
 "score": 0.0,
-"rank": 336
+"rank": 337
 },
 {
 "repo": "gp32-bluemarble-king",
@@ -9945,7 +9974,7 @@
 "social": "https://opengraph.githubassets.com/8cfb071b436bbbfc111a46b7ad23b89bf53c9bd305fda9f33417111d9352950f/sigco3111/gp32-bluemarble-king",
 "social_custom": false,
 "score": 0.0,
-"rank": 337
+"rank": 338
 },
 {
 "repo": "gravity-typography",
@@ -9974,7 +10003,7 @@
 "social": "https://opengraph.githubassets.com/6bc43b78ffef7b398904572086793938c233c1fcd23b7d0794503f247b02fcce/sigco3111/gravity-typography",
 "social_custom": false,
 "score": 0.0,
-"rank": 338
+"rank": 339
 },
 {
 "repo": "gray-scott-reaction-diffusion",
@@ -10003,7 +10032,7 @@
 "social": "https://opengraph.githubassets.com/3d1b7dbbd6a57229fde77bb316b7ac8fcf479b45ea7e0f7a9940b47ab482fecf/sigco3111/gray-scott-reaction-diffusion",
 "social_custom": false,
 "score": 0.0,
-"rank": 339
+"rank": 340
 },
 {
 "repo": "heat-conduction-heatmap",
@@ -10032,7 +10061,7 @@
 "social": "https://opengraph.githubassets.com/d9b0ea56a880791f433a28285f360485c077a438a3c684bfb030b6c2b364ffb0/sigco3111/heat-conduction-heatmap",
 "social_custom": false,
 "score": 0.0,
-"rank": 340
+"rank": 341
 },
 {
 "repo": "heavy-chain-ik",
@@ -10061,7 +10090,7 @@
 "social": "https://opengraph.githubassets.com/ebac8de017cd96e51b75aec9edecd868c859bd02edfc87f9d18b0b5bf858f878/sigco3111/heavy-chain-ik",
 "social_custom": false,
 "score": 0.0,
-"rank": 341
+"rank": 342
 },
 {
 "repo": "hermes-control-room",
@@ -10090,7 +10119,7 @@
 "social": "https://opengraph.githubassets.com/43ae35ac04bc0e2aab414e450ffb17e9d02221160896bff86ca5280f722f67d4/sigco3111/hermes-control-room",
 "social_custom": false,
 "score": 0.0,
-"rank": 342
+"rank": 343
 },
 {
 "repo": "interactive-voronoi",
@@ -10119,7 +10148,7 @@
 "social": "https://opengraph.githubassets.com/e83095880f3a7fb04819c0349bd140431988c8d2731f5e651f0acc8f4a7892e2/sigco3111/interactive-voronoi",
 "social_custom": false,
 "score": 0.0,
-"rank": 343
+"rank": 344
 },
 {
 "repo": "ios_hyperclovax",
@@ -10148,7 +10177,7 @@
 "social": "https://opengraph.githubassets.com/757f19a16d8d5814e053f568f6db9523e193dac11440508021bbbf1716095208/sigco3111/ios_hyperclovax",
 "social_custom": false,
 "score": 0.0,
-"rank": 344
+"rank": 345
 },
 {
 "repo": "IsoMapTool",
@@ -10177,7 +10206,7 @@
 "social": "https://opengraph.githubassets.com/e2dfaf9bf8ae47c9d6da8774a600fac0c7ffcf5095f8fee4804e94bb00d03986/sigco3111/IsoMapTool",
 "social_custom": false,
 "score": 0.0,
-"rank": 345
+"rank": 346
 },
 {
 "repo": "jelly-slime",
@@ -10206,7 +10235,7 @@
 "social": "https://opengraph.githubassets.com/d9b0ea56a880791f433a28285f360485c077a438a3c684bfb030b6c2b364ffb0/sigco3111/jelly-slime",
 "social_custom": false,
 "score": 0.0,
-"rank": 346
+"rank": 347
 },
 {
 "repo": "jungle-trail",
@@ -10239,7 +10268,7 @@
 "source": "StarKnightt/jungle-trail",
 "url": "https://github.com/StarKnightt/jungle-trail"
 },
-"rank": 347
+"rank": 348
 },
 {
 "repo": "KakaoSplit",
@@ -10268,7 +10297,7 @@
 "social": "https://opengraph.githubassets.com/d1b23bd7cb85b84340529d96e9f47cb2cf8ea50651b206149f9ebb55687ba5a8/sigco3111/KakaoSplit",
 "social_custom": false,
 "score": 0.0,
-"rank": 348
+"rank": 349
 },
 {
 "repo": "lorenz-attractor",
@@ -10297,7 +10326,7 @@
 "social": "https://opengraph.githubassets.com/be048cf8073f92c58718ac62db7d1e0741d946773815a9687c532f0bc71c7af6/sigco3111/lorenz-attractor",
 "social_custom": false,
 "score": 0.0,
-"rank": 349
+"rank": 350
 },
 {
 "repo": "mac-board",
@@ -10326,7 +10355,7 @@
 "social": "https://opengraph.githubassets.com/1976f2156c2409990863faa766dc09f3fe0aeb557c002b98966fdb93e8ee630a/sigco3111/mac-board",
 "social_custom": false,
 "score": 0.0,
-"rank": 350
+"rank": 351
 },
 {
 "repo": "mandelbrot-kaleidoscope",
@@ -10355,7 +10384,7 @@
 "social": "https://opengraph.githubassets.com/d0bed4ad8edd233da3f7b80b0a2b8cec98677324e49c8904c015085d34562ab4/sigco3111/mandelbrot-kaleidoscope",
 "social_custom": false,
 "score": 0.0,
-"rank": 351
+"rank": 352
 },
 {
 "repo": "md-doctor",
@@ -10384,7 +10413,7 @@
 "social": "https://opengraph.githubassets.com/f76071d9a70946716929b33fdc053e38fcf7eb3c15a0cabe17474b7b9dfb3a3d/sigco3111/md-doctor",
 "social_custom": false,
 "score": 0.0,
-"rank": 352
+"rank": 353
 },
 {
 "repo": "mingmo-game-korea",
@@ -10413,7 +10442,7 @@
 "social": "https://opengraph.githubassets.com/7cd108c4a2a13836757b1d57d3b77da0545cde48a0bbb33ce16460fad73f7c33/sigco3111/mingmo-game-korea",
 "social_custom": false,
 "score": 0.0,
-"rank": 353
+"rank": 354
 },
 {
 "repo": "mobile-map-editor",
@@ -10442,7 +10471,7 @@
 "social": "https://opengraph.githubassets.com/f7fdbedefae5a1e0c943033793e23c702b46bc0f2c4200da8f9ff586e932bcc5/sigco3111/mobile-map-editor",
 "social_custom": false,
 "score": 0.0,
-"rank": 354
+"rank": 355
 },
 {
 "repo": "nbody-simulation",
@@ -10471,7 +10500,7 @@
 "social": "https://opengraph.githubassets.com/1ddd154bc6b7a1ae432f3a1fa40efaf48417663dc4920ab3c6e974c573f08e84/sigco3111/nbody-simulation",
 "social_custom": false,
 "score": 0.0,
-"rank": 355
+"rank": 356
 },
 {
 "repo": "offroad-suspension",
@@ -10500,7 +10529,7 @@
 "social": "https://opengraph.githubassets.com/6b6a30ea76e434e1ff2c7bf7f82b2980f936c7e1a2e37b37c9a7db6c5b674280/sigco3111/offroad-suspension",
 "social_custom": false,
 "score": 0.0,
-"rank": 356
+"rank": 357
 },
 {
 "repo": "optics-prism-lab",
@@ -10529,7 +10558,7 @@
 "social": "https://opengraph.githubassets.com/468f7ec0c30c312ba288b7b7b27534a1a44e84379abceb21c5a19d37d67f51f8/sigco3111/optics-prism-lab",
 "social_custom": false,
 "score": 0.0,
-"rank": 357
+"rank": 358
 },
 {
 "repo": "pages",
@@ -10558,7 +10587,7 @@
 "social": "https://opengraph.githubassets.com/8d1fc2c0f2488fc0dd1b3dee0b719729a01dbf7f653f3c4391ad0fe1c10363ae/sigco3111/pages",
 "social_custom": false,
 "score": 0.0,
-"rank": 358
+"rank": 359
 },
 {
 "repo": "particle-fireworks",
@@ -10587,7 +10616,7 @@
 "social": "https://opengraph.githubassets.com/2976173271ee97ed064fbe27d5cf065ad51aaba57823ae8b4f96bbb939fd2d04/sigco3111/particle-fireworks",
 "social_custom": false,
 "score": 0.0,
-"rank": 359
+"rank": 360
 },
 {
 "repo": "pendulum-wave",
@@ -10616,7 +10645,7 @@
 "social": "https://opengraph.githubassets.com/a47516a30435e72b4f6aea92dd9b1703b80a686c5a769a7a4be101bd09179e36/sigco3111/pendulum-wave",
 "social_custom": false,
 "score": 0.0,
-"rank": 360
+"rank": 361
 },
 {
 "repo": "photosynthesis-simulator",
@@ -10645,7 +10674,7 @@
 "social": "https://opengraph.githubassets.com/683b6f1d1e8b8a42e41f25a22c1a337608986ff57355e6648e9a6ccd900a2eb2/sigco3111/photosynthesis-simulator",
 "social_custom": false,
 "score": 0.0,
-"rank": 361
+"rank": 362
 },
 {
 "repo": "piratenation-art",
@@ -10674,7 +10703,7 @@
 "social": "https://opengraph.githubassets.com/a3724732580233f776853dda04d0b4a24b466c317427aec476bc8f7612374ed3/sigco3111/piratenation-art",
 "social_custom": false,
 "score": 0.0,
-"rank": 362
+"rank": 363
 },
 {
 "repo": "piratenation-game",
@@ -10703,7 +10732,7 @@
 "social": "https://opengraph.githubassets.com/d1a93783578625d97d9e326a0865fe1f30650d4e3430e2968cfd9351462cad6a/sigco3111/piratenation-game",
 "social_custom": false,
 "score": 0.0,
-"rank": 363
+"rank": 364
 },
 {
 "repo": "pleasuregate-shmup",
@@ -10732,7 +10761,7 @@
 "social": "https://opengraph.githubassets.com/5d12cea836c7a7d70e0cf2a8cf85844c42601bf8878d306c70606560439caf04/sigco3111/pleasuregate-shmup",
 "social_custom": false,
 "score": 0.0,
-"rank": 364
+"rank": 365
 },
 {
 "repo": "prism-currents",
@@ -10761,7 +10790,7 @@
 "social": "https://opengraph.githubassets.com/5dc501af0666efbdcd0045d2cdde4d710f42fed9306e2aa7dd91d7790ed94233/sigco3111/prism-currents",
 "social_custom": false,
 "score": 0.0,
-"rank": 365
+"rank": 366
 },
 {
 "repo": "private-archive-thumbnails",
@@ -10790,7 +10819,7 @@
 "social": "https://opengraph.githubassets.com/f218d353d55f6e3c3a49fc7aca2cb0e20e55b709a5ec3fcd812c12f9f1fccf9f/sigco3111/private-archive-thumbnails",
 "social_custom": false,
 "score": 0.0,
-"rank": 366
+"rank": 367
 },
 {
 "repo": "procedural-city",
@@ -10819,7 +10848,7 @@
 "social": "https://opengraph.githubassets.com/600d0c969807a4fba3a5f14b1e99419ef4156f3c838efaf7a6492e396452fcc1/sigco3111/procedural-city",
 "social_custom": false,
 "score": 0.0,
-"rank": 367
+"rank": 368
 },
 {
 "repo": "Q-gress",
@@ -10852,7 +10881,7 @@
 "source": "Tok/Q-gress",
 "url": "https://github.com/Tok/Q-gress"
 },
-"rank": 368
+"rank": 369
 },
 {
 "repo": "ray-cast-shadows",
@@ -10881,7 +10910,7 @@
 "social": "https://opengraph.githubassets.com/9203457059054fba41ab779842e5a7bce2de8f2b3b27631d79abf525ed52fced/sigco3111/ray-cast-shadows",
 "social_custom": false,
 "score": 0.0,
-"rank": 369
+"rank": 370
 },
 {
 "repo": "raycasting-doom",
@@ -10910,7 +10939,7 @@
 "social": "https://opengraph.githubassets.com/9203457059054fba41ab779842e5a7bce2de8f2b3b27631d79abf525ed52fced/sigco3111/raycasting-doom",
 "social_custom": false,
 "score": 0.0,
-"rank": 370
+"rank": 371
 },
 {
 "repo": "repo-dna-analyzer",
@@ -10939,7 +10968,7 @@
 "social": "https://opengraph.githubassets.com/fd5c399ec80d34ae347a6a2a4e42f14a8d542dbbd9599c3117b0c9baa0dce4db/sigco3111/repo-dna-analyzer",
 "social_custom": false,
 "score": 0.0,
-"rank": 371
+"rank": 372
 },
 {
 "repo": "retro-synthwave-shooter",
@@ -10968,7 +10997,7 @@
 "social": "https://opengraph.githubassets.com/442e8923752999e1a54e4ed3f00fb4f13f0919d496ddb94481523be2419ecf71/sigco3111/retro-synthwave-shooter",
 "social_custom": false,
 "score": 0.0,
-"rank": 372
+"rank": 373
 },
 {
 "repo": "scam-with-your-friends-web",
@@ -11001,7 +11030,7 @@
 "source": "mrzh7/scam-with-your-friends-web",
 "url": "https://github.com/mrzh7/scam-with-your-friends-web"
 },
-"rank": 373
+"rank": 374
 },
 {
 "repo": "sigco3111",
@@ -11016,7 +11045,7 @@
 "views": 0,
 "visitors": 0,
 "clones": 0,
-"size": 420,
+"size": 428,
 "open_issues": 1,
 "license": "",
 "archived": false,
@@ -11027,10 +11056,10 @@
 "pushed": "2026-11-05",
 "tracked": true,
 "first_seen": "2026-06-23",
-"social": "https://opengraph.githubassets.com/708bed735d2c3537693ad39de84e144e100a02be976cbcac9e63a5576e59ee12/sigco3111/sigco3111",
+"social": "https://opengraph.githubassets.com/6f816741bf467993319a6293d89f96f83ae5e790a5fb9910409a16fa4ba527d4/sigco3111/sigco3111",
 "social_custom": false,
 "score": 0.0,
-"rank": 374
+"rank": 375
 },
 {
 "repo": "sprite-map-viewer",
@@ -11059,7 +11088,7 @@
 "social": "https://opengraph.githubassets.com/1aa1802c18045d015396231660469d826b22d5bcf8b0c356ac53e05101ee13ea/sigco3111/sprite-map-viewer",
 "social_custom": false,
 "score": 0.0,
-"rank": 375
+"rank": 376
 },
 {
 "repo": "spriteatelier",
@@ -11088,7 +11117,7 @@
 "social": "https://opengraph.githubassets.com/709341f8fc5ef8e1e48c7fd5bf68404b29b728d709dc121eb8e3efec94e45e5b/sigco3111/spriteatelier",
 "social_custom": false,
 "score": 0.0,
-"rank": 376
+"rank": 377
 },
 {
 "repo": "summer-cycle",
@@ -11121,7 +11150,7 @@
 "source": "StarKnightt/summer-cycle",
 "url": "https://github.com/StarKnightt/summer-cycle"
 },
-"rank": 377
+"rank": 378
 },
 {
 "repo": "synthwave-terrain",
@@ -11150,7 +11179,7 @@
 "social": "https://opengraph.githubassets.com/61bc8a1a47142bef12de0f384c22d74261745d47cec90609b18887002f730f3a/sigco3111/synthwave-terrain",
 "social_custom": false,
 "score": 0.0,
-"rank": 378
+"rank": 379
 },
 {
 "repo": "sys8-board",
@@ -11179,7 +11208,7 @@
 "social": "https://opengraph.githubassets.com/a807154407779b5bdd842556ea391ee91c3b9849b754e37d42ae588cd5e6d0d1/sigco3111/sys8-board",
 "social_custom": false,
 "score": 0.0,
-"rank": 379
+"rank": 380
 },
 {
 "repo": "ubuntu-board",
@@ -11208,7 +11237,7 @@
 "social": "https://opengraph.githubassets.com/a807154407779b5bdd842556ea391ee91c3b9849b754e37d42ae588cd5e6d0d1/sigco3111/ubuntu-board",
 "social_custom": false,
 "score": 0.0,
-"rank": 380
+"rank": 381
 },
 {
 "repo": "vibe-coding-ui-glossary",
@@ -11237,7 +11266,7 @@
 "social": "https://opengraph.githubassets.com/c9a278d68830f01811da812d8b17cefdf45a8cbc92858c49c8c2ce329a143aa3/sigco3111/vibe-coding-ui-glossary",
 "social_custom": false,
 "score": 0.0,
-"rank": 381
+"rank": 382
 },
 {
 "repo": "voronoi-glass-fracture",
@@ -11266,7 +11295,7 @@
 "social": "https://opengraph.githubassets.com/6642f991cb74bc7f2a8da0b68b1648977e4e55050796a60e3a000bc55f2825e3/sigco3111/voronoi-glass-fracture",
 "social_custom": false,
 "score": 0.0,
-"rank": 382
+"rank": 383
 },
 {
 "repo": "voxel-musou",
@@ -11299,7 +11328,7 @@
 "source": "mike007jd/voxel-musou",
 "url": "https://github.com/mike007jd/voxel-musou"
 },
-"rank": 383
+"rank": 384
 },
 {
 "repo": "Waveshare_ESP32_RLCD",
@@ -11332,7 +11361,7 @@
 "source": "heimumumu/Waveshare_ESP32_RLCD",
 "url": "https://github.com/heimumumu/Waveshare_ESP32_RLCD"
 },
-"rank": 384
+"rank": 385
 },
 {
 "repo": "win11-board",
@@ -11361,7 +11390,7 @@
 "social": "https://opengraph.githubassets.com/406f6d2c1191bed5a7bd78f309bd17026ef905171e55085f642bce720e0bbe75/sigco3111/win11-board",
 "social_custom": false,
 "score": 0.0,
-"rank": 385
+"rank": 386
 },
 {
 "repo": "win32-console-shooter",
@@ -11390,7 +11419,7 @@
 "social": "https://opengraph.githubassets.com/a3b6cf94cabadf682e2a58ecaf9f004099bc9f771bc5d008778d913f6f8613ba/sigco3111/win32-console-shooter",
 "social_custom": false,
 "score": 0.0,
-"rank": 386
+"rank": 387
 },
 {
 "repo": "winxp-board",
@@ -11419,7 +11448,7 @@
 "social": "https://opengraph.githubassets.com/8d830eae12b9ab662abfbde3c674d3f982944f6585a3f5ba8391454a112359f1/sigco3111/winxp-board",
 "social_custom": false,
 "score": 0.0,
-"rank": 387
+"rank": 388
 },
 {
 "repo": "wipic-draw3",
@@ -11448,7 +11477,7 @@
 "social": "https://opengraph.githubassets.com/8a3dcebf9698a92d9cbabe5ef7f8a76d618862d56c0d848737c70b3d56741742/sigco3111/wipic-draw3",
 "social_custom": false,
 "score": 0.0,
-"rank": 388
+"rank": 389
 },
 {
 "repo": "wordle",
@@ -11477,7 +11506,7 @@
 "social": "https://opengraph.githubassets.com/4feea49dcce6a06ca6bcbab2ba1b40b38ea17781c4a88379c3d2bf924946a6e5/sigco3111/wordle",
 "social_custom": false,
 "score": 0.0,
-"rank": 389
+"rank": 390
 },
 {
 "repo": "xmrig-dashboard",
@@ -11506,6 +11535,6 @@
 "social": "https://opengraph.githubassets.com/9e9da28aec57a760cbdbf37d7f47e0b07e68c887a6a9dcae1442bdbfce063ff2/sigco3111/xmrig-dashboard",
 "social_custom": false,
 "score": 0.0,
-"rank": 390
+"rank": 391
 }
 ]
