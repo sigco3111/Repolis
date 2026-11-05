@@ -1,5 +1,5 @@
 {
-  "$id": "https://hyeonsangjeon.github.io/Repolis/data/city-state.schema.json",
+  "$id": "https://sigco3111.github.io/Repolis/data/city-state.schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "additionalProperties": false,
   "properties": {
