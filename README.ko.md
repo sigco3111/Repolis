@@ -1,26 +1,224 @@
-# 🏙️ Repolis — sigco3111의 도시
+> **작업본 안내 (2026-11-05):** 이 문서는 원본 v1.98.0 README를 sigco3111 소유로 옮긴 시험용 작업본입니다. 원본: github.com/hyeonsangjeon/Repolis
 
-> **156개의 GitHub repo가 만드는 3D 도시.** 건물은 트래픽이 자라게 하고, LLM 택시가 안내한다.
+<div align="center">
 
-이 저장소는 [hyeonsangjeon/Repolis](https://github.com/hyeonsangjeon/Repolis)를 sigco3111에 맞춰 fork한 버전입니다. 자세한 내용은 [README.md](./README.md) 참고.
+<a href="https://sigco3111.github.io/Repolis/"><img src="assets/banner.svg" alt="Repolis — 레포들의 도시" width="80%"></a>
 
-## 빠른 시작
+# Repolis — 레포들의 도시
+
+[English](README.md) · [한국어](README.ko.md)
+
+**Repolis는 공개 GitHub 레포를 직접 걸어 다니는 3D 마을로 바꿉니다. 트래픽이 건물을 만들고, 주민이 살아가며, 깃버가 원하는 프로젝트까지 데려갑니다.**
+
+<p>
+  <a href="https://sigco3111.github.io/Repolis/?view=plaza&amp;lang=ko"><img src="https://img.shields.io/badge/-%E2%96%B6%20%EC%A7%80%EA%B8%88%20%EB%A7%88%EC%9D%84%20%EC%9E%85%EC%9E%A5-178f86?style=for-the-badge" alt="지금 Repolis 라이브 마을 입장" height="40"></a><br>
+  <sub><strong>먼저 눌러보세요:</strong> 지금 운영 중인 Repolis 광장으로 바로 들어갑니다.</sub>
+</p>
+<p>
+  <a href="https://sigco3111.github.io/Repolis/?launch=1"><img src="https://img.shields.io/badge/-%EB%82%B4%20GITHUB%EB%A1%9C%20%EB%B3%B4%EA%B8%B0-24292f?style=for-the-badge&amp;logo=github&amp;logoColor=white" alt="내 GitHub로 Repolis 보기" height="32"></a>
+  <a href="https://github.com/new?template_name=Repolis&amp;template_owner=sigco3111"><img src="https://img.shields.io/badge/-%EB%82%B4%20%EB%A7%88%EC%9D%84%EB%A1%9C%20%EB%B3%B5%EC%A0%9C-c56a26?style=for-the-badge&amp;logo=github&amp;logoColor=white" alt="Repolis 템플릿으로 내 마을 만들기" height="32"></a><br>
+  <sub>내 공개 레포 미리보기 · 또는 템플릿을 복제해 내 마을 만들기</sub>
+</p>
+
+<a href="https://sigco3111.github.io/Repolis/"><img src="assets/demo.ko.gif" alt="Repolis 데모: 트래픽으로 지은 살아 있는 GitHub 마을, 깃버 검색과 택시 이동, 실제 레포 카드" width="92%"></a>
+
+<sub>🎬 <strong>15초 데모:</strong> 트래픽 → 건물 · 깃버에게 질문 → 택시 이동 → 실제 레포 카드</sub><br>
+<sub><code>WASD</code> / 터치로 걷기 · 깃버에게 묻기 · <code>Enter</code> / 탭으로 열기 · 가입이나 빌드 없음 · <strong><a href="#60초-로컬-실행">로컬 실행</a></strong> · ⭐ <strong><a href="https://github.com/sigco3111/Repolis">Star 남기기</a></strong></sub><br>
+<sub>첫 화면에 GitHub username, <code>owner/repo</code>, 또는 레포 URL을 입력하세요. 공개 메타데이터만 사용합니다.</sub>
+
+[![매일 갱신](https://img.shields.io/github/actions/workflow/status/sigco3111/Repolis/refresh.yml?style=flat-square&label=daily%20refresh&logo=githubactions&logoColor=white)](https://github.com/sigco3111/Repolis/actions/workflows/refresh.yml)
+[![Three.js](https://img.shields.io/badge/Three.js-r160-000000?style=flat-square&logo=three.js&logoColor=white)](https://threejs.org)
+[![빌드 없음](https://img.shields.io/badge/runtime-zero%20build-83bb59?style=flat-square)](index.html)
+[![License: MIT](https://img.shields.io/badge/License-MIT-a0a0a0?style=flat-square)](LICENSE)
+
+</div>
+
+## 이 데모가 보여 주는 것
+
+| 데모에서 보이는 장면 | 내 저장소에 적용하면 |
+|---|---|
+| 트래픽·스타·포크·클론·활동이 건축으로 바뀝니다 | 포트폴리오 신호를 대시보드 없이 한눈에 설명할 수 있습니다 |
+| 깃버가 자연어로 찾고 실제 결과까지 운전합니다 | 저장소 탐색이 또 하나의 목록이 아니라 상호작용이 됩니다 |
+| `?user=<login>`이 어떤 공개 GitHub 계정이든 마을로 다시 짓습니다 | 클론이나 설정 전에 같은 엔진을 내 작업으로 검증할 수 있습니다 |
+
+**가장 빠른 확인:** **[내 GitHub로 보기](https://sigco3111.github.io/Repolis/?launch=1)**를 열고 username이나 `owner/repo` 하나를 입력하세요. username은 공개 마을을 만들고, 레포 주소는 그 프로젝트부터 엽니다. 토큰·계정 연결·포크가 필요 없습니다.
+
+<div align="center">
+
+<a href="https://sigco3111.github.io/Repolis/?launch=1"><img src="assets/launch.ko.gif" alt="Repolis 첫 화면에 GitHub username을 입력하면 그 계정의 공개 레포로 지은 마을을 걸어 다니는 흐름" width="86%"></a>
+
+<sub>⌨️ <strong>username → 내 마을:</strong> <code>mrdoob</code> 입력 → 그의 공개 레포 58채가 걸어 다닐 수 있는 도시로</sub>
+
+</div>
+
+저장소를 보여 주는 새로운 방식이 유용했다면 **[Repolis에 Star를 남겨주세요](https://github.com/sigco3111/Repolis)**. 더 많은 개발자가 이 템플릿을 발견하는 데 도움이 됩니다.
+
+## 미리보기에서 내 도시까지
+
+| 목표 | 할 일 | 결과 |
+|---|---|---|
+| 내 공개 레포 미리보기 | 라이브 첫 화면에 username 입력 | 몇 초 안에 공유 가능한 메타데이터 마을 생성 |
+| 레포 하나를 경험으로 공유 | `owner/repo` 또는 GitHub 레포 URL을 입력하고 전시실에서 **Repo Portal 복사** | 확인형 정식 링크와, 전시실부터 보여줄 때 쓰는 `?repo=owner/repo&view=atelier&lang=en` 직행 링크 |
+| 내가 발견한 가장 좋은 동선을 다른 개발자에게 건네기 | 직접 연 레포 카드 2~3곳을 **Repo Route**에 담아 따라가거나 공유 | 수신자를 실제 레포 집 순서대로 안내한 뒤 완주 시 기존 Star 초대로 이어지는 딥 링크 |
+| 지금 기여할 오픈소스 일 찾기 | 길찾기의 **기여할 일 찾기**(오픈소스 퀘스트)를 고르고 명시적으로 검색 | 접근하기 좋은 현재 공개 이슈 세 개와 실제로 도울 수 있는 레포 집, 정확한 GitHub 이슈 연결 |
+| 마을을 만든 사람 소개 | **마을 창작자 회관** 방문 또는 도시 메뉴의 **마을 만든 사람** 열기 | 현재 마을 주인의 공개 bio·팔로워·GitHub 활동 기간·주요 언어·배지·대표 프로젝트 표시 |
+| 이번 방문에서 한 일 되짚기 | **여권**을 열고 **여정** 탭 선택 | 연 집의 순서, 고른 길, 공유·이슈 같은 남긴 흔적 — 이 페이지에만 머물고 저장하거나 보내지 않음 |
+| 내 오픈소스 역사가 펼쳐지는 장면 보기 | 길찾기·여권·완성된 공개 마을 미리보기에서 **도시 성장 리플레이** 열기 | 레포 집이 생성 연도별로 솟아나는 타임라인, 연도 공유 링크, 시대 엽서 |
+| 다른 개발자와 마을 연결 | 미리보기 후 **친구 마을과 연결하기** 클릭, 또는 도시 메뉴에서 **Twin Towns** 열기 | 두 마을과 공통 언어·토픽을 바로 여는 2인 링크 생성 |
+| GitHub 프로필에 내 마을 남기기 | 미리보기 완성 화면의 **GitHub 프로필에 마을 붙이기** 클릭, 또는 **타운 엽서 스튜디오** 이용 | 누르면 내 마을로 열리는 600px 포털 생성 |
+| 내 Repolis 배포 | 템플릿 사용 → Actions·Pages 활성화 → **Refresh Repolis data** 1회 실행 | 템플릿 저장소 소유자의 공개 레포가 기본 도시가 됨 · PAT 불필요 |
+| 실제 트래픽으로 건물 성장 | 선택적으로 `GH_PAT` Actions 시크릿 추가 | 같은 도시에 일일 조회·방문자·클론 누적 |
+
+포크는 `<owner>.github.io`를 자동으로 마을 소유자로 인식하고 원본 AI·실시간 Worker를 호출하지 않습니다. 커스텀 도메인은 [`repolis.config.js`](repolis.config.js) 한 곳만 설정합니다.
+
+## 레포 데이터가 도시가 되는 방식
+
+Repolis는 공개 GitHub 메타데이터와 누적 트래픽을 또 하나의 대시보드가 아니라 실제 장소로 바꿉니다.
+
+| 신호 | 마을에 나타나는 모습 |
+|---|---|
+| 순방문자 | 건물 높이 |
+| 포크 | 터와 건물 너비 |
+| 클론 | 깃발과 금장식 |
+| 조회수 | 정원과 울타리 크기 |
+| 스타 | 지붕 장식 |
+| 최근 활동 | 밤에 빛나는 창문 |
+
+레포는 주제별 구역으로 나뉘고 도로, 표지판, 구역 허브, 세계 지도로 연결됩니다. 주인 마을은 누적 트래픽 기록과 GitHub API로 매일 갱신됩니다. `?user=<login>`은 그 사용자의 세계수 기록과 로컬 주민이 있는 가벼운 공개 마을을 만들고, `?repo=<owner>/<repo>`는 같은 projection으로 프로젝트 하나를 먼저 불러옵니다. GitHub는 이 공개 API 모드에 방문자·조회·클론 트래픽을 제공하지 않으므로, 건물은 가짜 트래픽 없이 스타·포크·최근 업데이트로 지어집니다.
+일반적인 보행 거리에서도 한 번에 그리는 건축 LOD가 레포 집의 텍스처 벽과 지붕뿐 아니라 대지, 생울타리, 진입로, 실제 창유리, 셔터, 창턱, 화분, 배수관, 집 등급별 현관·발코니·포티코를 유지합니다.
+
+## 실제로 살아가는 마을
+
+- **내 도시가 먼저입니다.** 공식 첫 화면은 샘플 마을보다 GitHub 아이디 입력을 먼저 묻습니다. 공개 마을에 처음 들어가면 도시 성장 리플레이가 한 번 재생되고(8~24초, 모션 줄이기에서는 현재 장면만), *sigco3111의 파이썬 연구소 도시* 같은 결정적 도시 명패로 끝납니다. 이어서 닫을 수 있는 카드가 레포 하나 이해하기 · 도시 둘러보기 · 기여할 일 찾기 중 무엇을 하러 왔는지 묻습니다. 둘러보기를 고르면 깃버 택시가 카탈로그에서 고른 세 집(가장 높은 집, 가장 오래된 집 또는 가장 조용한 집, 의외의 집)으로 데려가고, 각 구역의 주민 안내자가 카탈로그 수치만으로 이유를 말합니다. 길찾기는 가다 · 보다 · 나누기로 묶이고, 보다는 집 1채, 나누기는 집 2채를 연 뒤 열립니다. 새 요청이나 저장은 없고, 이미 재생한 마을을 기억하는 세션 범위 목록 하나만 씁니다.
+- **가까이 가도 이름표가 화면을 덮지 않습니다.** 화면상 크기와 표시 수를 제한하고, 겹치는 이름표보다 대화 중인 상대를 먼저 보여 줍니다. 이름표가 숨겨져도 길찾기의 **가까운 인물 선택**에서 이름·직업을 읽고 대화할 수 있습니다. 레포 카드의 닫기 버튼은 화면 안에 남으며, Escape는 활성 패널 하나만 닫습니다.
+- **주민은 제자리 반복 동작만 하지 않습니다.** 이름 있는 주민들이 자기 구역을 거닐고, 시간대에 맞춰 생활하며, 기분이 바뀌고, 아끼는 아지트를 찾습니다. 북동쪽 **별빛 주거구역**에는 이름표가 달린 집과 주민색 앞마당이 있습니다. 집마다 3종 지붕 실루엣, 셔터, 트랜섬 창, 선택형 창가 화분·캐노피·굴뚝·지붕 장식이 다르게 조합되고, 공동 꽃정원·랜턴·생울타리·활엽수·사이프러스가 마을을 감쌉니다. 밤이면 따뜻한 창과 현관으로 귀가하고, 아침이면 각자 구역으로 출근합니다. 친구를 알아보고 함께 산책하거나 나란히 쉬며, 모닥불에 모이고, 때로는 새 릴리스 축제를 엽니다. 두 주민은 플레이어 지시나 AI 호출 없이 실제 꽃밭·별이 보이는 밤하늘·실제 레포 집으로 짧은 **함께하는 기쁨** 나들이도 스스로 떠납니다. 전문 질문을 받으면 아는 척하지 않고 맞는 현자를 소개합니다. 나침반을 따라 마을 안에서 그 현자를 직접 찾아가세요.
+- **공개 마을도 자기 기록으로 살아갑니다.** 기존 공개 레포 요청 한 번으로 도시력·계절·고요 장부·아카이브된 The Roots와 데스크톱 최대 6명/휴대폰·LOW_END 최대 4명의 주민을 결정적으로 만듭니다. 주민의 일·인사·실제 레포 집 연결은 공개 필드만 쓰며, 트래픽·주인 주민·Shared/Bound 기억은 알 수 없는 값으로 남깁니다. 실시간 연결과 근거 검색 서비스도 꺼져 있어 두 번째 API 요청이나 모델 호출이 없습니다.
+- **주인 마을의 세계수는 작고 사실적인 이력을 남깁니다.** **30일 수액 장부**에는 공개 레포·스타·포크·최근 활동·계절·고요 집계의 실제 UTC 일별 기록만 최대 30개 보존됩니다. 같은 날 재실행하면 중복 대신 교체하고, 누락 날짜는 그대로 두며, 다른 공개 마을에는 주인 장부를 넘기지 않습니다.
+- **뿌리 아래로 걸어 들어갈 수 있습니다.** **The Undercroft**는 현재 마을의 아카이브된 공개 레포를 세계수 아래의 결정적인 선반과 명패로 바꿉니다. 가까이 가면 기존 Roots 설명, 활동 연도, 제공되는 마지막 공개 활동일을 읽고 새 탭에서 레포를 열 수 있습니다. 연대기는 접근 가능한 요약으로 남고, 비어 있거나 다른 사람의 마을도 주인 기록을 빌리지 않은 자기 기록만 보여줍니다.
+- **탐험에는 흐름이 남습니다.** 탐험 여권이 집과 명소 방문을 기록하고, 구역 진행률이 남은 곳을 보여주며, 매일 열리는 **마을 이야기**가 한 주민과 그 아지트, 실제로 이어진 레포 또는 구역을 연결합니다.
+- **도시는 실제 기여로 이어집니다.** **오픈소스 퀘스트**는 방문자가 직접 요청할 때만 익명 GitHub 공개 검색을 한 번 실행해 현재 `good first issue`, `help wanted`, 일반 열린 이슈 중 최대 세 개를 고릅니다. 실제 레포 집을 거친 뒤 정확한 이슈로 연결합니다. 해당 레포의 Blueprint를 직접 불러온 뒤에는 **Issue-to-Code Scout**가 선택한 이슈의 제목·라벨과 실제 경로 메타데이터만 보수적으로 대조해 **먼저 살펴볼 후보 경로**를 다섯 개까지 보여 줍니다. 파일 관계나 수정 위치를 단정하지 않고, 어휘 근거가 약하면 추측하지 않습니다. 추가 요청 없이 결과는 탭에만 남습니다. 로그인·토큰·이슈 추적·새 백엔드는 없고, 기존 Star 초대는 방문자가 이슈 열기를 선택한 뒤에만 나타날 수 있습니다.
+- **방문자가 도시의 가치를 증명한 동선을 그대로 건넬 수 있습니다.** 레포 집을 연 뒤 **Repo Route**에 2~3곳을 순서대로 담으면, 수신 링크가 입장 전에 정류장을 확인해 주고 실제 집을 차례로 가리킵니다. 기존 Star 초대는 이 길을 완주한 뒤에만 열립니다. 초안은 세션에만 있고 URL에는 공개 레포 이름만 들어가며, 백엔드·계정·저장 키·렌더 자산을 추가하지 않습니다.
+- **레포 역사가 움직이는 도시 이야기가 됩니다.** **도시 성장 리플레이**는 모든 레포 집에 이미 있는 공개 생성일을 읽어 첫 집부터 현재까지 실제 레포 탄생 연도 순으로 마을을 키웁니다. 슬라이더·재생/일시정지·연도 딥링크·시대 엽서는 주인 마을과 모든 `?user=` 공개 마을에서 동작합니다. 현재도 공개된 레포만 시간축에 들어가며, 집의 모습과 언어 표시는 현재 메타데이터라는 경계도 화면에 명시합니다. 새 메시·텍스처·조명·백엔드·계정·이력 저장은 없습니다.
+- **레포 하나가 입구가 됩니다.** **Repo Portal**에 `owner/repo`나 GitHub URL을 넣으면 소유자 목록보다 공개 대상 하나를 먼저 불러오고, 한 번의 입장 클릭 뒤 Repository Atelier로 안내합니다. `?repo=owner/repo&view=atelier&lang=en` 캠페인 링크는 초기화 위에 짧은 포털 전환을 유지한 채 마을 외부나 채팅창이 먼저 덮지 않도록 같은 전시실로 바로 들어갑니다. 직행 링크는 영어가 기본이며 한국어는 `lang=ko`로 지정합니다. 전시실에서 확인형 정식 주소를 복사하거나 GitHub를 열 수 있고, 원할 때만 소유자의 마을 전체로 넓힙니다. 15분·512 KiB 로컬 캐시와 오래된 캐시 복구로 범위를 묶으며, 알 수 없는 트래픽은 그대로 비공개로 표시합니다.
+- **모든 레포 집에는 완성된 전시실이 있습니다.** 재사용하는 **Repository Atelier**에 들어가면 정확한 `owner/repo`와 공개 설명부터 보입니다. Core 조형물·통계·연혁은 보조 전시로 남습니다. **README 시작 안내**를 직접 누르면 해당 공개 레포의 README만 읽어 원문 제목·조건·복사 가능한 코드와 출처 행, branch/ref, 문서 blob SHA, 읽은 시각을 보여 줍니다. 명령을 생성하거나 전체 실행 절차를 검증한 안내가 아니라 범위를 제한한 발췌이며, 안내가 없으면 없다고 표시합니다. 모델 호출·이미지 다운로드·명령 실행은 없습니다. 홈페이지·GitHub 이동과 추가 질문은 방문자가 선택합니다. **Repository Blueprint**도 **공개 소스 지도 스캔**을 눌러야 GitHub Tree API를 한 번 읽고 DOM/3D 파일·폴더 지도를 보여 줍니다. **Blueprint Deep Link**는 정확한 레포와 경로를 확인한 뒤 불러오며, 없는 경로를 추측하지 않습니다. 호출 그래프나 런타임 아키텍처가 아닌 소스 트리입니다. **깃버에게 이 레포 질문**은 격리된 대화에서 방문당 최대 다섯 번의 시작된 요청을 허용하며 다른 레포로 대신 답하지 않습니다. 입장이나 문서 열람으로 질문을 자동 전송하지 않습니다.
+- **매일 갱신되는 이유가 재방문에서 보입니다.** 여권의 **마을 소식**은 이 브라우저가 마지막으로 읽은 공개 레포 스냅샷과 현재를 비교해 새 레포·제공되는 경우의 릴리스 태그·푸시·양의 지표 성장을 보여줍니다. 전부 로컬에서 계산되어 비용이 없습니다.
+- **레포끼리의 관계도 보입니다.** 별빛 전망대는 공통 주제나 언어를 바탕으로 실제 세 레포의 연결을 찾고, 밤하늘 저장소 별자리 탐사로 펼칩니다.
+- **모든 마을은 만든 사람을 소개합니다.** **마을 창작자 회관**은 본진·포크·`?user=` 방문 마을의 현재 소유자에게 귀속됩니다. 명시적으로 불러온 공개 GitHub 프로필과 이미 렌더링된 레포를 합쳐 사실 기반 통계·주요 언어·획득 배지·대표 프로젝트 세 개를 보여준 뒤 원본 Repolis 엔진을 분명히 표시합니다.
+- **두 개발자의 마을도 연결할 수 있습니다.** **Twin Towns**가 공개 레포 메타데이터에서 공통 언어·토픽을 찾고, 로그인이나 백엔드 없이 어느 방향으로든 따라갈 수 있는 수신자 전용 링크를 만듭니다.
+- **조용한 유지보수에도 빛을 비춥니다.** 전망대의 오픈소스 야간 순찰은 공개 메타데이터에서 최근까지 관리된 저스타 저장소 세 곳을 골라 등불을 밝히게 합니다. 인기가 아니라 꾸준한 돌봄을 기념합니다.
+- **명소가 프로젝트의 이야기를 품습니다.** 기여 도서관은 논문·발표·오픈소스 기여·수상을 보관하고, 크로노폴리스에는 시간의 회의가 열립니다. 광장, 전망대, 공원, 놀이 구역은 도시를 직접 걸을 이유를 만듭니다. 쁘띠베니스에서는 낮은 유람선에 올라 실제 운하 곡선을 따라 꽃다리 아래를 지나며 마을을 한 바퀴 둘러볼 수 있습니다.
+- **월드 트리가 스카이라인을 받칩니다.** [threejs-sculpt-dna](https://github.com/sigco3111/threejs-sculpt-dna) Copilot 플러그인으로 생성한 결정적 코드 네이티브 Three.js 조형물이며, 가지에 뿌리내린 잎, 살아 있는 움직임, 나무에만 격리된 블룸을 갖습니다.
+
+## 마을에 물어보기
+
+| 안내자 | 이렇게 물어보세요 | 답하는 방식 |
+|---|---|---|
+| **깃버 · POLARIS** | “AI 에이전트 레포로 가자”, “클론이 가장 많은 곳” | 기본은 로컬 색인 검색, 선택한 집까지 실제 운행 |
+| **VEGA · 기록자** | Azure, .NET, Copilot, Microsoft 제품 | Microsoft Learn 근거 검색과 출처 |
+| **RIGEL · 지도제작자** | 공개 레포가 내부에서 어떻게 동작하는지 | DeepWiki 기반 탐색 |
+| **MIRA · 시간지기** | 최신 라이브러리 API와 버전별 예제 | Context7 직접 조회 · 문서 구역 순회 |
+| **LYRA · 창조의 대장장이** | 공개 모델·데이터셋·ML 논문 | Hugging Face 직접 검색 · AI 구역 순회 |
+| **시간의 회의** | 기술 선택이나 서로 다른 주장 | 큐레이트된 결정적 판정과, 미검증으로 명시된 선택형 라이브 토론 |
+
+백엔드가 없어도 마을은 동작합니다. **로컬** 검색은 즉시 실행되고 키가 필요 없으며, **WebLLM**은 선택형 브라우저 내 추론입니다. 라이브 데모는 Cloudflare Worker를 통해 근거 있는 답변과 공식 공개 MCP 조회를 더합니다. 서비스가 없으면 로컬 검색이나 솔로 플레이로 자연스럽게 전환됩니다.
+
+## 60초 로컬 실행
 
 ```bash
 git clone https://github.com/sigco3111/Repolis
 cd Repolis
-gh auth login  # 또는 GH_TOKEN 환경 변수
-git clone https://github.com/sigco3111/gh-traffic-monitor /tmp/gtm
-pip install -e /tmp/gtm
-python -m gh_traffic_monitor --owner sigco3111 --log-dir ./data/logs collect
-REPO_OWNER=sigco3111 python3 scripts/build_repos.py
-python3 -m http.server 8000  # http://localhost:8000 열기
+python3 -m http.server 8000 --protocol HTTP/1.1   # HTTP/1.1이어야 모듈 동시 로드가 끊기지 않아요
+# http://localhost:8000 열기
 ```
 
-## 라이브 데모
+설치나 빌드 단계가 없습니다. Three.js는 CDN import map으로 불러오고, 로컬 데이터와 모듈은 정적 파일로 제공됩니다.
 
-https://sigco3111.github.io/Repolis/
+GitHub와 누적 트래픽 기록으로 주인 마을을 다시 만들려면:
+
+```bash
+gh auth login
+GTM_DIR=data python3 scripts/build_repos.py
+```
+
+`repos.json`은 생성 파일입니다. JSON을 직접 고치지 말고 빌더를 변경하세요.
+
+## 내 도시로 만들기
+
+가장 빠른 미리보기에는 포크도 필요 없습니다. **[내 GitHub로 보기](https://sigco3111.github.io/Repolis/?launch=1)**를 열거나 `https://sigco3111.github.io/Repolis/?user=<login>`을 공유하세요. 영어 광장에는 `?view=plaza&lang=en`으로 바로 들어갑니다. 프로젝트 하나는 `https://sigco3111.github.io/Repolis/?repo=<owner>/<repo>&ref=repo-portal`로 확인한 뒤 열거나, `?repo=<owner>/<repo>&view=atelier&lang=en`으로 영어 전시실에 바로 들어갈 수 있습니다.
+
+영구적인 메타데이터 도시를 운영하려면:
+
+1. **[이 템플릿 사용](https://github.com/new?template_name=Repolis&template_owner=sigco3111)**을 누릅니다.
+2. Actions를 활성화하고 저장소 루트 `main` 브랜치에서 GitHub Pages를 켭니다.
+3. **Refresh Repolis data**를 한 번 실행합니다. `github.token`으로 템플릿 저장소 소유자의 공개 레포를 불러오고 이후 매일 이어집니다.
+4. 선택: 누적 트래픽이 필요하면 `GH_PAT` Actions 시크릿을 추가합니다. 없어도 스타·포크·최근 활동·언어·토픽·릴리스로 도시는 완성됩니다.
+
+공개 레포만 마을에 나타납니다. 손대지 않은 미러 포크는 제외되며, 비공개 레포 이름은 공개 데이터에 들어가지 않습니다.
+
+## 구조
+
+```text
+누적 트래픽 + GitHub API
+             │
+             ▼
+ scripts/build_repos.py ──▶ repos.json
+                                │
+                                ▼
+                    index.html + 로컬 모듈
+                         Three.js 마을
+                         ├─ 로컬 검색
+                         ├─ 선택형 근거 검색 Worker
+                         └─ 선택형 실시간 Worker
+```
+
+Repolis는 **빌드 없는 정적 웹 앱**을 유지합니다. 주 런타임은 `index.html`에 있고, 생성 데이터, 현자 명단, 월드 트리 팩토리, 결정적 회의 엔진은 목적별 로컬 파일로 분리합니다.
+
+| 경로 | 역할 |
+|---|---|
+| [`index.html`](index.html) | 3D 월드, UI, 이동, 주민, 탐험, 다국어 |
+| [`repolis.config.js`](repolis.config.js) | 포크 소유자 자동 인식과 선택형 서비스 안전 기본값 |
+| [`repos.json`](repos.json) | 생성된 레포 및 트래픽 데이터 |
+| [`scholars.js`](scholars.js) | 현자 명단 |
+| [`assets/repo-portal.js`](assets/repo-portal.js) | 엄격한 대상 해석·공개 데이터 투영·정식 레포 링크 |
+| [`assets/town-growth.js`](assets/town-growth.js) | 결정적 레포 탄생 타임라인·연도 스냅샷·공유 링크 |
+| [`assets/world-tree/`](assets/world-tree/) | 절차적 월드 트리 팩토리 |
+| [`cloudflare-taxi/`](cloudflare-taxi/) | 근거 검색 AI와 선택형 주민 대화 Worker |
+| [`cloudflare/`](cloudflare/) | 실시간 접속 Worker |
+| [`council/`](council/) | 결정적 회의 엔진과 가드 |
+| [`scripts/`](scripts/) | 데이터 빌더와 회귀 검사 |
+
+## 선택형 서비스
+
+| 기능 | 설정 문서 |
+|---|---|
+| 근거 검색 택시와 현자 | [`cloudflare-taxi/README.md`](cloudflare-taxi/README.md) |
+| 실시간 방문자와 카운터 | [`cloudflare/README.md`](cloudflare/README.md) |
+| Vercel 택시 대안 | [`api/`](api/)와 [`.env.example`](.env.example) |
+| 복사해서 쓰는 연동 예제 | [`examples/`](examples/) |
+
+## 조작
+
+| 입력 | 동작 |
+|---|---|
+| `W A S D`, 방향키, 왼쪽 터치 스틱 | 걷기 |
+| 마우스 드래그 또는 오른쪽 터치 스틱 | 시점과 방향 전환 |
+| 휠 | 확대·축소 |
+| `Enter`, 클릭, 모바일 문 버튼 | 가까운 장소 열기 |
+| 택시 버튼 | 깃버에게 묻기 |
+| 메뉴·지도·여권 버튼 | 길찾기·탐험 기록·도시 성장 리플레이 |
+| 언어 및 해·달 버튼 | 언어와 시간대 전환 |
+
+## 문서
+
+- [`AGENTS.md`](AGENTS.md) — 기여자와 에이전트 운영 계약
+- [`docs/domain-model.md`](docs/domain-model.md) — 레포 데이터와 기능 모델
+- [`docs/repo-portal-change-guide.md`](docs/repo-portal-change-guide.md) — Repo Portal URL·데이터·캐시·프라이버시·유지보수 계약
+- [`docs/known-limitations.md`](docs/known-limitations.md) — 의도된 제약
+- [`SCHOLARS.md`](SCHOLARS.md) — 현자 명단과 근거 검색 역할
+- [`COUNCIL_PATTERN.ko.md`](COUNCIL_PATTERN.ko.md) — 토론에서 판정으로 가는 패턴
+- [`CHANGELOG.md`](CHANGELOG.md) — 최근 릴리스와 보관 기록
+- [`repolis.yaml`](repolis.yaml) / [`llms.txt`](llms.txt) — 도구용 프로젝트 진입점
 
 ## 라이선스
 
-MIT
+MIT © [신희정](https://github.com/sigco3111). 데이터 수집: [github-traffic-monitor](https://github.com/sigco3111/github-traffic-monitor).

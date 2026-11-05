@@ -1,390 +1,224 @@
-# 🏙️ Repolis — the City of Repos
+> **작업본 안내 (2026-11-05):** 이 문서는 원본 v1.98.0 README를 sigco3111 소유로 옮긴 시험용 작업본입니다. 원본: github.com/hyeonsangjeon/Repolis
 
-**sigco3111의 모든 GitHub repo가 사는 3D 도시** · 별빛 학자 셋이 안내하고, 도시 자체가 평생 누적 트래픽을 보여준다
+<div align="center">
 
-<p align="left">
+<a href="https://sigco3111.github.io/Repolis/"><img src="assets/banner.svg" alt="Repolis — the City of Repos" width="80%"></a>
 
-  <a href="./LICENSE"><img src="https://img.shields.io/github/license/sigco3111/Repolis?style=for-the-badge" alt="License"></a>
-  <a href="https://github.com/sigco3111/Repolis/stargazers"><img src="https://img.shields.io/github/stars/sigco3111/Repolis?style=for-the-badge" alt="Stars"></a>
-  <a href="https://github.com/sigco3111/Repolis/network/members"><img src="https://img.shields.io/github/forks/sigco3111/Repolis?style=for-the-badge" alt="Forks"></a>
-  <a href="https://github.com/sigco3111/Repolis/actions/workflows/refresh.yml"><img src="https://img.shields.io/github/actions/workflow-status/sigco3111/Repolis/refresh.yml?style=for-the-badge" alt="Build Status"></a>
-  <a href="https://github.com/sigco3111?tab=repositories"><img src="https://img.shields.io/github/repos/sigco3111?style=for-the-badge&color=22c55e" alt="sigco3111's public repos"></a>
+# Repolis — the City of Repos
 
+[English](README.md) · [한국어](README.ko.md)
+
+**Public GitHub repos become a walkable 3D town. Traffic shapes the buildings, residents live there, and Gitber drives you to the right project.**
+
+<p>
+  <a href="https://sigco3111.github.io/Repolis/?view=plaza&amp;lang=en"><img src="https://img.shields.io/badge/-%E2%96%B6%20ENTER%20LIVE%20TOWN-178f86?style=for-the-badge" alt="Enter the live Repolis town" height="40"></a><br>
+  <sub><strong>Start here:</strong> enter the live Repolis plaza now.</sub>
+</p>
+<p>
+  <a href="https://sigco3111.github.io/Repolis/?launch=1"><img src="https://img.shields.io/badge/-TRY%20MY%20GITHUB-24292f?style=for-the-badge&amp;logo=github&amp;logoColor=white" alt="Try Repolis with my GitHub" height="32"></a>
+  <a href="https://github.com/new?template_name=Repolis&amp;template_owner=sigco3111"><img src="https://img.shields.io/badge/-USE%20THIS%20TEMPLATE-c56a26?style=for-the-badge&amp;logo=github&amp;logoColor=white" alt="Use the Repolis template" height="32"></a><br>
+  <sub>Preview your public repos · or copy the template to build your own town.</sub>
 </p>
 
-<p align="left">
+<a href="https://sigco3111.github.io/Repolis/"><img src="assets/demo.gif" alt="Repolis demo: a living traffic-shaped GitHub town, Gitber search, taxi ride, and real repository card" width="92%"></a>
 
-  <a href="https://sigco3111.github.io/Repolis/"><img src="https://img.shields.io/badge/🌆_LIVE-sigco3111.github.io-FF6B6B?style=for-the-badge" alt="Live Demo"></a>
-  <a href="https://github.com/sigco3111/Repolis"><img src="https://img.shields.io/badge/🐙_REPO-GitHub-181717?style=for-the-badge&logo=github" alt="GitHub"></a>
-  <a href="https://github.com/sigco3111/gh-traffic-monitor"><img src="https://img.shields.io/badge/📊_DATA-gh--traffic--monitor-4ECDC4?style=for-the-badge" alt="Data Backend"></a>
+<sub>🎬 <strong>15-second demo:</strong> traffic → buildings · ask Gitber → taxi ride → real repo card</sub><br>
+<sub><code>WASD</code> / touch to walk · ask Gitber · <code>Enter</code> / tap to open · no sign-up or build · <strong><a href="#run-in-60-seconds">Run locally</a></strong> · ⭐ <strong><a href="https://github.com/sigco3111/Repolis">Star Repolis</a></strong></sub><br>
+<sub>Type a GitHub username, <code>owner/repo</code>, or repository URL on the first screen. Repolis uses public metadata only.</sub>
 
-</p>
+[![Daily refresh](https://img.shields.io/github/actions/workflow/status/sigco3111/Repolis/refresh.yml?style=flat-square&label=daily%20refresh&logo=githubactions&logoColor=white)](https://github.com/sigco3111/Repolis/actions/workflows/refresh.yml)
+[![Three.js](https://img.shields.io/badge/Three.js-r160-000000?style=flat-square&logo=three.js&logoColor=white)](https://threejs.org)
+[![Zero build](https://img.shields.io/badge/runtime-zero%20build-83bb59?style=flat-square)](index.html)
+[![License: MIT](https://img.shields.io/badge/License-MIT-a0a0a0?style=flat-square)](LICENSE)
 
----
+</div>
 
-## ✨ 30초 만에 도시 구경하기
+## What the demo proves
 
-<p align="center">
-  <a href="https://sigco3111.github.io/Repolis/"><img src="https://sigco3111.github.io/Repolis/assets/banner.svg" alt="Repolis Banner" width="800"/></a>
-</p>
+| In the demo | What it means for your repositories |
+|---|---|
+| traffic, stars, forks, clones, and activity shape the architecture | people can understand your portfolio signals without opening a dashboard |
+| Gitber searches in natural language, then drives to the result | repository discovery becomes an interaction rather than another list |
+| `?user=<login>` rebuilds the town from any public GitHub account | you can try the same engine with your work before cloning or configuring anything |
 
-### 👉 [**🌆 https://sigco3111.github.io/Repolis/**](https://sigco3111.github.io/Repolis/)
+**Fastest proof:** open **[Try my GitHub](https://sigco3111.github.io/Repolis/?launch=1)** and enter your login or one `owner/repo`. A username builds the public town; a repository opens that project first. No token, account connection, or fork is required.
 
-> **WASD**로 도시 걸어다니기 · 🚕 **POLARIS 택시** 호출 · 🌟 **별빛 학자 셋**에게 질문하기 · 🌙 야경 모드
+<div align="center">
 
-건물 **높이=방문자**, **너비=포크**, **장식=클론**, **정원=조회수**, **지붕 금박=별** — 야경에서는 최근 push한 repo 창문이 빛난다.
+<a href="https://sigco3111.github.io/Repolis/?launch=1"><img src="assets/launch.gif" alt="Typing a GitHub username on the Repolis launchpad and walking into a town built from that account's public repositories" width="86%"></a>
 
----
+<sub>⌨️ <strong>Username → your own town:</strong> type <code>mrdoob</code> → his 58 public repos become a walkable city</sub>
 
-## 📑 목차
+</div>
 
-1. [왜 만들었나](#왜-만들었나-why-this-exists)
-2. [v0.3.0에서 달라진 점](#v030에서-달라진-점-whats-new)
-3. [도시 한눈에](#도시-한눈에-city-at-a-glance)
-4. [아키텍처](#아키텍처-architecture)
-5. [빠른 시작](#빠른-시작-quick-start)
-6. [택시 + 학자](#택시--학자-taxi--scholars)
-7. [Kronos Council](#kronos-council)
-8. [공유 가능한 도시](#공유-가능한-도시-shareable-towns)
-9. [Contribution Library](#contribution-library)
-10. [자동화](#자동화-automation)
-11. [알려진 한계](#알려진-한계-known-limits)
-12. [기술 스택](#기술-스택-tech-stack)
-13. [감사와 라이선스](#감사와-라이선스)
+If you find this useful for presenting repositories, **[star Repolis](https://github.com/sigco3111/Repolis)**. Your star helps other developers discover the template.
 
----
+## From preview to your own city
 
-## 왜 만들었나 (`Why this exists`)
+| Goal | What to do | Result |
+|---|---|---|
+| preview my public repos | use the live username field | a shareable town built from metadata in seconds |
+| share one repository as an experience | paste `owner/repo` or a GitHub repository URL, then use **Copy Repo Portal** in its Atelier | a canonical confirmation link, plus `?repo=owner/repo&view=atelier&lang=en` when the exhibition should be the first screen |
+| hand another developer the best path I found | add 2–3 opened repo cards to **Repo Route**, then follow or share it | one ordered deep link that guides the recipient through those real houses before the earned Star invitation |
+| find a current open-source task | choose **Find something to contribute** in Wayfinding (Open Source Quests), then explicitly search | three current public issues ranked for approachability, each connected to its real repo house and exact GitHub issue |
+| introduce who built the town | visit **Town Creator Hall** or open **Meet the town creator** in the city menu | public bio, followers, GitHub tenure, top languages, badges, and signature projects tied to the current town owner |
+| retrace what I did on this visit | open the **Passport** and choose **Journey** | the houses I opened in order, the paths I chose, and the shares or issues I left, kept on this page only (nothing stored or sent) |
+| watch my open-source history unfold | open **Town Growth Replay** from Wayfinding, the Passport, or my completed public-town preview | a creation-date timeline where repo houses rise year by year, with a shareable year link and era postcard |
+| connect with another developer | click **Connect with a friend** after a preview, or open **Twin Towns** in the city menu | a two-person link that opens both towns and their shared languages or topics |
+| keep my town on my GitHub profile | click **Put this town on my GitHub profile** when the preview is ready, or use **Town Postcard Studio** | a 600px portal that always opens my personalized town |
+| publish my own Repolis | use the template, enable Actions + Pages, run **Refresh Repolis data** once | your fork owner's public repos become the default town; no PAT required |
+| grow buildings from real traffic | optionally add the `GH_PAT` Actions secret | cumulative views, visitors, and clones enrich the city each day |
 
-GitHub은 traffic 데이터를 **14일 롤링 윈도우**로만 보여준다. 14일이 지나면 방문자·클론·포크 수가 영원히 사라진다.
+Forks automatically infer `<owner>.github.io` as the town owner and do **not** call the upstream AI or realtime Workers. For a custom domain, set one value in [`repolis.config.js`](repolis.config.js).
 
+## How repository data becomes a city
 
-| 문제                  | 결과                          |
-| ------------------- | --------------------------- |
-| 14일 지난 방문자 데이터 소실   | "내 repo에 지금까지 몇 명 왔지?" 못 답함 |
-| 14일 지난 clone 데이터 소실 | 평생 인기 repo 순위 못 만듦          |
-| 정적 빌드               | 살아있는 OSS 작업 흐름이 안 보임        |
+Repolis maps public GitHub metadata and cumulative traffic onto a walkable town.
 
+| Signal | What it becomes |
+|---|---|
+| unique visitors | building height |
+| forks | lot and building width |
+| clones | banners and gold trim |
+| views | garden and fence size |
+| stars | roof ornaments |
+| recent activity | window glow at night |
 
-**Repolis**는 그 데이터를 **매일 누적 CSV로 영구 보존**하고, 그 누적값으로 **3D 도시를 짓는다.** 도시를 걸으면 작업 흐름이 보이고, 야경에서 활발한 repo 창문이 빛난다.
+Repositories are grouped into topic districts with roads, signs, hubs, and a world map. The owner's town refreshes daily from committed traffic history and the GitHub API. `?user=<login>` builds a lighter public town with that user's own World Tree record and bounded local residents, while `?repo=<owner>/<repo>` loads one project first through the same projection. GitHub does not publish visitor, view, or clone traffic for those public API modes, so their buildings use stars, forks, and update recency without inventing traffic.
+At ordinary walking distances, a one-draw architectural LOD keeps each repo house's textured walls and roof while preserving its plot, hedge, path, real window panes, shutters, sills, flower boxes, gutters, and tier-specific porch, balcony, or portico.
 
----
+## A village that lives
 
-## v0.3.0에서 달라진 점 (`What's new`)
+- **Your city comes first.** The canonical first screen asks for a GitHub login before offering the sample town. A public town's first entry plays its Growth Replay once (8–24 seconds, or only the present frame with reduced motion) and ends on a deterministic city plaque such as *Python Lab City of you*. A dismissible card then asks what brought you: understand one repository, explore the town, or find something to contribute. Exploring takes Gitber's taxi to three houses chosen from the catalog — the tallest, the oldest (or quietest), and a surprising one — and each district's resident guide says why, using only catalog numbers. Wayfinding is grouped into Go, Look, and Share; Look opens after one visited house and Share after two. Nothing new is requested or stored beyond one session-scoped list of towns that already played.
+- **Names stay readable when you walk closer.** Nearby nameplates have a screen-size limit and do not overlap; the person you are talking to takes priority. **Choose someone nearby** in Wayfinding keeps names and roles available even when a world label is hidden. Repository cards keep their close button in view, and Escape closes the active panel without also leaving the exhibition.
+- **Residents follow daily routines.** Named townspeople wander their districts with changing moods, visit cherished haunts, recognize friends, stroll or sit together, gather around the campfire, and sometimes celebrate a recent repository release. At night, they return to warm windows and porch seats. In the morning, they head back to work in their districts. Their cottages form **Starlight Row** on the north-east edge, with resident-coloured gardens, three roof silhouettes, shutters, transoms, selected window boxes, canopies, chimneys, and roof finials. A shared flower bed, lanterns, hedges, broadleaf trees, and cypresses fill the common spaces. Pairs also choose short **Shared Joy** excursions to real flower patches, visible stars at night, or a real repository house, all without a player prompt or AI call. When asked a specialist question, residents introduce the right scholar instead of pretending to know the answer. Follow the compass to find that scholar in the world.
+- **A public town lives from its own record.** The one existing public-repository load deterministically supplies its era, season, Silence Ledger, archived Roots, and up to six desktop/four phone-or-LOW_END residents with local jobs, greetings, and real repo-home bindings. Traffic, owner residents, Shared/Bound memories, realtime, and grounded services stay unknown or off; no second API request or model call is made.
+- **The owner World Tree keeps a small factual history.** Its **Thirty-day Sap Ledger** retains up to 30 actual UTC daily entries of public repo, star, fork, recent-activity, season, and Silence aggregates. Same-day refreshes replace instead of duplicate, missing days stay missing, and foreign towns explicitly receive no owner ledger.
+- **The roots open into a walkable archive.** **The Undercroft** turns the current town's archived public repositories into deterministic shelves and plaques beneath the World Tree. Approach one to read its existing Roots text, active years, and available last public activity, then open the repository in a new tab. The Chronicle stays available as the accessible summary; empty and foreign towns keep their own truthful record without borrowing owner history.
+- **Exploration continues across visits.** The Explorer Passport records houses and landmarks, district progress shows what remains, and the daily **Village Chronicle** links one resident and their cherished haunt to a repository or district with a real connection.
+- **The city points outward to real work.** **Open Source Quests** makes one anonymous public GitHub search only when the visitor asks, ranks up to three current `good first issue`, `help wanted`, or open issues, and leads through the actual repository house before the exact issue handoff. After that repository's Blueprint is explicitly loaded, **Issue-to-Code Scout** can compare only the selected issue's title and labels with actual path metadata and offer up to five candidate paths to inspect first. It makes no file relationship or modification claim, adds no request, and returns no guess when lexical evidence is weak. Results stay in the tab; no login, token, issue tracking, or new backend is involved. The existing earned Star invitation can appear only after the visitor chooses to open an issue.
+- **A visitor can hand off the route that proved the town's value.** After opening a repository house, **Repo Route** can save it to an ordered 2–3 stop walk. The recipient's link confirms the stops before entry, points to each real house in sequence, and offers the existing earned Star invitation only after completion. The draft is session-only; the URL contains public repo names and adds no backend, account, storage key, or render asset.
+- **Your repository history becomes a moving city story.** **Town Growth Replay** reads the public creation date already carried by every repo house, then raises the town through its real repo-birth years from the first house to the present. The scrubber, play/pause controls, deep link, and era postcard work for the owner and every `?user=` public town. The timeline covers repos still public today; house appearance and language labels stay explicitly marked as today’s metadata. Replay adds no mesh, texture, light, backend, account, or stored history.
+- **A repository can be the front door.** **Repo Portal** accepts `owner/repo` or a GitHub URL, loads that one public target before the owner catalog, and takes the visitor into its Repository Atelier after one entry click. A strict `?repo=owner/repo&view=atelier&lang=en` campaign link instead holds a short portal transition over initialization and opens the same exhibition directly, without flashing the exterior town or covering it with chat. Direct links default to English; use `lang=ko` for Korean. The Atelier can copy the canonical confirmation address, open GitHub, or expand into the owner's full town. A 15-minute, 512 KiB local cache and stale fallback keep the path bounded; unavailable traffic remains unknown.
+- **Every repo house opens into one finished exhibition.** The reusable **Repository Atelier** puts the exact `owner/repo` and its public description in front of you; the Core, statistics, and history remain supporting exhibits. **README getting started** reads that public repository's README only when chosen, then shows original headings, conditions, copyable code, source lines, branch/ref, document blob SHA, and read time. These are bounded excerpts, not generated instructions or a verified complete setup guide; missing guidance stays missing. No model call, image download, or command execution is involved. **Homepage**, GitHub, and optional **Ask Gitber** remain explicit choices. **Repository Blueprint** still waits for **Scan public source map**, makes one exact public GitHub Tree request, and projects a bounded DOM/3D file-and-folder map. Its **Blueprint Deep Link** confirms the exact repo/path before loading, never guesses missing paths, and represents a source tree—not a call graph or runtime architecture. Gitber retains an isolated thread with up to five backend calls per visit, counting every started request; no other repository is substituted. Entry and document reading do not start a question.
+- **Returning visitors can see what changed.** The Passport's **Town Gazette** compares the current public repository snapshot with the last one this browser marked as read. It then highlights new repositories, release tags when available, pushes, and positive metric growth. The comparison is entirely local and costs nothing.
+- **Repository connections are visible.** The Stargazer's Observatory finds a genuine connection among three repositories that share topics or languages and draws it as a nighttime Constellation Trail.
+- **Every town introduces its creator.** **Town Creator Hall** belongs to the active town owner—canonical, fork, or `?user=` visitor—and combines an explicitly loaded public GitHub profile with the repositories already rendered in town. The hall highlights truthful stats, languages, earned badges, and three signature projects before crediting the upstream Repolis engine.
+- **Two developers can connect their towns.** **Twin Towns** compares public repo metadata, finds shared languages or topics, and creates a recipient-specific link that can be followed in either direction—without login or a backend.
+- **Quiet maintenance gets its own light.** The Observatory's Maintainers' Night Watch selects three recently maintained, low-star repositories from public metadata and asks visitors to light their lanterns. The Watch recognizes care regardless of popularity.
+- **Landmarks carry the project story.** The Contribution Library archives papers, talks, open-source work, and awards. Chronopolis hosts the Council of Time. The plaza, observatory, park, and fairground make the city worth walking. At Petite-Venise, a boardable, low-profile ferry follows the real canal curve beneath the flower bridges for one scenic tour of the town.
+- **The World Tree anchors the skyline.** It is a deterministic, code-native Three.js sculpture created with the [threejs-sculpt-dna](https://github.com/sigco3111/threejs-sculpt-dna) Copilot plugin, with rooted foliage, living motion, and tree-isolated bloom.
 
-이 fork는 [hyeonsangjeon/Repolis](https://github.com/hyeonsangjeon/Repolis) v1.64.0 위에 sigco3111 데이터를 얹은 v0.3.0이다.
+## Ask the city
 
+| Guide | What to ask | How it answers |
+|---|---|---|
+| **Gitber · POLARIS** | “Take me to an AI agent repo” or “most cloned” | uses local indexed search by default, then drives to the selected house |
+| **VEGA · Archivist** | Azure, .NET, Copilot, Microsoft products | grounded Microsoft Learn search with references |
+| **RIGEL · Cartographer** | how a public repository works | grounded DeepWiki exploration |
+| **MIRA · Timekeeper** | current library APIs and version-specific examples | direct Context7 lookup; roams the Library district |
+| **LYRA · Forgemaster** | public models, datasets, and ML papers | direct Hugging Face search; roams the AI district |
+| **Council of Time** | a technical trade-off or disputed claim | curated, deterministic verdicts, plus an optional live debate clearly marked as unverified |
 
-| 기능                       | 원작 (hyeonsangjeon v1.64.0)            | sigco3111 fork v0.3.0                                                                         |
-| ------------------------ | ------------------------------------- | --------------------------------------------------------------------------------------------- |
-| 데이터 백엔드                  | 자체 `collect_traffic.py` (3-layer CSV) | [**gh-traffic-monitor**](https://github.com/sigco3111/gh-traffic-monitor) (zero-deps, 단일 레이어) |
-| 도시 데이터                   | 60~80개 repo                           | **sigco3111의 모든 public repo** (193개, 매일 갱신)                                                   |
-| Scholar NPC              | (없음)                                  | **POLARIS · VEGA · RIGEL** (MCP-grounded, 별자리 표시)                                             |
-| Grounded 택시              | (없음)                                  | **🛰️ AI Foundry Live** — Cloudflare Worker가 KB retrieval + in-persona chat                   |
-| Kronos Council           | ✅ 있음                                  | ✅ 그대로 유지 (deterministic debate → verdict, 130+56 checks)                                      |
-| Contribution Library     | 6 카테고리 × 50+ 항목 (논문/수상/AWS)           | **6 카테고리 × 25 작품** (sigco3111 OSS/게임/에이전트/커뮤니티/3D/학습)                                         |
-| Shareable towns `?user=` | ✅ 있음                                  | ✅ 그대로 유지 (남의 도시도 탐험)                                                                          |
-| Multiplayer (PartyKit)   | ✅ 있음                                  | ✅ 그대로 유지                                                                                      |
-| 자동화                      | 매일 1회 cron                            | **이중 cron** — traffic 4h + build 24h                                                          |
-| 다국어                      | 한국어 / 영어                              | ✅ 동일                                                                                          |
+The town works without a backend. **Local** search is instant and keyless. **WebLLM** provides optional in-browser inference. The live demo adds grounded answers and official public MCP lookups through a Cloudflare Worker. If those services are unavailable, the town falls back to Local search or solo play.
 
-
----
-
-## 도시 한눈에 (`City at a glance`)
-
-### 📊 라이브 지표
-
-
-| 지표            | 값                                                                                                                 |
-| ------------- | ----------------------------------------------------------------------------------------------------------------- |
-| 총 public repo | ![repos](https://img.shields.io/github/repos/sigco3111?style=flat-square&color=22c55e)                            |
-| 도시 데이터        | `repos.json` (매일 cron 자동 갱신, [소스](https://github.com/sigco3111/Repolis/blob/main/repos.json))                     |
-| 도시 빌드 상태      | ![refresh](https://img.shields.io/github/actions/workflow-status/sigco3111/Repolis/refresh.yml?style=flat-square) |
-| Traffic 누적    | `data/logs/_cumulative.csv` (매일 append)                                                                           |
-
-
-### 🏗️ 도시 구조 (Traffic → Architecture)
-
-`scripts/build_repos.py`가 누적 트래픽을 점수화하고, `index.html`이 그 점수로 건물을 짓는다:
-
-
-| 신호                          | 건축 요소                |
-| --------------------------- | -------------------- |
-| 👁 unique visitors          | 건물 **높이**            |
-| ⑂ forks                     | 건물 **너비** (lot size) |
-| ⬇ clones                    | **장식** (배너, 금테)      |
-| 📈 views                    | **정원** · 펜스          |
-| ⭐ stars                     | **지붕 금박**            |
-| 🌙 최근 push · clones · views | **야경 창문 빛**          |
-
-
-점수 상위 14개는 **다운타운** (high-rise), 나머지는 **동네** (ring-road cottages). [전체 데이터 모델 → `docs/domain-model.md`](docs/domain-model.md)
-
----
-
-## 아키텍처 (`Architecture`)
-
-```
-┌─────────────────────────────────────────────────────────────────────┐
-│ 1️⃣  GitHub Actions (cron)                                          │
-│     • traffic-refresh.yml  — 4시간마다 traffic만                     │
-│     • refresh.yml          — 매일 1회 전체 빌드 + Pages 배포         │
-└─────────────────────────────────────────────────────────────────────┘
-                                ↓
-┌─────────────────────────────────────────────────────────────────────┐
-│ 2️⃣  gh-traffic-monitor                                              │
-│     → data/logs/YYYY-MM-DD.csv  (일별)                               │
-│     → data/logs/_cumulative.csv  (평생 누적)                         │
-└─────────────────────────────────────────────────────────────────────┘
-                                ↓
-┌─────────────────────────────────────────────────────────────────────┐
-│ 3️⃣  scripts/build_repos.py                                          │
-│     • metadata + social 병합 (GraphQL openGraphImageUrl)            │
-│     • 점수 = log(visitors)·1.0 + log(clones)·0.7 +                   │
-│             log(forks)·0.6 + log(stars)·0.5                          │
-│     → repos.json (~30 필드 × N repo, score 순)                       │
-└─────────────────────────────────────────────────────────────────────┘
-                                ↓
-┌─────────────────────────────────────────────────────────────────────┐
-│ 4️⃣  GitHub Pages — index.html (단일 파일, Three.js r0.160)         │
-│     • 건물 자동 배치 (다운타운 + 동네)                              │
-│     • WASD 도보 + WoW-style 카메라                                  │
-│     • POLARIS 택시 + 3 학자 NPC + Kronos Council                    │
-└─────────────────────────────────────────────────────────────────────┘
-```
-
-선택: Grounded AI — [`cloudflare-taxi/`](cloudflare-taxi/) Cloudflare Worker가 POLARIS / VEGA / RIGEL의 KB retrieval과 in-persona chat을 담당한다. Worker가 unconfigured면 모든 모드는 silent Local fallback.
-
----
-
-## 빠른 시작 (`Quick start`)
-
-### 옵션 1: 라이브 데모 (1초)
-
-👉 [**https://sigco3111.github.io/Repolis/**](https://sigco3111.github.io/Repolis/) 클릭
-
-### 옵션 2: 본인 도시로 빌드 (15분)
+## Run in 60 seconds
 
 ```bash
-# 1. Fork + clone
-gh repo fork sigco3111/Repolis --clone --remote
+git clone https://github.com/sigco3111/Repolis
 cd Repolis
+python3 -m http.server 8000 --protocol HTTP/1.1   # HTTP/1.1 keeps the burst of module loads from being reset
+# open http://localhost:8000
+```
 
-# 2. gh-traffic-monitor 설치 (zero-deps, 1분)
-git clone https://github.com/sigco3111/gh-traffic-monitor /tmp/gtm
-pip install -e /tmp/gtm
-python -m gh_traffic_monitor --owner YOUR_USERNAME --log-dir ./data/logs collect
+No installation or build step is required. Three.js is loaded from a CDN import map, while local data and modules are served as static files.
 
-# 3. OWNER 본인 이름으로 교체
-sed -i '' "s/const OWNER = 'sigco3111'/const OWNER = 'YOUR_USERNAME'/" index.html
+To rebuild the owner's city from GitHub data and collected traffic history:
 
-# 4. repos.json 빌드
+```bash
 gh auth login
-REPO_OWNER=YOUR_USERNAME python3 scripts/build_repos.py
-
-# 5. 로컬 미리보기
-python3 -m http.server 8000   # http://localhost:8000
-
-# 6. GitHub Pages 활성화 + push
-gh repo edit YOUR_USERNAME/Repolis --enable-pages --source main --source-path /
-git push -u origin main
+GTM_DIR=data python3 scripts/build_repos.py
 ```
 
-### 옵션 3: Contribution Library를 본인 작품으로
+`repos.json` is generated. Edit the builder instead of changing the generated JSON by hand.
 
-`index.html`의 `LIBDATA` 배열을 본인 작품으로 교체한다. 6개 카테고리 권장:
+## Build your own city
 
-```js
-const LIBDATA = [
-  { icon: '🛠️', ko: '시그니처 OSS', en: 'Signature OSS', items: [
-    { t: { ko: '내 첫 OSS — ...', en: 'My first OSS — ...' }, m: 'YOU · MIT', u: 'https://github.com/YOU/repo' },
-    // ...
-  ]},
-  // ... 5개 카테고리 더
-];
+The quickest preview requires no fork. Open **[Try my GitHub](https://sigco3111.github.io/Repolis/?launch=1)**, share `https://sigco3111.github.io/Repolis/?user=<login>`, enter the English owner plaza with `?view=plaza&lang=en`, point one project at `https://sigco3111.github.io/Repolis/?repo=<owner>/<repo>&ref=repo-portal`, or enter its exhibition directly with `?repo=<owner>/<repo>&view=atelier&lang=en`.
+
+To publish a persistent city built from repository metadata:
+
+1. Click **[Use this template](https://github.com/new?template_name=Repolis&template_owner=sigco3111)**.
+2. Enable Actions, then configure GitHub Pages to publish from the root of `main`.
+3. Run **Refresh Repolis data** once. The workflow uses `github.token` to build the city from the template owner's public repositories and then runs daily.
+4. Optionally, add an Actions secret named `GH_PAT` to collect cumulative traffic. Without it, stars, forks, recency, language, topics, and releases still shape the city.
+
+Only public repositories are rendered. Unmodified mirror forks are filtered out, and private repository names never enter the public data.
+
+## Architecture
+
+```text
+traffic history + GitHub API
+             │
+             ▼
+ scripts/build_repos.py ──▶ repos.json
+                                │
+                                ▼
+                    index.html + local modules
+                         Three.js town
+                         ├─ Local search
+                         ├─ optional grounded AI Worker
+                         └─ optional realtime Worker
 ```
 
----
-
-## 택시 + 학자 (`Taxi & Scholars`)
-
-POLARIS가 도시로 안내하고, VEGA·RIGEL이 질문에 답한다. 각 NPC는 **하나의 MCP 지식 출처**에 grounding되어 있다.
-
-
-| NPC                              | 역할                 | 지식 출처 (MCP)         | 호출법                                 |
-| -------------------------------- | ------------------ | ------------------- | ----------------------------------- |
-| 🚕 **POLARIS** · the Wayfinder   | 택시 (자연어 → repo 픽업) | GitHub MCP          | "가장 인기있는 repo" / "AI agent 관련 repo" |
-| 📘 **VEGA** · the Archivist      | MS Docs 엔지니어       | Microsoft Learn MCP | "Azure Functions 어떻게 써?"            |
-| 🗺️ **RIGEL** · the Cartographer | DeepWiki 탐험가       | DeepWiki MCP        | "Three.js 구조 설명해줘"                  |
-
-
-### 택시 모드 3가지
-
-택시 버튼 → 상단 드롭다운으로 모드 전환. 기본은 **Local**.
-
-
-| 모드                      | 의존성                                | 첫 사용 | 품질                            |
-| ----------------------- | ---------------------------------- | ---- | ----------------------------- |
-| 🟢 **Local** (default)  | 0                                  | 즉시   | 좋음 (synonym + metric 인식)      |
-| 🟡 **WebLLM**           | 브라우저 내 ~1GB 모델                     | ~30초 | 더 좋음 (Llama-3.2-1B 추론)        |
-| 🛰️ **AI Foundry Live** | Cloudflare Worker (`repolis-taxi`) | 즉시   | 최고 (KB-grounded + references) |
-
-
-**🛰️ AI Foundry Live**는 [Cloudflare Worker](cloudflare-taxi/)가 Azure AI Search KB를 호출해서 grounded 답변 + 참조 문서를 돌려준다. Worker가 없으면 자동으로 Local로 fallback — silent.
-
-### KB miss / 잡담은 "별빛" 경로
-
-질문이 KB 밖(천문학, 신화, 잡담)이거나 KB가 빈 결과를 주면, Worker가 scholar 인격으로 **Azure OpenAI `gpt-5.4-mini` 직접 호출**로 답한다 (keyless Entra service principal). 브라우저에는 `✦ how I answered` 패널로 표시된다.
-
-### 예시 질문 (모든 모드 작동)
-
-```
-"가장 인기있는 repo"          → POLARIS가 다운타운 1번 건물로 픽업
-"AI agent 관련 repo"          → POLARIS가 토픽 매칭으로 픽업
-"Azure Functions 어떻게 써?"   → VEGA가 MS Docs 인용 + 답변
-"Three.js 내부 구조 설명"      → RIGEL이 DeepWiki로 답변
-"library"                    → Contribution Library 안내
-```
-
----
-
-## Kronos Council
-
-도시에 사는 별도의 **결정 엔진**. 세 비평가(Olddoc · Livewire · Hearsay)가 토론하고, 의장 **KRONOS**가 `source × recency` 가중으로 판결을 내린다.
-
-- **결정론적** — 같은 입력에 항상 같은 판결
-- **수학/정형 케이스**: 정확히 검증된 verdict
-- **자유 주제 케이스**: AI 추론 + `⚡ unverified` 배지
-
-```
-node council/test.mjs        # → "ALL GREEN — 130 checks passed"
-node council/test-live.mjs   # → "56 passed, 0 failed"
-node scripts/smoke.mjs       # → index.html 정적 회귀 가드
-```
-
-Council의 동작 패턴은 [`COUNCIL_PATTERN.md`](COUNCIL_PATTERN.md), 데이터 모델은 [`docs/domain-model.md`](docs/domain-model.md) §7 참고.
-
----
-
-## 공유 가능한 도시 (`Shareable towns`)
-
-URL에 `?user=<login>`을 붙이면 **아무나의 public GitHub**로 도시를 짓는다:
-
-```
-https://sigco3111.github.io/Repolis/?user=mrdoob
-https://sigco3111.github.io/Repolis/?user=torvalds
-```
-
-- 캐시는 `localStorage` (stale-fallback 포함)
-- Cross-town 택시 운전은 비활성 — "🏠 도시로 돌아가기" 버튼으로 owner 도시 복귀
-- 유효하지 않은 username이거나 owner와 같으면 owner 도시 그대로
-
----
-
-## Contribution Library
-
-`index.html`의 `LIBDATA` (또는 별도 빌드된 [`assets/contribution-library.json`](assets/))로 도시 끝 사거리에 **sigco3111 6 카테고리 × 25 작품**을 전시한다:
-
-
-| 카테고리                | 작품 수 |
-| ------------------- | ----: |
-| 🛠️ 시그니처 OSS        | 5    |
-| 🎮 AI 게임 / 전략 / RPG | 5    |
-| 🤖 AI 자동화 / 에이전트    | 4    |
-| 🏘️ 커뮤니티 / 실험       | 3    |
-| 🎨 3D / 비주얼 / 게임 에셋 | 5    |
-| 📚 학습 / 강의 / 데이터    | 3    |
-
-
-본인 fork로 갈아끼우려면 `index.html`의 `LIBDATA`만 교체하면 된다.
-
----
-
-## 자동화 (`Automation`)
-
-### 이중 cron (GitHub Actions 무료 한도 내)
-
-
-| 워크플로                            | 트리거       | 효과                                | 월 실행  |
-| ------------------------------- | --------- | --------------------------------- | -----: |
-| `traffic-refresh.yml`           | **4시간마다** | `gh-traffic-monitor` 단독, traffic만 | ~180회 |
-| `refresh.yml`                   | **매일 1회** | 전체 빌드 + Pages 배포                  | ~30회  |
-| `refresh.yml` workflow_dispatch | 수동        | 즉시 전체 빌드                          | 무제한   |
-
-
-### 수동 트리거 (저장소 추가/삭제 즉시 반영)
-
-```bash
-gh workflow run refresh.yml --repo sigco3111/Repolis
-# → 1~2분 안에 도시 갱신
-```
-
-### 자동 테스트 (배포 전 필수)
-
-```bash
-node council/test.mjs        # → "ALL GREEN — 130 checks passed"
-node council/test-live.mjs   # → "56 passed, 0 failed"
-node scripts/smoke.mjs       # → index.html 정적 회귀 가드
-node --check scholars.js
-node --check cloudflare-taxi/src/grounded.js
-```
-
-UI 검증: 로컬 서버 띄우고 Chrome DevTools에서 콘솔 에러 0개 확인 (모바일 390×844 + 데스크톱).
-
----
-
-## 알려진 한계 (`Known limits`)
-
-- **첫 24~48시간**: GitHub Traffic API가 visitor를 노출하기까지 시간이 걸려 `uniques=0`이 정상이다.
-- **14일 룰**: GitHub이 14일 지난 traffic을 지운다 — **매일 실행이 필수**.
-- **WebLLM 모드**: 첫 사용 시 ~1GB 모델 다운로드 (캐시됨). WebGPU 미지원 브라우저는 동작 안 함.
-- **🛰️ AI Foundry Live**: Cloudflare Worker가 unconfigured면 Local로 fallback. Worker 설정은 [`cloudflare-taxi/README.md`](cloudflare-taxi/README.md).
-- **다국어**: 한국어 / 영어만 지원.
-
----
-
-## 기술 스택 (`Tech stack`)
-
-
-| 영역             | 기술                                                                                            |
-| -------------- | --------------------------------------------------------------------------------------------- |
-| 3D 엔진          | **Three.js r0.160** (단일 `index.html` ~5.2k 줄, CDN import map)                                 |
-| 빌드             | 없음 — `python3 -m http.server`만                                                                |
-| 데이터            | `repos.json` (생성됨, 손으로 편집 금지)                                                                 |
-| 데이터 백엔드        | [**gh-traffic-monitor**](https://github.com/sigco3111/gh-traffic-monitor) (Python, zero-deps) |
-| 빌더             | `scripts/build_repos.py` (stdlib only + gh CLI)                                               |
-| LLM grounding  | Cloudflare Worker [`cloudflare-taxi/`](cloudflare-taxi/) — Azure AI Search KB + MCP           |
-| LLM in-persona | Azure OpenAI `gpt-5.4-mini` (keyless Entra SP)                                                |
-| LLM on-device  | WebLLM (Llama-3.2-1B, WebGPU)                                                                 |
-| 결정 엔진          | `council/` (deterministic debate → verdict, 130+56 checks)                                    |
-| 멀티플레이어         | PartyKit (Cloudflare Workers)                                                                 |
-| CI/CD          | GitHub Actions (월 ~210회)                                                                      |
-| 호스팅            | GitHub Pages                                                                                  |
-
-
----
-
-## 감사와 라이선스
-
-### 🙏 Credits
-
-
-| 기여                              | 출처                                                                                                          |
-| ------------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| **원작 + 도시 엔진 + 3 학자 + Council** | [hyeonsangjeon/Repolis](https://github.com/hyeonsangjeon/Repolis) — 단일 HTML 3D 세계 + LLM 택시 + Kronos Council |
-| **데이터 백엔드**                     | [sigco3111/gh-traffic-monitor](https://github.com/sigco3111/gh-traffic-monitor) — 14일 롤링 한계를 매일 누적으로 해결     |
-| **3D 라이브러리**                    | Three.js 커뮤니티                                                                                               |
-| **CI/CD · 호스팅**                 | GitHub Actions + Pages                                                                                      |
-
-
-### 📄 License
-
-**MIT** — 원작 hyeonsangjeon/Repolis도 MIT. [`LICENSE`](LICENSE) 참고.
-
-<p align="center">
-
-  <sub>Built with 🏙️ by sigco3111 · 기반 hyeonsangjeon/Repolis v1.64.0 · 데이터 매일 Actions로 갱신</sub>
-
-</p>
-
+Repolis remains a **zero-build static web app**. Its main runtime lives in `index.html`. Specialized local files contain generated data, the scholar roster, the World Tree factory, and deterministic Council logic.
+
+| Path | Purpose |
+|---|---|
+| [`index.html`](index.html) | 3D world, UI, navigation, residents, exploration, i18n |
+| [`repolis.config.js`](repolis.config.js) | fork owner inference and safe optional-service defaults |
+| [`repos.json`](repos.json) | generated repository and traffic data |
+| [`scholars.js`](scholars.js) | scholar roster |
+| [`assets/repo-portal.js`](assets/repo-portal.js) | strict target parsing, public projection, and canonical repository links |
+| [`assets/town-growth.js`](assets/town-growth.js) | deterministic repo-birth timeline, year snapshots, and share links |
+| [`assets/world-tree/`](assets/world-tree/) | procedural World Tree factory |
+| [`cloudflare-taxi/`](cloudflare-taxi/) | grounded AI and optional resident dialogue Worker |
+| [`cloudflare/`](cloudflare/) | realtime presence Worker |
+| [`council/`](council/) | deterministic Council engine and guards |
+| [`scripts/`](scripts/) | data builders and regression checks |
+
+## Optional services
+
+| Capability | Setup |
+|---|---|
+| Grounded taxi and scholars | [`cloudflare-taxi/README.md`](cloudflare-taxi/README.md) |
+| Realtime visitors and counters | [`cloudflare/README.md`](cloudflare/README.md) |
+| Vercel taxi alternatives | [`api/`](api/) and [`.env.example`](.env.example) |
+| Copy-paste integrations | [`examples/`](examples/) |
+
+## Controls
+
+| Input | Action |
+|---|---|
+| `W A S D`, arrows, or left touch stick | walk |
+| mouse drag or right touch stick | look and turn |
+| wheel | zoom |
+| `Enter`, click, or the mobile door button | open the nearby place |
+| taxi button | ask Gitber |
+| menu / map / passport buttons | navigate, track exploration, and replay the town's growth |
+| language and sun/moon buttons | switch language and time of day |
+
+## Documentation
+
+- [`AGENTS.md`](AGENTS.md) — contributor and agent operating contract
+- [`docs/domain-model.md`](docs/domain-model.md) — repository data and feature model
+- [`docs/repo-portal-change-guide.md`](docs/repo-portal-change-guide.md) — Repo Portal URL, data, cache, privacy, and maintenance contract
+- [`docs/known-limitations.md`](docs/known-limitations.md) — intentional constraints
+- [`SCHOLARS.md`](SCHOLARS.md) — scholar roster and grounding roles
+- [`COUNCIL_PATTERN.md`](COUNCIL_PATTERN.md) — the debate-to-judge pattern
+- [`CHANGELOG.md`](CHANGELOG.md) — recent releases and archive links
+- [`repolis.yaml`](repolis.yaml) / [`llms.txt`](llms.txt) — machine-readable project entry points
+
+## License
+
+MIT © [Hyeonsang Jeon](https://github.com/sigco3111). Data collection credit: [github-traffic-monitor](https://github.com/sigco3111/github-traffic-monitor).

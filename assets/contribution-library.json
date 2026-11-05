@@ -1,0 +1,338 @@
+{
+  "generatedAt": "2026-11-05",
+  "source": {
+    "ko": "sigco3111 fork LIBDATA (migrated)",
+    "en": "sigco3111 fork LIBDATA (migrated)"
+  },
+  "repo": "https://github.com/sigco3111/Repolis",
+  "ko": {
+    "categories": [
+      {
+        "icon": "🛠️",
+        "title": "시그니처 OSS 도구",
+        "items": [
+          {
+            "title": "opencode-harness-bridge — Claude Code/Codex 하니스를 OpenCode로 안전 이주",
+            "meta": "sigco3111 · MIT",
+            "url": "https://github.com/sigco3111/opencode-harness-bridge"
+          },
+          {
+            "title": "md-doctor — 마크다운 품질 진단 + 후처리 CLI",
+            "meta": "sigco3111 · MIT",
+            "url": "https://github.com/sigco3111/md-doctor"
+          },
+          {
+            "title": "cron-doctor — cron YAML 문법·의미·스키마 검증",
+            "meta": "sigco3111 · MIT",
+            "url": "https://github.com/sigco3111/cron-doctor"
+          },
+          {
+            "title": "hwp2md — 한글 HWP를 마크다운으로 (의존성 0)",
+            "meta": "sigco3111 · MIT",
+            "url": "https://github.com/sigco3111/hwp2md"
+          },
+          {
+            "title": "opencode-trading — TradingCodex → OpenCode 어댑터",
+            "meta": "sigco3111 · MIT",
+            "url": "https://github.com/sigco3111/opencode-trading"
+          }
+        ]
+      },
+      {
+        "icon": "🎮",
+        "title": "AI 게임 / 전략 / RPG",
+        "items": [
+          {
+            "title": "ai-gm-core — AI 게임마스터 코어",
+            "meta": "sigco3111",
+            "url": "https://github.com/sigco3111/ai-gm-core"
+          },
+          {
+            "title": "ai-gm-strategy-war — 전략/전쟁 장르 플러그인 (샘플: 고구려 391)",
+            "meta": "sigco3111",
+            "url": "https://github.com/sigco3111/ai-gm-strategy-war"
+          },
+          {
+            "title": "ai-gm-fantasy-rpg — 판타지 RPG 플러그인",
+            "meta": "sigco3111",
+            "url": "https://github.com/sigco3111/ai-gm-fantasy-rpg"
+          },
+          {
+            "title": "terrarium — 3D 방치형 생태계 시뮬레이션 (★2)",
+            "meta": "sigco3111 · Three.js",
+            "url": "https://github.com/sigco3111/terrarium"
+          },
+          {
+            "title": "real-estate-king — 부동산 매매/임대 시뮬레이션",
+            "meta": "sigco3111 · ★1",
+            "url": "https://github.com/sigco3111/real-estate-king"
+          }
+        ]
+      },
+      {
+        "icon": "🤖",
+        "title": "AI 자동화 / 에이전트",
+        "items": [
+          {
+            "title": "ICBM2 — 사설 Hermes Agent (자동화 워크플로 + Notion + cron)",
+            "meta": "sigco3111 · private",
+            "url": "https://github.com/sigco3111/icbm2-knowledge-graph"
+          },
+          {
+            "title": "icbm2-skills-marketplace — 스킬 마켓플레이스",
+            "meta": "sigco3111",
+            "url": "https://github.com/sigco3111/icbm2-skills-marketplace"
+          },
+          {
+            "title": "icbm2-knowledge-graph — 지식 그래프 자동 구축",
+            "meta": "sigco3111 · ★1",
+            "url": "https://github.com/sigco3111/icbm2-knowledge-graph"
+          },
+          {
+            "title": "opencode-usage-cli — OpenCode 사용량 체크 (★1)",
+            "meta": "sigco3111",
+            "url": "https://github.com/sigco3111/opencode-usage-cli"
+          }
+        ]
+      },
+      {
+        "icon": "🏘️",
+        "title": "커뮤니티 / 실험",
+        "items": [
+          {
+            "title": "hitel-board — 90년대 PC통신 레트로 게시판 (★1)",
+            "meta": "sigco3111",
+            "url": "https://github.com/sigco3111/hitel-board"
+          },
+          {
+            "title": "dongne-today — 동네 오늘 (앱인토스 챌린지)",
+            "meta": "sigco3111 · 2026",
+            "url": "https://github.com/sigco3111/dongne-today"
+          },
+          {
+            "title": "blog-images — ICBM 블로그 이미지 호스팅",
+            "meta": "sigco3111",
+            "url": "https://github.com/sigco3111/blog-images"
+          }
+        ]
+      },
+      {
+        "icon": "🎨",
+        "title": "3D / 비주얼 / 게임 에셋",
+        "items": [
+          {
+            "title": "2048 — 클래식 퍼즐 게임",
+            "meta": "sigco3111",
+            "url": "https://github.com/sigco3111/2048"
+          },
+          {
+            "title": "3d-physics-lab — Three.js 물리 시뮬레이션",
+            "meta": "sigco3111",
+            "url": "https://github.com/sigco3111/3d-physics-lab"
+          },
+          {
+            "title": "3d-fractal — 3D 프랙탈 렌더링",
+            "meta": "sigco3111",
+            "url": "https://github.com/sigco3111/3d-fractal"
+          },
+          {
+            "title": "wobbly-tower — 흔들리는 탑 시뮬레이션",
+            "meta": "sigco3111",
+            "url": "https://github.com/sigco3111/wobbly-tower"
+          },
+          {
+            "title": "python-xmas-tree — 인터랙티브 크리스마스 트리",
+            "meta": "sigco3111",
+            "url": "https://github.com/sigco3111/python-xmas-tree"
+          }
+        ]
+      },
+      {
+        "icon": "📚",
+        "title": "학습 / 강의 / 데이터",
+        "items": [
+          {
+            "title": "myipynb — Jupyter 노트북 모음",
+            "meta": "sigco3111",
+            "url": "https://github.com/sigco3111/myipynb"
+          },
+          {
+            "title": "yesno — 단순 결정 도우미",
+            "meta": "sigco3111",
+            "url": "https://github.com/sigco3111/yesno"
+          },
+          {
+            "title": "sysmon — 시스템 모니터링",
+            "meta": "sigco3111",
+            "url": "https://github.com/sigco3111/sysmon"
+          }
+        ]
+      }
+    ]
+  },
+  "en": {
+    "categories": [
+      {
+        "icon": "🛠️",
+        "title": "Signature OSS tools",
+        "items": [
+          {
+            "title": "opencode-harness-bridge — Safe Claude Code/Codex → OpenCode migration",
+            "meta": "sigco3111 · MIT",
+            "url": "https://github.com/sigco3111/opencode-harness-bridge"
+          },
+          {
+            "title": "md-doctor — Markdown quality diagnosis CLI",
+            "meta": "sigco3111 · MIT",
+            "url": "https://github.com/sigco3111/md-doctor"
+          },
+          {
+            "title": "cron-doctor — cron YAML validator (syntax + semantics + schema)",
+            "meta": "sigco3111 · MIT",
+            "url": "https://github.com/sigco3111/cron-doctor"
+          },
+          {
+            "title": "hwp2md — Korean HWP → clean markdown (zero-deps)",
+            "meta": "sigco3111 · MIT",
+            "url": "https://github.com/sigco3111/hwp2md"
+          },
+          {
+            "title": "opencode-trading — TradingCodex → OpenCode adapter",
+            "meta": "sigco3111 · MIT",
+            "url": "https://github.com/sigco3111/opencode-trading"
+          }
+        ]
+      },
+      {
+        "icon": "🎮",
+        "title": "AI games · Strategy · RPG",
+        "items": [
+          {
+            "title": "ai-gm-core — AI Game Master core engine",
+            "meta": "sigco3111",
+            "url": "https://github.com/sigco3111/ai-gm-core"
+          },
+          {
+            "title": "ai-gm-strategy-war — Strategy/war genre plugin (seed: Goguryeo 391)",
+            "meta": "sigco3111",
+            "url": "https://github.com/sigco3111/ai-gm-strategy-war"
+          },
+          {
+            "title": "ai-gm-fantasy-rpg — Fantasy RPG genre plugin",
+            "meta": "sigco3111",
+            "url": "https://github.com/sigco3111/ai-gm-fantasy-rpg"
+          },
+          {
+            "title": "terrarium — 3D idle ecosystem simulation (★2)",
+            "meta": "sigco3111 · Three.js",
+            "url": "https://github.com/sigco3111/terrarium"
+          },
+          {
+            "title": "real-estate-king — Real estate trading/lease simulation",
+            "meta": "sigco3111 · ★1",
+            "url": "https://github.com/sigco3111/real-estate-king"
+          }
+        ]
+      },
+      {
+        "icon": "🤖",
+        "title": "AI automation · Agents",
+        "items": [
+          {
+            "title": "ICBM2 — Private Hermes Agent (automation + Notion + cron)",
+            "meta": "sigco3111 · private",
+            "url": "https://github.com/sigco3111/icbm2-knowledge-graph"
+          },
+          {
+            "title": "icbm2-skills-marketplace — Skill marketplace",
+            "meta": "sigco3111",
+            "url": "https://github.com/sigco3111/icbm2-skills-marketplace"
+          },
+          {
+            "title": "icbm2-knowledge-graph — Auto knowledge graph",
+            "meta": "sigco3111 · ★1",
+            "url": "https://github.com/sigco3111/icbm2-knowledge-graph"
+          },
+          {
+            "title": "opencode-usage-cli — OpenCode usage check (★1)",
+            "meta": "sigco3111",
+            "url": "https://github.com/sigco3111/opencode-usage-cli"
+          }
+        ]
+      },
+      {
+        "icon": "🏘️",
+        "title": "Community · Experiments",
+        "items": [
+          {
+            "title": "hitel-board — 90s Korean BBS retro bulletin board (★1)",
+            "meta": "sigco3111",
+            "url": "https://github.com/sigco3111/hitel-board"
+          },
+          {
+            "title": "dongne-today — Neighborhood today (Toss app-in challenge)",
+            "meta": "sigco3111 · 2026",
+            "url": "https://github.com/sigco3111/dongne-today"
+          },
+          {
+            "title": "blog-images — ICBM blog image hosting",
+            "meta": "sigco3111",
+            "url": "https://github.com/sigco3111/blog-images"
+          }
+        ]
+      },
+      {
+        "icon": "🎨",
+        "title": "3D · Visual · Game assets",
+        "items": [
+          {
+            "title": "2048 — Classic puzzle game",
+            "meta": "sigco3111",
+            "url": "https://github.com/sigco3111/2048"
+          },
+          {
+            "title": "3d-physics-lab — Three.js physics simulation",
+            "meta": "sigco3111",
+            "url": "https://github.com/sigco3111/3d-physics-lab"
+          },
+          {
+            "title": "3d-fractal — 3D fractal renderer",
+            "meta": "sigco3111",
+            "url": "https://github.com/sigco3111/3d-fractal"
+          },
+          {
+            "title": "wobbly-tower — Wobbly tower simulation",
+            "meta": "sigco3111",
+            "url": "https://github.com/sigco3111/wobbly-tower"
+          },
+          {
+            "title": "python-xmas-tree — Interactive Christmas tree",
+            "meta": "sigco3111",
+            "url": "https://github.com/sigco3111/python-xmas-tree"
+          }
+        ]
+      },
+      {
+        "icon": "📚",
+        "title": "Learning · Lectures · Data",
+        "items": [
+          {
+            "title": "myipynb — Jupyter notebook collection",
+            "meta": "sigco3111",
+            "url": "https://github.com/sigco3111/myipynb"
+          },
+          {
+            "title": "yesno — Simple decision helper",
+            "meta": "sigco3111",
+            "url": "https://github.com/sigco3111/yesno"
+          },
+          {
+            "title": "sysmon — System monitoring",
+            "meta": "sigco3111",
+            "url": "https://github.com/sigco3111/sysmon"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,20 +1,17 @@
-# Python
-__pycache__/
-*.py[cod]
-*.so
-.venv/
-venv/
-
-# 데이터 (Actions에서 자동 갱신)
-data/logs/*.csv
-!data/logs/.gitkeep
-
-# 빌드 산출물
-repos.json
-# ↑ Actions에서 갱신하지만, 첫 빌드는 로컬에서 푸시
-
-# Editor / OS
-.idea/
-.vscode/
 .DS_Store
-*.swp
+node_modules/
+cloudflare/.wrangler/
+cloudflare-taxi/.wrangler/
+.wrangler/
+# Cloudflare Worker local secrets (wrangler dev) — never commit real keys
+.dev.vars
+# Local-only notes that record real keys/secrets (kept out of git on purpose)
+*.local.md
+# Internal design / agent-working docs — kept local, not published to the public repo
+# (AGENTS.md is intentionally NOT here — it's the public agent-onboarding spec.)
+CHRONOPOLIS_SPEC.md
+CLAUDE.md
+# Local-only scratch: agent worklogs, screenshots, context-handoff notes — never commit
+local.data/
+__pycache__/
+*.pyc

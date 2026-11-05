@@ -6,53 +6,223 @@
 // login and the free Workers plan — SQLite-backed Durable Objects, no card.
 //
 // The wire protocol is identical to party/repolis.js and
-// scripts/dev_realtime.mjs, so the Repolis client needs ZERO changes: just
-// point RT_DEFAULT (in index.html) at the deployed
+// scripts/dev_realtime.mjs, so the Repolis client needs ZERO protocol changes:
+// point services.realtime (in repolis.config.js) at the deployed
 //   wss://repolis-rt.<your-subdomain>.workers.dev
 //
 // Protocol (JSON over WS):
 //   client -> { t:'join', id, name, x, z, yaw, color }
 //   client -> { t:'pos',  id, x, z, yaw }
-//   server -> { t:'welcome', peers:[...], live, today, total }
-//   server -> { t:'join', peer, live, today, total }
+//   server -> { t:'welcome', peers:[...], live, today, total, entriesToday, entriesTotal }
+//   server -> { t:'join', peer, live, today, total, entriesToday, entriesTotal }
 //   server -> { t:'pos', id, x, z, yaw }
 //   server -> { t:'leave', id, live }
+//   server -> { t:'sync', ids:[...], live }   // authoritative roster (every ~15s); clients drop any avatar not listed
+//
+// Owner moderation (not part of the public client): GET /__admin/peers and
+// /__admin/kick?id=|name=[&ban=secs], both gated by the ADMIN_KEY secret.
 //
 // Counters: `today` and `total` (unique visitors today / all-time) are kept in
 // the Durable Object's SQLite storage, so they survive restarts. `live` is the
 // number of currently-open sockets (in memory; naturally resets to 0 only when
 // the room is empty and the object evicts).
 
+const ENTRY_SEED_MULTIPLIER = 3.7;
+const COUNTER_BASIS = "UTC day / world unique guest / entry joins";
+// How often the room broadcasts its authoritative peer roster ({t:'sync'}). Clients
+// drop any avatar not in the roster, so a ghost (a peer whose one-shot `leave` was
+// missed by a client) self-heals within one interval instead of lingering forever.
+const SYNC_MS = 15000;
+const MAX_BAN_S = 3600; // safety ceiling for an admin kick's optional re-join ban
+
 export class RepolisRoom {
   constructor(state, env) {
     this.state = state;
+    this.env = env;
     this.sql = state.storage.sql;
     this.sessions = new Map(); // ws -> peer
-    // One unique row per (guest, UTC-day). today = rows for today's date,
-    // total = distinct guests across all days. Idempotent on every startup.
-    this.sql.exec(
-      "CREATE TABLE IF NOT EXISTS seen (gid TEXT NOT NULL, day TEXT NOT NULL, PRIMARY KEY (gid, day))"
-    );
+    this.bans = new Map();     // peer id / "name:<name>" -> ban-expiry ms (in-memory; short admin kicks)
+    this._alarmSet = false;    // is a roster-sync alarm currently scheduled?
+    this.ready = false;        // schema + counters initialised?
+    // Kill switch: a monthly cap on NEW connections so a traffic spike or abuse
+    // can never push the bill past the included Workers Paid allowance. Tunable
+    // from wrangler.toml / the dashboard via REPOLIS_MONTHLY_CAP ("0" disables it).
+    this.cap = Math.max(0, parseInt((env && env.REPOLIS_MONTHLY_CAP) || "", 10) || 5000000);
+    this.reqMonth = this.monthKey();
+    this.reqCount = 0;
+    this.reqDirty = 0;
+    try {
+      this.state.blockConcurrencyWhile(async () => {
+        try {
+          const saved = await this.state.storage.get("reqCount:" + this.reqMonth);
+          if (typeof saved === "number") this.reqCount = saved;
+        } catch (e) { /* storage unavailable — start from 0, cap still enforced in memory */ }
+      });
+    } catch (e) { /* ignore */ }
+    this.ensureSchema();       // guarded — never throws (storage may be over quota)
+  }
+
+  // Create the schema + rollup counter tables and, once, backfill them from any
+  // pre-existing `seen` history. Wrapped so a storage outage (e.g. the free-tier
+  // "rows read / day" limit being exhausted ANYWHERE on the account — it is a
+  // shared pool across all Durable Objects) cannot crash the room: realtime
+  // multiplayer and the in-memory live count keep working, and the persistent
+  // today/total counters simply resume once storage is writable again.
+  ensureSchema() {
+    if (this.ready) return true;
+    try {
+      // One unique row per (guest, UTC-day).
+      this.sql.exec("CREATE TABLE IF NOT EXISTS seen (gid TEXT NOT NULL, day TEXT NOT NULL, PRIMARY KEY (gid, day))");
+      // O(1) rollups so the hot join path never scans `seen`:
+      //   daily_count.n = unique guests for that UTC-day; stat['total'] = distinct guests all-time.
+      this.sql.exec("CREATE TABLE IF NOT EXISTS daily_count (day TEXT PRIMARY KEY, n INTEGER NOT NULL)");
+      this.sql.exec("CREATE TABLE IF NOT EXISTS entry_count (day TEXT PRIMARY KEY, n INTEGER NOT NULL)");
+      this.sql.exec("CREATE TABLE IF NOT EXISTS stat (k TEXT PRIMARY KEY, v INTEGER NOT NULL)");
+      this.backfillOnce();
+      this.seedEntriesOnce();
+      this.ready = true;
+      return true;
+    } catch (e) {
+      return false; // storage unavailable — degrade gracefully, retry on the next call
+    }
+  }
+
+  // Seed the rollup counters from historical `seen` rows exactly once: the only
+  // remaining full scan, and only on the first healthy startup after this version
+  // ships (afterwards stat['total'] exists, so it is skipped forever).
+  backfillOnce() {
+    if (this.sql.exec("SELECT v FROM stat WHERE k = 'total' LIMIT 1").toArray().length) return;
+    if (!this.sql.exec("SELECT 1 FROM seen LIMIT 1").toArray().length) {
+      this.sql.exec("INSERT OR IGNORE INTO stat (k, v) VALUES ('total', 0)");
+      return;
+    }
+    const total = this.sql.exec("SELECT COUNT(DISTINCT gid) AS n FROM seen").one().n;
+    this.sql.exec("INSERT OR REPLACE INTO stat (k, v) VALUES ('total', ?)", total);
+    for (const r of this.sql.exec("SELECT day, COUNT(*) AS n FROM seen GROUP BY day").toArray())
+      this.sql.exec("INSERT OR REPLACE INTO daily_count (day, n) VALUES (?, ?)", r.day, r.n);
+  }
+
+  // `entries_total` is an estimated historical entry counter. We do not have
+  // app-lifetime page-load history in this DO, so the first value is seeded once
+  // from the current all-time unique visitor count, then real joins increment it.
+  seedEntriesOnce() {
+    if (this.sql.exec("SELECT v FROM stat WHERE k = 'entries_total' LIMIT 1").toArray().length) return;
+    const total = Number((this.sql.exec("SELECT v FROM stat WHERE k = 'total' LIMIT 1").toArray()[0] || {}).v) || 0;
+    this.sql.exec("INSERT OR IGNORE INTO stat (k, v) VALUES ('entries_total', ?)", Math.round(total * ENTRY_SEED_MULTIPLIER));
   }
 
   today() {
     return new Date().toISOString().slice(0, 10); // UTC day
   }
 
-  // Record this guest for today + all-time, then return both counts.
-  counts(gid) {
+  monthKey() {
+    return new Date().toISOString().slice(0, 7); // YYYY-MM (UTC)
+  }
+
+  // Snapshot of the monthly counter for the /__usage monitor endpoint.
+  usage() {
+    const m = this.monthKey();
+    if (m !== this.reqMonth) { this.reqMonth = m; this.reqCount = 0; this.reqDirty = 0; }
+    return {
+      month: this.reqMonth,
+      count: this.reqCount,
+      cap: this.cap,
+      pct: this.cap ? +((this.reqCount / this.cap) * 100).toFixed(2) : 0,
+      live: this.sessions.size,
+    };
+  }
+
+  readCounts(day = this.today()) {
+    const today = (this.sql.exec("SELECT n FROM daily_count WHERE day = ?", day).toArray()[0] || {}).n;
+    const total = (this.sql.exec("SELECT v FROM stat WHERE k = 'total'").toArray()[0] || {}).v;
+    const entriesToday = (this.sql.exec("SELECT n FROM entry_count WHERE day = ?", day).toArray()[0] || {}).n;
+    const entriesTotal = (this.sql.exec("SELECT v FROM stat WHERE k = 'entries_total'").toArray()[0] || {}).v;
+    return {
+      today: Number(today) || 0,
+      total: Number(total) || 0,
+      entriesToday: Number(entriesToday) || 0,
+      entriesTotal: Number(entriesTotal) || 0,
+    };
+  }
+
+  counterSnapshot() {
+    const base = this.usage();
     const day = this.today();
-    if (gid) {
-      this.sql.exec("INSERT OR IGNORE INTO seen (gid, day) VALUES (?, ?)", gid, day);
+    if (!this.ensureSchema()) {
+      return { ...base, ok: false, day, today: null, total: null, entriesToday: null, entriesTotal: null, basis: COUNTER_BASIS };
     }
-    const today = this.sql.exec("SELECT COUNT(*) AS n FROM seen WHERE day = ?", day).one().n;
-    const total = this.sql.exec("SELECT COUNT(DISTINCT gid) AS n FROM seen").one().n;
-    return { today, total };
+    try {
+      return { ...base, ok: true, day, ...this.readCounts(day), basis: COUNTER_BASIS, entrySeedMultiplier: ENTRY_SEED_MULTIPLIER };
+    } catch (e) {
+      return { ...base, ok: false, day, today: null, total: null, entriesToday: null, entriesTotal: null, basis: COUNTER_BASIS };
+    }
+  }
+
+  // Count one new connection. Returns false once the monthly cap is reached so the
+  // caller can refuse cheaply. O(1): an in-memory counter flushed to storage only
+  // every 500 hits (one row write per 500); the month key resets it for free.
+  allow() {
+    const m = this.monthKey();
+    if (m !== this.reqMonth) { this.reqMonth = m; this.reqCount = 0; this.reqDirty = 0; }
+    if (this.cap && this.reqCount >= this.cap) return false;
+    this.reqCount++;
+    if (++this.reqDirty >= 500) {
+      this.reqDirty = 0;
+      try { this.state.storage.put("reqCount:" + this.reqMonth, this.reqCount); } catch (e) { /* best-effort */ }
+    }
+    return true;
+  }
+
+  // Record this guest for today + all-time, then return both counts. O(1): a few
+  // single-row indexed lookups instead of scanning `seen` on every join. The old
+  // `SELECT COUNT(DISTINCT gid) FROM seen` ran a FULL table scan per connection,
+  // which (as the table grew + reconnects accumulated) exhausted the free-tier
+  // rows-read budget and took the room — and the live counter — offline. Returns
+  // null counts when storage is unavailable so the caller can still serve presence.
+  counts(gid, countEntry = true) {
+    if (!this.ensureSchema()) return { today: null, total: null, entriesToday: null, entriesTotal: null };
+    try {
+      const day = this.today();
+      if (countEntry) {
+        this.sql.exec("INSERT INTO entry_count (day, n) VALUES (?, 1) ON CONFLICT(day) DO UPDATE SET n = n + 1", day);
+        this.sql.exec("INSERT INTO stat (k, v) VALUES ('entries_total', 1) ON CONFLICT(k) DO UPDATE SET v = v + 1");
+      }
+      if (gid) {
+        const seenToday = this.sql.exec("SELECT 1 FROM seen WHERE gid = ? AND day = ? LIMIT 1", gid, day).toArray().length;
+        if (!seenToday) {
+          this.sql.exec("INSERT OR IGNORE INTO seen (gid, day) VALUES (?, ?)", gid, day);
+          this.sql.exec("INSERT INTO daily_count (day, n) VALUES (?, 1) ON CONFLICT(day) DO UPDATE SET n = n + 1", day);
+          // Brand-new guest ever? PK index seeks straight to this gid's rows (0-few), not a scan.
+          const seenEver = this.sql.exec("SELECT 1 FROM seen WHERE gid = ? AND day <> ? LIMIT 1", gid, day).toArray().length;
+          if (!seenEver)
+            this.sql.exec("INSERT INTO stat (k, v) VALUES ('total', 1) ON CONFLICT(k) DO UPDATE SET v = v + 1");
+        }
+      }
+      return this.readCounts(day);
+    } catch (e) {
+      return { today: null, total: null, entriesToday: null, entriesTotal: null };
+    }
   }
 
   fetch(req) {
+    const url = new URL(req.url);
+    // Lightweight usage monitor — no socket, no table scan. Check spend headroom:
+    //   curl https://repolis-rt.<sub>.workers.dev/__usage
+    if (url.pathname.endsWith("/__usage")) {
+      return new Response(JSON.stringify(this.counterSnapshot()), { headers: { "content-type": "application/json" } });
+    }
+    // Owner-only moderation (list live peers / kick a nuisance socket). Gated by the
+    // ADMIN_KEY secret — never exposed to the public client. See admin().
+    if (url.pathname.includes("/__admin/")) {
+      return this.admin(req, url);
+    }
     if (req.headers.get("Upgrade") !== "websocket") {
       return new Response("Repolis realtime OK", { status: 200 });
+    }
+    // Kill switch: once the monthly cap is hit, refuse new sockets cheaply. Already
+    // open sockets keep working; presence/counters are unaffected.
+    if (!this.allow()) {
+      return new Response("Repolis realtime paused — monthly safety cap reached.", { status: 503 });
     }
     const pair = new WebSocketPair();
     const client = pair[0];
@@ -60,6 +230,79 @@ export class RepolisRoom {
     server.accept();
     this.wire(server);
     return new Response(null, { status: 101, webSocket: client });
+  }
+
+  // Owner-only moderation endpoint. Auth: ADMIN_KEY secret via ?key= or x-admin-key.
+  //   GET  /__admin/peers          -> { live, peers:[{id,name,x,z,yaw}] }
+  //   POST /__admin/kick?id=<id>   -> close matching socket(s), broadcast leave
+  //        /__admin/kick?name=<n>  -> match by display name (e.g. "Guest-7500")
+  //        &ban=<seconds>          -> also refuse that id/name re-joining for a bit (<=1h)
+  // Kicking only severs a live socket. A ghost avatar (already-gone peer still shown on
+  // some client because its `leave` was missed) has no socket here — the periodic
+  // {t:'sync'} roster removes those automatically; see alarm().
+  admin(req, url) {
+    const secret = this.env && this.env.ADMIN_KEY;
+    const key = url.searchParams.get("key") || req.headers.get("x-admin-key");
+    if (!secret) return this.json({ error: "ADMIN_KEY not set on the worker" }, 501);
+    if (key !== secret) return new Response("forbidden", { status: 403 });
+    const path = url.pathname;
+    if (path.endsWith("/__admin/peers")) {
+      const peers = [...this.sessions.values()].map((p) => ({ id: p.id, name: p.name, x: p.x, z: p.z, yaw: p.yaw }));
+      return this.json({ live: this.sessions.size, peers, bans: [...this.bans.keys()] });
+    }
+    if (path.endsWith("/__admin/kick")) {
+      const id = url.searchParams.get("id");
+      const name = url.searchParams.get("name");
+      if (!id && !name) return this.json({ error: "pass ?id= or ?name=" }, 400);
+      const banS = Math.min(MAX_BAN_S, Math.max(0, parseInt(url.searchParams.get("ban") || "0", 10) || 0));
+      const kicked = [];
+      for (const [ws, p] of [...this.sessions]) {
+        if ((id && p.id === id) || (name && p.name === name)) {
+          kicked.push({ id: p.id, name: p.name });
+          this.sessions.delete(ws);
+          if (banS) {
+            const until = Date.now() + banS * 1000;
+            this.bans.set(p.id, until);
+            this.bans.set("name:" + p.name, until);
+          }
+          try { ws.close(4001, "kicked"); } catch (e) { /* already closing */ }
+          this.broadcast({ t: "leave", id: p.id, live: this.sessions.size });
+        }
+      }
+      return this.json({ kicked, count: kicked.length, live: this.sessions.size, bannedFor: banS || null });
+    }
+    return this.json({ error: "unknown admin route", routes: ["/__admin/peers", "/__admin/kick"] }, 404);
+  }
+
+  json(obj, status = 200) {
+    return new Response(JSON.stringify(obj), { status, headers: { "content-type": "application/json" } });
+  }
+
+  isBanned(peer) {
+    const now = Date.now();
+    for (const k of [peer.id, "name:" + peer.name]) {
+      const until = this.bans.get(k);
+      if (until) { if (until > now) return true; this.bans.delete(k); }
+    }
+    return false;
+  }
+
+  // Keep exactly one roster-sync alarm scheduled while the room is populated. The
+  // alarm broadcasts the authoritative peer id list so ghost avatars self-heal; it
+  // reschedules itself until the room empties, then stops (no idle-room cost).
+  scheduleSync() {
+    if (this._alarmSet) return;
+    try { this.state.storage.setAlarm(Date.now() + SYNC_MS); this._alarmSet = true; }
+    catch (e) { this._alarmSet = false; /* storage/alarm unavailable — presence still works */ }
+  }
+
+  async alarm() {
+    this._alarmSet = false;
+    if (this.sessions.size > 0) {
+      const ids = [...this.sessions.values()].map((p) => p.id);
+      this.broadcast({ t: "sync", ids, live: this.sessions.size });
+      this.scheduleSync();
+    }
   }
 
   wire(ws) {
@@ -74,17 +317,34 @@ export class RepolisRoom {
           x: +m.x || 0, z: +m.z || 0, yaw: +m.yaw || 0,
           color: m.color,
         };
+        // An admin kick can carry a short ban; refuse the re-join cleanly.
+        if (this.isBanned(peer)) { try { ws.close(4003, "banned"); } catch (e) { /* ignore */ } return; }
+        const countEntry = !this.sessions.has(ws);
         this.sessions.set(ws, peer);
-        const { today, total } = this.counts(peer.id);
+        this.scheduleSync();   // ensure the ghost-clearing roster broadcast is running while anyone is here
+        const { today, total, entriesToday, entriesTotal } = this.counts(peer.id, countEntry);
         const live = this.sessions.size;
+        const stats = { live };
+        if (today != null) stats.today = today;   // omitted while storage is over quota
+        if (total != null) stats.total = total;   // → client keeps its last shown value
+        if (entriesToday != null) stats.entriesToday = entriesToday;
+        if (entriesTotal != null) stats.entriesTotal = entriesTotal;
         const others = [...this.sessions.values()].filter((p) => p !== peer);
-        ws.send(JSON.stringify({ t: "welcome", peers: others, live, today, total }));
-        this.broadcast({ t: "join", peer, live, today, total }, ws);
+        ws.send(JSON.stringify({ t: "welcome", peers: others, ...stats }));
+        this.broadcast({ t: "join", peer, ...stats }, ws);
       } else if (m.t === "pos") {
         const p = this.sessions.get(ws);
         if (!p) return;
         p.x = +m.x || 0; p.z = +m.z || 0; p.yaw = +m.yaw || 0;
         this.broadcast({ t: "pos", id: p.id, x: p.x, z: p.z, yaw: p.yaw }, ws);
+      } else if (m.t === "wave") {
+        const p = this.sessions.get(ws);
+        if (!p) return;
+        this.broadcast({ t: "wave", id: p.id, to: String(m.to || "").slice(0, 40) }, ws);
+      } else if (m.t === "emote") {
+        const p = this.sessions.get(ws);
+        if (!p) return;
+        this.broadcast({ t: "emote", id: p.id, kind: String(m.kind || "").slice(0, 16) }, ws);
       }
     });
 
@@ -110,11 +370,15 @@ export class RepolisRoom {
 export default {
   async fetch(req, env) {
     const url = new URL(req.url);
-    if (req.headers.get("Upgrade") !== "websocket") {
+    const isWS = req.headers.get("Upgrade") === "websocket";
+    const isUsage = url.pathname.endsWith("/__usage");
+    const isAdmin = url.pathname.includes("/__admin/");
+    if (!isWS && !isUsage && !isAdmin) {
       return new Response("Repolis realtime server — connect over WebSocket.", { status: 200 });
     }
     // Everyone shares one room; the last path segment names it (default "world").
-    const room = url.pathname.split("/").filter(Boolean).pop() || "world";
+    // /__usage and /__admin/* always target the shared "world" room.
+    const room = (isUsage || isAdmin) ? "world" : (url.pathname.split("/").filter(Boolean).pop() || "world");
     const id = env.REPOLIS_ROOM.idFromName(room);
     return env.REPOLIS_ROOM.get(id).fetch(req);
   },

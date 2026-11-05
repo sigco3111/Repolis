@@ -8,6 +8,16 @@ main = "src/grounded.js"
 compatibility_date = "2025-04-01"
 workers_dev = true
 
+# One globally named instance serializes every resident-NPC reservation. The SQLite-backed
+# namespace persists UTC-day aggregates and idempotency records across isolates/restarts.
+[[durable_objects.bindings]]
+name = "NPC_BUDGET_GOVERNOR"
+class_name = "NpcBudgetGovernor"
+
+[[migrations]]
+tag = "v1-npc-budget-governor"
+new_sqlite_classes = ["NpcBudgetGovernor"]
+
 # ── Resident NPC live on/off (owner dashboard toggle) ─────────────────────────
 # Shared KV with the private repolis-metrics dashboard. The dashboard writes the
 # on/off flags here; this Worker reads them per request ONLY when NPC_LIVE_TOGGLE
@@ -18,6 +28,12 @@ workers_dev = true
 binding = "NPC_FLAGS"
 id = "0cad99a719a84c919839aa9e0616db53"
 
+# Same-account Worker-to-Worker telemetry must use a Service Binding. A global
+# fetch to the repolis-metrics workers.dev route can fail with Cloudflare 1042.
+[[services]]
+binding = "REPOLIS_METRICS"
+service = "repolis-metrics"
+
 # Non-secret config. The Search key is a SECRET — never put it here:
 #   wrangler secret put SEARCH_API_KEY
 [vars]
@@ -27,6 +43,21 @@ SEARCH_KS_NAME = "github-repos-mcp-ks"
 # knowledge source (see SCHOLARS.md). Defaults are baked into src/grounded.js — override here:
 MSDOCS_KB_NAME = "repolis-mslearn-kb"
 MSDOCS_KS_NAME = "microsoft-learn-mcp-ks"
+# AURI's easter-egg market ledger combines two strictly read-only MCP sources:
+# Longbridge quote/fundamental tools + this Worker's /mcp/crypto public spot-data endpoint
+# (Coinbase Exchange public market data; Binance refuses Cloudflare egress IPs).
+MARKET_KB_NAME = "repolis-market-kb"
+# Add longbridge-market-mcp-ks here once that Knowledge Source exists in the same
+# Knowledge Base; every name listed must already belong to the KB.
+MARKET_KS_NAME = "crypto-market-mcp-ks"
+MARKET_LONGBRIDGE_KS_NAME = "longbridge-market-mcp-ks"
+MARKET_MCP_TIMEOUT_MS = "6000"
+# Longbridge uses OAuth. Keep its access token server-side and rotate it when required:
+#   wrangler secret put MARKET_LONGBRIDGE_ACCESS_TOKEN
+# MIRA/Context7 and LYRA/Hugging Face use official direct MCP endpoints anonymously.
+# Optional higher-quota secrets (never commit values):
+#   wrangler secret put CONTEXT7_API_KEY
+#   wrangler secret put HF_TOKEN
 SEARCH_API_VERSION = "2026-05-01-preview"
 GROUNDED_MAX_RUNTIME_S = "30"
 GROUNDED_TIMEOUT_MS = "25000"
@@ -37,6 +68,43 @@ GROUNDED_TIMEOUT_MS = "25000"
 # endpoint/tenant/client id and the secret are kept out of git (see below + wrangler secret).
 AOAI_DEPLOYMENT = "gpt-5.4-mini"
 AOAI_API_VERSION = "2025-04-01-preview"
+
+# Private aggregate telemetry target and model-cost attribution assumptions.
+# The prices match the observed Foundry Models input/cached-input/output meters
+# and are shown verbatim in the private Observatory methodology panel.
+# Set the same random secret on this Worker and repolis-metrics; never commit it:
+#   wrangler secret put METRICS_INGEST_TOKEN
+METRICS_URL = "https://repolis-metrics.wingnut0310.workers.dev/event"
+MODEL_PRICE_IN_PER_1M_USD = "0.75"
+MODEL_PRICE_CACHED_IN_PER_1M_USD = "0.075"
+MODEL_PRICE_OUT_PER_1M_USD = "4.5"
+
+# Resident NPC reservations use deployment-specific prices and official input/output limits.
+# Unknown deployments or malformed tables fail closed. max_completion_tokens uses the same bound.
+NPC_MODEL_PRICING_JSON = '{"gpt-5.4-mini":{"inputPer1MUsd":0.75,"cachedInputPer1MUsd":0.075,"outputPer1MUsd":4.5,"maxInputTokens":272000,"maxOutputTokens":128000}}'
+NPC_MAX_COMPLETION_TOKENS = "120"
+NPC_BUDGET_TIMEOUT_MS = "3000"
+NPC_DAILY_ATTEMPT_MAX = "5000"
+NPC_RESERVATION_LEASE_MS = "60000"
+# Resident model calls still require the owner-only KV switches. Ambient chatter is
+# enabled for the canonical pilot, with scripted fallback and the durable daily cap below.
+NPC_AI_ENABLED = "true"
+NPC_AMBIENT_ENABLED = "true"
+NPC_PLAYER_CHAT_ENABLED = "true"
+# 31-day worst case = $4.65 for resident Azure model calls.
+NPC_DAY_CAP_USD = "0.15"
+
+# Explicit visitor-to-resident Bound dialogue uses its own Durable Object ledger.
+# Its output, turn, attempt, and rate bounds stay separate from scholar usage.
+RESIDENT_DIALOGUE_MAX_COMPLETION_TOKENS = "96"
+# Owner-selected dollar ceiling; separate turn/attempt/rate bounds remain in force.
+RESIDENT_DIALOGUE_DAY_CAP_USD = "10"
+# Revision 2 applies this increase immediately without clearing today's ledger.
+RESIDENT_DIALOGUE_DAY_CAP_REVISION = "2"
+RESIDENT_DIALOGUE_DAILY_TURN_MAX = "120"
+RESIDENT_DIALOGUE_DAILY_ATTEMPT_MAX = "240"
+RESIDENT_DIALOGUE_RATE_MAX = "12"
+RESIDENT_DIALOGUE_RATE_WINDOW_S = "60"
 
 # Set your Azure AI Search endpoint (not secret, but account-specific). Either
 # uncomment + edit here, or keep it out of git with `wrangler secret put SEARCH_ENDPOINT`:

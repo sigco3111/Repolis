@@ -1,0 +1,215 @@
+# Repo Portal change guide
+
+Repo Portal gives one public repository its own front door into Repolis:
+
+```text
+https://hyeonsangjeon.github.io/Repolis/?repo=owner/repo&ref=repo-portal
+```
+
+Campaigns can begin inside the exhibition with a covered direct entry:
+
+```text
+https://hyeonsangjeon.github.io/Repolis/?repo=owner/repo&view=atelier&lang=en
+```
+
+A general Repolis campaign should instead begin in the owner-town plaza:
+
+```text
+https://hyeonsangjeon.github.io/Repolis/?view=plaza&lang=en
+```
+
+This is the product change most likely to improve Star acquisition because it shortens the path from a
+developer sharing real work to a visitor understanding Repolis. A repository link now opens one
+metadata-shaped building and its Repository Atelier before Repolis requests the owner catalog. The recipient
+gets relevant proof, a GitHub handoff, and a copyable artifact in one short visit. Only after that proof do
+they choose whether to expand into the owner's town. That link can travel with the repository that
+already has an audience instead of asking people to share Repolis as a destination on its own.
+
+## User flow
+
+1. Paste a GitHub username, `owner/repo`, or a GitHub repository root URL into the intro or Station.
+2. A username keeps the existing `?user=<login>` public-town flow.
+3. A repository resolves to the canonical Portal URL and loads that target first.
+4. The first screen confirms stars, forks, language, description, and data source.
+5. **Enter this repo exhibition** opens the target's Repository Atelier.
+6. The Atelier can copy the same Portal address, open GitHub, or explicitly load the owner's full town.
+7. The earned Star invitation remains deferred until the visitor has completed the Atelier Aha or copied
+   the Portal and then returned to the town.
+
+## URL contract
+
+| Purpose | URL |
+|---|---|
+| Covered owner-plaza entry | `?view=plaza&lang=en` |
+| Canonical repository entry | `?repo=owner/repo&ref=repo-portal` |
+| Covered Atelier direct entry | `?repo=owner/repo&view=atelier&lang=en` |
+| Canonical Blueprint landmark | `?repo=owner/repo&view=blueprint&path=src%2Fagents&ref=blueprint` |
+| Public owner-town expansion | `?user=owner&focus=repo&ref=repo-portal` |
+| Canonical owner-town expansion | `?focus=repo&ref=repo-portal` |
+| Existing public town | `?user=owner` |
+
+`repo` is the source of truth when `repo` and `user` disagree. Portal links discard unrelated `user`,
+`twin`, `growth`, and hash state instead of composing ambiguous experiences. Browser history remains
+ordinary navigation: entering the Atelier does not push a synthetic history entry, and Back returns to the
+previous page.
+
+The direct form accepts `repo`, fixed `view=atelier`, and optional `lang=en|ko`; omitted language defaults to
+English. It keeps the loading layer above the intro for the existing minimum 1.2-second ring transition,
+measured from a completed scene frame, and reuses the normal entry action with automatic chat closed.
+The existing 900 ms cover minimum starts at accepted entry; elapsed time alone cannot release it. The exact
+requested Atelier must be inside and have completed a render. Ordinary confirmation waits for two completed
+scene frames. Entry ownership is idempotent, including repeated button activation.
+Extra query state, duplicate fields, an invalid language, or a hash disables auto-entry and falls back to
+normal confirmation. Reduced-motion keeps the covered timing with static rings and the existing shorter
+Atelier fade.
+
+The shared parser accepts:
+
+- a GitHub username;
+- `owner/repo`;
+- `https://github.com/owner/repo`;
+- the same repository forms with one trailing slash or `.git`.
+
+It rejects non-GitHub hosts, credentials, ports, extra path segments, query strings, fragments, encoded path
+separators, traversal, control characters, and malformed owner or repository names. Rejected input never
+starts a GitHub API request.
+
+### Blueprint Deep Link contract
+
+A focused Repository Blueprint node can be shared with exactly four query fields: `repo`, fixed
+`view=blueprint`, one encoded public relative `path`, and fixed `ref=blueprint`. The decoded path is capped at
+512 bytes. Parent or encoded traversal, absolute paths, backslashes, control characters, malformed encoding,
+empty path segments, duplicate fields, and every unrelated query field are rejected.
+
+Opening the link reuses Repo Portal's exact public repository load, then shows a lightweight confirmation with
+the repository and focus path. This confirmation makes zero GitHub Tree requests. Only **Load public
+Blueprint** enters the existing Atelier and starts Repository Blueprint's one bounded Tree request. The
+fetched projection must carry the same owner/repo and contain the exact path before DOM/3D focus is restored.
+A missing path selects nothing, triggers no follow-up request, and remains available for ordinary
+Atelier/town navigation. The URL never contains source contents, chat, tokens, metrics, visitor/session IDs,
+or telemetry identifiers. **Enter town instead** stays in the already loaded exterior and starts no Tree
+request; it does not enter an unrequested Atelier.
+
+## Target-first data path
+
+The runtime resolves a repository in this order:
+
+| Step | Source | Result |
+|---|---|---|
+| 1 | Exact match in the generated owner snapshot | Reuses known owner traffic with `trafficKnown: true`. |
+| 2 | Fresh local Portal cache | Reuses allowlisted public metadata for 15 minutes. |
+| 3 | `GET /repos/{owner}/{repo}` | Makes one unauthenticated GitHub request with no automatic retry. |
+| 4 | Stale local Portal cache | Recovers explicitly as stale when the request fails. |
+| 5 | Existing owner-town background | Preserves a local scene behind the target error, never a substitute destination. |
+
+The Portal cache is an LRU capped at 30 entries and 512 KiB. It stores only the public fields projected by
+`assets/repo-portal.js`. A 403 or 429 is surfaced without automatic retry or a request for the target owner's
+public catalog. That public catalog is requested only after **Explore @owner's full town**. A failed target
+can still reuse the existing local owner snapshot for its covered background. Public-town `focus` retains
+its existing exact-repository lookup when the focused repo is absent from the first catalog page.
+Target-only mode does not write a Town Gazette baseline or Village Chronicle payload. A Postcard copy-link
+returns the same canonical Portal URL instead of dropping the target or composing unrelated feature state.
+
+### Readiness and recovery
+
+Awaited boot data responses have an 8-second deadline through headers and body, with a 2 MiB decoded-byte
+ceiling. Optional resident manifest, lore and Council loads use a 4-second deadline and their existing
+validated local fallbacks. This adds no request, retry loop, storage or service. Malformed catalogs are not
+cached. Existing fresh/stale public and Portal cache semantics remain intact.
+
+A standalone KO/EN recovery dialog runs before required scripts. Script/module failure, unavailable WebGL,
+bounded data failure, or the 45-second startup watchdog presents an explanation rather than an endless
+loading cover. **Retry the same link** reloads the exact URL. **Open the original GitHub** uses the validated
+repository/profile target when the parser has loaded; **Open the default plaza** preserves language on the
+same site path. No failed target silently enters a same-named repository from another owner.
+
+Context loss pauses input and simulation. Existing texture/shadow/room restoration hooks rebuild GPU state,
+not the scene. One restored frame enables **Continue**; focus, draft and any queued initial arrival remain
+owned by the interrupted flow. Restoring the context does not emit another entry or repeat a completed
+arrival action. All failure injection is local-only; no production counter or Worker is a test target.
+
+## Traffic truth boundary
+
+GitHub's public repository endpoint does not expose visitors, views, or clones. Repo Portal and `?user=`
+towns therefore keep:
+
+```js
+trafficKnown: false
+visitors: null
+views: null
+clones: null
+```
+
+Public architecture uses stars, forks, and update recency directly. Cards, search answers, and Atelier walls
+do not print unavailable traffic as zero or describe a public building as traffic-shaped. An exact match in
+the generated owner snapshot may show cumulative traffic because that data is already present and marked
+`trafficKnown: true`.
+
+## Funnel events
+
+Repo Portal uses the existing optional analytics sink with a stricter payload:
+
+| Event | Moment |
+|---|---|
+| `feature_seen` | The universal repository entry is visible or a Portal link opens. |
+| `feature_started` | Input is rejected, or a canonical target finishes resolving. |
+| `portal_entry` | The target Atelier reaches its inside state after facts are bound (renamed from `aha_completed` in v1.97; the legacy name is sent alongside for one release). |
+| `share_created` | A canonical Portal address is copied. |
+| `github_repo_opened` | The visitor explicitly opens the target on GitHub. |
+| `project_star_click` | The earned upstream Repolis Star link is clicked. |
+
+These events may include only a page-lifetime session ID, timestamp, entry surface, device class, language,
+result enum, coarse latency bucket, and channel enum. They omit owner, repository, URL, pasted input, query
+text, `cityUser`, and the persistent anonymous instance ID.
+
+## Performance and accessibility contract
+
+- No binary asset, model, image, texture, light, shadow, backend, package, or build step was added.
+- A cold arbitrary target makes at most one GitHub repository request before Aha.
+- Portal code stays below 30 KiB uncompressed, and the complete local runtime stays below 5 MiB.
+- Target arrival adds no steady-state town draw and no Portal-specific Three.js object.
+- Intro and Station use one labelled 320-character field, visible alert text, and shared validation.
+- Proof and copy results use live regions. Atelier actions use at least 44 px mobile targets and hide
+  while its chat, Blueprint, or README reader owns the screen.
+- Repository Exhibit entry uses the already loaded public description. Its separate explicit README
+  action has one anonymous request per visit, an eight-second deadline, 128 KiB JSON / 64 KiB document
+  caps, and no media, model call, or storage. It does not change the Portal request/cache or deep-link
+  contracts; [the excerpt limitations](known-limitations.md) remain visible.
+- Reduced-motion visitors keep the same flow with the existing shortened Atelier fade.
+
+## Files to change
+
+| File | Responsibility |
+|---|---|
+| `assets/repo-portal.js` | Parser, route precedence, public projection, canonical links, and latency buckets. |
+| `index.html` | Loading, bounded cache, truthful architecture, intro/Station UX, Atelier actions, and events. |
+| `scripts/smoke.mjs` | Hermetic parser, security, fallback, privacy, i18n, accessibility, and budget guards. |
+| `scripts/test-first-visit.mjs` | Extracted speech, picker, readiness, bounded-fetch and recovery regressions, included in smoke. |
+| `scripts/test-first-visit-browser.mjs` | Local-only entry/failure/policy matrix and mixed-speech browser fixtures using an existing isolated CDP browser. |
+| `examples/share-links.md` | Copy-ready public URL examples. |
+| `docs/domain-model.md` | Portal mode and `trafficKnown` semantics. |
+| `docs/known-limitations.md` | API, cache, and public-traffic constraints. |
+
+Keep parsing and link construction in the pure module. Do not add a second input resolver or build Portal
+links by editing `location.search` in place. Do not add synthetic traffic fields to make existing building
+math convenient.
+
+See [first-visit review evidence](first-visit-evidence/README.md) for reproduction commands, controlled
+measurements, screenshots, release-gate results and the separate physical-device verification boundary.
+
+## Verification
+
+Run the golden suite:
+
+```bash
+node council/test.mjs
+node council/test-live.mjs
+node scripts/smoke.mjs
+node --check scholars.js
+node --check cloudflare-taxi/src/grounded.js
+```
+
+Then serve the repository and test a known owner repo, an arbitrary public repo, a fresh and stale cache,
+404, 403/429, offline fallback, malicious input, owner-town expansion, copy, GitHub handoff, Back, KO/EN,
+keyboard operation, reduced motion, desktop, and 390x844 mobile. Both viewports must finish with no console
+errors, overlap, or horizontal overflow.

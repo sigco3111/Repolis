@@ -1,55 +1,94 @@
-# repolis.yaml — machine-readable project manifest
-# A compact, stable description of Repolis for AI agents and tooling.
+# repolis.yaml — stable machine-readable project manifest
 # Human guide: README.md · Agent contract: AGENTS.md
 schema: repolis/manifest@1
 
 name: Repolis
-tagline: The city of repos — your GitHub as a walkable 3D town.
+tagline: Public GitHub repos become a walkable 3D town.
 description: >-
-  A single-file 3D web app that renders every public GitHub repo of its owner as a
-  walkable low-poly house whose architecture is built from real traffic (visitors,
-  clones, forks, views). An LLM taxi and star-named scholar NPCs answer questions
-  and drive you to any repo. Runs from one index.html with no build step.
+  Traffic shapes the buildings, residents live there, and Gitber drives visitors to
+  the right project. Repolis is a zero-build static Three.js app with topic districts,
+  exploration systems, and optional grounded scholars.
 owner:
-  name: Hyeon Sang Jeon
-  github: hyeonsangjeon
+  name: HEE JUNG SHIN
+  github: sigco3111
 license: MIT
-homepage: https://hyeonsangjeon.github.io/Repolis/
-repository: https://github.com/hyeonsangjeon/Repolis
+homepage: https://sigco3111.github.io/Repolis/
+repository: https://github.com/sigco3111/Repolis
 languages: [en, ko]
 
 runtime:
-  kind: static-web-app
-  build: none            # no bundler, no package.json, no install step
+  kind: zero-build-static-web-app
+  build: none
   entrypoint: index.html
-  serve: python3 -m http.server 8000
-  renderer: three.js@0.160     # loaded via CDN import map (jsdelivr)
-  node_for_tooling: ">=20"     # tested on v24; only for tests/scripts, not the site
+  config: repolis.config.js
+  serve: python3 -m http.server 8000 --protocol HTTP/1.1
+  renderer: three.js@0.160
+  module_source: jsdelivr import map
+  package_manager: none
+  node_for_tooling: ">=20"
 
 data:
-  file: repos.json
-  shape: array
-  generated: true
-  generator: scripts/build_repos.py
-  generate_cmd: GTM_DIR=data python3 scripts/build_repos.py
-  note: Do not hand-edit; regenerate from data/logs/* + `gh api`.
+  repositories:
+    file: repos.json
+    shape: array
+    generated: true
+    generator: scripts/build_repos.py
+    generate_cmd: GTM_DIR=data python3 scripts/build_repos.py
+    note: Do not hand-edit; regenerate from data/logs/* plus gh api.
+    optional_fork_lineage: "lineage{source,url}; included public forks only"
+  city_state:
+    file: data/city-state.json
+    generated: true
+    generator: scripts/city_state.py
+    schema: data/city-state.schema.json
+    sap_ledger: "repolis.sap-ledger@1; 30 actual UTC entries / 32768 compact bytes"
+  contribution_library:
+    file: assets/contribution-library.json
+    generated: true
+    generator: scripts/build-contribution-library.mjs
+  elder_lore:
+    file: data/lore/fragments.json
+    generated: false
+    validator: scripts/validate-lore-fragments.mjs
 
 entrypoints:
   app: index.html
   scholars: scholars.js
+  world_tree: assets/world-tree/createRepolisHero.js
+  portable_town_projection: assets/world-tree/world-tree-state.js
+  homecoming: assets/homecoming.js
+  passport_journey: assets/journey.js
+  town_growth: assets/town-growth.js
+  repo_portal: assets/repo-portal.js
+  repo_route: assets/repo-route.js
+  contribution_quests: assets/contribution-quests.js
+  issue_code_scout: assets/issue-code-scout.js
+  elder_lore: assets/lore-fragments.js
+  taxi_voice: assets/taxi-voice.js
+  session_footprints: assets/session-footprints.js
+  fork_lineage: assets/fork-lineage.js
+  procedural_surfaces: assets/procedural-surfaces.js
+  zone_classifier: assets/zone-classifier.js
+  city_card: assets/city-card.js
   data_builder: scripts/build_repos.py
-  library_builder: scripts/build-contribution-library.mjs   # → assets/contribution-library.json (generated, daily)
+  launch_config: repolis.config.js
+  library_builder: scripts/build-contribution-library.mjs
   grounding_worker: cloudflare-taxi/src/grounded.js
   realtime_worker: cloudflare/src
+  card_worker: cloudflare-card/src/index.js
   council_engine: council/engine.js
+  client_regression: scripts/smoke.mjs
 
 deploy:
   site:
     target: github-pages
     branch: main
-    dir: /            # root, .nojekyll present
+    dir: /
     command: git push origin main
-    rule: "rebase onto origin/main first (a daily Action pushes `chore: refresh`)"
+    rule: Rebase onto origin/main first because the daily refresh Action also pushes.
+    fork_bootstrap: Enable Actions and Pages, then run Refresh Repolis data once.
+    fork_pat_required: false
+    optional_traffic_secret: GH_PAT
   grounding_worker:
     target: cloudflare-workers
     name: repolis-taxi
@@ -58,53 +97,168 @@ deploy:
     target: cloudflare-workers
     name: repolis-rt
     command: cd cloudflare && npx wrangler deploy
+  card_worker:
+    target: cloudflare-workers
+    name: repolis-card
+    command: cd cloudflare-card && npm ci && npx wrangler deploy
+    plan: workers-paid
+    bindings: [CARD_KV, CARD_RATE_LIMIT]
+    secrets: [GITHUB_TOKEN]
+    guide: cloudflare-card/README.md
 
 endpoints:
   grounding:
     url: https://repolis-taxi.wingnut0310.workers.dev/
     method: POST
-    body: '{ "question": "<text>", "npc": "taxi|msdocs|deepwiki", "lang": "ko|en", "history": [] }'
-    wired_in: index.html (GROUNDED_DEFAULT)
-    required: false      # absent backend → silent Local fallback
+    wired_in: repolis.config.js -> index.html
+    required: false
+    fallback: keyless Local search
+    fork_default: disabled
   realtime:
     url: wss://repolis-rt.wingnut0310.workers.dev
-    wired_in: index.html (RT_DEFAULT)
-    required: false      # absent backend → solo city
+    wired_in: repolis.config.js -> index.html
+    required: false
+    fallback: solo town
+    fork_default: disabled
+  card:
+    url: https://repolis-card.wingnut0310.workers.dev/
+    routes: [GET /u/<login>, GET /card/<login>.png, GET /card/<login>.svg]
+    wired_in: repolis.config.js -> index.html (public-town share links, profile README card)
+    required: false
+    fallback: the site's own preview and Pages ?user= links
+    fork_default: disabled
 
 features:
-  - id: walkable-city
-    summary: WoW-style camera; metrics drive building height/width/ornament/glow.
-  - id: llm-taxi
-    summary: Natural-language repo finder that drives you to the house (Local · WebLLM · AI Foundry Live).
+  - id: data-built-city
+    summary: Repository traffic and metadata shape houses, gardens, ornaments, and night glow.
+  - id: procedural-surfaces
+    summary: Eight facade families and shingle use deterministic seeded UV phases over nine bounded shared CanvasTextures.
+    desktop_texture_cache_cap: 9
+    low_end_texture_cache_cap: 9
+    added_runtime_requests: 0
+    added_draw_calls: 0
+  - id: thirty-day-sap-ledger
+    summary: The owner World Tree keeps up to 30 actual UTC daily public aggregate entries with same-day replacement, explicit gaps, and no foreign history reuse.
+    runtime_requests: 0
+    maximum_entries: 30
+    maximum_compact_bytes: 32768
+  - id: world-tree-undercroft
+    summary: Current archived public Roots become one isolated walkable archive with exact exterior restoration and an accessible Chronicle fallback.
+    spatial_record_cap: 64
+    desktop_dust_cap: 72
+    low_end_dust_cap: 28
+    desktop_root_rib_cap: 14
+    low_end_root_rib_cap: 8
+    point_light_cap: 2
+    added_textures: 0
+    added_runtime_requests: 0
+  - id: topic-districts
+    summary: Deterministic districts with hubs, boards, map navigation, and progress.
+  - id: living-village
+    summary: Residents have named homes, home-work routines, relationships, haunts, bounded shared excursions, gatherings, festivals, and specialist handoffs.
+  - id: resident-quarter
+    summary: Starlight Row gives every resident a named, individually styled cottage with three batched roof families, facade details, colored gardens, tree canopy, and session-local home-work commute.
+  - id: resident-shared-joy
+    summary: One idle pair autonomously visits real flowers, visible night stars, or a rendered repo house without AI or network calls.
+  - id: exploration
+    summary: Explorer Passport, district progress, daily Village Chronicle, and Repository Constellation Trail.
+  - id: session-footprints
+    summary: The local avatar leaves a short current-tab trail in one fixed instanced pool, with no storage, identity, synchronization, analytics, or network request.
+    desktop_cap: 36
+    low_end_cap: 18
+    reduced_motion_cap: 8
+    added_draw_calls_while_visible: 1
+    added_network_requests: 0
+  - id: public-fork-lineage
+    summary: Included public fork houses receive a factual canonical source card row and one shared deterministic crest batch without runtime GitHub requests.
+    generated_fields: [lineage.source, lineage.url]
+    added_draw_calls: 1
+    runtime_github_requests: 0
+  - id: plaza-direct-link
+    summary: An English-first covered campaign link skips the intro and starts at the existing owner-town plaza.
+    url: "?view=plaza&lang=en"
+  - id: town-growth-replay
+    summary: Public repo creation dates raise existing houses through a reversible, shareable year timeline without inventing historical metrics or adding render assets.
+  - id: repo-portal
+    summary: A canonical owner/repo link loads one public target before the owner catalog; an optional covered direct link opens the same Atelier after a 1.2-second initialization pause.
+    url: "?repo=<owner>/<repo>&ref=repo-portal"
+    direct_atelier_url: "?repo=<owner>/<repo>&view=atelier&lang=en"
+    cache: "15 minutes, 30 entries, 512 KiB LRU"
+    cold_github_requests_before_aha: 1
+  - id: portable-living-towns
+    summary: One normalized public payload deterministically derives the foreign owner's World Tree record and local repo-bound residents without owner state or another request.
+    schema: repolis.portable-town@1
+    desktop_resident_cap: 6
+    low_end_resident_cap: 4
+    feature_owned_api_requests: 0
+    foreign_services: local-dialogue-only; realtime and grounded disabled
+  - id: repo-route
+    summary: Visitors hand off an ordered 2–3 house path they actually explored; recipients follow current public repo cards before the earned Star invitation.
+    url: "?user=<login>&route=<repo1>,<repo2>,<repo3>&ref=repo-route"
+    persistence: session-only draft; public repository names in shared URL
+    added_scene_resources: 0
+    added_network_requests: 0
+  - id: open-source-quests
+    summary: One explicit anonymous public-issue search ranks up to three approachable tasks and guides visitors through each real repo house before GitHub handoff.
+    source: assets/contribution-quests.js
+    persistence: in-memory for the current tab
+    startup_network_requests: 0
+    explicit_github_requests: 1
+    added_scene_resources: 0
+  - id: repository-atelier
+    summary: One reusable walkable exhibition rebinds repo history, current impact signals, the current chibi avatar, and in-room Gitber/district actions while restoring the exterior exactly.
+  - id: village-chronicle
+    summary: A deterministic town/day story connects one resident to their cherished haunt and a related repo or district.
+  - id: town-gazette
+    summary: A bounded local per-town snapshot makes daily public-repo changes visible on return.
+  - id: gitber-taxi
+    summary: Shared-only all-district traveler that finds a repo, redirects household memory, and adds one local seasonal or district observation per ride.
+  - id: elder-lore
+    summary: Hand-authored bilingual recollections are deterministically shared among the oldest eligible 20% of the bounded active roster and delivered rarely without model or network calls.
+  - id: newcomer-buildings
+    summary: Repositories younger than 90 generated-clock days receive bounded full/mid-LOD scaffolding and a rules-based local newcomer voice.
   - id: scholars
-    summary: Star-named MCP-grounded NPCs (POLARIS taxi, VEGA · MS Learn, RIGEL · DeepWiki) with trace panels.
+    summary: POLARIS, VEGA/MS Learn, RIGEL/DeepWiki, roaming MIRA/Context7, and roaming LYRA/Hugging Face.
+  - id: resident-scholar-handoff
+    summary: Specialist resident questions become compass-guided walks to the matching live scholar position.
+  - id: landmarks
+    summary: Contribution Library, Chronopolis, Observatory, World Tree, canals, parks, and fairground.
   - id: shareable-towns
-    summary: '?user=<login> rebuilds the town from any public GitHub user.'
+    summary: "?user=<login> rebuilds a lighter town from any public GitHub user's repositories."
+  - id: launch-kit
+    summary: The intro username launchpad previews any public account; template forks infer their Pages owner, build with github.token, and isolate upstream optional services.
   - id: realtime
-    summary: Optional multiplayer presence + live visitor counter.
-  - id: kronos-council
-    summary: Deterministic multi-agent debate→verdict engine (council/), 130+56 hermetic checks.
-  - id: i18n-daynight
-    summary: Live English/한국어 toggle and day/night with activity-lit windows.
+    summary: Optional multiplayer presence and visitor counters.
+  - id: bilingual-daynight
+    summary: Live English/Korean switching and a continuous day/night cycle.
 
 verify:
-  golden_rule: All tests below must pass before any deploy (hermetic — no net/clock/LLM/cost).
+  golden_rule: All commands must pass before deploy.
   commands:
-    - node council/test.mjs        # → ALL GREEN — 130 checks passed
-    - node council/test-live.mjs   # → 56 passed, 0 failed
-    - node scripts/smoke.mjs       # → ALL GREEN — index.html static regression guards
+    - node council/test.mjs
+    - node council/test-live.mjs
+    - node scripts/smoke.mjs
+    - node scripts/test-portable-town.mjs
+    - node scripts/test-public-town-cache.mjs
+    - node scripts/test-session-footprints.mjs
+    - python3 scripts/test_fork_lineage.py
+    - node scripts/test-fork-lineage.mjs
+    - node scripts/validate-lore-fragments.mjs
     - node --check scholars.js
     - node --check cloudflare-taxi/src/grounded.js
-  ui: serve locally and drive the page in Chrome DevTools; require 0 console errors (mobile 390x844 + desktop).
+    - node scripts/test-city-card-worker.mjs
+    - node --check assets/repo-route.js
+    - node --check assets/contribution-quests.js
+  ui: Serve locally and exercise changed flows in Chrome DevTools on desktop and 390x844 mobile with no console errors.
 
 constraints:
-  git_author: Hyeon Sang Jeon <wingnut0310@gmail.com>
-  commit_trailer: "Co-authored-by: Copilot <223556219+Copilot@users.noreply.github.com>"
-  public_safe: Only public repos are shown; never expose private repo names or secrets.
-  generated_data: Edit scripts/build_repos.py, not repos.json directly.
-  no_build_step: Keep the site a single dependency-free static index.html.
+  git_identity: Hyeon Sang Jeon <wingnut0310@gmail.com>
+  public_safe: Only public repositories are rendered; never expose private names or secrets.
+  generated_data: Edit generators, not repos.json or assets/contribution-library.json directly.
+  no_build_step: Keep the browser runtime static and free of a package-manager requirement.
+  no_heavy_runtime_dependencies: Prefer existing Three.js and local deterministic systems.
 
-do_not_touch:   # local/secret, gitignored — never commit
+do_not_touch:
   - "*.local.md"
   - cloudflare-taxi/.dev.vars
   - CLAUDE.md

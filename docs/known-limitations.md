@@ -1,0 +1,234 @@
+# Known limitations
+
+So an agent (or contributor) doesn't chase a "bug" that is actually intended behavior, or design a
+change around a constraint that can't move. Pair this with [`AGENTS.md`](../AGENTS.md).
+
+## Data
+
+- **Traffic is daily, not live.** The city reflects yesterday's cumulative totals. `repos.json` updates
+  once per day via `.github/workflows/refresh.yml`; there is no real-time traffic feed.
+- **Traffic needs an external collector.** GitHub's traffic API only keeps a rolling **14-day** window,
+  so lifetime visitor/clone totals come from a separate private collector
+  ([`github-traffic-monitor`](https://github.com/hyeonsangjeon/github-traffic-monitor)). A fork without a
+  collector will show stars/forks/issues but flat/zero visitor·clone·view history.
+- **`repos.json` is generated.** Hand edits are overwritten on the next refresh. Change
+  `scripts/build_repos.py` instead.
+- **Resident profiles are generated and public-only.** `data/residents/*.json` contains only bounded,
+  sanitized public repository metadata available during refresh. Missing issue/PR/commit/release history stays
+  empty. Details load only after explicit interaction; a Bound-source change may temporarily use the local
+  fallback until the generated Worker registry is redeployed.
+- **Elder lore is sparse and hand-authored.** It is allocated only across the eligible nine-resident active
+  roster, not all generated profiles, and is deliberately rare enough that a short visit may reveal none.
+  The in-memory seen/cooldown state resets on reload. The fragments hint through fallible recollection; they are
+  not a factual history screen, and the World Tree never answers.
+- **Newcomer and ruin visuals follow reproducible public dates.** A repository is new only while its generated
+  city-reference age is under 90 days. The current snapshot has no archived repository, so warm ruin composition
+  and unavailable dialogue are exercised with deterministic fixtures rather than fabricated production history.
+- **The Silence Ledger is a dated current snapshot, not a repository health judgment.** It uses only each
+  unarchived public repository's latest public push date and the generated UTC city reference date. Missing or
+  invalid push dates stay explicitly unavailable; 365- and 730-day counts include the boundary day, and only one
+  deterministically tied longest-quiet repository is retained. Archived repositories remain separate in The Roots.
+  Fork and clone counts have no bearing on quiet time, copies, recoverability, or preservation.
+- **The Thirty-day Sap Ledger starts at deployment, not in the past.** It stores only actual generated UTC
+  dates from the feature's first run onward, replaces a same-day correction, retains at most 30 entries /
+  32 KiB, and never fills a missing date. Its public counts and latest-push-based activity/season/silence
+  facts are aggregate snapshots, not a reconstruction of deleted, private, or previously different repos.
+  Missing star or fork inputs make that entry's total explicitly `null`. Foreign public towns do not receive
+  or reuse the canonical owner's ledger because their one current public payload contains no historical run.
+- **The Undercroft is a current archived-catalog view, not recovered repository history.** It cross-checks
+  Roots against the active town's current normalized public payload, shows at most 64 spatial records, and
+  leaves the full accessible Roots list above ground. It cannot show deleted, private, renamed-away, or past
+  archive states, and it does not infer preservation from forks. A town with no matching archived record keeps
+  a truthful empty room and exit.
+- **Public repos only, by design.** Private repo names never appear. Untouched mirror forks are filtered
+  out; only forks you've actually committed to are shown.
+- **Fork lineage is public origin metadata, not credit assignment.** The generated field exists only when
+  GitHub exposes a canonical public source for an included committed-to fork. Deleted, private, inaccessible,
+  malformed, and foreign runtime-only sources show no crest or card row. The shared crest color groups equal
+  sources but does not claim family, authorship, ownership, or a current maintainer relationship.
+- **Public API modes do not have traffic.** Repo Portal and `?user=` receive stars, forks, issues, language,
+  topics, and lifecycle dates from unauthenticated public endpoints. GitHub does not return visitors, views,
+  or clones there, so Repolis keeps those fields unknown and uses stars, forks, and recency for architecture.
+  An exact Portal match in the generated owner snapshot may reuse its known cumulative traffic.
+- **Portable town life is a current public projection, not the owner's generated memory.** The one normalized
+  public payload derives era, season, Silence Ledger, archived Roots, and at most six desktop/four LOW_END
+  residents. Missing dates use explicit empty states and a deterministic epoch reference only when every date
+  is absent. The 100-repository unauthenticated list cap is surfaced as partial coverage. Public residents have
+  deterministic local jobs and greetings, but no issue titles, owner resident records, Shared/Bound memory,
+  daily sap record, realtime identity, or grounded backend.
+- **The public-town cache is small, short-lived, and per browser.** `?user=` and Twin Towns keep, per login,
+  only the raw fields the public projection reads for the repositories it accepts: about 47K characters for a
+  full 100-repository page instead of GitHub's roughly 588K-character raw page. An entry is fresh for six hours;
+  after that, one request refreshes it, and a failed request falls back to it as an explicitly stale town. At
+  most eight towns are kept, least recently used out first, and a town whose entry would exceed 128K characters
+  (near-maximum descriptions and topics on most repositories) renders live without being cached, so the cache
+  never holds much more than 1M characters, a fifth of Chrome's roughly 5.2M-character origin quota. The first
+  visit after this change deletes the older unbounded raw-page entries, so those towns are requested once more.
+- **Repo Portal is one unauthenticated request, not a proxy.** An arbitrary target uses one
+  `GET /repos/{owner}/{repo}` request with no retry. A 15-minute LRU cache is limited to 30 entries and 512
+  KiB; failed requests may use an explicitly labelled stale entry. Without one, the target error appears
+  over the existing owner town. GitHub's anonymous 403/429 limit still applies.
+- **Direct entry is presentation, not a new trust boundary.** `?view=plaza&lang=en` skips only the owner-town
+  intro, while `?repo=owner/repo&view=atelier&lang=en` skips the Portal confirmation only after the same exact
+  target validation and load. Their 1.2-second covered transition adds no request, persistence, or resource,
+  and malformed or composed URLs fall back to the
+  ordinary Portal screen. The existing Atelier chat/service policy remains unchanged.
+- **Repo Route is a current-catalog path, not a permanent playlist.** Its URL contains two or three public
+  repository names from the town that created it. Renamed, deleted, privatized, or newly filtered repositories
+  cannot be reconstructed and make that shared route fail soft to the normal town. Route drafts are session-only,
+  and strict order means opening another house does not skip the current stop.
+- **Open Source Quests uses GitHub's anonymous search, not an issue mirror.** It reads up to 50 current open
+  public issues only after the visitor presses Find, displays at most three, and keeps results in memory for
+  this tab. Anonymous Search API rate limits can produce an explicit temporary error. A changed, closed,
+  renamed, deleted, private, or newly filtered issue disappears on the next page load; Repolis does not claim,
+  assign, cache, refresh, or track contribution outcomes.
+- **Issue-to-Code Scout is lexical triage, not code analysis.** It can run only when one exact current Quest
+  and an already-loaded Blueprint belong to the same repository. It compares title/label words with bounded
+  path metadata, offers at most five candidate paths to inspect first, and makes no claim about file
+  relationships, modification locations, ownership, or runtime architecture. Generic or zero-overlap input
+  returns no candidates; the visit-local result is cleared on repository change or Atelier exit.
+- **Creator Hall reads one public profile explicitly.** Opening the hall requests GitHub's public
+  `/users/<login>` endpoint and caches only the fields it renders for 24 hours. Anonymous API rate limits
+  can hide the avatar/bio temporarily; the hall still falls back to the public repository facts already
+  present in town. Email, blog, contribution-calendar scraping, and private data are not collected.
+
+## AI / scholars
+
+- **Grounded answers depend on a backend.** The live grounding needs the `repolis-taxi` Cloudflare Worker
+  plus an Azure AI Search Knowledge Base. A fresh clone with no backend falls back to **keyless Local
+  search** — accurate navigation, but no grounded prose Q&A. This is graceful, not an error.
+- **Taxi travel does not require the backend.** Shared season/count answers, household redirects, and the single
+  seasonal/district ride observation are deterministic local behavior. The taxi never receives resident Bound
+  profiles; a forged household payload is rejected server-side before retrieval or model planning. Public/portal
+  foreign towns do not borrow the generated owner Shared state or resident homes and stay on local navigation.
+  Their public ledger can answer derived season/count facts explicitly as a public record, while grounded and
+  realtime endpoints remain closed even when the canonical site hosts the visit.
+- **KB latency is real.** A cold/complex Knowledge Base + MCP round-trip can take **15–21 s**. Cloudflare
+  Workers tolerate it (they bill CPU time, not awaited wall-clock); the optional **Vercel Hobby** path caps
+  at ~10 s and silently falls back to Local — so the Vercel function is best-effort only.
+- **`gpt-5.4-mini` is a small model.** Synthesized answers are concise and occasionally hedge. Retrieval is
+  done client-side first and the model only **picks from a shortlist**, which limits hallucination but does
+  not eliminate it. Free-topic Council verdicts are AI inference and are explicitly marked `⚡ unverified`.
+- **Starlit (general) chat is intentionally unsourced.** Off-topic / small-talk replies carry no references
+  by design and are labeled as general knowledge.
+- **Atelier document answers are bounded.** With a configured existing GitHub credential, exact public
+  metadata and a complete README or license feed one synthesis directly, without MCP planning or an
+  intermediate KB answer. Without the credential, the existing MCP-first path remains. Authenticated
+  reads avoid the shared-IP anonymous quota but not GitHub's authenticated quota or credential expiry;
+  fresh explicit public metadata is mandatory before each document. The public GitHub API can rate-limit
+  these reads. Documents larger than 32 KiB,
+  invalid responses and redirects are rejected rather than silently truncated. The existing
+  Entra-authenticated model is required, and all stages share the 25-second Worker deadline inside the
+  client's 30-second limit. These sources do not cover every code or commit-history question.
+
+## Realtime / multiplayer
+
+- **Solo by default.** Presence + the live visitor counter only appear when a realtime server is wired
+  (`repolis.config.js`, `?rt=`, `localStorage.repolisRT`, or `window.REPOLIS_RT`). A bare fork is single-player.
+- **Self-host count is in-memory.** The `node scripts/dev_realtime.mjs` server forgets counts on restart;
+  only the PartyKit / Cloudflare Durable-Object backends persist the cumulative total.
+
+## Client / rendering
+
+- **Homecoming is a first-visit guide, not a recommender.** The canonical landing leads with the login form only on the
+  canonical town; forks keep their owner's town first. A public town plays its arrival timelapse once per browser session
+  and login, so a new session replays it. The timelapse budget (8–24 s) is measured in rendered frame time like the rest of
+  Growth Replay, so a very slow device can take longer in wall-clock time. The intent card appears once per session, never
+  over an open panel, room, ride, tour, or chat, and not for returning owner-town visitors, who keep the existing welcome-back
+  and Gazette path. The three explore stops use only current catalog fields: unknown public traffic becomes "most stars", and
+  a town without a tended, forked, rare-district, or tagged house tours fewer than three houses rather than inventing one.
+  Look/Share unlocks follow the existing browser-wide Explorer Passport visits, so same-named houses visited in another town
+  count. Funnel events carry no login, repository name, session, or instance identifier.
+- **The Passport Journey is this page's memory, not a history.** It lists houses opened through a repo card (the
+  `markVisited` point), so entering a Repository Atelier directly does not add a house. A reload starts an empty journey,
+  and nothing is stored or sent. After 24 houses and 12 traces it counts instead of listing. Its cumulative line reads the
+  browser-wide Explorer Passport, which stores repository names without their town; it counts only names in the current
+  catalog, so a same-named house opened in another town still counts here.
+- **Town Gazette keeps five towns.** Baselines for the five most recently visited owner or `?user=` towns stay in one
+  local key; a sixth town drops the least recently visited one. "N more houses" is net growth (new minus departed), so a
+  renamed repository or a public town whose 100-repository API window slid is not announced as a new house, and a town
+  that gained one house while losing another reports only the changes. Public-town snapshots follow the six-hour public
+  data cache, so changes made within that window appear on a later visit.
+- **Zero-build static runtime, on purpose.** `index.html` remains the primary runtime and imports a few
+  local modules/assets directly. There is no bundler, `package.json`, or `node_modules` requirement for
+  the site. Don't add a build step — it is a feature.
+- **Three.js loads from a CDN import map** (jsDelivr). Fully offline first-loads won't render until the
+  module is cached; there is no local copy of Three.js in the repo.
+- **WebLLM needs WebGPU** and a ~1 GB one-time download; unsupported browsers simply don't offer that mode.
+- **No full browser automation suite.** `scripts/smoke.mjs` guards many static and extracted behavioral
+  contracts, but visual and interaction changes still require serving locally and driving the page in
+  Chrome DevTools with 0 console errors on mobile + desktop.
+- **World names are intentionally selective.** At most six desktop or four mobile/LOW_END names are
+  admitted, with a screen-size ceiling, safe-area gutters and stable engaged-person priority. Existing
+  speech and UI space win overlaps; behind-camera/near-plane labels are not drawn. Roles remain in
+  **Choose someone nearby** and chat rather than a second world-text row. Physical sign planes retain
+  their texture/depth test but are capped near the camera; no character, house or tree geometry is simplified.
+  The new browser group covers Chrome emulation and IME event ownership, not physical touch hardware,
+  native composition keyboards, Safari/Firefox or hardware GPU loss. See the [manual release checklist](first-visit-evidence/readable-town.md).
+- **Facade relief is intentionally lightweight.** Eight facade families and the roof use nine shared seeded
+  color maps plus per-geometry UV phases, not downloaded materials or a photorealistic PBR stack. LOW_END keeps
+  the same material identities with fewer micro-marks and lower anisotropy. No bump, normal, or roughness map
+  is retained.
+- **Adaptive quality is an in-memory safety rail, not a benchmark or device profile.** The governor observes
+  visible, active exterior render intervals only after 6 seconds of eligible warm-up, uses three coarse reversible
+  tiers, and forgets everything on reload. Hidden tabs, the intentional idle cap, intro/modals, Atelier, and Growth
+  Replay do not influence it. LOW_END remains the maximum quality bound and reduced motion keeps decorative
+  updates stopped; there is no user dashboard, telemetry, persistence, fingerprint, backend report, or attempt to
+  predict hardware. `?dbg` fixtures are local deterministic replays rather than real-device speed claims.
+- **Owner-town size is a snapshot, not a contract.** Its repository count changes whenever the daily
+  public data refresh adds, removes, or filters a repository.
+- **Town Gazette is browser-local.** It compares public repo fields against the last snapshot marked read
+  in this browser, keeps at most five towns, and does not sync across devices. Negative metric corrections
+  are ignored rather than presented as losses. Release-tag changes are available in the owner town's
+  generated data; lightweight `?user=` towns do not fetch release metadata.
+- **Town Growth Replay is a creation timeline, not a historical analytics database.** Each year is taken from
+  a currently public repo's `created` date; deleted or private repos cannot appear. GitHub does not provide
+  past Star, fork, traffic, topic, or language snapshots, so a visible house keeps its current architecture
+  and language label and the UI says so explicitly. Repos without a valid creation date appear only in the
+  present step. Replay state lives in the URL and is not persisted.
+- **Repository Exhibit excerpts are not a verified setup guide.** Metadata appears without a request.
+  Choosing README getting started makes one anonymous `api.github.com` README request per visit, with an
+  eight-second whole-response deadline, 128 KiB JSON and 64 KiB UTF-8 limits. English/Korean heading rules
+  select at most six complete sections, twelve complete code blocks, and 24 KiB of excerpts; a section
+  exceeding 12 KiB or containing code over 8 KiB is omitted, not cut into partial commands. Nested
+  installation headings retain their containing section, but instructions elsewhere in the document or
+  linked files may not be included. Read the full README for all requirements and platform conditions.
+  Source text is not translated, summarized by a model, executed, or rendered as raw HTML. Images,
+  badges, SVG, embeds, and remote previews are not loaded. A homepage is not a verified live demo.
+  The recorded ref can move; the displayed SHA identifies the returned document blob, not a commit.
+  Missing, inaccessible, rate-limited, malformed, oversized, or redirected documents stay unavailable
+  without retry. Closing the panel keeps the result; leaving/rebinding the room cancels and clears it.
+  Entry and document reading do not send an AI question; optional scoped chat remains separately limited.
+- **Repository Atelier is an exhibition, not a source-code IDE.** One reusable room redraws the current repo
+  description, topics, public metrics, lifecycle dates, and available traffic. Its Repository Blueprint makes
+  one explicit anonymous GitHub Tree request only after the visitor chooses Scan, stops after 8 seconds or
+  2 MiB decoded, and projects at most 220 desktop / 96 mobile-or-LOW_END nodes, depth 4, and 160 / 64 edges.
+  Truncated or partial responses remain labeled and never trigger subtree follow-ups. The view shows current
+  public file/folder topology only: it does not clone or parse file bodies, reconstruct call graphs or runtime
+  architecture, infer private/deleted content, reconstruct old metrics, or simulate build behavior. A shared
+  Blueprint path is capped at 512 decoded bytes and can restore only an exact node present in that bounded
+  projection; missing paths remain unselected.
+- **Session footprints are deliberately forgetful.** Only post-collision movement by the local exterior avatar
+  can create them. A fixed 36/18/8-slot desktop/LOW_END/reduced-motion pool fades or expires in memory; taxi,
+  rides, teleports, hidden tabs, Growth Replay, Atelier movement, reloads, and navigation do not become a trail.
+  No footprint is stored, synchronized, analyzed, or attached to a visitor, resident, or peer identity.
+- **Resident Shared Joy is bounded and session-local.** At most one pair takes a scripted excursion at a
+  time; it is not remembered across reloads and does not use a model. Stargazing starts autonomously only
+  while stars are visible, and visitor/chat/festival ownership intentionally interrupts an outing.
+- **Starlight Row is exterior and session-local.** The eight cottages do not have walk-in interiors, saved
+  occupancy, or offline simulation. Residents finish any stronger social owner before commuting, so a
+  festival or conversation can intentionally delay home/work arrival. Long commutes use purposeful speed
+  plus existing circle-collider resolution rather than authored road splines. Its trees and gardens are
+  procedural scenery rather than a persistent gardening simulation; cottage styles are fixed to resident
+  identity rather than user-customizable, and LOW_END intentionally uses fewer plants and omits canopy,
+  chimney, and finial detail.
+- **Portable Starlight Row is smaller by design.** Foreign towns reuse the same truthful cottage signs,
+  silhouettes, porch/home and repo/work anchors, colliders, and interaction priority, but instantiate at most
+  six residents on desktop and four on mobile/LOW_END. Archive-only and empty projections create no cottages.
+
+## Tooling
+
+- **Coverage is layered, not end-to-end.** `node council/test*.mjs` is authoritative for the Council;
+  `node scripts/smoke.mjs` guards the static client and selected extracted behavior. Workers and rendered
+  interactions still need their targeted syntax/runtime checks.
+- **No linter/formatter is configured.** Match the surrounding code style by hand.
