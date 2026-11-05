@@ -1,0 +1,54 @@
+name: Migrate to v1.98.0 (one-off, user-approved)
+
+on:
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: migrate-v198
+  cancel-in-progress: false
+
+jobs:
+  migrate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download migration bundle
+        run: curl -fsSL -o /tmp/bundle.tar.gz "https://github.com/sigco3111/repolis-v198-test/releases/download/v198-migration/repolis-v198-migration.tar.gz"
+
+      - name: Verify bundle sha256 (abort before touching any repo file)
+        run: |
+          echo "372c6564099d3fd6d1bd978d0cb691296cf3a2017f294669d1997d877abbac09  /tmp/bundle.tar.gz" | sha256sum -c -
+
+      - name: Validate archive paths (reject absolute or parent-escaping entries)
+        run: |
+          if tar tzf /tmp/bundle.tar.gz | grep -E '^/|(^|/)\.\.(/|$)'; then
+            echo "unsafe paths in bundle" >&2
+            exit 1
+          fi
+
+      - name: Apply bundle (preserve .git and data/logs)
+        run: |
+          find . -mindepth 1 -maxdepth 1 ! -name .git ! -name data -exec rm -rf {} +
+          find data -mindepth 1 -maxdepth 1 ! -name logs -exec rm -rf {} +
+          tar xzf /tmp/bundle.tar.gz
+
+      - name: Commit migration (rebase-retry so concurrent data commits are kept)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "no changes"; exit 0
+          fi
+          git commit -m "Repolis v1.98.0 migration (user-approved one-off workflow)"
+          for i in 1 2 3 4 5; do
+            if git push; then echo pushed; exit 0; fi
+            echo "push rejected (attempt $i) - rebasing on latest main"
+            git pull --rebase --autostash origin main
+          done
+          echo "push failed after retries" >&2
+          exit 1
