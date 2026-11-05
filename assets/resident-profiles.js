@@ -5,7 +5,7 @@ export const RESIDENT_PROFILE_VERSION = 1;
 export const RESIDENT_MANIFEST_SCHEMA = 'repolis.resident-manifest';
 export const RESIDENT_MANIFEST_VERSION = 1;
 export const RESIDENT_PROFILE_MAX_BYTES = 12000;
-export const RESIDENT_MANIFEST_MAX_BYTES = 64000;
+export const RESIDENT_MANIFEST_MAX_BYTES = 200000; // measured 147,973B for 387 repos (2026-11-05); ~35% headroom
 
 const SAFE_SLUG = /^[a-z0-9](?:[a-z0-9._-]{0,98}[a-z0-9])?$/;
 const SAFE_DIGEST = /^[a-f0-9]{64}$/;
