@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://hyeonsangjeon.github.io/Repolis/data/residents/profile.schema.json",
+  "$id": "https://sigco3111.github.io/Repolis/data/residents/profile.schema.json",
   "title": "Repolis resident profile",
   "description": "Date-free public resident profile. The build clock and city reference day live only in data/residents/index.json.",
   "type": "object",
