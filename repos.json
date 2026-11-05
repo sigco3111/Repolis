@@ -6461,7 +6461,7 @@
 "views": 0,
 "visitors": 0,
 "clones": 0,
-"size": 2148,
+"size": 21098,
 "open_issues": 0,
 "license": "MIT",
 "archived": false,
@@ -6472,7 +6472,7 @@
 "pushed": "2026-11-05",
 "tracked": true,
 "first_seen": "2026-06-23",
-"social": "https://opengraph.githubassets.com/e27055927dfdc6270786b740b64527588c649843ac2f70a587746a1576a9d1e2/sigco3111/Repolis",
+"social": "https://opengraph.githubassets.com/72917d282fcad4c29e0f54064376ac4395257f8e6cd1eb07499fc2017cc3816c/sigco3111/Repolis",
 "social_custom": false,
 "score": 0.416,
 "rank": 219
@@ -10942,35 +10942,6 @@
 "rank": 371
 },
 {
-"repo": "repolis-v198-test",
-"desc": "🧪 [테스트] Repolis v1.98.0 업스트림 + sigco3111 데이터 이주 시험본 (운영 Repolis 아님, 검증 후 삭제 예정)",
-"lang": "JavaScript",
-"topics": [],
-"url": "https://github.com/sigco3111/repolis-v198-test",
-"home": "",
-"stars": 0,
-"forks": 0,
-"fork": false,
-"views": 0,
-"visitors": 0,
-"clones": 0,
-"size": 17727,
-"open_issues": 0,
-"license": "MIT",
-"archived": false,
-"default_branch": "main",
-"release_tag": "v198-migration",
-"release_date": "2026-11-05",
-"created": "2026-11-05",
-"pushed": "2026-11-05",
-"tracked": false,
-"first_seen": "",
-"social": "https://opengraph.githubassets.com/3663163a3892486307c2f38219d4abbbec0470cb5aaffce7e368c010ff307c30/sigco3111/repolis-v198-test",
-"social_custom": false,
-"score": 0.0,
-"rank": 372
-},
-{
 "repo": "retro-synthwave-shooter",
 "desc": "🟢 [원작] (3D도구) · [코드깎는노인-코딩미션] 레트로 신스웨이브 슈팅 게임",
 "lang": "HTML",
@@ -10997,7 +10968,7 @@
 "social": "https://opengraph.githubassets.com/442e8923752999e1a54e4ed3f00fb4f13f0919d496ddb94481523be2419ecf71/sigco3111/retro-synthwave-shooter",
 "social_custom": false,
 "score": 0.0,
-"rank": 373
+"rank": 372
 },
 {
 "repo": "scam-with-your-friends-web",
@@ -11030,7 +11001,7 @@
 "source": "mrzh7/scam-with-your-friends-web",
 "url": "https://github.com/mrzh7/scam-with-your-friends-web"
 },
-"rank": 374
+"rank": 373
 },
 {
 "repo": "sigco3111",
@@ -11059,7 +11030,7 @@
 "social": "https://opengraph.githubassets.com/708bed735d2c3537693ad39de84e144e100a02be976cbcac9e63a5576e59ee12/sigco3111/sigco3111",
 "social_custom": false,
 "score": 0.0,
-"rank": 375
+"rank": 374
 },
 {
 "repo": "sprite-map-viewer",
@@ -11088,7 +11059,7 @@
 "social": "https://opengraph.githubassets.com/1aa1802c18045d015396231660469d826b22d5bcf8b0c356ac53e05101ee13ea/sigco3111/sprite-map-viewer",
 "social_custom": false,
 "score": 0.0,
-"rank": 376
+"rank": 375
 },
 {
 "repo": "spriteatelier",
@@ -11117,7 +11088,7 @@
 "social": "https://opengraph.githubassets.com/709341f8fc5ef8e1e48c7fd5bf68404b29b728d709dc121eb8e3efec94e45e5b/sigco3111/spriteatelier",
 "social_custom": false,
 "score": 0.0,
-"rank": 377
+"rank": 376
 },
 {
 "repo": "summer-cycle",
@@ -11150,7 +11121,7 @@
 "source": "StarKnightt/summer-cycle",
 "url": "https://github.com/StarKnightt/summer-cycle"
 },
-"rank": 378
+"rank": 377
 },
 {
 "repo": "synthwave-terrain",
@@ -11179,7 +11150,7 @@
 "social": "https://opengraph.githubassets.com/61bc8a1a47142bef12de0f384c22d74261745d47cec90609b18887002f730f3a/sigco3111/synthwave-terrain",
 "social_custom": false,
 "score": 0.0,
-"rank": 379
+"rank": 378
 },
 {
 "repo": "sys8-board",
@@ -11208,7 +11179,7 @@
 "social": "https://opengraph.githubassets.com/a807154407779b5bdd842556ea391ee91c3b9849b754e37d42ae588cd5e6d0d1/sigco3111/sys8-board",
 "social_custom": false,
 "score": 0.0,
-"rank": 380
+"rank": 379
 },
 {
 "repo": "ubuntu-board",
@@ -11237,7 +11208,7 @@
 "social": "https://opengraph.githubassets.com/a807154407779b5bdd842556ea391ee91c3b9849b754e37d42ae588cd5e6d0d1/sigco3111/ubuntu-board",
 "social_custom": false,
 "score": 0.0,
-"rank": 381
+"rank": 380
 },
 {
 "repo": "vibe-coding-ui-glossary",
@@ -11266,7 +11237,7 @@
 "social": "https://opengraph.githubassets.com/c9a278d68830f01811da812d8b17cefdf45a8cbc92858c49c8c2ce329a143aa3/sigco3111/vibe-coding-ui-glossary",
 "social_custom": false,
 "score": 0.0,
-"rank": 382
+"rank": 381
 },
 {
 "repo": "voronoi-glass-fracture",
@@ -11295,7 +11266,7 @@
 "social": "https://opengraph.githubassets.com/6642f991cb74bc7f2a8da0b68b1648977e4e55050796a60e3a000bc55f2825e3/sigco3111/voronoi-glass-fracture",
 "social_custom": false,
 "score": 0.0,
-"rank": 383
+"rank": 382
 },
 {
 "repo": "voxel-musou",
@@ -11328,7 +11299,7 @@
 "source": "mike007jd/voxel-musou",
 "url": "https://github.com/mike007jd/voxel-musou"
 },
-"rank": 384
+"rank": 383
 },
 {
 "repo": "Waveshare_ESP32_RLCD",
@@ -11361,7 +11332,7 @@
 "source": "heimumumu/Waveshare_ESP32_RLCD",
 "url": "https://github.com/heimumumu/Waveshare_ESP32_RLCD"
 },
-"rank": 385
+"rank": 384
 },
 {
 "repo": "win11-board",
@@ -11390,7 +11361,7 @@
 "social": "https://opengraph.githubassets.com/406f6d2c1191bed5a7bd78f309bd17026ef905171e55085f642bce720e0bbe75/sigco3111/win11-board",
 "social_custom": false,
 "score": 0.0,
-"rank": 386
+"rank": 385
 },
 {
 "repo": "win32-console-shooter",
@@ -11419,7 +11390,7 @@
 "social": "https://opengraph.githubassets.com/a3b6cf94cabadf682e2a58ecaf9f004099bc9f771bc5d008778d913f6f8613ba/sigco3111/win32-console-shooter",
 "social_custom": false,
 "score": 0.0,
-"rank": 387
+"rank": 386
 },
 {
 "repo": "winxp-board",
@@ -11448,7 +11419,7 @@
 "social": "https://opengraph.githubassets.com/8d830eae12b9ab662abfbde3c674d3f982944f6585a3f5ba8391454a112359f1/sigco3111/winxp-board",
 "social_custom": false,
 "score": 0.0,
-"rank": 388
+"rank": 387
 },
 {
 "repo": "wipic-draw3",
@@ -11477,7 +11448,7 @@
 "social": "https://opengraph.githubassets.com/8a3dcebf9698a92d9cbabe5ef7f8a76d618862d56c0d848737c70b3d56741742/sigco3111/wipic-draw3",
 "social_custom": false,
 "score": 0.0,
-"rank": 389
+"rank": 388
 },
 {
 "repo": "wordle",
@@ -11506,7 +11477,7 @@
 "social": "https://opengraph.githubassets.com/4feea49dcce6a06ca6bcbab2ba1b40b38ea17781c4a88379c3d2bf924946a6e5/sigco3111/wordle",
 "social_custom": false,
 "score": 0.0,
-"rank": 390
+"rank": 389
 },
 {
 "repo": "xmrig-dashboard",
@@ -11535,6 +11506,6 @@
 "social": "https://opengraph.githubassets.com/9e9da28aec57a760cbdbf37d7f47e0b07e68c887a6a9dcae1442bdbfce063ff2/sigco3111/xmrig-dashboard",
 "social_custom": false,
 "score": 0.0,
-"rank": 391
+"rank": 390
 }
 ]
