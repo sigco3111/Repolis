@@ -99,7 +99,7 @@
 "views": 0,
 "visitors": 0,
 "clones": 0,
-"size": 9326,
+"size": 9396,
 "open_issues": 0,
 "license": "",
 "archived": false,
@@ -107,10 +107,10 @@
 "release_tag": "",
 "release_date": "",
 "created": "2026-04-11",
-"pushed": "2026-11-08",
+"pushed": "2026-11-09",
 "tracked": true,
 "first_seen": "2026-06-23",
-"social": "https://opengraph.githubassets.com/bfb4eca691401febd81df53eeee567c1ad93a2ffeb124cbba429615d5aa139b4/sigco3111/icbm2-knowledge-graph",
+"social": "https://opengraph.githubassets.com/269057a62c7d41b96f48b269be43f7fcdc15e5a443e94905bd94e891d88eabd1/sigco3111/icbm2-knowledge-graph",
 "social_custom": false,
 "score": 0.965,
 "rank": 3
@@ -431,7 +431,7 @@
 "views": 0,
 "visitors": 0,
 "clones": 0,
-"size": 315108,
+"size": 326185,
 "open_issues": 0,
 "license": "",
 "archived": false,
@@ -439,10 +439,10 @@
 "release_tag": "v8.41",
 "release_date": "2026-11-04",
 "created": "2026-10-28",
-"pushed": "2026-11-08",
+"pushed": "2026-11-09",
 "tracked": true,
 "first_seen": "2026-11-04",
-"social": "https://opengraph.githubassets.com/d97d4eb9a9c4d80b967bfd2fd436507d431173825ac9e4a53db3f1978f33e78a/sigco3111/assets-2d-pixel",
+"social": "https://opengraph.githubassets.com/cbbbdb9374808f557e5b71f6215ea724d9265aae7b4c04c41365a707a9b4a14b/sigco3111/assets-2d-pixel",
 "social_custom": false,
 "score": 0.659,
 "rank": 14
@@ -460,7 +460,7 @@
 "views": 0,
 "visitors": 0,
 "clones": 0,
-"size": 497485,
+"size": 540921,
 "open_issues": 0,
 "license": "",
 "archived": false,
@@ -468,10 +468,10 @@
 "release_tag": "v9.0",
 "release_date": "2026-11-05",
 "created": "2026-10-28",
-"pushed": "2026-11-07",
+"pushed": "2026-11-09",
 "tracked": true,
 "first_seen": "2026-11-04",
-"social": "https://opengraph.githubassets.com/1636c27a3d82b694c9ec45b2f64aa8fe1f5de22482ce588d2e3634140448fb69/sigco3111/assets-3d-lowpoly",
+"social": "https://opengraph.githubassets.com/69fe30fe0af9bb21985504aa686cc113bd4cea96a2f03c8b2eaf4369a7062ef2/sigco3111/assets-3d-lowpoly",
 "social_custom": false,
 "score": 0.659,
 "rank": 15
@@ -489,7 +489,7 @@
 "views": 0,
 "visitors": 0,
 "clones": 0,
-"size": 325882,
+"size": 350893,
 "open_issues": 0,
 "license": "",
 "archived": false,
@@ -497,10 +497,10 @@
 "release_tag": "v6.24",
 "release_date": "2026-11-04",
 "created": "2026-10-28",
-"pushed": "2026-11-08",
+"pushed": "2026-11-09",
 "tracked": true,
 "first_seen": "2026-11-04",
-"social": "https://opengraph.githubassets.com/aa1ba8359379cd64da73c3a57ba6387bd9a9684148f82e03e28b4d5c1c1e3de7/sigco3111/assets-audio",
+"social": "https://opengraph.githubassets.com/92a4eba129457bb08b91870f0d487cd2e704e20a1f40badd8b5108a3fa9f357b/sigco3111/assets-audio",
 "social_custom": false,
 "score": 0.659,
 "rank": 16
@@ -576,7 +576,7 @@
 "views": 0,
 "visitors": 0,
 "clones": 0,
-"size": 2601,
+"size": 2980,
 "open_issues": 0,
 "license": "",
 "archived": false,
@@ -584,10 +584,10 @@
 "release_tag": "",
 "release_date": "",
 "created": "2026-10-28",
-"pushed": "2026-11-08",
+"pushed": "2026-11-09",
 "tracked": true,
 "first_seen": "2026-11-04",
-"social": "https://opengraph.githubassets.com/6468fa0c645a899a5c2236112c30ac591268dbcd316c72101e119489e8188687/sigco3111/game-asset-catalog",
+"social": "https://opengraph.githubassets.com/ce7be9a392e51bc81eeb0d756ac669e5804b798d1039dd5e198460657cb48c9e/sigco3111/game-asset-catalog",
 "social_custom": false,
 "score": 0.659,
 "rank": 19
@@ -4540,7 +4540,7 @@
 "views": 0,
 "visitors": 0,
 "clones": 0,
-"size": 431,
+"size": 135,
 "open_issues": 0,
 "license": "",
 "archived": false,
@@ -4548,10 +4548,10 @@
 "release_tag": "",
 "release_date": "",
 "created": "2026-10-16",
-"pushed": "2026-11-08",
+"pushed": "2026-11-09",
 "tracked": true,
 "first_seen": "2026-11-04",
-"social": "https://opengraph.githubassets.com/02fb3e6c15aadf121d46af79444c0a9ed012fe06aa577ff6b0e03aaff7e835a5/sigco3111/instinct-usage-dashboard",
+"social": "https://opengraph.githubassets.com/d1cd2bed58dac3fecc024c06c5e4d48fef2b3ee7e189e2e2bb8820e8ce45f1a8/sigco3111/instinct-usage-dashboard",
 "social_custom": false,
 "score": 0.416,
 "rank": 154
@@ -6701,7 +6701,7 @@
 "views": 0,
 "visitors": 0,
 "clones": 0,
-"size": 19882,
+"size": 19888,
 "open_issues": 0,
 "license": "MIT",
 "archived": false,
@@ -6709,10 +6709,10 @@
 "release_tag": "",
 "release_date": "",
 "created": "2026-06-23",
-"pushed": "2026-11-07",
+"pushed": "2026-11-08",
 "tracked": true,
 "first_seen": "2026-06-23",
-"social": "https://opengraph.githubassets.com/273565bab8abbb845282b21301ab7f2c0859c43a09c094df082869d8f1da778d/sigco3111/Repolis",
+"social": "https://opengraph.githubassets.com/a1237d974de21aa64b8a23171487eec3409d91fde7b8567eea6445642d6f7d71/sigco3111/Repolis",
 "social_custom": false,
 "score": 0.416,
 "rank": 227
@@ -11153,6 +11153,35 @@
 "rank": 378
 },
 {
+"repo": "return-investor",
+"desc": "리턴: 회귀 투자자 개발 코드 스냅샷. 역사 데이터는 권리 검토 중이라 제외했으며 완성 게임·플레이 배포가 아닙니다.",
+"lang": "JavaScript",
+"topics": [],
+"url": "https://github.com/sigco3111/return-investor",
+"home": "",
+"stars": 0,
+"forks": 0,
+"fork": false,
+"views": 0,
+"visitors": 0,
+"clones": 0,
+"size": 19305,
+"open_issues": 0,
+"license": "",
+"archived": false,
+"default_branch": "main",
+"release_tag": "",
+"release_date": "",
+"created": "2026-11-08",
+"pushed": "2026-11-09",
+"tracked": false,
+"first_seen": "",
+"social": "https://opengraph.githubassets.com/741f33ed456b708f6de61aac7fb4209f2df1c828cd9b159835772349a051604a/sigco3111/return-investor",
+"social_custom": false,
+"score": 0.0,
+"rank": 379
+},
+{
 "repo": "sigco3111",
 "desc": "🟢 [원작] (도구) · GitHub profile README for sigco3111",
 "lang": "Other",
@@ -11165,7 +11194,7 @@
 "views": 0,
 "visitors": 0,
 "clones": 0,
-"size": 707,
+"size": 714,
 "open_issues": 1,
 "license": "",
 "archived": false,
@@ -11173,13 +11202,13 @@
 "release_tag": "",
 "release_date": "",
 "created": "2026-06-18",
-"pushed": "2026-11-08",
+"pushed": "2026-11-09",
 "tracked": true,
 "first_seen": "2026-06-23",
 "social": "https://opengraph.githubassets.com/6f816741bf467993319a6293d89f96f83ae5e790a5fb9910409a16fa4ba527d4/sigco3111/sigco3111",
 "social_custom": false,
 "score": 0.0,
-"rank": 379
+"rank": 380
 },
 {
 "repo": "sprite-map-viewer",
@@ -11208,7 +11237,7 @@
 "social": "https://opengraph.githubassets.com/1aa1802c18045d015396231660469d826b22d5bcf8b0c356ac53e05101ee13ea/sigco3111/sprite-map-viewer",
 "social_custom": false,
 "score": 0.0,
-"rank": 380
+"rank": 381
 },
 {
 "repo": "spriteatelier",
@@ -11237,7 +11266,7 @@
 "social": "https://opengraph.githubassets.com/709341f8fc5ef8e1e48c7fd5bf68404b29b728d709dc121eb8e3efec94e45e5b/sigco3111/spriteatelier",
 "social_custom": false,
 "score": 0.0,
-"rank": 381
+"rank": 382
 },
 {
 "repo": "summer-cycle",
@@ -11270,7 +11299,7 @@
 "source": "StarKnightt/summer-cycle",
 "url": "https://github.com/StarKnightt/summer-cycle"
 },
-"rank": 382
+"rank": 383
 },
 {
 "repo": "synthwave-terrain",
@@ -11299,7 +11328,7 @@
 "social": "https://opengraph.githubassets.com/61bc8a1a47142bef12de0f384c22d74261745d47cec90609b18887002f730f3a/sigco3111/synthwave-terrain",
 "social_custom": false,
 "score": 0.0,
-"rank": 383
+"rank": 384
 },
 {
 "repo": "sys8-board",
@@ -11328,7 +11357,7 @@
 "social": "https://opengraph.githubassets.com/a807154407779b5bdd842556ea391ee91c3b9849b754e37d42ae588cd5e6d0d1/sigco3111/sys8-board",
 "social_custom": false,
 "score": 0.0,
-"rank": 384
+"rank": 385
 },
 {
 "repo": "ubuntu-board",
@@ -11357,7 +11386,7 @@
 "social": "https://opengraph.githubassets.com/a807154407779b5bdd842556ea391ee91c3b9849b754e37d42ae588cd5e6d0d1/sigco3111/ubuntu-board",
 "social_custom": false,
 "score": 0.0,
-"rank": 385
+"rank": 386
 },
 {
 "repo": "vibe-coding-ui-glossary",
@@ -11386,7 +11415,7 @@
 "social": "https://opengraph.githubassets.com/c9a278d68830f01811da812d8b17cefdf45a8cbc92858c49c8c2ce329a143aa3/sigco3111/vibe-coding-ui-glossary",
 "social_custom": false,
 "score": 0.0,
-"rank": 386
+"rank": 387
 },
 {
 "repo": "voronoi-glass-fracture",
@@ -11415,7 +11444,7 @@
 "social": "https://opengraph.githubassets.com/6642f991cb74bc7f2a8da0b68b1648977e4e55050796a60e3a000bc55f2825e3/sigco3111/voronoi-glass-fracture",
 "social_custom": false,
 "score": 0.0,
-"rank": 387
+"rank": 388
 },
 {
 "repo": "voxel-musou",
@@ -11448,7 +11477,7 @@
 "source": "mike007jd/voxel-musou",
 "url": "https://github.com/mike007jd/voxel-musou"
 },
-"rank": 388
+"rank": 389
 },
 {
 "repo": "win11-board",
@@ -11477,7 +11506,7 @@
 "social": "https://opengraph.githubassets.com/406f6d2c1191bed5a7bd78f309bd17026ef905171e55085f642bce720e0bbe75/sigco3111/win11-board",
 "social_custom": false,
 "score": 0.0,
-"rank": 389
+"rank": 390
 },
 {
 "repo": "win32-console-shooter",
@@ -11506,7 +11535,7 @@
 "social": "https://opengraph.githubassets.com/a3b6cf94cabadf682e2a58ecaf9f004099bc9f771bc5d008778d913f6f8613ba/sigco3111/win32-console-shooter",
 "social_custom": false,
 "score": 0.0,
-"rank": 390
+"rank": 391
 },
 {
 "repo": "winxp-board",
@@ -11535,7 +11564,7 @@
 "social": "https://opengraph.githubassets.com/8d830eae12b9ab662abfbde3c674d3f982944f6585a3f5ba8391454a112359f1/sigco3111/winxp-board",
 "social_custom": false,
 "score": 0.0,
-"rank": 391
+"rank": 392
 },
 {
 "repo": "wipic-draw3",
@@ -11564,7 +11593,7 @@
 "social": "https://opengraph.githubassets.com/8a3dcebf9698a92d9cbabe5ef7f8a76d618862d56c0d848737c70b3d56741742/sigco3111/wipic-draw3",
 "social_custom": false,
 "score": 0.0,
-"rank": 392
+"rank": 393
 },
 {
 "repo": "wordle",
@@ -11593,7 +11622,7 @@
 "social": "https://opengraph.githubassets.com/4feea49dcce6a06ca6bcbab2ba1b40b38ea17781c4a88379c3d2bf924946a6e5/sigco3111/wordle",
 "social_custom": false,
 "score": 0.0,
-"rank": 393
+"rank": 394
 },
 {
 "repo": "xmrig-dashboard",
@@ -11622,6 +11651,6 @@
 "social": "https://opengraph.githubassets.com/9e9da28aec57a760cbdbf37d7f47e0b07e68c887a6a9dcae1442bdbfce063ff2/sigco3111/xmrig-dashboard",
 "social_custom": false,
 "score": 0.0,
-"rank": 394
+"rank": 395
 }
 ]
