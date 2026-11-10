@@ -138,31 +138,31 @@
       },
       {
         "forks": {
-          "repositories_with_value": 396,
+          "repositories_with_value": 398,
           "repositories_without_value": 0,
-          "total": 320
+          "total": 322
         },
         "reference_date": "2026-11-10",
         "repositories": {
           "archived": 0,
-          "latest_push_with_date": 396,
+          "latest_push_with_date": 398,
           "latest_push_without_date": 0,
-          "public": 396,
-          "recent_active_30d": 71
+          "public": 398,
+          "recent_active_30d": 73
         },
         "season": {
           "fallback_used": false,
-          "value": "summer"
+          "value": "spring"
         },
         "silence": {
           "at_least_365_days": 3,
           "at_least_730_days": 0,
-          "unarchived": 396,
-          "with_push_date": 396,
+          "unarchived": 398,
+          "with_push_date": 398,
           "without_push_date": 0
         },
         "stars": {
-          "repositories_with_value": 396,
+          "repositories_with_value": 398,
           "repositories_without_value": 0,
           "total": 28
         }
@@ -192,7 +192,7 @@
       "used": false
     },
     "inputs": {
-      "active_repository_share": 0.17929292929292928,
+      "active_repository_share": 0.18341708542713567,
       "activity_signal": "latest_push_per_repository",
       "historical_average": 53.667,
       "historical_bucket_counts": [
@@ -204,14 +204,14 @@
         2
       ],
       "historical_bucket_days": 30,
-      "recent_active_repositories": 71,
-      "recent_to_historical_ratio": 1.323,
+      "recent_active_repositories": 73,
+      "recent_to_historical_ratio": 1.36,
       "recent_window_days": 30,
       "reference_date": "2026-11-10",
-      "repositories_with_push_date": 396
+      "repositories_with_push_date": 398
     },
-    "reason": "Recent latest-push count is 1.32x the average of the prior 6 30-day buckets.",
-    "value": "summer"
+    "reason": "Recent latest-push count is 1.36x the average of the prior 6 30-day buckets.",
+    "value": "spring"
   },
   "silence": {
     "activity_signal": "latest_public_push",
@@ -226,8 +226,8 @@
     },
     "reference_date": "2026-11-10",
     "repositories": {
-      "total": 396,
-      "with_push_date": 396,
+      "total": 398,
+      "with_push_date": 398,
       "without_push_date": 0
     },
     "schema": "repolis.silence-ledger",
@@ -239,7 +239,7 @@
     "version": 1
   },
   "stats": {
-    "active_repository_count": 396,
+    "active_repository_count": 398,
     "archived_repository_count": 0,
     "commit_history": {
       "available": false,
@@ -249,11 +249,11 @@
     "language_distribution": [
       {
         "language": "TypeScript",
-        "repositories": 157
+        "repositories": 158
       },
       {
         "language": "JavaScript",
-        "repositories": 98
+        "repositories": 99
       },
       {
         "language": "HTML",
@@ -313,12 +313,12 @@
       }
     ],
     "latest_push_signal": {
-      "recent_30d_repositories": 71,
-      "repositories_with_push_date": 396
+      "recent_30d_repositories": 73,
+      "repositories_with_push_date": 398
     },
     "public_repository_stars": 28,
-    "repository_count": 396,
-    "total_forks": 320,
+    "repository_count": 398,
+    "total_forks": 322,
     "total_stars": 28
   },
   "version": 1
