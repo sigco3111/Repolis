@@ -169,31 +169,31 @@
       },
       {
         "forks": {
-          "repositories_with_value": 403,
+          "repositories_with_value": 412,
           "repositories_without_value": 0,
-          "total": 322
+          "total": 328
         },
         "reference_date": "2026-11-12",
         "repositories": {
           "archived": 0,
-          "latest_push_with_date": 403,
+          "latest_push_with_date": 412,
           "latest_push_without_date": 0,
-          "public": 403,
-          "recent_active_30d": 70
+          "public": 412,
+          "recent_active_30d": 96
         },
         "season": {
           "fallback_used": false,
-          "value": "summer"
+          "value": "spring"
         },
         "silence": {
           "at_least_365_days": 3,
           "at_least_730_days": 0,
-          "unarchived": 403,
-          "with_push_date": 403,
+          "unarchived": 412,
+          "with_push_date": 412,
           "without_push_date": 0
         },
         "stars": {
-          "repositories_with_value": 403,
+          "repositories_with_value": 412,
           "repositories_without_value": 0,
           "total": 28
         }
@@ -223,26 +223,26 @@
       "used": false
     },
     "inputs": {
-      "active_repository_share": 0.17369727047146402,
+      "active_repository_share": 0.23300970873786409,
       "activity_signal": "latest_push_per_repository",
-      "historical_average": 55.0,
+      "historical_average": 52.167,
       "historical_bucket_counts": [
-        26,
-        91,
-        193,
+        23,
+        79,
+        191,
         13,
         5,
         2
       ],
       "historical_bucket_days": 30,
-      "recent_active_repositories": 70,
-      "recent_to_historical_ratio": 1.273,
+      "recent_active_repositories": 96,
+      "recent_to_historical_ratio": 1.84,
       "recent_window_days": 30,
       "reference_date": "2026-11-12",
-      "repositories_with_push_date": 403
+      "repositories_with_push_date": 412
     },
-    "reason": "Recent latest-push count is 1.27x the average of the prior 6 30-day buckets.",
-    "value": "summer"
+    "reason": "Recent latest-push count is 1.84x the average of the prior 6 30-day buckets.",
+    "value": "spring"
   },
   "silence": {
     "activity_signal": "latest_public_push",
@@ -257,8 +257,8 @@
     },
     "reference_date": "2026-11-12",
     "repositories": {
-      "total": 403,
-      "with_push_date": 403,
+      "total": 412,
+      "with_push_date": 412,
       "without_push_date": 0
     },
     "schema": "repolis.silence-ledger",
@@ -270,7 +270,7 @@
     "version": 1
   },
   "stats": {
-    "active_repository_count": 403,
+    "active_repository_count": 412,
     "archived_repository_count": 0,
     "commit_history": {
       "available": false,
@@ -280,15 +280,15 @@
     "language_distribution": [
       {
         "language": "TypeScript",
-        "repositories": 157
+        "repositories": 160
       },
       {
         "language": "JavaScript",
-        "repositories": 101
+        "repositories": 102
       },
       {
         "language": "HTML",
-        "repositories": 86
+        "repositories": 91
       },
       {
         "language": "Python",
@@ -344,12 +344,12 @@
       }
     ],
     "latest_push_signal": {
-      "recent_30d_repositories": 70,
-      "repositories_with_push_date": 403
+      "recent_30d_repositories": 96,
+      "repositories_with_push_date": 412
     },
     "public_repository_stars": 28,
-    "repository_count": 403,
-    "total_forks": 322,
+    "repository_count": 412,
+    "total_forks": 328,
     "total_stars": 28
   },
   "version": 1
