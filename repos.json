@@ -99,7 +99,7 @@
 "views": 0,
 "visitors": 0,
 "clones": 0,
-"size": 9438,
+"size": 9509,
 "open_issues": 0,
 "license": "",
 "archived": false,
@@ -107,10 +107,10 @@
 "release_tag": "",
 "release_date": "",
 "created": "2026-04-11",
-"pushed": "2026-11-10",
+"pushed": "2026-11-11",
 "tracked": true,
 "first_seen": "2026-06-23",
-"social": "https://opengraph.githubassets.com/61737c5bb00da12aa11809fa53e2a9e5a71fb28ed8f42769c9aeb8055d3c1800/sigco3111/icbm2-knowledge-graph",
+"social": "https://opengraph.githubassets.com/f8439fb764f40ab8782d73a5c18f7f25a2915ae103d6d5e6c248bc665dd7fc38/sigco3111/icbm2-knowledge-graph",
 "social_custom": false,
 "score": 0.965,
 "rank": 3
@@ -431,18 +431,18 @@
 "views": 0,
 "visitors": 0,
 "clones": 0,
-"size": 335839,
+"size": 377406,
 "open_issues": 0,
 "license": "",
 "archived": false,
 "default_branch": "main",
-"release_tag": "v8.41",
-"release_date": "2026-11-04",
+"release_tag": "v8.42",
+"release_date": "2026-11-11",
 "created": "2026-10-28",
-"pushed": "2026-11-10",
+"pushed": "2026-11-11",
 "tracked": true,
 "first_seen": "2026-11-04",
-"social": "https://opengraph.githubassets.com/bc3186860924b281e667eb8eae3e07835e9374f7a17f08ea7c99060e050211f1/sigco3111/assets-2d-pixel",
+"social": "https://opengraph.githubassets.com/ec3047c8b3631c991d0ce1035195c222f93a2983e0fcc94fd50399d5f131e618/sigco3111/assets-2d-pixel",
 "social_custom": false,
 "score": 0.659,
 "rank": 14
@@ -489,18 +489,18 @@
 "views": 0,
 "visitors": 0,
 "clones": 0,
-"size": 378029,
+"size": 387511,
 "open_issues": 0,
 "license": "",
 "archived": false,
 "default_branch": "main",
-"release_tag": "v6.24",
-"release_date": "2026-11-04",
+"release_tag": "v6.25",
+"release_date": "2026-11-11",
 "created": "2026-10-28",
-"pushed": "2026-11-10",
+"pushed": "2026-11-11",
 "tracked": true,
 "first_seen": "2026-11-04",
-"social": "https://opengraph.githubassets.com/b621fc34dd2603145df1c3e29d2171d555f1eeb9018cb66772a227e44b3b90a9/sigco3111/assets-audio",
+"social": "https://opengraph.githubassets.com/8819c91249fee31ede11b5bd7fd10b894b823069c1bae6ecc22bd6912979a24b/sigco3111/assets-audio",
 "social_custom": false,
 "score": 0.659,
 "rank": 16
@@ -565,8 +565,8 @@
 },
 {
 "repo": "game-asset-catalog",
-"desc": "🟢 [원작] (에셋) 재사용 게임 에셋 도서관 - 151개 팩을 검색·필터·미리보기로 찾는 사이트 (출처·라이선스 표시, catalog.csv로 자동 갱신)",
-"lang": "JavaScript",
+"desc": "🟢 [원작] (에셋) 재사용 게임 에셋 도서관 - 에셋을 검색·필터·미리보기로 찾는 사이트 (출처·라이선스 표시, assets-index.min.json 기반, catalog.csv로 자동 갱신)",
+"lang": "Python",
 "topics": [],
 "url": "https://github.com/sigco3111/game-asset-catalog",
 "home": "https://sigco3111.github.io/game-asset-catalog/",
@@ -576,7 +576,7 @@
 "views": 0,
 "visitors": 0,
 "clones": 0,
-"size": 3803,
+"size": 9198,
 "open_issues": 0,
 "license": "",
 "archived": false,
@@ -584,10 +584,10 @@
 "release_tag": "",
 "release_date": "",
 "created": "2026-10-28",
-"pushed": "2026-11-10",
+"pushed": "2026-11-11",
 "tracked": true,
 "first_seen": "2026-11-04",
-"social": "https://opengraph.githubassets.com/9ed5fd55d400f07aafc7d82c374239b9cdb70b9982533fc349f6b0aa8721f581/sigco3111/game-asset-catalog",
+"social": "https://opengraph.githubassets.com/40110d47cdd75437ff30e0dd6cbcc782bc2a8c95ba1995603e0569a6ca21616d/sigco3111/game-asset-catalog",
 "social_custom": false,
 "score": 0.659,
 "rank": 19
@@ -4540,7 +4540,7 @@
 "views": 0,
 "visitors": 0,
 "clones": 0,
-"size": 143,
+"size": 152,
 "open_issues": 0,
 "license": "",
 "archived": false,
@@ -4548,10 +4548,10 @@
 "release_tag": "",
 "release_date": "",
 "created": "2026-10-16",
-"pushed": "2026-11-10",
+"pushed": "2026-11-11",
 "tracked": true,
 "first_seen": "2026-11-04",
-"social": "https://opengraph.githubassets.com/60ddba6694ea31c13865ac74e7e7be53a49254a62d2716e7f1ffb7953484fd5c/sigco3111/instinct-usage-dashboard",
+"social": "https://opengraph.githubassets.com/918a496de1e3d24525a7599a7b540ef2c003c1d194d43f2519f30dc106254d95/sigco3111/instinct-usage-dashboard",
 "social_custom": false,
 "score": 0.416,
 "rank": 154
@@ -6730,7 +6730,7 @@
 "views": 0,
 "visitors": 0,
 "clones": 0,
-"size": 20005,
+"size": 20014,
 "open_issues": 0,
 "license": "MIT",
 "archived": false,
@@ -6741,14 +6741,14 @@
 "pushed": "2026-11-10",
 "tracked": true,
 "first_seen": "2026-06-23",
-"social": "https://opengraph.githubassets.com/d4741546a6f96378bcd0a21abfe47fb1db5d1fcab0f075606dcf42b632153373/sigco3111/Repolis",
+"social": "https://opengraph.githubassets.com/33b1252f2778f57349057e6a16607bb185c9381bc664a66bd4bc2d24b7757fe4/sigco3111/Repolis",
 "social_custom": false,
 "score": 0.416,
 "rank": 228
 },
 {
 "repo": "return-investor",
-"desc": "리턴: 회귀 투자자 개발 코드 스냅샷. 역사 데이터는 권리 검토 중이라 제외했으며 완성 게임·플레이 배포가 아닙니다.",
+"desc": "🟢 [원작] (2D게임) 회귀·진로·투자 선택을 다루는 비주얼 노벨형 투자 게임 [개발중]",
 "lang": "JavaScript",
 "topics": [],
 "url": "https://github.com/sigco3111/return-investor",
@@ -6770,7 +6770,7 @@
 "pushed": "2026-11-09",
 "tracked": false,
 "first_seen": "",
-"social": "https://opengraph.githubassets.com/741f33ed456b708f6de61aac7fb4209f2df1c828cd9b159835772349a051604a/sigco3111/return-investor",
+"social": "https://opengraph.githubassets.com/55196c7b82c26b97db1c9ebdb4fc108f28b7a7fd4a18fd64e2a6cd0aa69297f1/sigco3111/return-investor",
 "social_custom": false,
 "score": 0.416,
 "rank": 229
@@ -9671,7 +9671,7 @@
 },
 {
 "repo": "boom-critters",
-"desc": "웜즈·포트리스 스타일 싱글플레이 포격 웹게임",
+"desc": "🟢 [원작] (2D게임) 싱글플레이 턴제 포격 웹게임 (HTML5 Canvas, 웜즈·포트리스 스타일)",
 "lang": "JavaScript",
 "topics": [],
 "url": "https://github.com/sigco3111/boom-critters",
@@ -9682,7 +9682,7 @@
 "views": 0,
 "visitors": 0,
 "clones": 0,
-"size": 10737,
+"size": 10561,
 "open_issues": 0,
 "license": "MIT",
 "archived": false,
@@ -9690,13 +9690,42 @@
 "release_tag": "",
 "release_date": "",
 "created": "2026-11-10",
-"pushed": "2026-11-10",
+"pushed": "2026-11-11",
 "tracked": false,
 "first_seen": "",
-"social": "https://opengraph.githubassets.com/ea3828d1dfe0f1c8b00d6afff5f41d5a4b5920b3fab809a5651dbb9641a9f1fc/sigco3111/boom-critters",
+"social": "https://opengraph.githubassets.com/bba21eeb1c94c8b6c4a8ebd93da7caf3a42ce3a5fbc0ec078a25ba9a4302233a/sigco3111/boom-critters",
 "social_custom": false,
 "score": 0.0,
 "rank": 328
+},
+{
+"repo": "bulssi-seoyak",
+"desc": "🔀🍴 [포크/웹개선] (3D) 꺼진 종의 계곡을 무대로 한 Three.js 3D 액션 RPG — 원작자 허락 조건 안에서 v16을 이전·배포하고 음악·효과음을 교체 (원작 readasesang-lab.vercel.app/v16)",
+"lang": "JavaScript",
+"topics": [],
+"url": "https://github.com/sigco3111/bulssi-seoyak",
+"home": "https://sigco3111.github.io/bulssi-seoyak/",
+"stars": 0,
+"forks": 0,
+"fork": false,
+"views": 0,
+"visitors": 0,
+"clones": 0,
+"size": 55695,
+"open_issues": 0,
+"license": "",
+"archived": false,
+"default_branch": "main",
+"release_tag": "",
+"release_date": "",
+"created": "2026-11-11",
+"pushed": "2026-11-12",
+"tracked": false,
+"first_seen": "",
+"social": "https://opengraph.githubassets.com/6f0536b6f5620766d445b742b90720cd2a1a4e9f425e20b6ff9e4eb7e2ae9ff1/sigco3111/bulssi-seoyak",
+"social_custom": false,
+"score": 0.0,
+"rank": 329
 },
 {
 "repo": "bytepath-ex",
@@ -9725,7 +9754,7 @@
 "social": "https://opengraph.githubassets.com/ee760450671ea39fb0a5f09aabe087e47488470bd1a6515ac2ba6798907f5465/sigco3111/bytepath-ex",
 "social_custom": false,
 "score": 0.0,
-"rank": 329
+"rank": 330
 },
 {
 "repo": "ccusage-json",
@@ -9754,7 +9783,7 @@
 "social": "https://opengraph.githubassets.com/d52adb5295ab42bf84ed0afd746e0c25b34e6c9568a7440131a36c1ddec87765/sigco3111/ccusage-json",
 "social_custom": false,
 "score": 0.0,
-"rank": 330
+"rank": 331
 },
 {
 "repo": "clipboard-history-mac",
@@ -9783,7 +9812,7 @@
 "social": "https://opengraph.githubassets.com/62d13acb876aefdb4b36326f52eb542f4cb348e0d3657a80779b306710ada0ee/sigco3111/clipboard-history-mac",
 "social_custom": false,
 "score": 0.0,
-"rank": 331
+"rank": 332
 },
 {
 "repo": "cloth-simulation",
@@ -9812,7 +9841,7 @@
 "social": "https://opengraph.githubassets.com/eb1caa4db4063460b56625d7ea7713bf943c66eb1731f9568b25ee029e4a9d8e/sigco3111/cloth-simulation",
 "social_custom": false,
 "score": 0.0,
-"rank": 332
+"rank": 333
 },
 {
 "repo": "core-image-converter",
@@ -9841,7 +9870,7 @@
 "social": "https://opengraph.githubassets.com/ff32c63b6135839a581268fc2fa42ce3c13a54109f701b753afaeeafb0903062/sigco3111/core-image-converter",
 "social_custom": false,
 "score": 0.0,
-"rank": 333
+"rank": 334
 },
 {
 "repo": "decision-genie",
@@ -9870,7 +9899,7 @@
 "social": "https://opengraph.githubassets.com/0ea96b7f6df46753f97c75adc1d331883aed0b0b12e58c3ae2a99d9391d69756/sigco3111/decision-genie",
 "social_custom": false,
 "score": 0.0,
-"rank": 334
+"rank": 335
 },
 {
 "repo": "dnb-action-rpg",
@@ -9899,7 +9928,7 @@
 "social": "https://opengraph.githubassets.com/27ed45d63f0898d724dfa2b1cec2417cc75dd0ac781f251a65d1fba212502081/sigco3111/dnb-action-rpg",
 "social_custom": false,
 "score": 0.0,
-"rank": 335
+"rank": 336
 },
 {
 "repo": "dnb-map-editor",
@@ -9928,7 +9957,7 @@
 "social": "https://opengraph.githubassets.com/c8dcb908d83ec8e88893479ea564c1e73521110664c57980d15ed9611e2230f0/sigco3111/dnb-map-editor",
 "social_custom": false,
 "score": 0.0,
-"rank": 336
+"rank": 337
 },
 {
 "repo": "dnb-sprite-tool",
@@ -9957,7 +9986,7 @@
 "social": "https://opengraph.githubassets.com/16e24f5dfd7cbdaa4cbccd960a61ad439a4a81a009f0070647dc7bcaf0c159cb/sigco3111/dnb-sprite-tool",
 "social_custom": false,
 "score": 0.0,
-"rank": 337
+"rank": 338
 },
 {
 "repo": "double-pendulum-chaos",
@@ -9986,7 +10015,7 @@
 "social": "https://opengraph.githubassets.com/ea9a8116c6f2b40ddc0d64de5340a1bc0ba2bafe637bb92bc2a1f9a9b46bbcbc/sigco3111/double-pendulum-chaos",
 "social_custom": false,
 "score": 0.0,
-"rank": 338
+"rank": 339
 },
 {
 "repo": "evolve-kr",
@@ -10015,7 +10044,7 @@
 "social": "https://opengraph.githubassets.com/76378db66ad8ea1c3c65cd07e0ff5e682b45238f5e5c77b59beeffa91e064ce7/sigco3111/evolve-kr",
 "social_custom": false,
 "score": 0.0,
-"rank": 339
+"rank": 340
 },
 {
 "repo": "FireworksMaster",
@@ -10044,7 +10073,7 @@
 "social": "https://opengraph.githubassets.com/c556fb8ca5f9ccd182ebe85655915b9c1df34674a4481db1397d859d4debca24/sigco3111/FireworksMaster",
 "social_custom": false,
 "score": 0.0,
-"rank": 340
+"rank": 341
 },
 {
 "repo": "flamesword-action",
@@ -10073,7 +10102,7 @@
 "social": "https://opengraph.githubassets.com/46643b15acbe349a1d299d6d9fdf271ce898af3d7b04dbb7b80ae8da4ccc2abd/sigco3111/flamesword-action",
 "social_custom": false,
 "score": 0.0,
-"rank": 341
+"rank": 342
 },
 {
 "repo": "fractal-tree",
@@ -10102,7 +10131,7 @@
 "social": "https://opengraph.githubassets.com/894022ac0b023b4fb6a5a2c420d0c5fa7fb1256536a92470e4a60347304a5dbc/sigco3111/fractal-tree",
 "social_custom": false,
 "score": 0.0,
-"rank": 342
+"rank": 343
 },
 {
 "repo": "gateheavens-shmup",
@@ -10131,7 +10160,7 @@
 "social": "https://opengraph.githubassets.com/5c2fa9341fe3bdb5384c33e6af50c78086034bd5175b49c2c1cbbb216823b80e/sigco3111/gateheavens-shmup",
 "social_custom": false,
 "score": 0.0,
-"rank": 343
+"rank": 344
 },
 {
 "repo": "genetic-walking",
@@ -10160,7 +10189,7 @@
 "social": "https://opengraph.githubassets.com/976420621222f94cd8c6a3964cd420116a55e99c20547e1eb3d8c925b7966979/sigco3111/genetic-walking",
 "social_custom": false,
 "score": 0.0,
-"rank": 344
+"rank": 345
 },
 {
 "repo": "github-board2",
@@ -10189,12 +10218,12 @@
 "social": "https://opengraph.githubassets.com/a3964317a5ad409d932865c34b4cb250f213dfe17e136700991e2ca1bd6e0314/sigco3111/github-board2",
 "social_custom": false,
 "score": 0.0,
-"rank": 345
+"rank": 346
 },
 {
 "repo": "gostop2026",
-"desc": "",
-"lang": "TypeScript",
+"desc": "🟢 [원작] (2D게임) 12인의 오리지널 고수와 겨루는 싱글 맞고",
+"lang": "JavaScript",
 "topics": [],
 "url": "https://github.com/sigco3111/gostop2026",
 "home": "https://sigco3111.github.io/gostop2026/",
@@ -10204,7 +10233,7 @@
 "views": 0,
 "visitors": 0,
 "clones": 0,
-"size": 268450,
+"size": 270048,
 "open_issues": 0,
 "license": "",
 "archived": false,
@@ -10212,13 +10241,13 @@
 "release_tag": "",
 "release_date": "",
 "created": "2026-11-10",
-"pushed": "2026-11-10",
+"pushed": "2026-11-12",
 "tracked": false,
 "first_seen": "",
-"social": "https://opengraph.githubassets.com/cf0b843a2f494c4f18a5bea68fed44bff0b8a812da2802fd47e2f977a1a57786/sigco3111/gostop2026",
+"social": "https://opengraph.githubassets.com/df2bc9c5d8e1effdb7b5c2f52ae633f0368cf8786f3db07ca64416ab09d4496c/sigco3111/gostop2026",
 "social_custom": false,
 "score": 0.0,
-"rank": 346
+"rank": 347
 },
 {
 "repo": "gp32-blaster-vertical",
@@ -10247,7 +10276,7 @@
 "social": "https://opengraph.githubassets.com/badceb57c9742ed5210c254e14f0d0564eda44b88ffc4fd4808755027eadded6/sigco3111/gp32-blaster-vertical",
 "social_custom": false,
 "score": 0.0,
-"rank": 347
+"rank": 348
 },
 {
 "repo": "gp32-bluemarble-king",
@@ -10276,7 +10305,7 @@
 "social": "https://opengraph.githubassets.com/8cfb071b436bbbfc111a46b7ad23b89bf53c9bd305fda9f33417111d9352950f/sigco3111/gp32-bluemarble-king",
 "social_custom": false,
 "score": 0.0,
-"rank": 348
+"rank": 349
 },
 {
 "repo": "gravity-typography",
@@ -10305,7 +10334,7 @@
 "social": "https://opengraph.githubassets.com/6bc43b78ffef7b398904572086793938c233c1fcd23b7d0794503f247b02fcce/sigco3111/gravity-typography",
 "social_custom": false,
 "score": 0.0,
-"rank": 349
+"rank": 350
 },
 {
 "repo": "gray-scott-reaction-diffusion",
@@ -10334,7 +10363,7 @@
 "social": "https://opengraph.githubassets.com/3d1b7dbbd6a57229fde77bb316b7ac8fcf479b45ea7e0f7a9940b47ab482fecf/sigco3111/gray-scott-reaction-diffusion",
 "social_custom": false,
 "score": 0.0,
-"rank": 350
+"rank": 351
 },
 {
 "repo": "heat-conduction-heatmap",
@@ -10363,7 +10392,7 @@
 "social": "https://opengraph.githubassets.com/d9b0ea56a880791f433a28285f360485c077a438a3c684bfb030b6c2b364ffb0/sigco3111/heat-conduction-heatmap",
 "social_custom": false,
 "score": 0.0,
-"rank": 351
+"rank": 352
 },
 {
 "repo": "heavy-chain-ik",
@@ -10392,7 +10421,7 @@
 "social": "https://opengraph.githubassets.com/ebac8de017cd96e51b75aec9edecd868c859bd02edfc87f9d18b0b5bf858f878/sigco3111/heavy-chain-ik",
 "social_custom": false,
 "score": 0.0,
-"rank": 352
+"rank": 353
 },
 {
 "repo": "hermes-control-room",
@@ -10421,7 +10450,7 @@
 "social": "https://opengraph.githubassets.com/43ae35ac04bc0e2aab414e450ffb17e9d02221160896bff86ca5280f722f67d4/sigco3111/hermes-control-room",
 "social_custom": false,
 "score": 0.0,
-"rank": 353
+"rank": 354
 },
 {
 "repo": "interactive-voronoi",
@@ -10450,7 +10479,7 @@
 "social": "https://opengraph.githubassets.com/e83095880f3a7fb04819c0349bd140431988c8d2731f5e651f0acc8f4a7892e2/sigco3111/interactive-voronoi",
 "social_custom": false,
 "score": 0.0,
-"rank": 354
+"rank": 355
 },
 {
 "repo": "ios_hyperclovax",
@@ -10479,7 +10508,7 @@
 "social": "https://opengraph.githubassets.com/757f19a16d8d5814e053f568f6db9523e193dac11440508021bbbf1716095208/sigco3111/ios_hyperclovax",
 "social_custom": false,
 "score": 0.0,
-"rank": 355
+"rank": 356
 },
 {
 "repo": "IsoMapTool",
@@ -10508,7 +10537,7 @@
 "social": "https://opengraph.githubassets.com/e2dfaf9bf8ae47c9d6da8774a600fac0c7ffcf5095f8fee4804e94bb00d03986/sigco3111/IsoMapTool",
 "social_custom": false,
 "score": 0.0,
-"rank": 356
+"rank": 357
 },
 {
 "repo": "jelly-slime",
@@ -10537,7 +10566,7 @@
 "social": "https://opengraph.githubassets.com/d9b0ea56a880791f433a28285f360485c077a438a3c684bfb030b6c2b364ffb0/sigco3111/jelly-slime",
 "social_custom": false,
 "score": 0.0,
-"rank": 357
+"rank": 358
 },
 {
 "repo": "jungle-trail",
@@ -10570,7 +10599,7 @@
 "source": "StarKnightt/jungle-trail",
 "url": "https://github.com/StarKnightt/jungle-trail"
 },
-"rank": 358
+"rank": 359
 },
 {
 "repo": "KakaoSplit",
@@ -10599,7 +10628,7 @@
 "social": "https://opengraph.githubassets.com/d1b23bd7cb85b84340529d96e9f47cb2cf8ea50651b206149f9ebb55687ba5a8/sigco3111/KakaoSplit",
 "social_custom": false,
 "score": 0.0,
-"rank": 359
+"rank": 360
 },
 {
 "repo": "lorenz-attractor",
@@ -10628,7 +10657,7 @@
 "social": "https://opengraph.githubassets.com/be048cf8073f92c58718ac62db7d1e0741d946773815a9687c532f0bc71c7af6/sigco3111/lorenz-attractor",
 "social_custom": false,
 "score": 0.0,
-"rank": 360
+"rank": 361
 },
 {
 "repo": "mac-board",
@@ -10657,7 +10686,7 @@
 "social": "https://opengraph.githubassets.com/1976f2156c2409990863faa766dc09f3fe0aeb557c002b98966fdb93e8ee630a/sigco3111/mac-board",
 "social_custom": false,
 "score": 0.0,
-"rank": 361
+"rank": 362
 },
 {
 "repo": "mandelbrot-kaleidoscope",
@@ -10686,7 +10715,7 @@
 "social": "https://opengraph.githubassets.com/d0bed4ad8edd233da3f7b80b0a2b8cec98677324e49c8904c015085d34562ab4/sigco3111/mandelbrot-kaleidoscope",
 "social_custom": false,
 "score": 0.0,
-"rank": 362
+"rank": 363
 },
 {
 "repo": "md-doctor",
@@ -10715,7 +10744,7 @@
 "social": "https://opengraph.githubassets.com/f76071d9a70946716929b33fdc053e38fcf7eb3c15a0cabe17474b7b9dfb3a3d/sigco3111/md-doctor",
 "social_custom": false,
 "score": 0.0,
-"rank": 363
+"rank": 364
 },
 {
 "repo": "mingmo-game-korea",
@@ -10744,7 +10773,7 @@
 "social": "https://opengraph.githubassets.com/7cd108c4a2a13836757b1d57d3b77da0545cde48a0bbb33ce16460fad73f7c33/sigco3111/mingmo-game-korea",
 "social_custom": false,
 "score": 0.0,
-"rank": 364
+"rank": 365
 },
 {
 "repo": "mobile-map-editor",
@@ -10773,7 +10802,7 @@
 "social": "https://opengraph.githubassets.com/f7fdbedefae5a1e0c943033793e23c702b46bc0f2c4200da8f9ff586e932bcc5/sigco3111/mobile-map-editor",
 "social_custom": false,
 "score": 0.0,
-"rank": 365
+"rank": 366
 },
 {
 "repo": "nbody-simulation",
@@ -10802,7 +10831,7 @@
 "social": "https://opengraph.githubassets.com/1ddd154bc6b7a1ae432f3a1fa40efaf48417663dc4920ab3c6e974c573f08e84/sigco3111/nbody-simulation",
 "social_custom": false,
 "score": 0.0,
-"rank": 366
+"rank": 367
 },
 {
 "repo": "offroad-suspension",
@@ -10831,7 +10860,7 @@
 "social": "https://opengraph.githubassets.com/6b6a30ea76e434e1ff2c7bf7f82b2980f936c7e1a2e37b37c9a7db6c5b674280/sigco3111/offroad-suspension",
 "social_custom": false,
 "score": 0.0,
-"rank": 367
+"rank": 368
 },
 {
 "repo": "optics-prism-lab",
@@ -10860,7 +10889,7 @@
 "social": "https://opengraph.githubassets.com/468f7ec0c30c312ba288b7b7b27534a1a44e84379abceb21c5a19d37d67f51f8/sigco3111/optics-prism-lab",
 "social_custom": false,
 "score": 0.0,
-"rank": 368
+"rank": 369
 },
 {
 "repo": "pages",
@@ -10889,7 +10918,7 @@
 "social": "https://opengraph.githubassets.com/8d1fc2c0f2488fc0dd1b3dee0b719729a01dbf7f653f3c4391ad0fe1c10363ae/sigco3111/pages",
 "social_custom": false,
 "score": 0.0,
-"rank": 369
+"rank": 370
 },
 {
 "repo": "particle-fireworks",
@@ -10918,7 +10947,7 @@
 "social": "https://opengraph.githubassets.com/2976173271ee97ed064fbe27d5cf065ad51aaba57823ae8b4f96bbb939fd2d04/sigco3111/particle-fireworks",
 "social_custom": false,
 "score": 0.0,
-"rank": 370
+"rank": 371
 },
 {
 "repo": "pendulum-wave",
@@ -10947,7 +10976,7 @@
 "social": "https://opengraph.githubassets.com/a47516a30435e72b4f6aea92dd9b1703b80a686c5a769a7a4be101bd09179e36/sigco3111/pendulum-wave",
 "social_custom": false,
 "score": 0.0,
-"rank": 371
+"rank": 372
 },
 {
 "repo": "photosynthesis-simulator",
@@ -10976,7 +11005,7 @@
 "social": "https://opengraph.githubassets.com/683b6f1d1e8b8a42e41f25a22c1a337608986ff57355e6648e9a6ccd900a2eb2/sigco3111/photosynthesis-simulator",
 "social_custom": false,
 "score": 0.0,
-"rank": 372
+"rank": 373
 },
 {
 "repo": "piratenation-art",
@@ -11005,7 +11034,7 @@
 "social": "https://opengraph.githubassets.com/a3724732580233f776853dda04d0b4a24b466c317427aec476bc8f7612374ed3/sigco3111/piratenation-art",
 "social_custom": false,
 "score": 0.0,
-"rank": 373
+"rank": 374
 },
 {
 "repo": "piratenation-game",
@@ -11034,7 +11063,7 @@
 "social": "https://opengraph.githubassets.com/d1a93783578625d97d9e326a0865fe1f30650d4e3430e2968cfd9351462cad6a/sigco3111/piratenation-game",
 "social_custom": false,
 "score": 0.0,
-"rank": 374
+"rank": 375
 },
 {
 "repo": "pleasuregate-shmup",
@@ -11063,7 +11092,7 @@
 "social": "https://opengraph.githubassets.com/5d12cea836c7a7d70e0cf2a8cf85844c42601bf8878d306c70606560439caf04/sigco3111/pleasuregate-shmup",
 "social_custom": false,
 "score": 0.0,
-"rank": 375
+"rank": 376
 },
 {
 "repo": "private-archive-thumbnails",
@@ -11092,7 +11121,7 @@
 "social": "https://opengraph.githubassets.com/f218d353d55f6e3c3a49fc7aca2cb0e20e55b709a5ec3fcd812c12f9f1fccf9f/sigco3111/private-archive-thumbnails",
 "social_custom": false,
 "score": 0.0,
-"rank": 376
+"rank": 377
 },
 {
 "repo": "procedural-city",
@@ -11121,7 +11150,36 @@
 "social": "https://opengraph.githubassets.com/600d0c969807a4fba3a5f14b1e99419ef4156f3c838efaf7a6492e396452fcc1/sigco3111/procedural-city",
 "social_custom": false,
 "score": 0.0,
-"rank": 377
+"rank": 378
+},
+{
+"repo": "qingyun-sword-flight-ko",
+"desc": "🔀🍴 [한글화/포크] (3D게임) 청운종(青雲宗) : 검을 타고 하늘을 날며 영기를 모으는 3D 비행 게임 한글화 (원작 hahaliu1029/fable5.2demo, Apache-2.0)",
+"lang": "HTML",
+"topics": [],
+"url": "https://github.com/sigco3111/qingyun-sword-flight-ko",
+"home": "https://sigco3111.github.io/qingyun-sword-flight-ko/",
+"stars": 0,
+"forks": 0,
+"fork": false,
+"views": 0,
+"visitors": 0,
+"clones": 0,
+"size": 2503,
+"open_issues": 0,
+"license": "Apache-2.0",
+"archived": false,
+"default_branch": "main",
+"release_tag": "",
+"release_date": "",
+"created": "2026-11-11",
+"pushed": "2026-11-11",
+"tracked": false,
+"first_seen": "",
+"social": "https://opengraph.githubassets.com/bffbb6d805bb8d2f89041d7d73b56e31cd7bd2f40727875f0b6ee02dbe5df2ff/sigco3111/qingyun-sword-flight-ko",
+"social_custom": false,
+"score": 0.0,
+"rank": 379
 },
 {
 "repo": "ray-cast-shadows",
@@ -11150,7 +11208,7 @@
 "social": "https://opengraph.githubassets.com/9203457059054fba41ab779842e5a7bce2de8f2b3b27631d79abf525ed52fced/sigco3111/ray-cast-shadows",
 "social_custom": false,
 "score": 0.0,
-"rank": 378
+"rank": 380
 },
 {
 "repo": "raycasting-doom",
@@ -11179,7 +11237,7 @@
 "social": "https://opengraph.githubassets.com/9203457059054fba41ab779842e5a7bce2de8f2b3b27631d79abf525ed52fced/sigco3111/raycasting-doom",
 "social_custom": false,
 "score": 0.0,
-"rank": 379
+"rank": 381
 },
 {
 "repo": "repo-dna-analyzer",
@@ -11208,7 +11266,7 @@
 "social": "https://opengraph.githubassets.com/fd5c399ec80d34ae347a6a2a4e42f14a8d542dbbd9599c3117b0c9baa0dce4db/sigco3111/repo-dna-analyzer",
 "social_custom": false,
 "score": 0.0,
-"rank": 380
+"rank": 382
 },
 {
 "repo": "retro-synthwave-shooter",
@@ -11237,7 +11295,65 @@
 "social": "https://opengraph.githubassets.com/442e8923752999e1a54e4ed3f00fb4f13f0919d496ddb94481523be2419ecf71/sigco3111/retro-synthwave-shooter",
 "social_custom": false,
 "score": 0.0,
-"rank": 381
+"rank": 383
+},
+{
+"repo": "saltline-ko",
+"desc": "🔀🍴 [한글화/포크] (3D게임) 컨테이너 야적장과 창고에서 업링크 중계기 세 개를 차단하는 Three.js 1인칭 슈터 한글화 (원본 realskyrin/fps3ademo-saltline, Claude 아티팩트 Saltline 기반, 원본 라이선스 미표기)",
+"lang": "HTML",
+"topics": [],
+"url": "https://github.com/sigco3111/saltline-ko",
+"home": "https://sigco3111.github.io/saltline-ko/",
+"stars": 0,
+"forks": 0,
+"fork": false,
+"views": 0,
+"visitors": 0,
+"clones": 0,
+"size": 13093,
+"open_issues": 0,
+"license": "",
+"archived": false,
+"default_branch": "main",
+"release_tag": "",
+"release_date": "",
+"created": "2026-11-11",
+"pushed": "2026-11-11",
+"tracked": false,
+"first_seen": "",
+"social": "https://opengraph.githubassets.com/a10d92886812b42beb27ad871d8cea355899e3778f666010ab9a7ddc352ec34f/sigco3111/saltline-ko",
+"social_custom": false,
+"score": 0.0,
+"rank": 384
+},
+{
+"repo": "shape-legion",
+"desc": "도형 군단 — 도형 병력을 그려 배치하고 자동으로 싸우는 수천 명 규모 웹 전략 게임",
+"lang": "JavaScript",
+"topics": [],
+"url": "https://github.com/sigco3111/shape-legion",
+"home": "https://sigco3111.github.io/shape-legion/",
+"stars": 0,
+"forks": 0,
+"fork": false,
+"views": 0,
+"visitors": 0,
+"clones": 0,
+"size": 1386,
+"open_issues": 0,
+"license": "MIT",
+"archived": false,
+"default_branch": "main",
+"release_tag": "",
+"release_date": "",
+"created": "2026-11-11",
+"pushed": "2026-11-12",
+"tracked": false,
+"first_seen": "",
+"social": "https://opengraph.githubassets.com/8d101339e8d194f6eea829639e62298f3a00a1cac26cdb4c7ad343c6df52ecaf/sigco3111/shape-legion",
+"social_custom": false,
+"score": 0.0,
+"rank": 385
 },
 {
 "repo": "sigco3111",
@@ -11252,7 +11368,7 @@
 "views": 0,
 "visitors": 0,
 "clones": 0,
-"size": 716,
+"size": 723,
 "open_issues": 1,
 "license": "",
 "archived": false,
@@ -11260,13 +11376,13 @@
 "release_tag": "",
 "release_date": "",
 "created": "2026-06-18",
-"pushed": "2026-11-10",
+"pushed": "2026-11-11",
 "tracked": true,
 "first_seen": "2026-06-23",
 "social": "https://opengraph.githubassets.com/6f816741bf467993319a6293d89f96f83ae5e790a5fb9910409a16fa4ba527d4/sigco3111/sigco3111",
 "social_custom": false,
 "score": 0.0,
-"rank": 382
+"rank": 386
 },
 {
 "repo": "sprite-map-viewer",
@@ -11295,7 +11411,7 @@
 "social": "https://opengraph.githubassets.com/1aa1802c18045d015396231660469d826b22d5bcf8b0c356ac53e05101ee13ea/sigco3111/sprite-map-viewer",
 "social_custom": false,
 "score": 0.0,
-"rank": 383
+"rank": 387
 },
 {
 "repo": "spriteatelier",
@@ -11324,7 +11440,7 @@
 "social": "https://opengraph.githubassets.com/709341f8fc5ef8e1e48c7fd5bf68404b29b728d709dc121eb8e3efec94e45e5b/sigco3111/spriteatelier",
 "social_custom": false,
 "score": 0.0,
-"rank": 384
+"rank": 388
 },
 {
 "repo": "summer-cycle",
@@ -11357,7 +11473,7 @@
 "source": "StarKnightt/summer-cycle",
 "url": "https://github.com/StarKnightt/summer-cycle"
 },
-"rank": 385
+"rank": 389
 },
 {
 "repo": "synthwave-terrain",
@@ -11386,7 +11502,7 @@
 "social": "https://opengraph.githubassets.com/61bc8a1a47142bef12de0f384c22d74261745d47cec90609b18887002f730f3a/sigco3111/synthwave-terrain",
 "social_custom": false,
 "score": 0.0,
-"rank": 386
+"rank": 390
 },
 {
 "repo": "sys8-board",
@@ -11415,7 +11531,36 @@
 "social": "https://opengraph.githubassets.com/a807154407779b5bdd842556ea391ee91c3b9849b754e37d42ae588cd5e6d0d1/sigco3111/sys8-board",
 "social_custom": false,
 "score": 0.0,
-"rank": 387
+"rank": 391
+},
+{
+"repo": "tilt-labyrinth-ko",
+"desc": "🔀🍴 [한글화/포크] (3D게임) 나무 미로판을 기울여 구슬을 굴리는 3D 퍼즐 한글화 (원작 majiayu000/blog, MIT, 텍스처 Poly Haven CC0)",
+"lang": "HTML",
+"topics": [],
+"url": "https://github.com/sigco3111/tilt-labyrinth-ko",
+"home": "https://sigco3111.github.io/tilt-labyrinth-ko/",
+"stars": 0,
+"forks": 0,
+"fork": false,
+"views": 0,
+"visitors": 0,
+"clones": 0,
+"size": 9560,
+"open_issues": 0,
+"license": "MIT",
+"archived": false,
+"default_branch": "main",
+"release_tag": "",
+"release_date": "",
+"created": "2026-11-11",
+"pushed": "2026-11-11",
+"tracked": false,
+"first_seen": "",
+"social": "https://opengraph.githubassets.com/68ec0d6f8b8069c89c81634219a7fda0a0e782f038f37709da993568d18a7daf/sigco3111/tilt-labyrinth-ko",
+"social_custom": false,
+"score": 0.0,
+"rank": 392
 },
 {
 "repo": "ubuntu-board",
@@ -11444,7 +11589,7 @@
 "social": "https://opengraph.githubassets.com/a807154407779b5bdd842556ea391ee91c3b9849b754e37d42ae588cd5e6d0d1/sigco3111/ubuntu-board",
 "social_custom": false,
 "score": 0.0,
-"rank": 388
+"rank": 393
 },
 {
 "repo": "vibe-coding-ui-glossary",
@@ -11473,7 +11618,7 @@
 "social": "https://opengraph.githubassets.com/c9a278d68830f01811da812d8b17cefdf45a8cbc92858c49c8c2ce329a143aa3/sigco3111/vibe-coding-ui-glossary",
 "social_custom": false,
 "score": 0.0,
-"rank": 389
+"rank": 394
 },
 {
 "repo": "voronoi-glass-fracture",
@@ -11502,7 +11647,7 @@
 "social": "https://opengraph.githubassets.com/6642f991cb74bc7f2a8da0b68b1648977e4e55050796a60e3a000bc55f2825e3/sigco3111/voronoi-glass-fracture",
 "social_custom": false,
 "score": 0.0,
-"rank": 390
+"rank": 395
 },
 {
 "repo": "voxel-musou",
@@ -11535,7 +11680,7 @@
 "source": "mike007jd/voxel-musou",
 "url": "https://github.com/mike007jd/voxel-musou"
 },
-"rank": 391
+"rank": 396
 },
 {
 "repo": "win11-board",
@@ -11564,7 +11709,7 @@
 "social": "https://opengraph.githubassets.com/406f6d2c1191bed5a7bd78f309bd17026ef905171e55085f642bce720e0bbe75/sigco3111/win11-board",
 "social_custom": false,
 "score": 0.0,
-"rank": 392
+"rank": 397
 },
 {
 "repo": "win32-console-shooter",
@@ -11593,7 +11738,7 @@
 "social": "https://opengraph.githubassets.com/a3b6cf94cabadf682e2a58ecaf9f004099bc9f771bc5d008778d913f6f8613ba/sigco3111/win32-console-shooter",
 "social_custom": false,
 "score": 0.0,
-"rank": 393
+"rank": 398
 },
 {
 "repo": "winxp-board",
@@ -11622,7 +11767,7 @@
 "social": "https://opengraph.githubassets.com/8d830eae12b9ab662abfbde3c674d3f982944f6585a3f5ba8391454a112359f1/sigco3111/winxp-board",
 "social_custom": false,
 "score": 0.0,
-"rank": 394
+"rank": 399
 },
 {
 "repo": "wipic-draw3",
@@ -11651,7 +11796,7 @@
 "social": "https://opengraph.githubassets.com/8a3dcebf9698a92d9cbabe5ef7f8a76d618862d56c0d848737c70b3d56741742/sigco3111/wipic-draw3",
 "social_custom": false,
 "score": 0.0,
-"rank": 395
+"rank": 400
 },
 {
 "repo": "wordle",
@@ -11680,7 +11825,7 @@
 "social": "https://opengraph.githubassets.com/4feea49dcce6a06ca6bcbab2ba1b40b38ea17781c4a88379c3d2bf924946a6e5/sigco3111/wordle",
 "social_custom": false,
 "score": 0.0,
-"rank": 396
+"rank": 401
 },
 {
 "repo": "xmrig-dashboard",
@@ -11709,6 +11854,6 @@
 "social": "https://opengraph.githubassets.com/9e9da28aec57a760cbdbf37d7f47e0b07e68c887a6a9dcae1442bdbfce063ff2/sigco3111/xmrig-dashboard",
 "social_custom": false,
 "score": 0.0,
-"rank": 397
+"rank": 402
 }
 ]
