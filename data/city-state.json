@@ -1,14 +1,14 @@
 {
   "era": {
-    "as_of": "2026-11-12",
+    "as_of": "2026-11-13",
     "basis": "Oldest creation date among the public repositories included in repos.json.",
-    "city_age_days": 546,
-    "city_age_years": 1.49,
+    "city_age_days": 547,
+    "city_age_years": 1.5,
     "city_year": 2,
     "founded_on": "2025-05-15",
     "oldest_repository": "ios_hyperclovax"
   },
-  "last_sap_flow": "2026-11-12T00:00:00Z",
+  "last_sap_flow": "2026-11-13T00:00:00Z",
   "roots": [],
   "sap_ledger": {
     "entries": [
@@ -197,6 +197,37 @@
           "repositories_without_value": 0,
           "total": 28
         }
+      },
+      {
+        "forks": {
+          "repositories_with_value": 414,
+          "repositories_without_value": 0,
+          "total": 334
+        },
+        "reference_date": "2026-11-13",
+        "repositories": {
+          "archived": 0,
+          "latest_push_with_date": 414,
+          "latest_push_without_date": 0,
+          "public": 414,
+          "recent_active_30d": 86
+        },
+        "season": {
+          "fallback_used": false,
+          "value": "spring"
+        },
+        "silence": {
+          "at_least_365_days": 3,
+          "at_least_730_days": 0,
+          "unarchived": 414,
+          "with_push_date": 414,
+          "without_push_date": 0
+        },
+        "stars": {
+          "repositories_with_value": 414,
+          "repositories_without_value": 0,
+          "total": 28
+        }
       }
     ],
     "gap_policy": "actual_entries_only",
@@ -223,25 +254,25 @@
       "used": false
     },
     "inputs": {
-      "active_repository_share": 0.23300970873786409,
+      "active_repository_share": 0.20772946859903382,
       "activity_signal": "latest_push_per_repository",
-      "historical_average": 52.167,
+      "historical_average": 54.167,
       "historical_bucket_counts": [
-        23,
-        79,
-        191,
-        13,
-        5,
+        35,
+        66,
+        204,
+        9,
+        9,
         2
       ],
       "historical_bucket_days": 30,
-      "recent_active_repositories": 96,
-      "recent_to_historical_ratio": 1.84,
+      "recent_active_repositories": 86,
+      "recent_to_historical_ratio": 1.588,
       "recent_window_days": 30,
-      "reference_date": "2026-11-12",
-      "repositories_with_push_date": 412
+      "reference_date": "2026-11-13",
+      "repositories_with_push_date": 414
     },
-    "reason": "Recent latest-push count is 1.84x the average of the prior 6 30-day buckets.",
+    "reason": "Recent latest-push count is 1.59x the average of the prior 6 30-day buckets.",
     "value": "spring"
   },
   "silence": {
@@ -250,15 +281,15 @@
       "at_least_365_days": 3,
       "at_least_730_days": 0,
       "longest": {
-        "elapsed_days": 546,
+        "elapsed_days": 547,
         "last_public_push": "2025-05-15",
         "repo": "ios_hyperclovax"
       }
     },
-    "reference_date": "2026-11-12",
+    "reference_date": "2026-11-13",
     "repositories": {
-      "total": 412,
-      "with_push_date": 412,
+      "total": 414,
+      "with_push_date": 414,
       "without_push_date": 0
     },
     "schema": "repolis.silence-ledger",
@@ -270,7 +301,7 @@
     "version": 1
   },
   "stats": {
-    "active_repository_count": 412,
+    "active_repository_count": 414,
     "archived_repository_count": 0,
     "commit_history": {
       "available": false,
@@ -284,7 +315,7 @@
       },
       {
         "language": "JavaScript",
-        "repositories": 102
+        "repositories": 103
       },
       {
         "language": "HTML",
@@ -296,7 +327,7 @@
       },
       {
         "language": "Other",
-        "repositories": 14
+        "repositories": 15
       },
       {
         "language": "C++",
@@ -344,12 +375,12 @@
       }
     ],
     "latest_push_signal": {
-      "recent_30d_repositories": 96,
-      "repositories_with_push_date": 412
+      "recent_30d_repositories": 86,
+      "repositories_with_push_date": 414
     },
     "public_repository_stars": 28,
-    "repository_count": 412,
-    "total_forks": 328,
+    "repository_count": 414,
+    "total_forks": 334,
     "total_stars": 28
   },
   "version": 1
