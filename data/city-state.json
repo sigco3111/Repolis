@@ -1,14 +1,14 @@
 {
   "era": {
-    "as_of": "2026-11-14",
+    "as_of": "2026-11-15",
     "basis": "Oldest creation date among the public repositories included in repos.json.",
-    "city_age_days": 548,
+    "city_age_days": 549,
     "city_age_years": 1.5,
     "city_year": 2,
     "founded_on": "2025-05-15",
     "oldest_repository": "ios_hyperclovax"
   },
-  "last_sap_flow": "2026-11-14T00:00:00Z",
+  "last_sap_flow": "2026-11-15T00:00:00Z",
   "roots": [],
   "sap_ledger": {
     "entries": [
@@ -259,6 +259,37 @@
           "repositories_without_value": 0,
           "total": 28
         }
+      },
+      {
+        "forks": {
+          "repositories_with_value": 420,
+          "repositories_without_value": 0,
+          "total": 334
+        },
+        "reference_date": "2026-11-15",
+        "repositories": {
+          "archived": 0,
+          "latest_push_with_date": 420,
+          "latest_push_without_date": 0,
+          "public": 420,
+          "recent_active_30d": 90
+        },
+        "season": {
+          "fallback_used": false,
+          "value": "spring"
+        },
+        "silence": {
+          "at_least_365_days": 3,
+          "at_least_730_days": 0,
+          "unarchived": 420,
+          "with_push_date": 420,
+          "without_push_date": 0
+        },
+        "stars": {
+          "repositories_with_value": 420,
+          "repositories_without_value": 0,
+          "total": 28
+        }
       }
     ],
     "gap_policy": "actual_entries_only",
@@ -285,25 +316,25 @@
       "used": false
     },
     "inputs": {
-      "active_repository_share": 0.21666666666666667,
+      "active_repository_share": 0.21428571428571427,
       "activity_signal": "latest_push_per_repository",
-      "historical_average": 54.333,
+      "historical_average": 54.5,
       "historical_bucket_counts": [
-        37,
-        64,
-        205,
-        8,
-        10,
+        38,
+        57,
+        212,
+        7,
+        11,
         2
       ],
       "historical_bucket_days": 30,
-      "recent_active_repositories": 91,
-      "recent_to_historical_ratio": 1.675,
+      "recent_active_repositories": 90,
+      "recent_to_historical_ratio": 1.651,
       "recent_window_days": 30,
-      "reference_date": "2026-11-14",
+      "reference_date": "2026-11-15",
       "repositories_with_push_date": 420
     },
-    "reason": "Recent latest-push count is 1.67x the average of the prior 6 30-day buckets.",
+    "reason": "Recent latest-push count is 1.65x the average of the prior 6 30-day buckets.",
     "value": "spring"
   },
   "silence": {
@@ -312,12 +343,12 @@
       "at_least_365_days": 3,
       "at_least_730_days": 0,
       "longest": {
-        "elapsed_days": 548,
+        "elapsed_days": 549,
         "last_public_push": "2025-05-15",
         "repo": "ios_hyperclovax"
       }
     },
-    "reference_date": "2026-11-14",
+    "reference_date": "2026-11-15",
     "repositories": {
       "total": 420,
       "with_push_date": 420,
@@ -406,7 +437,7 @@
       }
     ],
     "latest_push_signal": {
-      "recent_30d_repositories": 91,
+      "recent_30d_repositories": 90,
       "repositories_with_push_date": 420
     },
     "public_repository_stars": 28,
