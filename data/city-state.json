@@ -1,14 +1,14 @@
 {
   "era": {
-    "as_of": "2026-11-15",
+    "as_of": "2026-11-17",
     "basis": "Oldest creation date among the public repositories included in repos.json.",
-    "city_age_days": 549,
-    "city_age_years": 1.5,
+    "city_age_days": 551,
+    "city_age_years": 1.51,
     "city_year": 2,
     "founded_on": "2025-05-15",
     "oldest_repository": "ios_hyperclovax"
   },
-  "last_sap_flow": "2026-11-15T00:00:00Z",
+  "last_sap_flow": "2026-11-17T00:00:00Z",
   "roots": [],
   "sap_ledger": {
     "entries": [
@@ -290,6 +290,37 @@
           "repositories_without_value": 0,
           "total": 28
         }
+      },
+      {
+        "forks": {
+          "repositories_with_value": 427,
+          "repositories_without_value": 0,
+          "total": 334
+        },
+        "reference_date": "2026-11-17",
+        "repositories": {
+          "archived": 0,
+          "latest_push_with_date": 427,
+          "latest_push_without_date": 0,
+          "public": 427,
+          "recent_active_30d": 96
+        },
+        "season": {
+          "fallback_used": false,
+          "value": "spring"
+        },
+        "silence": {
+          "at_least_365_days": 3,
+          "at_least_730_days": 0,
+          "unarchived": 427,
+          "with_push_date": 427,
+          "without_push_date": 0
+        },
+        "stars": {
+          "repositories_with_value": 427,
+          "repositories_without_value": 0,
+          "total": 28
+        }
       }
     ],
     "gap_policy": "actual_entries_only",
@@ -316,25 +347,25 @@
       "used": false
     },
     "inputs": {
-      "active_repository_share": 0.21428571428571427,
+      "active_repository_share": 0.22482435597189696,
       "activity_signal": "latest_push_per_repository",
       "historical_average": 54.5,
       "historical_bucket_counts": [
-        38,
-        57,
-        212,
+        32,
+        59,
+        217,
         7,
         11,
-        2
+        1
       ],
       "historical_bucket_days": 30,
-      "recent_active_repositories": 90,
-      "recent_to_historical_ratio": 1.651,
+      "recent_active_repositories": 96,
+      "recent_to_historical_ratio": 1.761,
       "recent_window_days": 30,
-      "reference_date": "2026-11-15",
-      "repositories_with_push_date": 420
+      "reference_date": "2026-11-17",
+      "repositories_with_push_date": 427
     },
-    "reason": "Recent latest-push count is 1.65x the average of the prior 6 30-day buckets.",
+    "reason": "Recent latest-push count is 1.76x the average of the prior 6 30-day buckets.",
     "value": "spring"
   },
   "silence": {
@@ -343,15 +374,15 @@
       "at_least_365_days": 3,
       "at_least_730_days": 0,
       "longest": {
-        "elapsed_days": 549,
+        "elapsed_days": 551,
         "last_public_push": "2025-05-15",
         "repo": "ios_hyperclovax"
       }
     },
-    "reference_date": "2026-11-15",
+    "reference_date": "2026-11-17",
     "repositories": {
-      "total": 420,
-      "with_push_date": 420,
+      "total": 427,
+      "with_push_date": 427,
       "without_push_date": 0
     },
     "schema": "repolis.silence-ledger",
@@ -363,7 +394,7 @@
     "version": 1
   },
   "stats": {
-    "active_repository_count": 420,
+    "active_repository_count": 427,
     "archived_repository_count": 0,
     "commit_history": {
       "available": false,
@@ -377,11 +408,11 @@
       },
       {
         "language": "JavaScript",
-        "repositories": 107
+        "repositories": 110
       },
       {
         "language": "HTML",
-        "repositories": 92
+        "repositories": 94
       },
       {
         "language": "Python",
@@ -389,7 +420,7 @@
       },
       {
         "language": "Other",
-        "repositories": 15
+        "repositories": 17
       },
       {
         "language": "C++",
@@ -437,11 +468,11 @@
       }
     ],
     "latest_push_signal": {
-      "recent_30d_repositories": 90,
-      "repositories_with_push_date": 420
+      "recent_30d_repositories": 96,
+      "repositories_with_push_date": 427
     },
     "public_repository_stars": 28,
-    "repository_count": 420,
+    "repository_count": 427,
     "total_forks": 334,
     "total_stars": 28
   },
