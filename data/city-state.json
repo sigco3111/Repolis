@@ -1,14 +1,14 @@
 {
   "era": {
-    "as_of": "2026-11-17",
+    "as_of": "2026-11-18",
     "basis": "Oldest creation date among the public repositories included in repos.json.",
-    "city_age_days": 551,
+    "city_age_days": 552,
     "city_age_years": 1.51,
     "city_year": 2,
     "founded_on": "2025-05-15",
     "oldest_repository": "ios_hyperclovax"
   },
-  "last_sap_flow": "2026-11-17T00:00:00Z",
+  "last_sap_flow": "2026-11-18T00:00:00Z",
   "roots": [],
   "sap_ledger": {
     "entries": [
@@ -321,6 +321,37 @@
           "repositories_without_value": 0,
           "total": 28
         }
+      },
+      {
+        "forks": {
+          "repositories_with_value": 429,
+          "repositories_without_value": 0,
+          "total": 343
+        },
+        "reference_date": "2026-11-18",
+        "repositories": {
+          "archived": 0,
+          "latest_push_with_date": 429,
+          "latest_push_without_date": 0,
+          "public": 429,
+          "recent_active_30d": 98
+        },
+        "season": {
+          "fallback_used": false,
+          "value": "spring"
+        },
+        "silence": {
+          "at_least_365_days": 3,
+          "at_least_730_days": 0,
+          "unarchived": 429,
+          "with_push_date": 429,
+          "without_push_date": 0
+        },
+        "stars": {
+          "repositories_with_value": 429,
+          "repositories_without_value": 0,
+          "total": 28
+        }
       }
     ],
     "gap_policy": "actual_entries_only",
@@ -347,7 +378,7 @@
       "used": false
     },
     "inputs": {
-      "active_repository_share": 0.22482435597189696,
+      "active_repository_share": 0.22843822843822845,
       "activity_signal": "latest_push_per_repository",
       "historical_average": 54.5,
       "historical_bucket_counts": [
@@ -359,13 +390,13 @@
         1
       ],
       "historical_bucket_days": 30,
-      "recent_active_repositories": 96,
-      "recent_to_historical_ratio": 1.761,
+      "recent_active_repositories": 98,
+      "recent_to_historical_ratio": 1.798,
       "recent_window_days": 30,
-      "reference_date": "2026-11-17",
-      "repositories_with_push_date": 427
+      "reference_date": "2026-11-18",
+      "repositories_with_push_date": 429
     },
-    "reason": "Recent latest-push count is 1.76x the average of the prior 6 30-day buckets.",
+    "reason": "Recent latest-push count is 1.80x the average of the prior 6 30-day buckets.",
     "value": "spring"
   },
   "silence": {
@@ -374,15 +405,15 @@
       "at_least_365_days": 3,
       "at_least_730_days": 0,
       "longest": {
-        "elapsed_days": 551,
+        "elapsed_days": 552,
         "last_public_push": "2025-05-15",
         "repo": "ios_hyperclovax"
       }
     },
-    "reference_date": "2026-11-17",
+    "reference_date": "2026-11-18",
     "repositories": {
-      "total": 427,
-      "with_push_date": 427,
+      "total": 429,
+      "with_push_date": 429,
       "without_push_date": 0
     },
     "schema": "repolis.silence-ledger",
@@ -394,7 +425,7 @@
     "version": 1
   },
   "stats": {
-    "active_repository_count": 427,
+    "active_repository_count": 429,
     "archived_repository_count": 0,
     "commit_history": {
       "available": false,
@@ -404,11 +435,11 @@
     "language_distribution": [
       {
         "language": "TypeScript",
-        "repositories": 161
+        "repositories": 162
       },
       {
         "language": "JavaScript",
-        "repositories": 110
+        "repositories": 113
       },
       {
         "language": "HTML",
@@ -420,7 +451,7 @@
       },
       {
         "language": "Other",
-        "repositories": 17
+        "repositories": 15
       },
       {
         "language": "C++",
@@ -468,12 +499,12 @@
       }
     ],
     "latest_push_signal": {
-      "recent_30d_repositories": 96,
-      "repositories_with_push_date": 427
+      "recent_30d_repositories": 98,
+      "repositories_with_push_date": 429
     },
     "public_repository_stars": 28,
-    "repository_count": 427,
-    "total_forks": 334,
+    "repository_count": 429,
+    "total_forks": 343,
     "total_stars": 28
   },
   "version": 1
