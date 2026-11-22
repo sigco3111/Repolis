@@ -344,7 +344,7 @@
 "views": 0,
 "visitors": 0,
 "clones": 0,
-"size": 10107,
+"size": 10140,
 "open_issues": 0,
 "license": "",
 "archived": false,
@@ -352,7 +352,7 @@
 "release_tag": "",
 "release_date": "",
 "created": "2026-04-11",
-"pushed": "2026-11-21",
+"pushed": "2026-11-22",
 "tracked": true,
 "first_seen": "2026-06-23",
 "social": "https://opengraph.githubassets.com/1b88a96d0def6f90e44fac44d2c76e48c99515637a166642a385a14e3869aaa0/sigco3111/icbm2-knowledge-graph",
@@ -489,15 +489,15 @@
 "views": 0,
 "visitors": 0,
 "clones": 0,
-"size": 459469,
+"size": 494687,
 "open_issues": 0,
 "license": "",
 "archived": false,
 "default_branch": "main",
-"release_tag": "pack-hiding-in-my-room-until-everyone-leaves",
-"release_date": "2026-11-21",
+"release_tag": "pack-loading-screen",
+"release_date": "2026-11-22",
 "created": "2026-10-28",
-"pushed": "2026-11-21",
+"pushed": "2026-11-22",
 "tracked": true,
 "first_seen": "2026-11-04",
 "social": "https://opengraph.githubassets.com/67380d529a8cff9982ce23ebc79a6c1b61741a6b7f027c2d5e0614a9a6f9624e/sigco3111/assets-audio",
@@ -518,7 +518,7 @@
 "views": 0,
 "visitors": 0,
 "clones": 0,
-"size": 81525,
+"size": 92930,
 "open_issues": 0,
 "license": "",
 "archived": false,
@@ -526,7 +526,7 @@
 "release_tag": "pack-medieval-icons-inventory-284",
 "release_date": "2026-11-21",
 "created": "2026-10-28",
-"pushed": "2026-11-21",
+"pushed": "2026-11-22",
 "tracked": true,
 "first_seen": "2026-11-04",
 "social": "https://opengraph.githubassets.com/f4b568ae93d9533f0bdbf00e175ad5e4b74384a6f0f462f280219a0338ce8112/sigco3111/assets-ui-icons",
@@ -576,7 +576,7 @@
 "views": 0,
 "visitors": 0,
 "clones": 0,
-"size": 24045,
+"size": 40849,
 "open_issues": 0,
 "license": "",
 "archived": false,
@@ -584,7 +584,7 @@
 "release_tag": "",
 "release_date": "",
 "created": "2026-10-28",
-"pushed": "2026-11-21",
+"pushed": "2026-11-22",
 "tracked": true,
 "first_seen": "2026-11-04",
 "social": "https://opengraph.githubassets.com/3536951da9cbd4a1a8a7816cddf29b9b7e49ad88ded85be6942809d6e946401c/sigco3111/game-asset-catalog",
@@ -5186,7 +5186,7 @@
 "views": 0,
 "visitors": 0,
 "clones": 0,
-"size": 509,
+"size": 531,
 "open_issues": 0,
 "license": "",
 "archived": false,
@@ -5194,7 +5194,7 @@
 "release_tag": "",
 "release_date": "",
 "created": "2026-10-16",
-"pushed": "2026-11-21",
+"pushed": "2026-11-22",
 "tracked": true,
 "first_seen": "2026-11-04",
 "social": "https://opengraph.githubassets.com/4084f17c7aa1e140bdcc1273d21862e130673fb6adfa08e518339840a696cd02/sigco3111/instinct-usage-dashboard",
@@ -7496,7 +7496,7 @@
 "views": 0,
 "visitors": 0,
 "clones": 0,
-"size": 20670,
+"size": 20677,
 "open_issues": 0,
 "license": "MIT",
 "archived": false,
@@ -10375,7 +10375,7 @@
 },
 {
 "repo": "codexofconquest",
-"desc": "Codex of Conquest — a single-file, quest-driven MUD-style fighter RPGs tabletop dice-roll simulator. 400+ nodes, 2,800+ quests, 400+ monsters. One HTML file. MIT.",
+"desc": "🔀🍴 [한글화/포크] (2D게임) 싱글파일 텍스트 어드벤처 RPG 「Codex of Conquest」 한국어판. 8막 캠페인, d20 주사위 전투, 400+ 지역·2,800+ 퀘스트·400+ 몬스터 (원본 vonglurt/codexofconquest, MIT)",
 "lang": "HTML",
 "topics": [],
 "url": "https://github.com/sigco3111/codexofconquest",
@@ -12022,7 +12022,7 @@
 "views": 0,
 "visitors": 0,
 "clones": 0,
-"size": 8805,
+"size": 8857,
 "open_issues": 0,
 "license": "",
 "archived": false,
@@ -12030,7 +12030,7 @@
 "release_tag": "",
 "release_date": "",
 "created": "2026-11-12",
-"pushed": "2026-11-21",
+"pushed": "2026-11-22",
 "tracked": false,
 "first_seen": "",
 "social": "https://opengraph.githubassets.com/19cd60886dc13e28140b3fdaf477b898d3e00bdc38b9605628d802e419c41a54/sigco3111/showcase",
@@ -12051,7 +12051,7 @@
 "views": 0,
 "visitors": 0,
 "clones": 0,
-"size": 6414,
+"size": 6424,
 "open_issues": 1,
 "license": "",
 "archived": false,
@@ -12059,7 +12059,7 @@
 "release_tag": "",
 "release_date": "",
 "created": "2026-06-18",
-"pushed": "2026-11-21",
+"pushed": "2026-11-22",
 "tracked": true,
 "first_seen": "2026-06-23",
 "social": "https://opengraph.githubassets.com/4e152b350c578f3207b4971e82fe3df6ab01e357172b01168681c1b8e5a76a95/sigco3111/sigco3111",
@@ -12680,7 +12680,7 @@
 "release_tag": "concrete-echo-props",
 "release_date": "2026-11-20",
 "created": "2026-11-13",
-"pushed": "2026-11-20",
+"pushed": "2026-11-22",
 "tracked": false,
 "first_seen": "",
 "social": "https://opengraph.githubassets.com/00ccab6a1bc71049d544efc0526706b7f1d7e74a7ad414f216e6e07193bc3804/sigco3111/assets-3d-lowpoly-2",
@@ -12701,7 +12701,7 @@
 "views": 0,
 "visitors": 0,
 "clones": 0,
-"size": 2292,
+"size": 5333,
 "open_issues": 0,
 "license": "CC-BY-4.0",
 "archived": false,
@@ -12709,7 +12709,7 @@
 "release_tag": "",
 "release_date": "",
 "created": "2026-11-20",
-"pushed": "2026-11-21",
+"pushed": "2026-11-22",
 "tracked": false,
 "first_seen": "",
 "social": "https://opengraph.githubassets.com/cf832e11d0dbd80b4ba491d2fc7beb69a34b9ea9adc23f65d6e8b508dc1ef948/sigco3111/assets-3d-polyfork",
@@ -12738,13 +12738,42 @@
 "release_tag": "",
 "release_date": "",
 "created": "2026-11-20",
-"pushed": "2026-11-20",
+"pushed": "2026-11-22",
 "tracked": false,
 "first_seen": "",
 "social": "https://opengraph.githubassets.com/85458f122ddfea4d10a777c961638c18d81817d1ddb319c589aea53413db7dbb/sigco3111/assets-code",
 "social_custom": false,
 "score": 0.0,
 "rank": 432
+},
+{
+"repo": "brickfall-ko",
+"desc": "🔀🍴 [한글화] (3D) 1인칭 복셀 철거 게임 「Brickfall」 한국어판. 모든 벽돌이 GPU 강체로 시뮬레이션되는 철거 시뮬레이션. 모드 4종(러시·블로우다운·샐비지·샌드박스), 부지 11곳, 도구 9종 (원본 Patch blendi/brickfall, MIT)",
+"lang": "TypeScript",
+"topics": [],
+"url": "https://github.com/sigco3111/brickfall-ko",
+"home": "https://sigco3111.github.io/brickfall-ko/",
+"stars": 0,
+"forks": 0,
+"fork": false,
+"views": 0,
+"visitors": 0,
+"clones": 0,
+"size": 0,
+"open_issues": 0,
+"license": "",
+"archived": false,
+"default_branch": "main",
+"release_tag": "",
+"release_date": "",
+"created": "2026-11-22",
+"pushed": "2026-11-22",
+"tracked": false,
+"first_seen": "",
+"social": "https://opengraph.githubassets.com/542f156d47dd6f5f66e65bea193c8b2fa23e614c00572373a3a6f3f9c3e4d3c8/sigco3111/brickfall-ko",
+"social_custom": false,
+"score": 0.0,
+"rank": 433
 },
 {
 "repo": "cold-boot-ko",
@@ -12777,7 +12806,7 @@
 "source": "rossinek/cold-boot",
 "url": "https://github.com/rossinek/cold-boot"
 },
-"rank": 433
+"rank": 434
 },
 {
 "repo": "concrete-echo-ko",
@@ -12810,7 +12839,7 @@
 "source": "Rikinshah787/Game-Fable-5.2",
 "url": "https://github.com/Rikinshah787/Game-Fable-5.2"
 },
-"rank": 434
+"rank": 435
 },
 {
 "repo": "everyday-game",
@@ -12843,7 +12872,7 @@
 "source": "zhgarylu/everyday-game",
 "url": "https://github.com/zhgarylu/everyday-game"
 },
-"rank": 435
+"rank": 436
 },
 {
 "repo": "fable-5.2-potatobench-ko",
@@ -12872,7 +12901,7 @@
 "social": "https://opengraph.githubassets.com/e6069ed9056d2410e7b2dc67de7dff87cb481467a38126a363c07df7bd8209f2/sigco3111/fable-5.2-potatobench-ko",
 "social_custom": false,
 "score": 0.0,
-"rank": 436
+"rank": 437
 },
 {
 "repo": "gamedemo-by-fable5.2-ko",
@@ -12901,7 +12930,36 @@
 "social": "https://opengraph.githubassets.com/d9bb500d14f33578760b45f348948d952710a99eae532c30ccc4c48ffe263417/sigco3111/gamedemo-by-fable5.2-ko",
 "social_custom": false,
 "score": 0.0,
-"rank": 437
+"rank": 438
+},
+{
+"repo": "inkwave-ko",
+"desc": "INKWAVE 한글판 - 4 대 4 터프 워 잉크 슈터 (원작: DevFrancois/inkwave, MIT)",
+"lang": "Other",
+"topics": [],
+"url": "https://github.com/sigco3111/inkwave-ko",
+"home": "",
+"stars": 0,
+"forks": 0,
+"fork": false,
+"views": 0,
+"visitors": 0,
+"clones": 0,
+"size": 0,
+"open_issues": 0,
+"license": "",
+"archived": false,
+"default_branch": "main",
+"release_tag": "",
+"release_date": "",
+"created": "2026-11-22",
+"pushed": "2026-11-22",
+"tracked": false,
+"first_seen": "",
+"social": "https://opengraph.githubassets.com/99577e2dcd89dc0bd4905324a6c80746130546711bf0722926ace82997bf9ba5/sigco3111/inkwave-ko",
+"social_custom": false,
+"score": 0.0,
+"rank": 439
 },
 {
 "repo": "instinct-benchmarks",
@@ -12930,7 +12988,7 @@
 "social": "https://opengraph.githubassets.com/bf5363975d5c5d8fcd4af4951203cfeebcb86ae4edfa47c3b924fcf1e6fd6809/sigco3111/instinct-benchmarks",
 "social_custom": false,
 "score": 0.0,
-"rank": 438
+"rank": 440
 },
 {
 "repo": "last-return-ko",
@@ -12959,7 +13017,7 @@
 "social": "https://opengraph.githubassets.com/86421a6727dabd05e8e18f2e5af4e7fe2252cc445eed0ba50a1a1eadcbc4b821/sigco3111/last-return-ko",
 "social_custom": false,
 "score": 0.0,
-"rank": 439
+"rank": 441
 },
 {
 "repo": "minimax-m3.1-flash-benchmarks",
@@ -12988,7 +13046,7 @@
 "social": "https://opengraph.githubassets.com/a425663e390422030e374d152b92d026d159b455113b740910624e6799588091/sigco3111/minimax-m3.1-flash-benchmarks",
 "social_custom": false,
 "score": 0.0,
-"rank": 440
+"rank": 442
 },
 {
 "repo": "muse-spark-1.3-benchmarks",
@@ -13017,7 +13075,7 @@
 "social": "https://opengraph.githubassets.com/a71f7edd4b785353d1a6be052b43f2042fd8a18ee34695d7e8483a72094dbf50/sigco3111/muse-spark-1.3-benchmarks",
 "social_custom": false,
 "score": 0.0,
-"rank": 441
+"rank": 443
 },
 {
 "repo": "papertrails-ko",
@@ -13050,7 +13108,7 @@
 "source": "xikhar/papertrails",
 "url": "https://github.com/xikhar/papertrails"
 },
-"rank": 442
+"rank": 444
 },
 {
 "repo": "pickle-benchmarks",
@@ -13079,7 +13137,7 @@
 "social": "https://opengraph.githubassets.com/67a091331a7aea60dc0e06318b10ac58df561381e67ab5530153ae8040ba652b/sigco3111/pickle-benchmarks",
 "social_custom": false,
 "score": 0.0,
-"rank": 443
+"rank": 445
 },
 {
 "repo": "rookie-nine-soccer",
@@ -13094,7 +13152,7 @@
 "views": 0,
 "visitors": 0,
 "clones": 0,
-"size": 7686,
+"size": 5984,
 "open_issues": 0,
 "license": "",
 "archived": false,
@@ -13102,13 +13160,13 @@
 "release_tag": "",
 "release_date": "",
 "created": "2026-11-20",
-"pushed": "2026-11-21",
+"pushed": "2026-11-22",
 "tracked": false,
 "first_seen": "",
 "social": "https://opengraph.githubassets.com/ab51d6d291b849c439e9ae7fc31196e1c46472bf81654735465f0f7ef1c01ac9/sigco3111/rookie-nine-soccer",
 "social_custom": false,
 "score": 0.0,
-"rank": 444
+"rank": 446
 },
 {
 "repo": "santa-game-ko",
@@ -13141,7 +13199,7 @@
 "source": "thestringtheories/Santa-Game",
 "url": "https://github.com/thestringtheories/Santa-Game"
 },
-"rank": 445
+"rank": 447
 },
 {
 "repo": "sf-hack-and-slash",
@@ -13156,7 +13214,7 @@
 "views": 0,
 "visitors": 0,
 "clones": 0,
-"size": 0,
+"size": 31229,
 "open_issues": 0,
 "license": "MIT",
 "archived": false,
@@ -13164,13 +13222,13 @@
 "release_tag": "",
 "release_date": "",
 "created": "2026-11-21",
-"pushed": "2026-11-21",
+"pushed": "2026-11-22",
 "tracked": false,
 "first_seen": "",
 "social": "https://opengraph.githubassets.com/5d52b13e01ebe300e4bb371f415b5947b6ac656b13bd7d1401f51ff77018a96c/sigco3111/sf-hack-and-slash",
 "social_custom": false,
 "score": 0.0,
-"rank": 446
+"rank": 448
 },
 {
 "repo": "the-lost-storm-ko",
@@ -13199,7 +13257,7 @@
 "social": "https://opengraph.githubassets.com/98acb7858b2c3c779c5770167439f888409871db5d51f4ca77934d6929bdf8dd/sigco3111/the-lost-storm-ko",
 "social_custom": false,
 "score": 0.0,
-"rank": 447
+"rank": 449
 },
 {
 "repo": "tria-prima-ko",
@@ -13228,7 +13286,7 @@
 "social": "https://opengraph.githubassets.com/a939d98e02a53fd8f2af9f980ab3287b8c50c8b3d9180d5598cb820ac43eb25b/sigco3111/tria-prima-ko",
 "social_custom": false,
 "score": 0.0,
-"rank": 448
+"rank": 450
 },
 {
 "repo": "vooy-benchmarks",
@@ -13257,7 +13315,7 @@
 "social": "https://opengraph.githubassets.com/c6223a515435280c812ae8244e260dc497af6aecb2161e59700d5ddb2adb6d28/sigco3111/vooy-benchmarks",
 "social_custom": false,
 "score": 0.0,
-"rank": 449
+"rank": 451
 },
 {
 "repo": "wildlife-odyssey-3d-ko",
@@ -13286,7 +13344,7 @@
 "social": "https://opengraph.githubassets.com/0f259db503f86855afc1478d6940ab5c4d88ad986aefaa93ae8cfd96a6a951f6/sigco3111/wildlife-odyssey-3d-ko",
 "social_custom": false,
 "score": 0.0,
-"rank": 450
+"rank": 452
 },
 {
 "repo": "worm-rider-ko",
@@ -13315,7 +13373,7 @@
 "social": "https://opengraph.githubassets.com/10635a499ad9c1de81059c69b6977f7480b3b6fa848787d0dbfc62a8f77434d7/sigco3111/worm-rider-ko",
 "social_custom": false,
 "score": 0.0,
-"rank": 451
+"rank": 453
 },
 {
 "repo": "zombies-ko",
@@ -13344,6 +13402,6 @@
 "social": "https://opengraph.githubassets.com/0db93138df19bf5a3919d5a31e2497ee4a3a49b4be98c4a854f89356f2c9a232/sigco3111/zombies-ko",
 "social_custom": false,
 "score": 0.0,
-"rank": 452
+"rank": 454
 }
 ]
