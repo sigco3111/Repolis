@@ -344,7 +344,7 @@
 "views": 0,
 "visitors": 0,
 "clones": 0,
-"size": 10140,
+"size": 10240,
 "open_issues": 0,
 "license": "",
 "archived": false,
@@ -352,7 +352,7 @@
 "release_tag": "",
 "release_date": "",
 "created": "2026-04-11",
-"pushed": "2026-11-22",
+"pushed": "2026-11-23",
 "tracked": true,
 "first_seen": "2026-06-23",
 "social": "https://opengraph.githubassets.com/1b88a96d0def6f90e44fac44d2c76e48c99515637a166642a385a14e3869aaa0/sigco3111/icbm2-knowledge-graph",
@@ -431,15 +431,15 @@
 "views": 0,
 "visitors": 0,
 "clones": 0,
-"size": 492099,
+"size": 511990,
 "open_issues": 0,
 "license": "",
 "archived": false,
 "default_branch": "main",
-"release_tag": "concrete-echo-concrete-textures",
-"release_date": "2026-11-20",
+"release_tag": "long-wind-ph-textures",
+"release_date": "2026-11-24",
 "created": "2026-10-28",
-"pushed": "2026-11-20",
+"pushed": "2026-11-24",
 "tracked": true,
 "first_seen": "2026-11-04",
 "social": "https://opengraph.githubassets.com/d27e97fe68244701b47c653b4a2034f1e7c5620b2b063eb6af4a68641f9e7631/sigco3111/assets-2d-pixel",
@@ -489,15 +489,15 @@
 "views": 0,
 "visitors": 0,
 "clones": 0,
-"size": 494687,
+"size": 528342,
 "open_issues": 0,
 "license": "",
 "archived": false,
 "default_branch": "main",
-"release_tag": "pack-loading-screen",
-"release_date": "2026-11-22",
+"release_tag": "pack-sigh",
+"release_date": "2026-11-23",
 "created": "2026-10-28",
-"pushed": "2026-11-22",
+"pushed": "2026-11-24",
 "tracked": true,
 "first_seen": "2026-11-04",
 "social": "https://opengraph.githubassets.com/67380d529a8cff9982ce23ebc79a6c1b61741a6b7f027c2d5e0614a9a6f9624e/sigco3111/assets-audio",
@@ -518,15 +518,15 @@
 "views": 0,
 "visitors": 0,
 "clones": 0,
-"size": 92930,
+"size": 92983,
 "open_issues": 0,
 "license": "",
 "archived": false,
 "default_branch": "main",
-"release_tag": "pack-medieval-icons-inventory-284",
-"release_date": "2026-11-21",
+"release_tag": "long-wind-fonts",
+"release_date": "2026-11-24",
 "created": "2026-10-28",
-"pushed": "2026-11-22",
+"pushed": "2026-11-24",
 "tracked": true,
 "first_seen": "2026-11-04",
 "social": "https://opengraph.githubassets.com/f4b568ae93d9533f0bdbf00e175ad5e4b74384a6f0f462f280219a0338ce8112/sigco3111/assets-ui-icons",
@@ -576,7 +576,7 @@
 "views": 0,
 "visitors": 0,
 "clones": 0,
-"size": 40849,
+"size": 26721,
 "open_issues": 0,
 "license": "",
 "archived": false,
@@ -584,7 +584,7 @@
 "release_tag": "",
 "release_date": "",
 "created": "2026-10-28",
-"pushed": "2026-11-22",
+"pushed": "2026-11-24",
 "tracked": true,
 "first_seen": "2026-11-04",
 "social": "https://opengraph.githubassets.com/3536951da9cbd4a1a8a7816cddf29b9b7e49ad88ded85be6942809d6e946401c/sigco3111/game-asset-catalog",
@@ -5186,7 +5186,7 @@
 "views": 0,
 "visitors": 0,
 "clones": 0,
-"size": 531,
+"size": 555,
 "open_issues": 0,
 "license": "",
 "archived": false,
@@ -5194,7 +5194,7 @@
 "release_tag": "",
 "release_date": "",
 "created": "2026-10-16",
-"pushed": "2026-11-22",
+"pushed": "2026-11-23",
 "tracked": true,
 "first_seen": "2026-11-04",
 "social": "https://opengraph.githubassets.com/4084f17c7aa1e140bdcc1273d21862e130673fb6adfa08e518339840a696cd02/sigco3111/instinct-usage-dashboard",
@@ -7496,7 +7496,7 @@
 "views": 0,
 "visitors": 0,
 "clones": 0,
-"size": 20677,
+"size": 20819,
 "open_issues": 0,
 "license": "MIT",
 "archived": false,
@@ -7504,7 +7504,7 @@
 "release_tag": "",
 "release_date": "",
 "created": "2026-06-23",
-"pushed": "2026-11-21",
+"pushed": "2026-11-22",
 "tracked": true,
 "first_seen": "2026-06-23",
 "social": "https://opengraph.githubassets.com/fcbda3dbfc3ed0fef27023a504047929fd6226b6dc6eac0b41d2c301955b2c1d/sigco3111/Repolis",
@@ -10316,6 +10316,39 @@
 "rank": 349
 },
 {
+"repo": "claude-opus-5.5-zombies-game",
+"desc": "🔀🍴 [한글화] (3D) Three.js 익스트랙션 좀비 FPS 「Dead Signal: Exclusion Zone」 한국어판. 오염된 산업 지역(제9구역)에서 업링크 중계기 방어·WARDEN-9 추적 2개 계약을 완수한 뒤 헬기로 탈출. 보급소 상점·무기 강화·전술 지도·위협 등급 시스템, 메뉴·HUD·월드 간판 전면 한글화 (원본 bridge-mind/claude-opus-5.5-zombies-game, MIT)",
+"lang": "TypeScript",
+"topics": [],
+"url": "https://github.com/sigco3111/claude-opus-5.5-zombies-game",
+"home": "https://sigco3111.github.io/claude-opus-5.5-zombies-game/",
+"stars": 0,
+"forks": 1,
+"fork": true,
+"views": 0,
+"visitors": 0,
+"clones": 0,
+"size": 622,
+"open_issues": 0,
+"license": "MIT",
+"archived": false,
+"default_branch": "main",
+"release_tag": "",
+"release_date": "",
+"created": "2026-11-23",
+"pushed": "2026-11-23",
+"tracked": false,
+"first_seen": "",
+"social": "",
+"social_custom": false,
+"score": 0.416,
+"lineage": {
+"source": "bridge-mind/claude-opus-5.5-zombies-game",
+"url": "https://github.com/bridge-mind/claude-opus-5.5-zombies-game"
+},
+"rank": 350
+},
+{
 "repo": "clipboard-history-mac",
 "desc": "🟢 [원작] (콘텐츠) · macOS 메뉴바 상주 클립보드 히스토리 — SwiftUI MenuBarExtra + NSPasteboard 폴링 + 기존 단일 HTML 임베드",
 "lang": "Swift",
@@ -10342,7 +10375,7 @@
 "social": "https://opengraph.githubassets.com/62d13acb876aefdb4b36326f52eb542f4cb348e0d3657a80779b306710ada0ee/sigco3111/clipboard-history-mac",
 "social_custom": false,
 "score": 0.416,
-"rank": 350
+"rank": 351
 },
 {
 "repo": "cloth-simulation",
@@ -10371,7 +10404,7 @@
 "social": "https://opengraph.githubassets.com/eb1caa4db4063460b56625d7ea7713bf943c66eb1731f9568b25ee029e4a9d8e/sigco3111/cloth-simulation",
 "social_custom": false,
 "score": 0.416,
-"rank": 351
+"rank": 352
 },
 {
 "repo": "codexofconquest",
@@ -10404,7 +10437,36 @@
 "source": "vonglurt/codexofconquest",
 "url": "https://github.com/vonglurt/codexofconquest"
 },
-"rank": 352
+"rank": 353
+},
+{
+"repo": "coloured-pencil-ko",
+"desc": "🔀🍴 [한글화] (3D) three.js 세계를 색연필화처럼 그려 내는 렌더링 데모 「색연필 한글판」. 아침 항구 마을을 걷는 장면의 한국어 UI·손글씨 글꼴, 실행 안내와 스크린샷을 담은 README를 제공.",
+"lang": "JavaScript",
+"topics": [],
+"url": "https://github.com/sigco3111/coloured-pencil-ko",
+"home": "https://sigco3111.github.io/coloured-pencil-ko/",
+"stars": 0,
+"forks": 1,
+"fork": false,
+"views": 0,
+"visitors": 0,
+"clones": 0,
+"size": 5352,
+"open_issues": 0,
+"license": "",
+"archived": false,
+"default_branch": "main",
+"release_tag": "",
+"release_date": "",
+"created": "2026-11-23",
+"pushed": "2026-11-23",
+"tracked": false,
+"first_seen": "",
+"social": "https://opengraph.githubassets.com/d60480581cc0de7a1b70528cbc03ff6ebed0c477d04265877d68b4bbe6df9711/sigco3111/coloured-pencil-ko",
+"social_custom": false,
+"score": 0.416,
+"rank": 354
 },
 {
 "repo": "core-image-converter",
@@ -10433,7 +10495,36 @@
 "social": "https://opengraph.githubassets.com/ff32c63b6135839a581268fc2fa42ce3c13a54109f701b753afaeeafb0903062/sigco3111/core-image-converter",
 "social_custom": false,
 "score": 0.416,
-"rank": 353
+"rank": 355
+},
+{
+"repo": "crowds-ko",
+"desc": "🔀🍴 [한글화] (3D) three.js 디오라마 위에서 마네킹 군중이 벽과 서로를 피해 길을 찾아 흘러가는 군중 길찾기 데모 「Crowds and navigation」 한국어판. 클릭으로 군중 이동 지시·돌 블록 설치, 실시간 내비메시 재계산과 우회, 레벨 3종(장터·성벽·생울타리 미로) (원본 Patch patch/crowds, MIT)",
+"lang": "JavaScript",
+"topics": [],
+"url": "https://github.com/sigco3111/crowds-ko",
+"home": "https://sigco3111.github.io/crowds-ko/",
+"stars": 0,
+"forks": 1,
+"fork": false,
+"views": 0,
+"visitors": 0,
+"clones": 0,
+"size": 1269,
+"open_issues": 0,
+"license": "",
+"archived": false,
+"default_branch": "main",
+"release_tag": "",
+"release_date": "",
+"created": "2026-11-23",
+"pushed": "2026-11-23",
+"tracked": false,
+"first_seen": "",
+"social": "https://opengraph.githubassets.com/5dd1a736974a6147a49fae5da24c583d75c36049a8c37a488f20371ebd6ba3bb/sigco3111/crowds-ko",
+"social_custom": false,
+"score": 0.416,
+"rank": 356
 },
 {
 "repo": "decision-genie",
@@ -10462,7 +10553,7 @@
 "social": "https://opengraph.githubassets.com/0ea96b7f6df46753f97c75adc1d331883aed0b0b12e58c3ae2a99d9391d69756/sigco3111/decision-genie",
 "social_custom": false,
 "score": 0.416,
-"rank": 354
+"rank": 357
 },
 {
 "repo": "dnb-action-rpg",
@@ -10491,7 +10582,7 @@
 "social": "https://opengraph.githubassets.com/27ed45d63f0898d724dfa2b1cec2417cc75dd0ac781f251a65d1fba212502081/sigco3111/dnb-action-rpg",
 "social_custom": false,
 "score": 0.416,
-"rank": 355
+"rank": 358
 },
 {
 "repo": "dnb-map-editor",
@@ -10520,7 +10611,7 @@
 "social": "https://opengraph.githubassets.com/c8dcb908d83ec8e88893479ea564c1e73521110664c57980d15ed9611e2230f0/sigco3111/dnb-map-editor",
 "social_custom": false,
 "score": 0.416,
-"rank": 356
+"rank": 359
 },
 {
 "repo": "dnb-sprite-tool",
@@ -10549,7 +10640,7 @@
 "social": "https://opengraph.githubassets.com/16e24f5dfd7cbdaa4cbccd960a61ad439a4a81a009f0070647dc7bcaf0c159cb/sigco3111/dnb-sprite-tool",
 "social_custom": false,
 "score": 0.416,
-"rank": 357
+"rank": 360
 },
 {
 "repo": "double-pendulum-chaos",
@@ -10578,7 +10669,94 @@
 "social": "https://opengraph.githubassets.com/ea9a8116c6f2b40ddc0d64de5340a1bc0ba2bafe637bb92bc2a1f9a9b46bbcbc/sigco3111/double-pendulum-chaos",
 "social_custom": false,
 "score": 0.416,
-"rank": 358
+"rank": 361
+},
+{
+"repo": "dungeon-forge-ko",
+"desc": "🔀🍴 [한글화/포크] (3D) 시드로 던전을 만들고 위에서 보다가 1인칭으로 걸어 다니는 절차적 던전 생성기 「던전 포지 한글판」. Patch Dungeons(원작 Dungeon Forge 기반, MIT)를 한글화하고 설정 패널·난이도 히트맵·개별 표시/숨김·생성 통계를 추가. Three.js 기반.",
+"lang": "JavaScript",
+"topics": [],
+"url": "https://github.com/sigco3111/dungeon-forge-ko",
+"home": "https://sigco3111.github.io/dungeon-forge-ko/",
+"stars": 0,
+"forks": 1,
+"fork": false,
+"views": 0,
+"visitors": 0,
+"clones": 0,
+"size": 7699,
+"open_issues": 0,
+"license": "MIT",
+"archived": false,
+"default_branch": "main",
+"release_tag": "",
+"release_date": "",
+"created": "2026-11-23",
+"pushed": "2026-11-23",
+"tracked": false,
+"first_seen": "",
+"social": "https://opengraph.githubassets.com/92328895741a95c02626d795f0a21d400b6ba8fdb78f1ac680c18570a9f70a98/sigco3111/dungeon-forge-ko",
+"social_custom": false,
+"score": 0.416,
+"rank": 362
+},
+{
+"repo": "effekseer-ko",
+"desc": "🔀🍴 [한글화/포크] (3D) Effekseer 이펙트 33종을 3D 장면에서 재생해 보는 three.js 데모 한국어판 (원본 patch.gg/patch/effekseer, 코드 MIT · 이펙트 CC0)",
+"lang": "JavaScript",
+"topics": [],
+"url": "https://github.com/sigco3111/effekseer-ko",
+"home": "https://sigco3111.github.io/effekseer-ko/",
+"stars": 0,
+"forks": 1,
+"fork": false,
+"views": 0,
+"visitors": 0,
+"clones": 0,
+"size": 26940,
+"open_issues": 0,
+"license": "",
+"archived": false,
+"default_branch": "main",
+"release_tag": "",
+"release_date": "",
+"created": "2026-11-23",
+"pushed": "2026-11-23",
+"tracked": false,
+"first_seen": "",
+"social": "https://opengraph.githubassets.com/0de27ea7a190df948e2827ad13949afe3e57f3409f6451c0fd5432b9cf0ef1ad/sigco3111/effekseer-ko",
+"social_custom": false,
+"score": 0.416,
+"rank": 363
+},
+{
+"repo": "elements-ko",
+"desc": "🔀🍴 [한글화] (3D) three.js·WebGL2로 그리는 원소 주문 VFX 데모 「Elements」 한국어판. 원소 그룹 10종·주문 39종, 클릭 시전, 크기·강도·속도·하늘·모양을 바꾸는 설정 패널, 주문별 미리보기 썸네일 (원본 Patch patch/elements, Ultra Elements by Humpalumps, MIT)",
+"lang": "JavaScript",
+"topics": [],
+"url": "https://github.com/sigco3111/elements-ko",
+"home": "https://sigco3111.github.io/elements-ko/",
+"stars": 0,
+"forks": 1,
+"fork": false,
+"views": 0,
+"visitors": 0,
+"clones": 0,
+"size": 5228,
+"open_issues": 0,
+"license": "MIT",
+"archived": false,
+"default_branch": "main",
+"release_tag": "",
+"release_date": "",
+"created": "2026-11-23",
+"pushed": "2026-11-23",
+"tracked": false,
+"first_seen": "",
+"social": "https://opengraph.githubassets.com/69c2ccc5c15cf45783922ad3844f877352238497d08e79ae753b4d3cc383e494/sigco3111/elements-ko",
+"social_custom": false,
+"score": 0.416,
+"rank": 364
 },
 {
 "repo": "evolve-kr",
@@ -10607,7 +10785,7 @@
 "social": "https://opengraph.githubassets.com/76378db66ad8ea1c3c65cd07e0ff5e682b45238f5e5c77b59beeffa91e064ce7/sigco3111/evolve-kr",
 "social_custom": false,
 "score": 0.416,
-"rank": 359
+"rank": 365
 },
 {
 "repo": "FireworksMaster",
@@ -10636,7 +10814,7 @@
 "social": "https://opengraph.githubassets.com/c556fb8ca5f9ccd182ebe85655915b9c1df34674a4481db1397d859d4debca24/sigco3111/FireworksMaster",
 "social_custom": false,
 "score": 0.416,
-"rank": 360
+"rank": 366
 },
 {
 "repo": "fishing-freel",
@@ -10665,7 +10843,7 @@
 "social": "https://opengraph.githubassets.com/0e9f3552b6eac9f2f7091ca714ff221907d3aa7eb6801253307454f36c04fe73/sigco3111/fishing-freel",
 "social_custom": false,
 "score": 0.416,
-"rank": 361
+"rank": 367
 },
 {
 "repo": "flamesword-action",
@@ -10694,7 +10872,7 @@
 "social": "https://opengraph.githubassets.com/46643b15acbe349a1d299d6d9fdf271ce898af3d7b04dbb7b80ae8da4ccc2abd/sigco3111/flamesword-action",
 "social_custom": false,
 "score": 0.416,
-"rank": 362
+"rank": 368
 },
 {
 "repo": "fractal-tree",
@@ -10723,7 +10901,7 @@
 "social": "https://opengraph.githubassets.com/894022ac0b023b4fb6a5a2c420d0c5fa7fb1256536a92470e4a60347304a5dbc/sigco3111/fractal-tree",
 "social_custom": false,
 "score": 0.416,
-"rank": 363
+"rank": 369
 },
 {
 "repo": "gateheavens-shmup",
@@ -10752,7 +10930,7 @@
 "social": "https://opengraph.githubassets.com/5c2fa9341fe3bdb5384c33e6af50c78086034bd5175b49c2c1cbbb216823b80e/sigco3111/gateheavens-shmup",
 "social_custom": false,
 "score": 0.416,
-"rank": 364
+"rank": 370
 },
 {
 "repo": "genetic-walking",
@@ -10781,7 +10959,7 @@
 "social": "https://opengraph.githubassets.com/976420621222f94cd8c6a3964cd420116a55e99c20547e1eb3d8c925b7966979/sigco3111/genetic-walking",
 "social_custom": false,
 "score": 0.416,
-"rank": 365
+"rank": 371
 },
 {
 "repo": "github-board2",
@@ -10810,7 +10988,7 @@
 "social": "https://opengraph.githubassets.com/a3964317a5ad409d932865c34b4cb250f213dfe17e136700991e2ca1bd6e0314/sigco3111/github-board2",
 "social_custom": false,
 "score": 0.416,
-"rank": 366
+"rank": 372
 },
 {
 "repo": "gitvana-ko",
@@ -10843,7 +11021,7 @@
 "source": "pixari/gitvana",
 "url": "https://github.com/pixari/gitvana"
 },
-"rank": 367
+"rank": 373
 },
 {
 "repo": "gp32-blaster-vertical",
@@ -10872,7 +11050,7 @@
 "social": "https://opengraph.githubassets.com/badceb57c9742ed5210c254e14f0d0564eda44b88ffc4fd4808755027eadded6/sigco3111/gp32-blaster-vertical",
 "social_custom": false,
 "score": 0.416,
-"rank": 368
+"rank": 374
 },
 {
 "repo": "gp32-bluemarble-king",
@@ -10901,7 +11079,7 @@
 "social": "https://opengraph.githubassets.com/8cfb071b436bbbfc111a46b7ad23b89bf53c9bd305fda9f33417111d9352950f/sigco3111/gp32-bluemarble-king",
 "social_custom": false,
 "score": 0.416,
-"rank": 369
+"rank": 375
 },
 {
 "repo": "gravity-typography",
@@ -10930,7 +11108,7 @@
 "social": "https://opengraph.githubassets.com/6bc43b78ffef7b398904572086793938c233c1fcd23b7d0794503f247b02fcce/sigco3111/gravity-typography",
 "social_custom": false,
 "score": 0.416,
-"rank": 370
+"rank": 376
 },
 {
 "repo": "gray-scott-reaction-diffusion",
@@ -10959,7 +11137,36 @@
 "social": "https://opengraph.githubassets.com/3d1b7dbbd6a57229fde77bb316b7ac8fcf479b45ea7e0f7a9940b47ab482fecf/sigco3111/gray-scott-reaction-diffusion",
 "social_custom": false,
 "score": 0.416,
-"rank": 371
+"rank": 377
+},
+{
+"repo": "grid-breach",
+"desc": "Grid Breach: Three.js hack-and-slash prototype (formerly sf-hack-and-slash). Assets: see ASSET-SOURCES.md",
+"lang": "JavaScript",
+"topics": [],
+"url": "https://github.com/sigco3111/grid-breach",
+"home": "https://sigco3111.github.io/grid-breach/",
+"stars": 0,
+"forks": 1,
+"fork": false,
+"views": 0,
+"visitors": 0,
+"clones": 0,
+"size": 36804,
+"open_issues": 0,
+"license": "MIT",
+"archived": false,
+"default_branch": "main",
+"release_tag": "",
+"release_date": "",
+"created": "2026-11-21",
+"pushed": "2026-11-24",
+"tracked": false,
+"first_seen": "",
+"social": "https://opengraph.githubassets.com/b3c8338f0879a754e75436f93092a1d466b2c5d37808077a0151c23cd803d0eb/sigco3111/grid-breach",
+"social_custom": false,
+"score": 0.416,
+"rank": 378
 },
 {
 "repo": "heat-conduction-heatmap",
@@ -10988,7 +11195,7 @@
 "social": "https://opengraph.githubassets.com/d9b0ea56a880791f433a28285f360485c077a438a3c684bfb030b6c2b364ffb0/sigco3111/heat-conduction-heatmap",
 "social_custom": false,
 "score": 0.416,
-"rank": 372
+"rank": 379
 },
 {
 "repo": "heavy-chain-ik",
@@ -11017,7 +11224,7 @@
 "social": "https://opengraph.githubassets.com/ebac8de017cd96e51b75aec9edecd868c859bd02edfc87f9d18b0b5bf858f878/sigco3111/heavy-chain-ik",
 "social_custom": false,
 "score": 0.416,
-"rank": 373
+"rank": 380
 },
 {
 "repo": "hermes-control-room",
@@ -11046,7 +11253,7 @@
 "social": "https://opengraph.githubassets.com/43ae35ac04bc0e2aab414e450ffb17e9d02221160896bff86ca5280f722f67d4/sigco3111/hermes-control-room",
 "social_custom": false,
 "score": 0.416,
-"rank": 374
+"rank": 381
 },
 {
 "repo": "interactive-voronoi",
@@ -11075,7 +11282,7 @@
 "social": "https://opengraph.githubassets.com/e83095880f3a7fb04819c0349bd140431988c8d2731f5e651f0acc8f4a7892e2/sigco3111/interactive-voronoi",
 "social_custom": false,
 "score": 0.416,
-"rank": 375
+"rank": 382
 },
 {
 "repo": "ios_hyperclovax",
@@ -11104,7 +11311,7 @@
 "social": "https://opengraph.githubassets.com/757f19a16d8d5814e053f568f6db9523e193dac11440508021bbbf1716095208/sigco3111/ios_hyperclovax",
 "social_custom": false,
 "score": 0.416,
-"rank": 376
+"rank": 383
 },
 {
 "repo": "IsoMapTool",
@@ -11133,7 +11340,7 @@
 "social": "https://opengraph.githubassets.com/e2dfaf9bf8ae47c9d6da8774a600fac0c7ffcf5095f8fee4804e94bb00d03986/sigco3111/IsoMapTool",
 "social_custom": false,
 "score": 0.416,
-"rank": 377
+"rank": 384
 },
 {
 "repo": "jelly-slime",
@@ -11162,7 +11369,7 @@
 "social": "https://opengraph.githubassets.com/d9b0ea56a880791f433a28285f360485c077a438a3c684bfb030b6c2b364ffb0/sigco3111/jelly-slime",
 "social_custom": false,
 "score": 0.416,
-"rank": 378
+"rank": 385
 },
 {
 "repo": "jungle-trail",
@@ -11195,7 +11402,7 @@
 "source": "StarKnightt/jungle-trail",
 "url": "https://github.com/StarKnightt/jungle-trail"
 },
-"rank": 379
+"rank": 386
 },
 {
 "repo": "KakaoSplit",
@@ -11224,7 +11431,7 @@
 "social": "https://opengraph.githubassets.com/d1b23bd7cb85b84340529d96e9f47cb2cf8ea50651b206149f9ebb55687ba5a8/sigco3111/KakaoSplit",
 "social_custom": false,
 "score": 0.416,
-"rank": 380
+"rank": 387
 },
 {
 "repo": "lorenz-attractor",
@@ -11253,7 +11460,7 @@
 "social": "https://opengraph.githubassets.com/be048cf8073f92c58718ac62db7d1e0741d946773815a9687c532f0bc71c7af6/sigco3111/lorenz-attractor",
 "social_custom": false,
 "score": 0.416,
-"rank": 381
+"rank": 388
 },
 {
 "repo": "mac-board",
@@ -11282,7 +11489,7 @@
 "social": "https://opengraph.githubassets.com/1976f2156c2409990863faa766dc09f3fe0aeb557c002b98966fdb93e8ee630a/sigco3111/mac-board",
 "social_custom": false,
 "score": 0.416,
-"rank": 382
+"rank": 389
 },
 {
 "repo": "mandelbrot-kaleidoscope",
@@ -11311,7 +11518,7 @@
 "social": "https://opengraph.githubassets.com/d0bed4ad8edd233da3f7b80b0a2b8cec98677324e49c8904c015085d34562ab4/sigco3111/mandelbrot-kaleidoscope",
 "social_custom": false,
 "score": 0.416,
-"rank": 383
+"rank": 390
 },
 {
 "repo": "md-doctor",
@@ -11340,7 +11547,7 @@
 "social": "https://opengraph.githubassets.com/f76071d9a70946716929b33fdc053e38fcf7eb3c15a0cabe17474b7b9dfb3a3d/sigco3111/md-doctor",
 "social_custom": false,
 "score": 0.416,
-"rank": 384
+"rank": 391
 },
 {
 "repo": "mingmo-game-korea",
@@ -11369,7 +11576,7 @@
 "social": "https://opengraph.githubassets.com/7cd108c4a2a13836757b1d57d3b77da0545cde48a0bbb33ce16460fad73f7c33/sigco3111/mingmo-game-korea",
 "social_custom": false,
 "score": 0.416,
-"rank": 385
+"rank": 392
 },
 {
 "repo": "mobile-map-editor",
@@ -11398,7 +11605,7 @@
 "social": "https://opengraph.githubassets.com/f7fdbedefae5a1e0c943033793e23c702b46bc0f2c4200da8f9ff586e932bcc5/sigco3111/mobile-map-editor",
 "social_custom": false,
 "score": 0.416,
-"rank": 386
+"rank": 393
 },
 {
 "repo": "nbody-simulation",
@@ -11427,7 +11634,7 @@
 "social": "https://opengraph.githubassets.com/1ddd154bc6b7a1ae432f3a1fa40efaf48417663dc4920ab3c6e974c573f08e84/sigco3111/nbody-simulation",
 "social_custom": false,
 "score": 0.416,
-"rank": 387
+"rank": 394
 },
 {
 "repo": "offroad-suspension",
@@ -11456,7 +11663,36 @@
 "social": "https://opengraph.githubassets.com/6b6a30ea76e434e1ff2c7bf7f82b2980f936c7e1a2e37b37c9a7db6c5b674280/sigco3111/offroad-suspension",
 "social_custom": false,
 "score": 0.416,
-"rank": 388
+"rank": 395
+},
+{
+"repo": "oil-paint-ko",
+"desc": "🔀🍴 [한글화] (3D) three.js 기반 유화 렌더 데모 「오일 페인트 한글판」. 오로라와 가을 숲 장면의 한국어 UI와 글꼴, 실행 안내를 담은 README를 제공.",
+"lang": "JavaScript",
+"topics": [],
+"url": "https://github.com/sigco3111/oil-paint-ko",
+"home": "https://sigco3111.github.io/oil-paint-ko/",
+"stars": 0,
+"forks": 1,
+"fork": false,
+"views": 0,
+"visitors": 0,
+"clones": 0,
+"size": 5423,
+"open_issues": 0,
+"license": "",
+"archived": false,
+"default_branch": "main",
+"release_tag": "",
+"release_date": "",
+"created": "2026-11-23",
+"pushed": "2026-11-23",
+"tracked": false,
+"first_seen": "",
+"social": "https://opengraph.githubassets.com/dcb506755a5e5b41ff941db4a2a888100fa6974141ae54f8140c26ca6c24d151/sigco3111/oil-paint-ko",
+"social_custom": false,
+"score": 0.416,
+"rank": 396
 },
 {
 "repo": "optics-prism-lab",
@@ -11485,7 +11721,7 @@
 "social": "https://opengraph.githubassets.com/468f7ec0c30c312ba288b7b7b27534a1a44e84379abceb21c5a19d37d67f51f8/sigco3111/optics-prism-lab",
 "social_custom": false,
 "score": 0.416,
-"rank": 389
+"rank": 397
 },
 {
 "repo": "pages",
@@ -11514,7 +11750,36 @@
 "social": "https://opengraph.githubassets.com/8d1fc2c0f2488fc0dd1b3dee0b719729a01dbf7f653f3c4391ad0fe1c10363ae/sigco3111/pages",
 "social_custom": false,
 "score": 0.416,
-"rank": 390
+"rank": 398
+},
+{
+"repo": "painted-valley-ko",
+"desc": "🔀🍴 [한글화] (3D) 손으로 그린 애니메이션 배경 같은 여름 계곡을 밀짚모자 방랑자로 걷는 three.js 데모 「경외(敬畏)」 한글판. 영화 같은 타이틀 연출·시간대 변경·카타나 발도 등 조작 안내 한국어화, 실제 실행 캡처 포함 한글 README 제공. (원본 patch.gg/majveia/painted-valley, 코드 MIT / 아트 CC0 1.0)",
+"lang": "JavaScript",
+"topics": [],
+"url": "https://github.com/sigco3111/painted-valley-ko",
+"home": "https://sigco3111.github.io/painted-valley-ko/",
+"stars": 0,
+"forks": 1,
+"fork": false,
+"views": 0,
+"visitors": 0,
+"clones": 0,
+"size": 9923,
+"open_issues": 0,
+"license": "",
+"archived": false,
+"default_branch": "main",
+"release_tag": "",
+"release_date": "",
+"created": "2026-11-23",
+"pushed": "2026-11-24",
+"tracked": false,
+"first_seen": "",
+"social": "https://opengraph.githubassets.com/7fb1c5818a39687e0c619f0d42a2759397b22822ab7569658156805555f9a2f3/sigco3111/painted-valley-ko",
+"social_custom": false,
+"score": 0.416,
+"rank": 399
 },
 {
 "repo": "particle-fireworks",
@@ -11543,7 +11808,36 @@
 "social": "https://opengraph.githubassets.com/2976173271ee97ed064fbe27d5cf065ad51aaba57823ae8b4f96bbb939fd2d04/sigco3111/particle-fireworks",
 "social_custom": false,
 "score": 0.416,
-"rank": 391
+"rank": 400
+},
+{
+"repo": "patchwork-quilt-ko",
+"desc": "🔀🍴 [한글화] (3D) 천 조각을 한 땀 한 땀 바느질해 만든 세계를 봉제 인형으로 걸어 다니는 데모 「패치워크 퀼트 한글판」. 로딩 문구·조작 안내·포즈 속도 표시 한국어화, 실행 안내를 담은 한글 README 제공.",
+"lang": "JavaScript",
+"topics": [],
+"url": "https://github.com/sigco3111/patchwork-quilt-ko",
+"home": "https://sigco3111.github.io/patchwork-quilt-ko/",
+"stars": 0,
+"forks": 1,
+"fork": false,
+"views": 0,
+"visitors": 0,
+"clones": 0,
+"size": 5412,
+"open_issues": 0,
+"license": "",
+"archived": false,
+"default_branch": "main",
+"release_tag": "",
+"release_date": "",
+"created": "2026-11-23",
+"pushed": "2026-11-23",
+"tracked": false,
+"first_seen": "",
+"social": "https://opengraph.githubassets.com/730c47834c342eab81208ff81686b788de50447f2b315ca0efd19dda3156f7d6/sigco3111/patchwork-quilt-ko",
+"social_custom": false,
+"score": 0.416,
+"rank": 401
 },
 {
 "repo": "pendulum-wave",
@@ -11572,7 +11866,7 @@
 "social": "https://opengraph.githubassets.com/a47516a30435e72b4f6aea92dd9b1703b80a686c5a769a7a4be101bd09179e36/sigco3111/pendulum-wave",
 "social_custom": false,
 "score": 0.416,
-"rank": 392
+"rank": 402
 },
 {
 "repo": "photosynthesis-simulator",
@@ -11601,7 +11895,7 @@
 "social": "https://opengraph.githubassets.com/683b6f1d1e8b8a42e41f25a22c1a337608986ff57355e6648e9a6ccd900a2eb2/sigco3111/photosynthesis-simulator",
 "social_custom": false,
 "score": 0.416,
-"rank": 393
+"rank": 403
 },
 {
 "repo": "piratenation-art",
@@ -11630,7 +11924,7 @@
 "social": "https://opengraph.githubassets.com/a3724732580233f776853dda04d0b4a24b466c317427aec476bc8f7612374ed3/sigco3111/piratenation-art",
 "social_custom": false,
 "score": 0.416,
-"rank": 394
+"rank": 404
 },
 {
 "repo": "piratenation-game",
@@ -11659,7 +11953,65 @@
 "social": "https://opengraph.githubassets.com/d1a93783578625d97d9e326a0865fe1f30650d4e3430e2968cfd9351462cad6a/sigco3111/piratenation-game",
 "social_custom": false,
 "score": 0.416,
-"rank": 395
+"rank": 405
+},
+{
+"repo": "pixel-village-ko",
+"desc": "🔀🍴 [한글화] (3D) 코드로 그린 픽셀 아트 절벽 마을 산책 데모. 한국어 조작 안내·제목·음악 출처 안내와 스크린샷 포함 README 제공.",
+"lang": "JavaScript",
+"topics": [],
+"url": "https://github.com/sigco3111/pixel-village-ko",
+"home": "https://sigco3111.github.io/pixel-village-ko/",
+"stars": 0,
+"forks": 1,
+"fork": false,
+"views": 0,
+"visitors": 0,
+"clones": 0,
+"size": 8039,
+"open_issues": 0,
+"license": "",
+"archived": false,
+"default_branch": "main",
+"release_tag": "",
+"release_date": "",
+"created": "2026-11-24",
+"pushed": "2026-11-24",
+"tracked": false,
+"first_seen": "",
+"social": "https://opengraph.githubassets.com/df9eb8f17efcb34a21a545069800cb6deed1b1f16f081789e45c414cfe44b27a/sigco3111/pixel-village-ko",
+"social_custom": false,
+"score": 0.416,
+"rank": 406
+},
+{
+"repo": "pixelfx-ko",
+"desc": "🔀🍴 [한글화] (에셋) 픽셀FX (pixelfx) 한글판 - 244가지 픽셀 아트 효과 갤러리 한국어 로컬라이즈",
+"lang": "JavaScript",
+"topics": [],
+"url": "https://github.com/sigco3111/pixelfx-ko",
+"home": "https://sigco3111.github.io/pixelfx-ko/",
+"stars": 0,
+"forks": 1,
+"fork": false,
+"views": 0,
+"visitors": 0,
+"clones": 0,
+"size": 38940,
+"open_issues": 0,
+"license": "MIT",
+"archived": false,
+"default_branch": "main",
+"release_tag": "",
+"release_date": "",
+"created": "2026-11-23",
+"pushed": "2026-11-23",
+"tracked": false,
+"first_seen": "",
+"social": "https://opengraph.githubassets.com/3f8f78d02db4b55885aacc201e1d1874a199993d031a83e90a35e9d18d9b7387/sigco3111/pixelfx-ko",
+"social_custom": false,
+"score": 0.416,
+"rank": 407
 },
 {
 "repo": "pleasuregate-shmup",
@@ -11688,7 +12040,7 @@
 "social": "https://opengraph.githubassets.com/5d12cea836c7a7d70e0cf2a8cf85844c42601bf8878d306c70606560439caf04/sigco3111/pleasuregate-shmup",
 "social_custom": false,
 "score": 0.416,
-"rank": 396
+"rank": 408
 },
 {
 "repo": "private-archive-thumbnails",
@@ -11717,7 +12069,36 @@
 "social": "https://opengraph.githubassets.com/f218d353d55f6e3c3a49fc7aca2cb0e20e55b709a5ec3fcd812c12f9f1fccf9f/sigco3111/private-archive-thumbnails",
 "social_custom": false,
 "score": 0.416,
-"rank": 397
+"rank": 409
+},
+{
+"repo": "procedural-animals-ko",
+"desc": "🔀🍴 [한글화] (3D) three.js용 완전 절차적 동물 생성기 「Three.js Procedural Animals」 한국어판. SDF 몸 조각·자동 리그/스킨·털/깃털·IK 보행으로 24종 동물을 모델·텍스처·애니메이션 클립 없이 코드만으로 생성. 쇼케이스 UI·행동/걸음 조작·코드 패널 설명 전면 한글화 (원본 majidmanzarpour/threejs-procedural-animals, MIT)",
+"lang": "JavaScript",
+"topics": [],
+"url": "https://github.com/sigco3111/procedural-animals-ko",
+"home": "https://sigco3111.github.io/procedural-animals-ko/",
+"stars": 0,
+"forks": 1,
+"fork": false,
+"views": 0,
+"visitors": 0,
+"clones": 0,
+"size": 17784,
+"open_issues": 0,
+"license": "MIT",
+"archived": false,
+"default_branch": "main",
+"release_tag": "",
+"release_date": "",
+"created": "2026-11-23",
+"pushed": "2026-11-23",
+"tracked": false,
+"first_seen": "",
+"social": "https://opengraph.githubassets.com/b9dd30b8c0c83d6799ef5d9893555fea1dc426705315fdbf6337571ac43696c8/sigco3111/procedural-animals-ko",
+"social_custom": false,
+"score": 0.416,
+"rank": 410
 },
 {
 "repo": "procedural-city",
@@ -11746,7 +12127,7 @@
 "social": "https://opengraph.githubassets.com/600d0c969807a4fba3a5f14b1e99419ef4156f3c838efaf7a6492e396452fcc1/sigco3111/procedural-city",
 "social_custom": false,
 "score": 0.416,
-"rank": 398
+"rank": 411
 },
 {
 "repo": "protein-universe",
@@ -11775,7 +12156,7 @@
 "social": "https://opengraph.githubassets.com/7bc00fcf96ffe43cba68cca7936fb082d4c581af0d7826754fc5f23050c11304/sigco3111/protein-universe",
 "social_custom": false,
 "score": 0.416,
-"rank": 399
+"rank": 412
 },
 {
 "repo": "qingyun-sword-flight-ko",
@@ -11804,7 +12185,7 @@
 "social": "https://opengraph.githubassets.com/bffbb6d805bb8d2f89041d7d73b56e31cd7bd2f40727875f0b6ee02dbe5df2ff/sigco3111/qingyun-sword-flight-ko",
 "social_custom": false,
 "score": 0.416,
-"rank": 400
+"rank": 413
 },
 {
 "repo": "ray-cast-shadows",
@@ -11833,7 +12214,7 @@
 "social": "https://opengraph.githubassets.com/9203457059054fba41ab779842e5a7bce2de8f2b3b27631d79abf525ed52fced/sigco3111/ray-cast-shadows",
 "social_custom": false,
 "score": 0.416,
-"rank": 401
+"rank": 414
 },
 {
 "repo": "raycasting-doom",
@@ -11862,7 +12243,36 @@
 "social": "https://opengraph.githubassets.com/9203457059054fba41ab779842e5a7bce2de8f2b3b27631d79abf525ed52fced/sigco3111/raycasting-doom",
 "social_custom": false,
 "score": 0.416,
-"rank": 402
+"rank": 415
+},
+{
+"repo": "realistic-car-ko",
+"desc": "🔀🍴 [한글화/포크] (3D) three.js+Rapier 물리 랠리 카 주행 데모 「리얼리스틱 카 한글판」. Patch Car를 한글화하고 한글 설정 패널(시점·맵·주행보조·그립·고급 물리), 노면 표시, 「노르드비크 랠리」「오를라 타이어」 배너로 현지화. 스테이지/드라이버 시점, 기어·시속 HUD.",
+"lang": "JavaScript",
+"topics": [],
+"url": "https://github.com/sigco3111/realistic-car-ko",
+"home": "https://sigco3111.github.io/realistic-car-ko/",
+"stars": 0,
+"forks": 1,
+"fork": false,
+"views": 0,
+"visitors": 0,
+"clones": 0,
+"size": 15946,
+"open_issues": 0,
+"license": "",
+"archived": false,
+"default_branch": "main",
+"release_tag": "",
+"release_date": "",
+"created": "2026-11-23",
+"pushed": "2026-11-23",
+"tracked": false,
+"first_seen": "",
+"social": "https://opengraph.githubassets.com/cb50bd051c708edb8944b08129196b3fd2aa410edfab324e2db134e2d9e19b3a/sigco3111/realistic-car-ko",
+"social_custom": false,
+"score": 0.416,
+"rank": 416
 },
 {
 "repo": "repo-dna-analyzer",
@@ -11891,7 +12301,7 @@
 "social": "https://opengraph.githubassets.com/fd5c399ec80d34ae347a6a2a4e42f14a8d542dbbd9599c3117b0c9baa0dce4db/sigco3111/repo-dna-analyzer",
 "social_custom": false,
 "score": 0.416,
-"rank": 403
+"rank": 417
 },
 {
 "repo": "retro-synthwave-shooter",
@@ -11920,7 +12330,36 @@
 "social": "https://opengraph.githubassets.com/442e8923752999e1a54e4ed3f00fb4f13f0919d496ddb94481523be2419ecf71/sigco3111/retro-synthwave-shooter",
 "social_custom": false,
 "score": 0.416,
-"rank": 404
+"rank": 418
+},
+{
+"repo": "rookie-fc",
+"desc": "🟢 [원작] (3D) 구단 유스 3시즌 육성에서 승격 평가·1군 리그까지 잇는 세로형 7대7 3D 축구 게임. 루키나인(야구)의 축구 스핀오프",
+"lang": "JavaScript",
+"topics": [],
+"url": "https://github.com/sigco3111/rookie-fc",
+"home": "https://sigco3111.github.io/rookie-fc/",
+"stars": 0,
+"forks": 1,
+"fork": false,
+"views": 0,
+"visitors": 0,
+"clones": 0,
+"size": 4889,
+"open_issues": 0,
+"license": "",
+"archived": false,
+"default_branch": "main",
+"release_tag": "",
+"release_date": "",
+"created": "2026-11-20",
+"pushed": "2026-11-23",
+"tracked": false,
+"first_seen": "",
+"social": "https://opengraph.githubassets.com/6301d20685b7d410f9e285a8e520cc7cf8cb31a9a95c0760ff6b9cabc4988ceb/sigco3111/rookie-fc",
+"social_custom": false,
+"score": 0.416,
+"rank": 419
 },
 {
 "repo": "rookie-nine",
@@ -11949,7 +12388,7 @@
 "social": "https://opengraph.githubassets.com/c60be3389be900c8bbf381ce089798bb0acb98cf9623fbb13e0f622c3a57dcac/sigco3111/rookie-nine",
 "social_custom": false,
 "score": 0.416,
-"rank": 405
+"rank": 420
 },
 {
 "repo": "saltline-ko",
@@ -11978,7 +12417,7 @@
 "social": "https://opengraph.githubassets.com/a10d92886812b42beb27ad871d8cea355899e3778f666010ab9a7ddc352ec34f/sigco3111/saltline-ko",
 "social_custom": false,
 "score": 0.416,
-"rank": 406
+"rank": 421
 },
 {
 "repo": "shape-legion",
@@ -12007,7 +12446,7 @@
 "social": "https://opengraph.githubassets.com/cc311d2f6397a7e960097fe52b6634a289b5efd8ddf9f6a9dbbd41391ff4fed7/sigco3111/shape-legion",
 "social_custom": false,
 "score": 0.416,
-"rank": 407
+"rank": 422
 },
 {
 "repo": "showcase",
@@ -12022,7 +12461,7 @@
 "views": 0,
 "visitors": 0,
 "clones": 0,
-"size": 8857,
+"size": 8969,
 "open_issues": 0,
 "license": "",
 "archived": false,
@@ -12030,13 +12469,13 @@
 "release_tag": "",
 "release_date": "",
 "created": "2026-11-12",
-"pushed": "2026-11-22",
+"pushed": "2026-11-23",
 "tracked": false,
 "first_seen": "",
 "social": "https://opengraph.githubassets.com/19cd60886dc13e28140b3fdaf477b898d3e00bdc38b9605628d802e419c41a54/sigco3111/showcase",
 "social_custom": false,
 "score": 0.416,
-"rank": 408
+"rank": 423
 },
 {
 "repo": "sigco3111",
@@ -12051,7 +12490,7 @@
 "views": 0,
 "visitors": 0,
 "clones": 0,
-"size": 6424,
+"size": 6432,
 "open_issues": 1,
 "license": "",
 "archived": false,
@@ -12059,13 +12498,42 @@
 "release_tag": "",
 "release_date": "",
 "created": "2026-06-18",
-"pushed": "2026-11-22",
+"pushed": "2026-11-23",
 "tracked": true,
 "first_seen": "2026-06-23",
 "social": "https://opengraph.githubassets.com/4e152b350c578f3207b4971e82fe3df6ab01e357172b01168681c1b8e5a76a95/sigco3111/sigco3111",
 "social_custom": false,
 "score": 0.416,
-"rank": 409
+"rank": 424
+},
+{
+"repo": "slice-anything-ko",
+"desc": "🔀🍴 [한글화] (3D) three.js 씬 안의 어떤 메시든 원하는 평면으로 몇 번이고 잘라낼 수 있는 1인칭 절단 데모의 한글판.",
+"lang": "TypeScript",
+"topics": [],
+"url": "https://github.com/sigco3111/slice-anything-ko",
+"home": "https://sigco3111.github.io/slice-anything-ko/",
+"stars": 0,
+"forks": 1,
+"fork": false,
+"views": 0,
+"visitors": 0,
+"clones": 0,
+"size": 73544,
+"open_issues": 0,
+"license": "MIT",
+"archived": false,
+"default_branch": "main",
+"release_tag": "",
+"release_date": "",
+"created": "2026-11-23",
+"pushed": "2026-11-23",
+"tracked": false,
+"first_seen": "",
+"social": "https://opengraph.githubassets.com/9355c3fe67885a4ee1954fa900c25ba935f9032868796fd14b017066ba499efd/sigco3111/slice-anything-ko",
+"social_custom": false,
+"score": 0.416,
+"rank": 425
 },
 {
 "repo": "sprite-map-viewer",
@@ -12094,7 +12562,7 @@
 "social": "https://opengraph.githubassets.com/1aa1802c18045d015396231660469d826b22d5bcf8b0c356ac53e05101ee13ea/sigco3111/sprite-map-viewer",
 "social_custom": false,
 "score": 0.416,
-"rank": 410
+"rank": 426
 },
 {
 "repo": "spriteatelier",
@@ -12123,7 +12591,36 @@
 "social": "https://opengraph.githubassets.com/709341f8fc5ef8e1e48c7fd5bf68404b29b728d709dc121eb8e3efec94e45e5b/sigco3111/spriteatelier",
 "social_custom": false,
 "score": 0.416,
-"rank": 411
+"rank": 427
+},
+{
+"repo": "stylised-sky-ko",
+"desc": "🔀🍴 [한글화] (3D) patch.gg의 three.js용 그림체 하늘 블록 「Stylised sky」 한국어판. 분위기 7종 프리셋과 시간대·구름량·바람·비 조절, 단독 실행용 한글 조작 패널, 로딩·오류 문구 전면 한글화. WebGPU/WebGL2 지원 브라우저 필요. (원본 patch.gg/patch/stylised-sky, MIT)",
+"lang": "JavaScript",
+"topics": [],
+"url": "https://github.com/sigco3111/stylised-sky-ko",
+"home": "https://sigco3111.github.io/stylised-sky-ko/",
+"stars": 0,
+"forks": 1,
+"fork": false,
+"views": 0,
+"visitors": 0,
+"clones": 0,
+"size": 4193,
+"open_issues": 0,
+"license": "",
+"archived": false,
+"default_branch": "main",
+"release_tag": "",
+"release_date": "",
+"created": "2026-11-23",
+"pushed": "2026-11-23",
+"tracked": false,
+"first_seen": "",
+"social": "https://opengraph.githubassets.com/abd788ad760a3e76314376ab591bc892ba50df7b2a44b61abee030e200569c35/sigco3111/stylised-sky-ko",
+"social_custom": false,
+"score": 0.416,
+"rank": 428
 },
 {
 "repo": "summer-cycle",
@@ -12156,7 +12653,7 @@
 "source": "StarKnightt/summer-cycle",
 "url": "https://github.com/StarKnightt/summer-cycle"
 },
-"rank": 412
+"rank": 429
 },
 {
 "repo": "sunslide-ko",
@@ -12189,7 +12686,7 @@
 "source": "carlok/sunslide",
 "url": "https://github.com/carlok/sunslide"
 },
-"rank": 413
+"rank": 430
 },
 {
 "repo": "synthwave-terrain",
@@ -12218,7 +12715,7 @@
 "social": "https://opengraph.githubassets.com/61bc8a1a47142bef12de0f384c22d74261745d47cec90609b18887002f730f3a/sigco3111/synthwave-terrain",
 "social_custom": false,
 "score": 0.416,
-"rank": 414
+"rank": 431
 },
 {
 "repo": "sys8-board",
@@ -12247,7 +12744,40 @@
 "social": "https://opengraph.githubassets.com/a807154407779b5bdd842556ea391ee91c3b9849b754e37d42ae588cd5e6d0d1/sigco3111/sys8-board",
 "social_custom": false,
 "score": 0.416,
-"rank": 415
+"rank": 432
+},
+{
+"repo": "threejs-particle-fluids",
+"desc": "🔀🍴 [한글화] (3D) Three.js용 GPU 입자 물리 라이브러리 「Three.js Particle Fluids」 한국어판. 액체·소프트 바디·천·연기를 WebGPU로 실시간 시뮬레이션하는 13개 인터랙티브 프리셋 데모 UI 전면 한글화. WebGPU 지원 브라우저 필요(WebGL 폴백 없음). 한글 UI 렌더링은 배포 페이지에서 확인, 실제 유체 동작은 미검증 (원본 dgreenheck/threejs-particle-fluids, MIT)",
+"lang": "TypeScript",
+"topics": [],
+"url": "https://github.com/sigco3111/threejs-particle-fluids",
+"home": "https://sigco3111.github.io/threejs-particle-fluids/",
+"stars": 0,
+"forks": 1,
+"fork": true,
+"views": 0,
+"visitors": 0,
+"clones": 0,
+"size": 9731,
+"open_issues": 0,
+"license": "MIT",
+"archived": false,
+"default_branch": "main",
+"release_tag": "",
+"release_date": "",
+"created": "2026-11-23",
+"pushed": "2026-11-23",
+"tracked": false,
+"first_seen": "",
+"social": "",
+"social_custom": false,
+"score": 0.416,
+"lineage": {
+"source": "dgreenheck/threejs-particle-fluids",
+"url": "https://github.com/dgreenheck/threejs-particle-fluids"
+},
+"rank": 433
 },
 {
 "repo": "tilt-labyrinth-ko",
@@ -12276,7 +12806,7 @@
 "social": "https://opengraph.githubassets.com/68ec0d6f8b8069c89c81634219a7fda0a0e782f038f37709da993568d18a7daf/sigco3111/tilt-labyrinth-ko",
 "social_custom": false,
 "score": 0.416,
-"rank": 416
+"rank": 434
 },
 {
 "repo": "ubuntu-board",
@@ -12305,7 +12835,7 @@
 "social": "https://opengraph.githubassets.com/a807154407779b5bdd842556ea391ee91c3b9849b754e37d42ae588cd5e6d0d1/sigco3111/ubuntu-board",
 "social_custom": false,
 "score": 0.416,
-"rank": 417
+"rank": 435
 },
 {
 "repo": "ugh-guys-ko",
@@ -12334,7 +12864,7 @@
 "social": "https://opengraph.githubassets.com/e94dbec05358fb853169eba85b0be3b918abc6c808d60310308a895c95f332c6/sigco3111/ugh-guys-ko",
 "social_custom": false,
 "score": 0.416,
-"rank": 418
+"rank": 436
 },
 {
 "repo": "vibe-coding-ui-glossary",
@@ -12363,7 +12893,7 @@
 "social": "https://opengraph.githubassets.com/c9a278d68830f01811da812d8b17cefdf45a8cbc92858c49c8c2ce329a143aa3/sigco3111/vibe-coding-ui-glossary",
 "social_custom": false,
 "score": 0.416,
-"rank": 419
+"rank": 437
 },
 {
 "repo": "voronoi-glass-fracture",
@@ -12392,7 +12922,7 @@
 "social": "https://opengraph.githubassets.com/6642f991cb74bc7f2a8da0b68b1648977e4e55050796a60e3a000bc55f2825e3/sigco3111/voronoi-glass-fracture",
 "social_custom": false,
 "score": 0.416,
-"rank": 420
+"rank": 438
 },
 {
 "repo": "voxel-musou",
@@ -12425,7 +12955,65 @@
 "source": "mike007jd/voxel-musou",
 "url": "https://github.com/mike007jd/voxel-musou"
 },
-"rank": 421
+"rank": 439
+},
+{
+"repo": "watercolour-ko",
+"desc": "🔀🍴 [한글화] (3D) WebGL 수채화 렌더 워킹 데모 「수채화 한글판」. 걸으며 연필 스케치가 수채화로 채색되는 장면의 한국어 UI·설정 패널, 실행 안내를 담은 README를 제공.",
+"lang": "JavaScript",
+"topics": [],
+"url": "https://github.com/sigco3111/watercolour-ko",
+"home": "https://sigco3111.github.io/watercolour-ko/",
+"stars": 0,
+"forks": 1,
+"fork": false,
+"views": 0,
+"visitors": 0,
+"clones": 0,
+"size": 6718,
+"open_issues": 0,
+"license": "",
+"archived": false,
+"default_branch": "main",
+"release_tag": "",
+"release_date": "",
+"created": "2026-11-23",
+"pushed": "2026-11-23",
+"tracked": false,
+"first_seen": "",
+"social": "https://opengraph.githubassets.com/084b0b46b44d3c24316000301b577290cee77c706d036e5775dda75d57994099/sigco3111/watercolour-ko",
+"social_custom": false,
+"score": 0.416,
+"rank": 440
+},
+{
+"repo": "wigglewild-ko",
+"desc": "🔀🍴 [한글화] (3D) 직접 만든 크리터가 되어 살아있는 섬을 누비는 크리처 시뮬레이션 「Wigglewild」 한국어판. 부위 조립 에디터와 절차적 다리 애니메이션, 종족 5종+떠돌이 거인, 노래·춤·매력·포즈 인사 교환, 연구소·도감·초원 샌드박스 (원본 Patch blendi/wigglewild, MIT)",
+"lang": "TypeScript",
+"topics": [],
+"url": "https://github.com/sigco3111/wigglewild-ko",
+"home": "https://sigco3111.github.io/wigglewild-ko/",
+"stars": 0,
+"forks": 1,
+"fork": false,
+"views": 0,
+"visitors": 0,
+"clones": 0,
+"size": 5775,
+"open_issues": 0,
+"license": "MIT",
+"archived": false,
+"default_branch": "main",
+"release_tag": "",
+"release_date": "",
+"created": "2026-11-23",
+"pushed": "2026-11-23",
+"tracked": false,
+"first_seen": "",
+"social": "https://opengraph.githubassets.com/e575726fe20a59b3301fe06bc5df713a897c9e951622424ddb731f0fe5c9fb64/sigco3111/wigglewild-ko",
+"social_custom": false,
+"score": 0.416,
+"rank": 441
 },
 {
 "repo": "win11-board",
@@ -12454,7 +13042,7 @@
 "social": "https://opengraph.githubassets.com/406f6d2c1191bed5a7bd78f309bd17026ef905171e55085f642bce720e0bbe75/sigco3111/win11-board",
 "social_custom": false,
 "score": 0.416,
-"rank": 422
+"rank": 442
 },
 {
 "repo": "win32-console-shooter",
@@ -12483,7 +13071,7 @@
 "social": "https://opengraph.githubassets.com/a3b6cf94cabadf682e2a58ecaf9f004099bc9f771bc5d008778d913f6f8613ba/sigco3111/win32-console-shooter",
 "social_custom": false,
 "score": 0.416,
-"rank": 423
+"rank": 443
 },
 {
 "repo": "winxp-board",
@@ -12512,7 +13100,7 @@
 "social": "https://opengraph.githubassets.com/8d830eae12b9ab662abfbde3c674d3f982944f6585a3f5ba8391454a112359f1/sigco3111/winxp-board",
 "social_custom": false,
 "score": 0.416,
-"rank": 424
+"rank": 444
 },
 {
 "repo": "wipic-draw3",
@@ -12541,7 +13129,7 @@
 "social": "https://opengraph.githubassets.com/8a3dcebf9698a92d9cbabe5ef7f8a76d618862d56c0d848737c70b3d56741742/sigco3111/wipic-draw3",
 "social_custom": false,
 "score": 0.416,
-"rank": 425
+"rank": 445
 },
 {
 "repo": "wordle",
@@ -12570,7 +13158,7 @@
 "social": "https://opengraph.githubassets.com/4feea49dcce6a06ca6bcbab2ba1b40b38ea17781c4a88379c3d2bf924946a6e5/sigco3111/wordle",
 "social_custom": false,
 "score": 0.416,
-"rank": 426
+"rank": 446
 },
 {
 "repo": "xmrig-dashboard",
@@ -12599,7 +13187,7 @@
 "social": "https://opengraph.githubassets.com/9e9da28aec57a760cbdbf37d7f47e0b07e68c887a6a9dcae1442bdbfce063ff2/sigco3111/xmrig-dashboard",
 "social_custom": false,
 "score": 0.416,
-"rank": 427
+"rank": 447
 },
 {
 "repo": "yt-download",
@@ -12628,7 +13216,7 @@
 "social": "https://opengraph.githubassets.com/6105f8528b092c1ee6558889641962a5cd131a27c588ac658ef1c7e9f4398da7/sigco3111/yt-download",
 "social_custom": false,
 "score": 0.416,
-"rank": 428
+"rank": 448
 },
 {
 "repo": "abyssal-garden-ko",
@@ -12657,7 +13245,7 @@
 "social": "https://opengraph.githubassets.com/6c5680c0660c5b8a4a879fcff276804ea961fac2687c3720ad6046fe01a71e4b/sigco3111/abyssal-garden-ko",
 "social_custom": false,
 "score": 0.0,
-"rank": 429
+"rank": 449
 },
 {
 "repo": "assets-3d-lowpoly-2",
@@ -12672,21 +13260,21 @@
 "views": 0,
 "visitors": 0,
 "clones": 0,
-"size": 437330,
+"size": 519808,
 "open_issues": 0,
 "license": "",
 "archived": false,
 "default_branch": "main",
-"release_tag": "concrete-echo-props",
-"release_date": "2026-11-20",
+"release_tag": "long-wind-ph-rocks",
+"release_date": "2026-11-24",
 "created": "2026-11-13",
-"pushed": "2026-11-22",
+"pushed": "2026-11-24",
 "tracked": false,
 "first_seen": "",
 "social": "https://opengraph.githubassets.com/00ccab6a1bc71049d544efc0526706b7f1d7e74a7ad414f216e6e07193bc3804/sigco3111/assets-3d-lowpoly-2",
 "social_custom": false,
 "score": 0.0,
-"rank": 430
+"rank": 450
 },
 {
 "repo": "assets-3d-polyfork",
@@ -12701,7 +13289,7 @@
 "views": 0,
 "visitors": 0,
 "clones": 0,
-"size": 5333,
+"size": 6428,
 "open_issues": 0,
 "license": "CC-BY-4.0",
 "archived": false,
@@ -12709,13 +13297,13 @@
 "release_tag": "",
 "release_date": "",
 "created": "2026-11-20",
-"pushed": "2026-11-22",
+"pushed": "2026-11-23",
 "tracked": false,
 "first_seen": "",
 "social": "https://opengraph.githubassets.com/cf832e11d0dbd80b4ba491d2fc7beb69a34b9ea9adc23f65d6e8b508dc1ef948/sigco3111/assets-3d-polyfork",
 "social_custom": false,
 "score": 0.0,
-"rank": 431
+"rank": 451
 },
 {
 "repo": "assets-code",
@@ -12730,7 +13318,7 @@
 "views": 0,
 "visitors": 0,
 "clones": 0,
-"size": 9312,
+"size": 19574,
 "open_issues": 0,
 "license": "",
 "archived": false,
@@ -12738,13 +13326,13 @@
 "release_tag": "",
 "release_date": "",
 "created": "2026-11-20",
-"pushed": "2026-11-22",
+"pushed": "2026-11-24",
 "tracked": false,
 "first_seen": "",
 "social": "https://opengraph.githubassets.com/85458f122ddfea4d10a777c961638c18d81817d1ddb319c589aea53413db7dbb/sigco3111/assets-code",
 "social_custom": false,
 "score": 0.0,
-"rank": 432
+"rank": 452
 },
 {
 "repo": "brickfall-ko",
@@ -12759,7 +13347,7 @@
 "views": 0,
 "visitors": 0,
 "clones": 0,
-"size": 0,
+"size": 17871,
 "open_issues": 0,
 "license": "",
 "archived": false,
@@ -12773,7 +13361,36 @@
 "social": "https://opengraph.githubassets.com/542f156d47dd6f5f66e65bea193c8b2fa23e614c00572373a3a6f3f9c3e4d3c8/sigco3111/brickfall-ko",
 "social_custom": false,
 "score": 0.0,
-"rank": 433
+"rank": 453
+},
+{
+"repo": "cinder-tide",
+"desc": "🔀🍴 [한글화] (2D게임) 모든 픽셀이 실제 물질로 시뮬레이션되는 2D 슈퍼히어로 샌드박스 「Cinder Tide」 한국어판. 셀 단위 열 전도·물 순환(증기→구름→비)·용암→흑요석, Rapier 강체 물리, 능력 6종, 모드 4종+다단계 보스 2종 (원본 git.patch.gg/blendi/cinder-tide, MIT, 제작: Patch)",
+"lang": "TypeScript",
+"topics": [],
+"url": "https://github.com/sigco3111/cinder-tide",
+"home": "https://sigco3111.github.io/cinder-tide/",
+"stars": 0,
+"forks": 0,
+"fork": false,
+"views": 0,
+"visitors": 0,
+"clones": 0,
+"size": 10994,
+"open_issues": 0,
+"license": "MIT",
+"archived": false,
+"default_branch": "main",
+"release_tag": "",
+"release_date": "",
+"created": "2026-11-22",
+"pushed": "2026-11-23",
+"tracked": false,
+"first_seen": "",
+"social": "https://opengraph.githubassets.com/9634c332a1c551eb3444eed9e59e5703214379f754bce41a7e7026e64b19830a/sigco3111/cinder-tide",
+"social_custom": false,
+"score": 0.0,
+"rank": 454
 },
 {
 "repo": "cold-boot-ko",
@@ -12806,7 +13423,40 @@
 "source": "rossinek/cold-boot",
 "url": "https://github.com/rossinek/cold-boot"
 },
-"rank": 434
+"rank": 455
+},
+{
+"repo": "cold-smoke",
+"desc": "雪迹： 一个人，一座山，一路向下",
+"lang": "Other",
+"topics": [],
+"url": "https://github.com/sigco3111/cold-smoke",
+"home": "https://huisky.xyz/cold-smoke/play",
+"stars": 0,
+"forks": 0,
+"fork": true,
+"views": 0,
+"visitors": 0,
+"clones": 0,
+"size": 40915,
+"open_issues": 0,
+"license": "MIT",
+"archived": false,
+"default_branch": "main",
+"release_tag": "",
+"release_date": "",
+"created": "2026-11-24",
+"pushed": "2026-11-20",
+"tracked": false,
+"first_seen": "",
+"social": "",
+"social_custom": false,
+"score": 0.0,
+"lineage": {
+"source": "huiskylabs/cold-smoke",
+"url": "https://github.com/huiskylabs/cold-smoke"
+},
+"rank": 456
 },
 {
 "repo": "concrete-echo-ko",
@@ -12839,7 +13489,7 @@
 "source": "Rikinshah787/Game-Fable-5.2",
 "url": "https://github.com/Rikinshah787/Game-Fable-5.2"
 },
-"rank": 435
+"rank": 457
 },
 {
 "repo": "everyday-game",
@@ -12872,7 +13522,7 @@
 "source": "zhgarylu/everyday-game",
 "url": "https://github.com/zhgarylu/everyday-game"
 },
-"rank": 436
+"rank": 458
 },
 {
 "repo": "fable-5.2-potatobench-ko",
@@ -12901,7 +13551,7 @@
 "social": "https://opengraph.githubassets.com/e6069ed9056d2410e7b2dc67de7dff87cb481467a38126a363c07df7bd8209f2/sigco3111/fable-5.2-potatobench-ko",
 "social_custom": false,
 "score": 0.0,
-"rank": 437
+"rank": 459
 },
 {
 "repo": "gamedemo-by-fable5.2-ko",
@@ -12930,36 +13580,36 @@
 "social": "https://opengraph.githubassets.com/d9bb500d14f33578760b45f348948d952710a99eae532c30ccc4c48ffe263417/sigco3111/gamedemo-by-fable5.2-ko",
 "social_custom": false,
 "score": 0.0,
-"rank": 438
+"rank": 460
 },
 {
 "repo": "inkwave-ko",
-"desc": "INKWAVE 한글판 - 4 대 4 터프 워 잉크 슈터 (원작: DevFrancois/inkwave, MIT)",
-"lang": "Other",
+"desc": "🔀🍴 [한글화] (3D) 4 대 4 터프 워 잉크 슈터 「INKWAVE」 한국어판. 오징어 변신·잉크 수영, 스테이지 3종(타이드워터 광장·켈프라인 터미널·홀리야드 마리나)×낮/황혼, 봇 난이도 3단계, XP/레벨 성장 (원본 DevFrancois/inkwave, MIT)",
+"lang": "JavaScript",
 "topics": [],
 "url": "https://github.com/sigco3111/inkwave-ko",
-"home": "",
+"home": "https://sigco3111.github.io/inkwave-ko/",
 "stars": 0,
 "forks": 0,
 "fork": false,
 "views": 0,
 "visitors": 0,
 "clones": 0,
-"size": 0,
+"size": 13928,
 "open_issues": 0,
-"license": "",
+"license": "MIT",
 "archived": false,
 "default_branch": "main",
 "release_tag": "",
 "release_date": "",
 "created": "2026-11-22",
-"pushed": "2026-11-22",
+"pushed": "2026-11-23",
 "tracked": false,
 "first_seen": "",
-"social": "https://opengraph.githubassets.com/99577e2dcd89dc0bd4905324a6c80746130546711bf0722926ace82997bf9ba5/sigco3111/inkwave-ko",
+"social": "https://opengraph.githubassets.com/bdde36ac47bc902dfeff41fdd8b15587ee6515a227f495c09a489faa5a1087b2/sigco3111/inkwave-ko",
 "social_custom": false,
 "score": 0.0,
-"rank": 439
+"rank": 461
 },
 {
 "repo": "instinct-benchmarks",
@@ -12988,7 +13638,36 @@
 "social": "https://opengraph.githubassets.com/bf5363975d5c5d8fcd4af4951203cfeebcb86ae4edfa47c3b924fcf1e6fd6809/sigco3111/instinct-benchmarks",
 "social_custom": false,
 "score": 0.0,
-"rank": 440
+"rank": 462
+},
+{
+"repo": "kervan-ko",
+"desc": "🔀🍴 [한글화] (3D) 케르반(Kervan) 한국어판 - 아나톨리아 실크로드 3D 무역 전략 게임 (원작: Furkiozknn/kervan, MIT)",
+"lang": "HTML",
+"topics": [],
+"url": "https://github.com/sigco3111/kervan-ko",
+"home": "https://sigco3111.github.io/kervan-ko/",
+"stars": 0,
+"forks": 0,
+"fork": false,
+"views": 0,
+"visitors": 0,
+"clones": 0,
+"size": 49571,
+"open_issues": 0,
+"license": "MIT",
+"archived": false,
+"default_branch": "main",
+"release_tag": "",
+"release_date": "",
+"created": "2026-11-24",
+"pushed": "2026-11-24",
+"tracked": false,
+"first_seen": "",
+"social": "https://opengraph.githubassets.com/41fd67966054a3cef9313da2f5d7c7ed1a8ee627bcfbe5f4148748ce949ff291/sigco3111/kervan-ko",
+"social_custom": false,
+"score": 0.0,
+"rank": 463
 },
 {
 "repo": "last-return-ko",
@@ -13017,7 +13696,40 @@
 "social": "https://opengraph.githubassets.com/86421a6727dabd05e8e18f2e5af4e7fe2252cc445eed0ba50a1a1eadcbc4b821/sigco3111/last-return-ko",
 "social_custom": false,
 "score": 0.0,
-"rank": 441
+"rank": 464
+},
+{
+"repo": "long-wind",
+"desc": "🔀🍴 [한글화] (3D) 외로운 검객이 세 개의 장(초원·죽림·마을)을 누비는 실시간 무협 액션 「장풍(長風)」 한글판. 순수 three.js/WebGL로 설치 없이 브라우저에서 바로 플레이. 메뉴·조작 안내·웨이브 부제·보스 소개·로딩 문구 한국어화, 붓글씨 한자 글리프와 고전시 원문은 유지하고 한글 병기. (원본 github.com/jbang2004/long-wind, 코드 MIT / 캐릭터 Tripo AI·모션 Mixamo 별도 약관)",
+"lang": "JavaScript",
+"topics": [],
+"url": "https://github.com/sigco3111/long-wind",
+"home": "https://sigco3111.github.io/long-wind/",
+"stars": 0,
+"forks": 0,
+"fork": true,
+"views": 0,
+"visitors": 0,
+"clones": 0,
+"size": 116145,
+"open_issues": 0,
+"license": "",
+"archived": false,
+"default_branch": "main",
+"release_tag": "",
+"release_date": "",
+"created": "2026-11-24",
+"pushed": "2026-11-24",
+"tracked": false,
+"first_seen": "",
+"social": "",
+"social_custom": false,
+"score": 0.0,
+"lineage": {
+"source": "jbang2004/long-wind",
+"url": "https://github.com/jbang2004/long-wind"
+},
+"rank": 465
 },
 {
 "repo": "minimax-m3.1-flash-benchmarks",
@@ -13046,7 +13758,7 @@
 "social": "https://opengraph.githubassets.com/a425663e390422030e374d152b92d026d159b455113b740910624e6799588091/sigco3111/minimax-m3.1-flash-benchmarks",
 "social_custom": false,
 "score": 0.0,
-"rank": 442
+"rank": 466
 },
 {
 "repo": "muse-spark-1.3-benchmarks",
@@ -13075,7 +13787,40 @@
 "social": "https://opengraph.githubassets.com/a71f7edd4b785353d1a6be052b43f2042fd8a18ee34695d7e8483a72094dbf50/sigco3111/muse-spark-1.3-benchmarks",
 "social_custom": false,
 "score": 0.0,
-"rank": 443
+"rank": 467
+},
+{
+"repo": "nova-lancer-ko",
+"desc": "🔀🍴 [한글화] (3D) 스타폭스풍 3D 레일 슈팅 「NOVA LANCER」 한국어판. 석양의 바다·붉은 협곡·밤의 요새·보스 미즈치(미션 1)와 사르가소 우주·가샤도쿠로(미션 2). 지형·모델·BGM·효과음 모두 코드로 생성, 키보드·게임패드·터치 지원 (원본 tanuu5/nova-lancer, MIT)",
+"lang": "HTML",
+"topics": [],
+"url": "https://github.com/sigco3111/nova-lancer-ko",
+"home": "https://sigco3111.github.io/nova-lancer-ko/",
+"stars": 0,
+"forks": 0,
+"fork": true,
+"views": 0,
+"visitors": 0,
+"clones": 0,
+"size": 2305,
+"open_issues": 0,
+"license": "MIT",
+"archived": false,
+"default_branch": "main",
+"release_tag": "",
+"release_date": "",
+"created": "2026-11-24",
+"pushed": "2026-11-24",
+"tracked": false,
+"first_seen": "",
+"social": "",
+"social_custom": false,
+"score": 0.0,
+"lineage": {
+"source": "tanuu5/nova-lancer",
+"url": "https://github.com/tanuu5/nova-lancer"
+},
+"rank": 468
 },
 {
 "repo": "papertrails-ko",
@@ -13108,7 +13853,7 @@
 "source": "xikhar/papertrails",
 "url": "https://github.com/xikhar/papertrails"
 },
-"rank": 444
+"rank": 469
 },
 {
 "repo": "pickle-benchmarks",
@@ -13137,36 +13882,7 @@
 "social": "https://opengraph.githubassets.com/67a091331a7aea60dc0e06318b10ac58df561381e67ab5530153ae8040ba652b/sigco3111/pickle-benchmarks",
 "social_custom": false,
 "score": 0.0,
-"rank": 445
-},
-{
-"repo": "rookie-nine-soccer",
-"desc": "루키나인 축구 버전 (구단 유스 육성형 7대7)",
-"lang": "TypeScript",
-"topics": [],
-"url": "https://github.com/sigco3111/rookie-nine-soccer",
-"home": "https://sigco3111.github.io/rookie-nine-soccer/",
-"stars": 0,
-"forks": 0,
-"fork": false,
-"views": 0,
-"visitors": 0,
-"clones": 0,
-"size": 5984,
-"open_issues": 0,
-"license": "",
-"archived": false,
-"default_branch": "main",
-"release_tag": "",
-"release_date": "",
-"created": "2026-11-20",
-"pushed": "2026-11-22",
-"tracked": false,
-"first_seen": "",
-"social": "https://opengraph.githubassets.com/ab51d6d291b849c439e9ae7fc31196e1c46472bf81654735465f0f7ef1c01ac9/sigco3111/rookie-nine-soccer",
-"social_custom": false,
-"score": 0.0,
-"rank": 446
+"rank": 470
 },
 {
 "repo": "santa-game-ko",
@@ -13199,36 +13915,7 @@
 "source": "thestringtheories/Santa-Game",
 "url": "https://github.com/thestringtheories/Santa-Game"
 },
-"rank": 447
-},
-{
-"repo": "sf-hack-and-slash",
-"desc": "SF hack-and-slash prototype (Three.js). Assets: see ASSET-SOURCES.md",
-"lang": "JavaScript",
-"topics": [],
-"url": "https://github.com/sigco3111/sf-hack-and-slash",
-"home": "",
-"stars": 0,
-"forks": 0,
-"fork": false,
-"views": 0,
-"visitors": 0,
-"clones": 0,
-"size": 31229,
-"open_issues": 0,
-"license": "MIT",
-"archived": false,
-"default_branch": "main",
-"release_tag": "",
-"release_date": "",
-"created": "2026-11-21",
-"pushed": "2026-11-22",
-"tracked": false,
-"first_seen": "",
-"social": "https://opengraph.githubassets.com/5d52b13e01ebe300e4bb371f415b5947b6ac656b13bd7d1401f51ff77018a96c/sigco3111/sf-hack-and-slash",
-"social_custom": false,
-"score": 0.0,
-"rank": 448
+"rank": 471
 },
 {
 "repo": "the-lost-storm-ko",
@@ -13257,7 +13944,40 @@
 "social": "https://opengraph.githubassets.com/98acb7858b2c3c779c5770167439f888409871db5d51f4ca77934d6929bdf8dd/sigco3111/the-lost-storm-ko",
 "social_custom": false,
 "score": 0.0,
-"rank": 449
+"rank": 472
+},
+{
+"repo": "tiny-planet-ko",
+"desc": "🔀🍴 [한글화] (3D) 작은 행성을 걷고·날고·헤엄치며 탐험하는 three.js 샌드박스 「타이니 플래닛」 한글판. 타이틀·일시정지·조작 안내·모드 칩·시간대 라벨 한국어화, 실제 실행 캡처 4장 포함 한글 README 제공. (원작 StarKnightt/tiny-planet, MIT)",
+"lang": "Other",
+"topics": [],
+"url": "https://github.com/sigco3111/tiny-planet-ko",
+"home": "https://sigco3111.github.io/tiny-planet-ko/",
+"stars": 0,
+"forks": 0,
+"fork": true,
+"views": 0,
+"visitors": 0,
+"clones": 0,
+"size": 5281,
+"open_issues": 0,
+"license": "MIT",
+"archived": false,
+"default_branch": "main",
+"release_tag": "",
+"release_date": "",
+"created": "2026-11-24",
+"pushed": "2026-11-24",
+"tracked": false,
+"first_seen": "",
+"social": "",
+"social_custom": false,
+"score": 0.0,
+"lineage": {
+"source": "StarKnightt/tiny-planet",
+"url": "https://github.com/StarKnightt/tiny-planet"
+},
+"rank": 473
 },
 {
 "repo": "tria-prima-ko",
@@ -13286,7 +14006,7 @@
 "social": "https://opengraph.githubassets.com/a939d98e02a53fd8f2af9f980ab3287b8c50c8b3d9180d5598cb820ac43eb25b/sigco3111/tria-prima-ko",
 "social_custom": false,
 "score": 0.0,
-"rank": 450
+"rank": 474
 },
 {
 "repo": "vooy-benchmarks",
@@ -13315,7 +14035,7 @@
 "social": "https://opengraph.githubassets.com/c6223a515435280c812ae8244e260dc497af6aecb2161e59700d5ddb2adb6d28/sigco3111/vooy-benchmarks",
 "social_custom": false,
 "score": 0.0,
-"rank": 451
+"rank": 475
 },
 {
 "repo": "wildlife-odyssey-3d-ko",
@@ -13344,7 +14064,7 @@
 "social": "https://opengraph.githubassets.com/0f259db503f86855afc1478d6940ab5c4d88ad986aefaa93ae8cfd96a6a951f6/sigco3111/wildlife-odyssey-3d-ko",
 "social_custom": false,
 "score": 0.0,
-"rank": 452
+"rank": 476
 },
 {
 "repo": "worm-rider-ko",
@@ -13373,7 +14093,7 @@
 "social": "https://opengraph.githubassets.com/10635a499ad9c1de81059c69b6977f7480b3b6fa848787d0dbfc62a8f77434d7/sigco3111/worm-rider-ko",
 "social_custom": false,
 "score": 0.0,
-"rank": 453
+"rank": 477
 },
 {
 "repo": "zombies-ko",
@@ -13402,6 +14122,6 @@
 "social": "https://opengraph.githubassets.com/0db93138df19bf5a3919d5a31e2497ee4a3a49b4be98c4a854f89356f2c9a232/sigco3111/zombies-ko",
 "social_custom": false,
 "score": 0.0,
-"rank": 454
+"rank": 478
 }
 ]
